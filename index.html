@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kalpesh Patil - Intermediate Python & C Developer, AI/ML Learner. Building innovative projects and growing my skills.">
+    <meta name="keywords" content="Kalpesh Patil, Developer, Python, C Programming, AI, Machine Learning, Portfolio">
+    <meta name="author" content="Kalpesh Patil">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kalpesh Patil - Developer & AI Learner">
+    <meta property="og:description"
+        content="Intermediate Python & C Developer passionate about AI and innovative projects">
+    <meta property="og:type" content="website">
+
+    <title>Kalpesh Patil - Developer & AI Learner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-box">
+                    <span class="logo-initial">K</span>alpesh <span class="logo-surname">Patil</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for Projects
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="greeting">Welcome! I'm</span>
+                        <span class="name-gradient">Kalpesh Patil</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-prefix">I'm a </span>
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate developer with expertise in <strong>Python</strong> and <strong>C
+                            programming</strong>.
+                        I build innovative solutions and explore the limitless potential of <strong>Artificial
+                            Intelligence</strong>
+                        to create meaningful impact through technology.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Languages Mastered</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="10">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Ideas & Growing</div>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="image-frame">
+                            <div class="frame-corner corner-tl"></div>
+                            <div class="frame-corner corner-tr"></div>
+                            <div class="frame-corner corner-bl"></div>
+                            <div class="frame-corner corner-br"></div>
+                        </div>
+                        <div class="image-glow"></div>
+                        <img src="WhatsApp Image 2026-02-12 at 3.56.13 AM (1).jpeg" alt="Kalpesh Patil"
+                            class="profile-image" loading="eager">
+                        <div class="floating-element element-1">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-code"></i>
+                            <span>C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know who I am and what drives me</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image-section">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-frame">
+                            <img src="WhatsApp Image 2026-02-12 at 3.56.13 AM.jpeg" alt="Kalpesh Patil" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="about-image-decoration">
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-square"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="about-text">
+                    <h3 class="about-heading">Passionate Developer & <span class="gradient-text">AI Enthusiast</span>
+                    </h3>
+                    <p class="about-paragraph">
+                        I'm a dedicated software developer with a strong foundation in <span
+                            class="highlight">Python</span> and
+                        <span class="highlight">C programming</span>. My journey in technology is fueled by an
+                        insatiable curiosity
+                        and a commitment to building solutions that make a difference.
+                    </p>
+                    <p class="about-paragraph">
+                        As an <span class="highlight">AI enthusiast</span>, I'm captivated by the transformative power
+                        of
+                        artificial intelligence and machine learning. I constantly push boundaries, exploring
+                        cutting-edge
+                        concepts and architecting projects that blend technical expertise with innovative thinking.
+                    </p>
+                    <p class="about-paragraph">
+                        Beyond coding, I'm a perpetual learner—diving into emerging tech trends, experimenting with new
+                        frameworks,
+                        and crafting solutions that marry technical precision with creative problem-solving.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Innovation Driven</h4>
+                                <p>Creating cutting-edge solutions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Problem Solver</h4>
+                                <p>Tackling complex challenges</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Fast Learner</h4>
+                                <p>Always adapting & growing</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Team Player</h4>
+                                <p>Collaborative & communicative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with and master daily</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Python -->
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-header">
+                            <div class="skill-icon python-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-badge">Intermediate</div>
+                        </div>
+                        <h3 class="skill-name">Python</h3>
+                        <p class="skill-description">
+                            Intermediate Python developer with solid understanding of data structures, algorithms, and
+                            OOP.
+                            Currently building projects and expanding my skills.
+                        </p>
+                        <div class="skill-progress-wrapper">
+                            <div class="skill-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill python-progress" data-progress="65"></div>
+                                </div>
+                                <span class="progress-percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Data Structures</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Scripting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C Programming -->
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-header">
+                            <div class="skill-icon c-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-badge">Intermediate</div>
+                        </div>
+                        <h3 class="skill-name">C Programming</h3>
+                        <p class="skill-description">
+                            Solid foundation in C programming with good understanding of memory management, pointers,
+                            and algorithms. Continuously improving through practice.
+                        </p>
+                        <div class="skill-progress-wrapper">
+                            <div class="skill-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill c-progress" data-progress="60"></div>
+                                </div>
+                                <span class="progress-percentage">60%</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Pointers</span>
+                            <span class="tag">Memory Mgmt</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-header">
+                            <div class="skill-icon ai-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-badge">Learning</div>
+                        </div>
+                        <h3 class="skill-name">AI & Machine Learning</h3>
+                        <p class="skill-description">
+                            Beginning my journey in AI and Machine Learning. Excited to explore this field and
+                            learning the fundamentals step by step.
+                        </p>
+                        <div class="skill-progress-wrapper">
+                            <div class="skill-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill ai-progress" data-progress="30"></div>
+                                </div>
+                                <span class="progress-percentage">30%</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">ML Models</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">AI Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-header">
+                            <div class="skill-icon problem-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <div class="skill-badge">Developing</div>
+                        </div>
+                        <h3 class="skill-name">Problem Solving</h3>
+                        <p class="skill-description">
+                            Developing strong problem-solving skills through practice and logical thinking.
+                            Enjoy tackling challenges and finding creative solutions.
+                        </p>
+                        <div class="skill-progress-wrapper">
+                            <div class="skill-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill problem-progress" data-progress="70"></div>
+                                </div>
+                                <span class="progress-percentage">70%</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Logic</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Debugging</span>
+                            <span class="tag">Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions I'm building and working on</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- AI Assistant Project -->
+                <div class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-number">01</div>
+                        <div class="project-header">
+                            <div class="project-icon ai-project">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-dot"></span>
+                                In Development
+                            </div>
+                        </div>
+                        <h3 class="project-title">Intelligent AI Assistant</h3>
+                        <p class="project-description">
+                            Building a sophisticated AI-powered assistant using Python and cutting-edge machine learning
+                            techniques. Features natural language processing, task automation, and adaptive learning
+                            capabilities
+                            to streamline daily workflows and boost productivity.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-progress">
+                                <div class="progress-track">
+                                    <div class="progress-value" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics Project -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-number">02</div>
+                        <div class="project-header">
+                            <div class="project-icon data-project">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-dot"></span>
+                                In Development
+                            </div>
+                        </div>
+                        <h3 class="project-title">Advanced Data Analytics Suite</h3>
+                        <p class="project-description">
+                            Developing a comprehensive data analysis platform for processing and visualizing large
+                            datasets.
+                            Implements statistical analysis, interactive dashboards, and real-time data processing for
+                            actionable insights and data-driven decision making.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Data Viz</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-progress">
+                                <div class="progress-track">
+                                    <div class="progress-value" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-text">45% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Get in touch for collaborations, opportunities, or just to say hi!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kalpeshp2007@gmail.com&su=Hello%20Kalpesh"
+                        target="_blank" rel="noopener noreferrer" class="contact-card" title="Send me an email">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/kalpesh-patil-204a0136a" target="_blank"
+                        rel="noopener noreferrer" class="contact-card" title="Connect on LinkedIn">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Kalpesh628" target="_blank" rel="noopener noreferrer"
+                        class="contact-card" title="View my GitHub">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Learning Signature -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="signature-section">
+                <div class="signature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="signature-text">Learning in Progress</h3>
+                <p class="signature-subtitle">More Amazing Things Coming Soon...</p>
+                <div class="signature-loader">
+                    <div class="loader-bar"></div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2026 Kalpesh Patil
+                </p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
