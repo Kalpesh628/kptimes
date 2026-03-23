@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python Test Relay</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="orb orb-left"></div>
+    <div class="orb orb-right"></div>
+    <div class="grain"></div>
+
+    <main class="page-shell">
+      <section id="quick-copy-view" class="view view-active">
+        <div class="panel hero-panel">
+          <p class="eyebrow">Python Test Relay</p>
+          <h1>Tap a number, copy the code, and move on.</h1>
+          <p class="subtitle">
+            Each button maps directly to your experiment file. Nothing opens on screen here. It just copies.
+          </p>
+
+          <div id="quick-buttons" class="quick-grid" aria-label="Experiment quick copy buttons"></div>
+
+          <form id="quick-copy-form" class="quick-form">
+            <label class="field">
+              <span>Manual number</span>
+              <input
+                id="quick-number-input"
+                name="quick-number"
+                type="number"
+                min="1"
+                max="10"
+                placeholder="1"
+                autocomplete="off"
+              >
+            </label>
+            <button class="primary-button" type="submit">Copy by number</button>
+          </form>
+
+          <div id="quick-status" class="status-chip" aria-live="polite">
+            Waiting for a number. Fill your `.py` files and press any button.
+          </div>
+
+          <button id="forgot-number-trigger" class="ghost-button" type="button">
+            Forgot your number?
+          </button>
+        </div>
+      </section>
+
+      <section id="vault-view" class="view view-hidden">
+        <aside class="vault-sidebar">
+          <div>
+            <p class="eyebrow">Unlocked View</p>
+            <h2>Experiment Vault</h2>
+            <p class="sidebar-copy">
+              Search by number, title, aim, or code. Every experiment shows the aim and the full code block.
+            </p>
+          </div>
+
+          <div class="sidebar-block">
+            <span class="sidebar-label">Status</span>
+            <p id="generated-at" class="sidebar-meta">Live</p>
+          </div>
+
+          <div class="sidebar-block">
+            <span class="sidebar-label">Jump to experiment</span>
+            <div id="vault-nav" class="vault-nav"></div>
+          </div>
+
+          <button id="back-to-quick-copy" class="ghost-button" type="button">
+            Back to quick copy
+          </button>
+        </aside>
+
+        <section class="vault-main">
+          <header class="vault-topbar">
+            <div>
+              <p class="eyebrow">Searchable View</p>
+              <h2>Code Feed</h2>
+            </div>
+
+            <form id="search-form" class="search-form">
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search number, aim, code, or title"
+                autocomplete="off"
+              >
+              <button class="primary-button" type="submit">Search</button>
+            </form>
+          </header>
+
+          <div id="search-status" class="vault-status" aria-live="polite">
+            Showing all experiments.
+          </div>
+
+          <div id="experiment-stream" class="chat-stream"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="lock-overlay" class="overlay overlay-hidden" aria-hidden="true">
+      <div class="lock-panel">
+        <p class="eyebrow warning-eyebrow">Suspicious Access</p>
+        <h2>This route exposes every experiment.</h2>
+        <p class="overlay-copy">
+          Use `acpce6969` for the full experiment vault, or `kpbhai` to open the dedicated page for Experiment 5.
+        </p>
+
+        <form id="password-form" class="password-form">
+          <label class="field">
+            <span>Password</span>
+            <input id="password-input" type="password" placeholder="Enter password" autocomplete="off">
+          </label>
+          <button class="primary-button" type="submit">Unlock vault</button>
+        </form>
+
+        <div id="password-status" class="status-chip" aria-live="polite">
+          Password required.
+        </div>
+
+        <button id="close-overlay" class="ghost-button" type="button">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <script src="experiments.generated.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

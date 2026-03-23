@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python Lab Access</title>
+    <meta name="description" content="Private access gate for the dedicated Experiment 5 page.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #061018;
+        --bg-2: #0d2028;
+        --panel: rgba(7, 19, 24, 0.82);
+        --panel-strong: rgba(9, 24, 30, 0.94);
+        --line: rgba(127, 198, 209, 0.2);
+        --line-strong: rgba(127, 198, 209, 0.36);
+        --text: #f7efe2;
+        --muted: #a8bcc1;
+        --accent: #f2b36f;
+        --accent-soft: #88d0d7;
+        --danger: #ff8a68;
+        --shadow: 0 32px 100px rgba(0, 0, 0, 0.38);
+        --sans: "Space Grotesk", "Segoe UI Variable", sans-serif;
+        --mono: "IBM Plex Mono", "Cascadia Code", monospace;
+      }
+
+      * { box-sizing: border-box; }
+      html { color-scheme: dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: var(--sans);
+        background:
+          radial-gradient(circle at 14% 12%, rgba(242, 179, 111, 0.18), transparent 26%),
+          radial-gradient(circle at 86% 16%, rgba(136, 208, 215, 0.18), transparent 24%),
+          linear-gradient(150deg, #03070a 0%, #061018 42%, #0d2028 100%);
+        overflow-x: hidden;
+      }
+
+      .mesh,
+      .glow,
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .mesh {
+        opacity: 0.18;
+        background:
+          linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 120px 120px;
+        mask-image: radial-gradient(circle at center, black 34%, transparent 76%);
+      }
+
+      .grain {
+        opacity: 0.05;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 22px 22px;
+      }
+
+      .glow::before,
+      .glow::after {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        filter: blur(96px);
+        opacity: 0.22;
+        animation: drift 12s ease-in-out infinite alternate;
+      }
+
+      .glow::before {
+        left: -120px;
+        top: -120px;
+        background: #f2b36f;
+      }
+
+      .glow::after {
+        right: -120px;
+        bottom: -120px;
+        background: #88d0d7;
+        animation-delay: 1.5s;
+      }
+
+      .shell {
+        position: relative;
+        z-index: 1;
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 28px 0;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+
+      .brand,
+      .topbar-pill,
+      .status,
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.04);
+      }
+
+      .brand { font-weight: 700; }
+      .brand-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), #ff8e5b);
+        box-shadow: 0 0 0 10px rgba(242, 179, 111, 0.1);
+      }
+
+      .topbar-pill,
+      .status,
+      .meta-chip {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+        gap: 18px;
+      }
+
+      .panel,
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        background: var(--panel);
+        backdrop-filter: blur(22px);
+        box-shadow: var(--shadow);
+      }
+
+      .hero,
+      .gate,
+      .card { padding: 28px; }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at top right, rgba(136, 208, 215, 0.12), transparent 30%),
+          linear-gradient(160deg, rgba(242, 179, 111, 0.09), rgba(7, 19, 24, 0.92));
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        width: 180px;
+        height: 180px;
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.06);
+        background: linear-gradient(145deg, rgba(255,255,255,0.06), transparent);
+        transform: rotate(14deg);
+        opacity: 0.34;
+      }
+
+      .eyebrow,
+      .card-label {
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+      }
+
+      .eyebrow { color: var(--accent); }
+      .card-label { color: var(--accent-soft); }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 0.96;
+        letter-spacing: -0.045em;
+      }
+
+      h1 { font-size: clamp(3rem, 7vw, 5.3rem); max-width: 10ch; }
+      h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+      h3 { font-size: 1.18rem; }
+
+      p { margin: 0; color: var(--muted); line-height: 1.72; }
+      .hero-copy { margin: 22px 0 24px; max-width: 60ch; font-size: 1.02rem; }
+      .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        border-radius: 24px;
+        background: rgba(255,255,255,0.035);
+      }
+
+      .card strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.08rem;
+        color: var(--text);
+      }
+
+      .card p { margin-top: 10px; }
+
+      .gate {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        background:
+          radial-gradient(circle at top left, rgba(242, 179, 111, 0.12), transparent 26%),
+          linear-gradient(180deg, rgba(8, 20, 25, 0.98), rgba(10, 26, 33, 0.94));
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      label span {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.78rem;
+        color: var(--accent-soft);
+      }
+
+      input {
+        width: 100%;
+        padding: 15px 17px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(4, 12, 16, 0.92);
+        color: var(--text);
+        outline: none;
+        font: inherit;
+      }
+
+      input:focus {
+        border-color: var(--accent-soft);
+        box-shadow: 0 0 0 4px rgba(136, 208, 215, 0.12);
+      }
+
+      .primary-button {
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 15px 20px;
+        background: linear-gradient(135deg, var(--accent), #ff8d5a);
+        color: #241206;
+        font-weight: 800;
+        cursor: pointer;
+        transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+      }
+
+      .primary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 34px rgba(242, 179, 111, 0.18);
+      }
+
+      .primary-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .status { min-height: 48px; }
+      .status.success { color: #9af0ae; }
+      .status.error { color: var(--danger); }
+
+      @keyframes drift {
+        from { transform: translate3d(0, 0, 0) scale(1); }
+        to { transform: translate3d(18px, -14px, 0) scale(1.08); }
+      }
+
+      @media (max-width: 980px) {
+        .layout,
+        .grid { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          width: min(100vw - 20px, 1120px);
+          padding-top: 18px;
+          padding-bottom: 22px;
+        }
+
+        .hero,
+        .gate,
+        .card {
+          padding: 22px;
+          border-radius: 24px;
+        }
+
+        h1 { font-size: clamp(2.5rem, 11vw, 4.2rem); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mesh"></div>
+    <div class="grain"></div>
+    <div class="glow"></div>
+
+    <main class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span>Python Lab Access</span>
+        </div>
+        <div class="topbar-pill">Dedicated route for Experiment 5</div>
+      </div>
+
+      <section class="layout">
+        <section class="panel hero">
+          <p class="eyebrow">Private experiment route</p>
+          <h1>One clean gate. One dedicated page.</h1>
+          <p class="hero-copy">
+            This entry page only exists to forward the correct user to the standalone Experiment 5 view. The general experiment page keeps 5 locked, while this gate handles the direct route.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-chip">Dedicated 5th experiment page</span>
+            <span class="meta-chip">Copy-ready code box</span>
+            <span class="meta-chip">Publishable layout</span>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <p class="card-label">Flow</p>
+              <strong>Password to route</strong>
+              <p>Enter the correct code and the page redirects straight to the dedicated Experiment 5 screen.</p>
+            </article>
+            <article class="card">
+              <p class="card-label">General page</p>
+              <strong>Experiment 5 stays locked</strong>
+              <p>The main experiment feed does not display the actual 5.py content anymore.</p>
+            </article>
+            <article class="card">
+              <p class="card-label">Experience</p>
+              <strong>Ready for publishing</strong>
+              <p>The route is simplified so the user sees exactly the page they need without extra confusion.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel gate">
+          <div>
+            <p class="card-label">Access gate</p>
+            <h2>Enter the route password</h2>
+            <p>Use the offline password to open the dedicated Experiment 5 page.</p>
+          </div>
+
+          <form id="access-form">
+            <label class="field">
+              <span>Password</span>
+              <input id="password-input" type="password" autocomplete="off" placeholder="Enter password">
+            </label>
+            <button id="enter-button" class="primary-button" type="submit">Open Experiment 5</button>
+          </form>
+
+          <div id="status" class="status" aria-live="polite">Waiting for password.</div>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const PASSWORD = "kpbhai";
+      const NEXT_PAGE = "./5th/";
+      const RICKROLL_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      const form = document.getElementById("access-form");
+      const passwordInput = document.getElementById("password-input");
+      const status = document.getElementById("status");
+      const enterButton = document.getElementById("enter-button");
+
+      function setStatus(message, type) {
+        status.textContent = message;
+        status.className = type ? `status ${type}` : "status";
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = passwordInput.value.trim();
+
+        if (!value) {
+          setStatus("Enter the password first.", "error");
+          passwordInput.focus();
+          return;
+        }
+
+        if (value !== PASSWORD) {
+          enterButton.disabled = true;
+          setStatus("Wrong password. Redirecting...", "error");
+          window.setTimeout(function () {
+            window.location.replace(RICKROLL_URL);
+          }, 700);
+          return;
+        }
+
+        enterButton.disabled = true;
+        setStatus("Password accepted. Opening Experiment 5...", "success");
+        window.setTimeout(function () {
+          window.location.href = NEXT_PAGE;
+        }, 350);
+      });
+    </script>
+  </body>
+</html>
