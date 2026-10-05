@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Canteen Pre-Order & Pickup System — KP Times Projects</title>
+<meta name="description" content="A full-stack Java web app for college canteens: students pre-order food and reserve pickup slots; staff manage orders through a live status lifecycle. Built with JSP, Servlets, JDBC, MySQL and Tomcat.">
+<link rel="canonical" href="https://kptimes.in/projects/canteen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Campus Canteen Pre-Order & Pickup System">
+<meta property="og:description" content="Full-stack Java web app — JSP, Servlets, JDBC, MySQL, Tomcat. Pre-order food, reserve a pickup slot, track your order live.">
+<meta property="og:url" content="https://kptimes.in/projects/canteen/">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f766e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>KP</text></svg>">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">KP</span> KP Times</a>
+    <div class="nav-links">
+      <a href="/store/">Store</a>
+      <a href="/projects/" class="active">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p style="font-weight:700;color:var(--accent);letter-spacing:2px;font-size:13px;text-transform:uppercase;margin-bottom:12px">Case study · Full-stack Java</p>
+    <h1>Campus Canteen<br>Pre-Order &amp; Pickup<span class="t">.</span></h1>
+    <p>No more canteen queues. Students pre-order food and reserve a pickup slot from their phone; the canteen sees every order move through a live status pipeline.</p>
+    <div class="hero-cta">
+      <a class="btn big" href="campus-canteen-project.zip" download>⬇️ Download Project ZIP</a>
+      <a class="btn ghost" href="#setup">Run it yourself</a>
+    </div>
+    <p style="font-size:13.5px;margin-top:14px">🚂 A live demo runs on Railway's free trial — link added here when deployed.</p>
+    <div class="stack-badges">
+      <span>Java 17</span><span>JSP</span><span>Servlets</span><span>JDBC</span><span>MySQL 8</span><span>Tomcat 10</span><span>Maven</span><span>Bootstrap 5</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <h2>What it does</h2>
+    <p class="sub">Two roles, one smooth flow — built for a real college canteen rush.</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>🎓 Student</h3>
+        <p>Register & log in · browse the menu with search and veg filters · session cart · choose a pickup slot (capacity-checked, race-safe) · pay at canteen · <strong>track the order live</strong> · order history · rate the food.</p>
+      </div>
+      <div class="card">
+        <h3>🧑‍🍳 Canteen Admin</h3>
+        <p>Dashboard with today's orders, revenue and pending counts · full menu CRUD · accept / reject orders with reasons · advance order status · manage pickup slots and per-slot capacity · sales stats · read all feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>Order lifecycle</h2>
+    <p class="sub">Every order moves through this pipeline — students watch it happen in real time.</p>
+    <div class="timeline">
+      <div class="t-step"><h4>PLACED</h4><p>Student checks out with a pickup slot. Payment mode: pay at canteen.</p></div>
+      <div class="t-step"><h4>ACCEPTED</h4><p>Canteen confirms the order — or rejects it with a reason.</p></div>
+      <div class="t-step"><h4>PREPARING</h4><p>Kitchen starts cooking. The student sees the status change live.</p></div>
+      <div class="t-step"><h4>READY</h4><p>Food is packed and waiting at the counter for the slot.</p></div>
+      <div class="t-step"><h4>PICKED_UP</h4><p>Student collects, pays, and can leave a rating.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>How it works</h2>
+    <p class="sub">Classic, viva-explainable architecture. No frameworks, no magic.</p>
+    <div class="steps">
+      <div class="step"><h4>JSP view</h4><p>Bootstrap pages render the UI and submit forms — menu, cart, checkout, tracking.</p></div>
+      <div class="step"><h4>Servlet controller</h4><p>Twelve servlets validate input, manage the session, and route — e.g. <code>OrderServlet</code> recomputes totals server-side, never trusting the browser.</p></div>
+      <div class="step"><h4>DAO model</h4><p>JDBC data-access objects run every query as a <code>PreparedStatement</code>. Slot booking locks the row (<code>SELECT … FOR UPDATE</code>) so two students can't grab the last slot.</p></div>
+      <div class="step"><h4>MySQL database</h4><p>Six tables: users, menu items, pickup slots, orders, order items, feedback. Passwords stored as salted SHA-256 hashes.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="setup" style="padding-top:0">
+    <h2>Run it yourself</h2>
+    <p class="sub">Three commands and a Tomcat — the README inside the ZIP walks through every step.</p>
+<pre class="code"><span class="c"># 1. Create the database</span>
+mysql -u root -p &lt; schema.sql
+
+<span class="c"># 2. Build the WAR</span>
+mvn package
+
+<span class="c"># 3. Deploy — copy target/campus-canteen.war</span>
+<span class="c">#    into Tomcat's webapps/ and open</span>
+http://localhost:8080/campus-canteen
+
+<span class="c"># Admin login (change after first sign-in)</span>
+admin@canteen.local / admin123</pre>
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn big" href="campus-canteen-project.zip" download>⬇️ Download campus-canteen-project.zip</a>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:12px">Includes full source, WAR, schema, README and 25 viva Q&amp;A.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-links">
+      <a href="/">Home</a>
+      <a href="/store/">Store</a>
+      <a href="/projects/">Projects</a>
+    </div>
+    © 2026 KP Times · kptimes.in
+  </div>
+</footer>
+</body>
+</html>
