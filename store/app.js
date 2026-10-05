@@ -1,11 +1,14 @@
 /* KP Times Store — loads products from individual JSON files in
-   store/products/ via the jsDelivr CDN (file tree + file contents).
-   No build step, no backend, no API rate limits.
+   store/products/ via the public GitHub API (1 request; file bodies come
+   from the unlimited raw CDN). Results cached 30 min in localStorage.
+   No build step, no backend.
    One bad file can never break the store: parse failures are skipped. */
 (function () {
   "use strict";
 
   var state = { products: [], category: "All", query: "", sort: "featured" };
+  var CACHE_KEY = "kptimes-products-v1";
+  var CACHE_TTL = 30 * 60 * 1000;
 
   function $(sel) { return document.querySelector(sel); }
 
@@ -98,29 +101,33 @@
 
   function load() {
     var status = $("#status");
-    var cdn = "https://cdn.jsdelivr.net/gh/" + GITHUB_REPO + "@main";
-    // Walk the jsDelivr file tree to find store/products/*.json
-    fetch("https://data.jsdelivr.com/v1/packages/gh/" + GITHUB_REPO + "@main")
-      .then(function (r) {
-        if (!r.ok) throw new Error("CDN " + r.status);
-        return r.json();
-      }).then(function (tree) {
-        var paths = [];
-        (function walk(files, prefix) {
-          (files || []).forEach(function (f) {
-            var p = prefix + "/" + f.name;
-            if (f.type === "directory") walk(f.files, p);
-            else if (p.indexOf("/store/products/") === 0 && f.name.slice(-5) === ".json") paths.push(p);
-          });
-        })(tree.files, "");
-        return Promise.all(paths.map(function (p) {
-          return fetch(cdn + p).then(function (r) { return r.text(); }).then(function (t) {
-            try { var pr = JSON.parse(t); return pr && pr.id && pr.name ? pr : null; }
-            catch (e) { return null; } // bad file: skip, never break the store
-          }).catch(function () { return null; });
-        }));
-      }).then(function (products) {
+    // Serve from cache when fresh — keeps the store instant and far under API limits.
+    try {
+      var cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+      if (cached && Date.now() - cached.at < CACHE_TTL && cached.products.length) {
+        state.products = cached.products;
+        status.style.display = "none";
+        renderPills(); render();
+        return;
+      }
+    } catch (e) { /* corrupted cache: fall through to network */ }
+
+    var api = "https://api.github.com/repos/" + GITHUB_REPO + "/contents/store/products";
+    fetch(api).then(function (r) {
+      if (!r.ok) throw new Error("GitHub API " + r.status);
+      return r.json();
+    }).then(function (files) {
+      var jsons = files.filter(function (f) { return f.name.slice(-5) === ".json" && f.download_url; });
+      return Promise.all(jsons.map(function (f) {
+        return fetch(f.download_url).then(function (r) { return r.text(); }).then(function (t) {
+          try { var p = JSON.parse(t); return p && p.id && p.name ? p : null; }
+          catch (e) { return null; } // bad file: skip, never break the store
+        }).catch(function () { return null; });
+      }));
+    }).then(function (products) {
       state.products = products.filter(Boolean);
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), products: state.products })); }
+      catch (e) { /* private mode: fine without cache */ }
       status.style.display = "none";
       if (!state.products.length) {
         $("#grid").innerHTML = '<div class="status-line" style="grid-column:1/-1">No products yet — check back soon.</div>';
