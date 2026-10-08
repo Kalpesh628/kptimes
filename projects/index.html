@@ -3,55 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — KP Times</title>
-<meta name="description" content="Software projects by KP Times — built end-to-end, from database to deployment.">
+<title>Projects — KPTimes</title>
+<meta name="description" content="Selected builds by KPTimes — real software, designed and built end-to-end.">
 <link rel="canonical" href="https://kptimes.in/projects/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Projects — KP Times">
+<meta property="og:title" content="Projects — KPTimes">
 <meta property="og:description" content="Real software, built end-to-end.">
 <meta property="og:url" content="https://kptimes.in/projects/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d9488'/%3E%3Ctext x='50' y='69' font-size='46' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'%3EKT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f766e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>KP</text></svg>">
 </head>
 <body>
-<nav class="nav">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav scrolled" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="/"><span class="brand-mark">KP</span> KP Times</a>
-    <div class="nav-links">
-      <a href="/projects/" class="active">Projects</a>
+    <a class="brand" href="/"><span class="brand-mark">KT</span><span class="brand-name">KPTimes</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#services">Services</a><a href="/#work">Work</a><a href="/#process">How we work</a><a href="/#ai">AI &amp; Automation</a><a href="/#about">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-sm" href="/#contact">Start a Project</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
-  </div>
-</nav>
-
-<header class="hero" style="padding:52px 0 8px">
-  <div class="wrap">
-    <h1>Projects<span class="t">.</span></h1>
-    <p>Real software, built end-to-end — from database schema to deployment.</p>
   </div>
 </header>
-
-<main class="wrap">
-  <div class="grid cols-2" style="padding:26px 0 56px">
-    <a class="card" href="/projects/canteen/" style="color:inherit">
-      <h3>🍔 Campus Canteen Pre-Order &amp; Pickup System</h3>
-      <p>A full-stack Java web app: students pre-order food and pick a time slot; the canteen manages the rush. JSP · Servlets · JDBC · MySQL · Tomcat.</p>
-      <span class="go">View case study →</span>
-    </a>
-    <div class="card" style="opacity:.65">
-      <h3>🚧 More coming soon</h3>
-      <p>New builds land here as they're finished. Right now it's all about the canteen.</p>
-    </div>
-  </div>
-</main>
-
-<footer>
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <nav aria-label="Mobile">
+    <a href="/#services">Services</a><a href="/#work">Work</a><a href="/#process">How we work</a><a href="/#ai">AI &amp; Automation</a><a href="/#about">About</a>
+    <a href="/#contact" class="btn">Start a Project</a>
+  </nav>
+</div>
+<main id="main">
+<section class="section" style="padding-top:152px">
   <div class="wrap">
-    <div class="f-links">
-      <a href="/">Home</a>
-      <a href="/projects/canteen/">Campus Canteen</a>
+    <p class="eyebrow">Projects</p>
+    <h2 style="font-family:var(--font-d);font-size:clamp(30px,4vw,46px);letter-spacing:-.02em;margin-bottom:14px">Selected builds.</h2>
+    <p class="section-sub">Real things we've designed and built — not mockups, not concepts. Each one runs.</p>
+    <div class="work-grid">
+      <article class="card work">
+        <p class="work-tag">Full-stack web app · Live</p>
+        <h3>Campus Canteen Pre-Order &amp; Pickup</h3>
+        <p class="work-p"><strong>Problem:</strong> college canteen rush — long queues, missed orders, chaos at peak hours.</p>
+        <p class="work-p"><strong>Solution:</strong> students pre-order from their phone and reserve a pickup slot; staff manage everything through an order pipeline.</p>
+        <div class="stack"><span>Java</span><span>JSP/Servlets</span><span>MySQL</span><span>Tomcat</span></div>
+        <div class="work-links">
+          <a class="btn btn-sm" href="https://canteen.kptimes.in" target="_blank" rel="noopener">Live demo</a>
+          <a class="btn btn-sm ghost" href="/projects/canteen/">Case study</a>
+        </div>
+      </article>
+      <article class="card work">
+        <p class="work-tag">Business website · Concept</p>
+        <h3>Star Electrical Service</h3>
+        <p class="work-p"><strong>Problem:</strong> a skilled local electrician in Kharghar existed only as one line in a business directory.</p>
+        <p class="work-p"><strong>Solution:</strong> a trilingual website concept — services, real shop imagery, precise map location, one-tap call and WhatsApp.</p>
+        <div class="stack"><span>HTML/CSS/JS</span><span>Trilingual</span><span>Maps</span></div>
+        <div class="work-links"><a class="btn btn-sm" href="https://demo.kptimes.in" target="_blank" rel="noopener">View concept</a></div>
+      </article>
+      <article class="card work">
+        <p class="work-tag">Internal experiment · Prototype</p>
+        <h3>PaperTrade Terminal</h3>
+        <p class="work-p"><strong>Problem:</strong> learning to trade without risking real money, with real market data.</p>
+        <p class="work-p"><strong>Solution:</strong> a TradingView-style terminal — live prices, candlestick charts, virtual portfolio, honest trade stats.</p>
+        <div class="stack"><span>JavaScript</span><span>Live data</span><span>Canvas charts</span></div>
+        <div class="work-links"><span class="work-note">Internal build — demo on request</span></div>
+      </article>
     </div>
-    © 2026 KP Times · kptimes.in
+    <a class="btn ghost" href="/#contact">Have something to build? Tell us →</a>
   </div>
+</section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="/"><span class="brand-mark">KT</span><span class="brand-name">KPTimes</span></a>
+      <p class="foot-tag">Websites, apps, software &amp; AI solutions for small businesses.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="/#services">Services</a><a href="/#work">Work</a><a href="/#process">How we work</a><a href="/#ai">AI &amp; Automation</a><a href="/#about">About</a><a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap foot-base"><span>© 2026 KPTimes · kptimes.in</span><span>Designed &amp; built by KPTimes</span></div>
 </footer>
+<script src="/assets/app.js" defer></script>
 </body>
 </html>
