@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Templates — KPTimes</title>
+<meta name="description" content="Three minimalist website templates by KPTimes — Minimal, Blush and Cobalt. Same content, three different structures.">
+<link rel="canonical" href="https://kptimes.in/templates/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V5 · macrostructure: Catalogue · contrast: pass (40-41) · slop: pass (42-45) · honest: pass (46) · tokens: pass (48) · mobile: pass (34, 49, 50-57) */
+:root{
+  --bg:#0b0e13; --bg2:#0e1219; --surface:#121722; --line:rgba(255,255,255,.08);
+  --txt:#e9edf3; --muted:#9aa4b5; --teal:#14b8a6;
+  --font-d:"Space Grotesk",system-ui,sans-serif; --font-b:"Inter",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{overflow-x:clip;background:var(--bg);color:var(--txt);font-family:var(--font-b);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--teal);color:#04211d;padding:10px 16px;font-weight:700;z-index:200}
+.skip:focus{left:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.topbar{border-bottom:1px solid var(--line);padding:18px 0}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--font-d);font-weight:700;font-size:19px;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--teal)}
+.toplink{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap}
+.toplink:hover{color:var(--txt)}
+.hero{padding:96px 0 64px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+h1{font-family:var(--font-d);font-weight:700;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.05;letter-spacing:-0.02em;max-width:18ch;overflow-wrap:anywhere}
+.lede{color:var(--muted);font-size:18px;max-width:56ch;margin-top:16px}
+.grid{display:grid;gap:24px;padding-bottom:32px}
+@media(min-width:56rem){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s ease,transform .2s ease}
+.card:hover{border-color:var(--teal);transform:translateY(-3px)}
+.preview{height:190px;position:relative;display:flex;align-items:flex-end;padding:24px;overflow:hidden}
+.preview .aa{font-size:64px;line-height:1;position:absolute;top:18px;left:24px}
+.preview .tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;position:absolute;top:24px;right:24px;opacity:.65}
+.p-min{background:#FBFBF9;color:#17171B}
+.p-min .aa{font-family:var(--font-d);font-weight:700}
+.p-min .rule{position:absolute;bottom:56px;left:24px;right:24px;height:1px;background:#E0E0DA}
+.p-blush{background:#F9ECE8;color:#33231F}
+.p-blush .aa{font-family:"Fraunces",serif;font-weight:600}
+.p-blush .dot{position:absolute;bottom:52px;left:24px;width:12px;height:12px;background:#B03A5B;transform:rotate(45deg);border-radius:2px}
+.p-cobalt{background:#fff;color:#0D0D10}
+.p-cobalt .aa{font-family:"Archivo",sans-serif;font-weight:800}
+.p-cobalt .band{position:absolute;bottom:0;left:0;right:0;height:56px;background:#0038D0}
+.p-cobalt .band::after{content:"Aa";position:absolute;left:24px;top:50%;transform:translateY(-50%);color:#fff;font-family:"Archivo",sans-serif;font-weight:800;font-size:20px}
+.card-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h2{font-family:var(--font-d);font-size:22px;font-weight:600}
+.card-body p{font-size:14px;color:var(--muted);flex:1}
+.card-body .go{font-size:14px;font-weight:600;color:var(--teal);white-space:nowrap}
+.note{border:1px solid var(--line);border-radius:16px;padding:28px;color:var(--muted);font-size:15px;margin-bottom:96px}
+.note strong{color:var(--txt)}
+footer{border-top:1px solid var(--line);padding:32px 0}
+.foot{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="/">KP<span>Times</span></a>
+  <a class="toplink" href="/">← Back to kptimes.in</a>
+</div></div>
+
+<main id="main">
+  <section class="hero"><div class="wrap">
+    <p class="eyebrow">Template gallery</p>
+    <h1>One site, three minimalist voices.</h1>
+    <p class="lede">Every template below carries the full KPTimes site — services, work, process, AI, about, contact — rebuilt with a different structure, not just different colours. Pick the voice you like.</p>
+  </div></section>
+
+  <section><div class="wrap"><div class="grid">
+    <a class="card" href="/templates/minimal/">
+      <span class="preview p-min" aria-hidden="true"><span class="aa">Aa</span><span class="tag">01</span><span class="rule"></span></span>
+      <span class="card-body"><h2>Minimal</h2><p>Quiet light theme. Hairline rules, generous whitespace, typographic calm. Nothing decorative — everything earns its place.</p><span class="go">Open template →</span></span>
+    </a>
+    <a class="card" href="/templates/blush/">
+      <span class="preview p-blush" aria-hidden="true"><span class="aa">Aa</span><span class="tag">02</span><span class="dot"></span></span>
+      <span class="card-body"><h2>Blush</h2><p>Soft pink minimalism. Warm paper, dusty-rose accents, gentle serif display type. Friendly without being frivolous.</p><span class="go">Open template →</span></span>
+    </a>
+    <a class="card" href="/templates/cobalt/">
+      <span class="preview p-cobalt" aria-hidden="true"><span class="aa">Aa</span><span class="tag">03</span><span class="band"></span></span>
+      <span class="card-body"><h2>Cobalt</h2><p>Black, white and deep cobalt blue. Bold bands, oversized type, sharp edges. Minimalism with confidence.</p><span class="go">Open template →</span></span>
+    </a>
+  </div></div></section>
+
+  <section><div class="wrap">
+    <div class="note"><strong>Why three templates?</strong> Because "we build websites" is a claim — these are the proof. Each template is a complete, responsive, accessible build. If you like one of these voices for your own business site, <a href="/#contact" style="color:var(--teal)">tell us</a>.</div>
+  </div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <span>© 2026 KPTimes · kptimes.in</span>
+  <span>Designed &amp; built by KPTimes</span>
+</div></footer>
+</body>
+</html>
