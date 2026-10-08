@@ -1,4 +1,11 @@
-/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V5 · macrostructure: Manifesto · theme: custom-cobalt · heading: hanging · contrast: pass (40-41) · nav: N7 · footer: Ft5 · slop: pass (42-45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50-57) */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · macrostructure: Manifesto · theme: custom-cobalt · heading: hanging · contrast: pass (40-41) · nav: N7 · footer: Ft5 · slop: pass (42-45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50-57) · main site 2026-10-08 */
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--ink);color:#F4F4F6;overflow:hidden;white-space:nowrap;padding:14px 0;border-block:2px solid var(--ink)}
+.ticker-track{display:inline-flex;align-items:center;gap:26px;animation:tick 30s linear infinite;font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+.ticker-track i{font-style:normal;color:var(--cobalt)}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
 
 :root{
   --paper:#FFFFFF; --ink:#0D0D10; --muted:#55555E; --line:#E4E4E8;
