@@ -138,3 +138,4 @@
   /* ---------- footer year ---------- */
   // (year is fixed to 2026 in markup; update annually)
 })();
+
