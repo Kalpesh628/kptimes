@@ -96,6 +96,9 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .qtable{border-collapse:collapse;margin:16px auto;font-size:1.08rem}
 .qtable td{border:1px solid #4a4a66;padding:9px 20px;text-align:center;color:#e8e8f2}
 .pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
+.eqblock{margin:12px 0 4px 4px;font-family:Georgia,'Times New Roman',serif;font-size:1.1em;line-height:1.65}
+.eqblock .obj{font-weight:700}
+.eqblock .cons{padding-left:32px}
 .pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
 .pw td{padding:2px 8px}
 .q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
@@ -289,20 +292,20 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 
 <article class="topic"><div class="topic-head"><h3>Lagrange multipliers (NLPP)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">6 marks both times</span></span></div>
 <label class="done"><input type="checkbox" data-topic> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve: Optimise z = −x₁² − x₂² + 4x₁ + 8x₂, subject to x₁ + x₂ = 4, x₁, x₂ ≥ 0.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve: Maximise Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃, subject to x₁ + x₂ + x₃ = 7, x₁, x₂, x₃ ≥ 0.</div>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve the following NLPP:<div class="eqblock"><div class="eqline obj">Optimise&nbsp;&nbsp; z = −x₁² − x₂² + 4x₁ + 8x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ = 4</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
+<div class="q"><div class="meta"><b>May 2026 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve the following NLPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ + x₃ = 7</div><div class="eqline cons">x₁, x₂, x₃ ≥ 0</div></div></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Solving an LPP (Simplex method)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 6 marks</span></span></div>
 <label class="done"><input type="checkbox" data-topic> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q5c · 6 marks</b></div>Applying Simplex method, solve: Maximise Z = 3x₁ + 2x₂, subject to x₁ + x₂ ≤ 4, x₁ − x₃ ≤ 2, x₁, x₂ ≥ 0.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div>Maximise Z = 7x₁ + 5x₂, subject to −x₁ − 2x₂ ≥ −6, 4x₁ + 3x₂ ≤ 12, x₁, x₂ ≥ 0.</div>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5c · 6 marks</b></div>Applying Simplex method, solve the following LPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 3x₁ + 2x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ ≤ 4</div><div class="eqline cons">x₁ − x₃ ≤ 2</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
+<div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div><div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 7x₁ + 5x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">−x₁ − 2x₂ ≥ −6</div><div class="eqline cons">4x₁ + 3x₂ ≤ 12</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>LPP standard form &amp; dual</h3><span><span class="badge papers">1 paper each</span> <span class="badge marks">3 marks both times</span></span></div>
 <label class="done"><input type="checkbox" data-topic> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Transform the LPP to standard form: Maximise Z = 2x₁ + x₂ + 4x₃, subject to x₁ − x₂ + 2x₃ ≤ 5, 3x₁ + x₂ + 5x₃ ≥ 14, x₁, x₂ ≥ 0.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Construct the dual of: Maximise Z = 5x₁ + 4x₂, subject to 2x₁ + 6x₂ ≤ 5, 7x₁ + 3x₂ ≤ 2, x₁, x₂ ≥ 0.</div>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Transform the LPP to standard form:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 2x₁ + x₂ + 4x₃</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ − x₂ + 2x₃ ≤ 5</div><div class="eqline cons">3x₁ + x₂ + 5x₃ ≥ 14</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
+<div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Construct the dual of the following LPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 5x₁ + 4x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">2x₁ + 6x₂ ≤ 5</div><div class="eqline cons">7x₁ + 3x₂ ≤ 2</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 </article></section>
 
 <!-- RANK 2 · UNIT III -->
