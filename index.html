@@ -47,6 +47,9 @@ p{color:var(--color-muted)} p strong{color:var(--color-ink)}
 .sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
 .sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
 .sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
+.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
+.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
 .stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
 .stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
@@ -125,10 +128,12 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <span class="pill">Sources: <b>Dec 2025 (QP 00720)</b> + <b>May 2026 (QP 14664)</b></span>
 </div>
 <div class="sharebar">
+<a class="sharebtn" href="#how-to-pass" style="background:var(--color-accent-2);color:#fff">How to pass — minimum study</a>
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Maths%20PYQs%2C%20ranked%20unit-wise%20%3E%20topic-wise%20%3E%20subtopic-wise%2C%20with%20min%2Fmax%20marks%20and%20all%2042%20questions%20from%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
 <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
 <a class="sharebtn ghost" href="/papers/" style="text-decoration:none">Exact papers →</a>
 </div>
+<nav class="sitenav" aria-label="Site"><a href="#how-to-pass">How to pass</a><a href="#model-paper">Model paper</a><a href="#units">Ranked study</a><a href="/papers/">Exact papers</a></nav>
 <div class="stats">
 <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
 <div class="stat"><div class="n">42</div><div class="l">unique questions extracted, both papers (one question cross-listed under Moments + MGF)</div></div>
@@ -146,6 +151,43 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Exam dates are <strong>expected, not confirmed</strong> for AI &amp; DS (taken from the AI &amp; ML sheet: 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm). Treat them as expected until the official sheet is seen.</p>
 </div>
 </div></section>
+
+
+<section class="unit reveal" id="how-to-pass"><div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · target 30+ / 60</span></div>
+<p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>35 marks on the table from just the Q1 short skills plus four full-question topics</strong> — so even with mistakes, you stay above the pass band. Add the safe set and it becomes 51 marks on the table.</p>
+<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
+<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+<tr><td>Q1 short skills — eigenvalues shortcut, LPP standard form / dual, Fourier a<sub>n</sub>, MGF / moments, remainder, Spearman</td><td>Q1, any 5</td><td>15</td></tr>
+<tr><td>Poisson distribution</td><td>Q2a</td><td>4</td></tr>
+<tr><td>Karl Pearson correlation</td><td>Q2b</td><td>5</td></tr>
+<tr><td>Chinese Remainder Theorem</td><td>Q3b</td><td>5</td></tr>
+<tr><td>Fourier expansion (x² in (0, 2) is the repeat)</td><td>Q2c</td><td>6</td></tr>
+<tr><td><b>Total on the table</b></td><td></td><td><b>35</b></td></tr></table>
+<h3>Step 2 — the safe set (add these and you cover 51 marks)</h3>
+<p>Eigenvalues &amp; eigenvectors full question (6) + Cayley–Hamilton (4) + Lagrange multipliers (6) = 16 more marks. 35 + 16 = <strong>51 out of 60</strong> of the paper's usual shape.</p>
+<h3>Step 3 — how to attempt in the hall (2 hours)</h3>
+<p><strong>Q1 first (25 min)</strong> — the six short skills are the most predictable marks in the paper. <strong>Then Q2 (30 min), then Q3 (30 min)</strong> — both are templated, see the model paper below. <strong>Then your strongest remaining question (25 min), last 10 min to check.</strong> Attempt every part you touch, even half an answer — step marks add up, a blank scores zero. If a slot surprises you, fall back to the safe set instead of freezing on one question.</p>
+<div class="callout"><p><strong>Honest note, not a guarantee.</strong> This pattern comes from only two papers, and MU can break a slot any year. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: 35 marks on the table from the minimum set, 51 with the safe set, against a 27–30 pass band.</p></div>
+</section>
+
+<section class="unit reveal" id="model-paper"><div class="unit-head"><h2>Model paper — MU's strict pattern</h2><span class="rank">Predicted shape · practice only</span></div>
+<p>MU sets this paper to a strict template. The table below is that template, read off both papers slot by slot. Below it is a <strong>model paper built from the template for practice — it is NOT the real exam paper</strong>, and no question in it is claimed to be a leaked or real question. Practise each slot with the Dec / May question listed in the ranked study above.</p>
+<table class="qtable"><tr><td><b>Question</b></td><td><b>a (marks)</b></td><td><b>b (marks)</b></td><td><b>c (marks)</b></td><td><b>Evidence</b></td></tr>
+<tr><td><b>Q1 — any 5</b></td><td colspan="3">Eigenvalues · LPP · Fourier a<sub>n</sub> · MGF / moments · Remainder · Spearman — 3 marks each</td><td>Identical topics, same a–f order, both papers</td></tr>
+<tr><td><b>Q2</b></td><td>Poisson (4)</td><td>Pearson (5)</td><td>Fourier x² in (0, 2) (6)</td><td>Identical, both papers</td></tr>
+<tr><td><b>Q3</b></td><td>Statistics: regression / fit (4)</td><td>CRT (5)</td><td>Eigenvalues &amp; vectors (6)</td><td>Same topics, both papers</td></tr>
+<tr><td><b>Q4</b></td><td>Moments / MGF (4)</td><td>Diagonalisation or Normal (5)</td><td>RSA or Diagonalisation (6)</td><td>Topics rotate, marks fixed</td></tr>
+<tr><td><b>Q5</b></td><td>Cayley–Hamilton (4)</td><td>Normal or LPP (5)</td><td>Simplex or RSA (6)</td><td>Q5a fixed, rest rotate</td></tr>
+<tr><td><b>Q6</b></td><td>Fit or Fourier (4)</td><td>Fourier or Regression (5)</td><td>Lagrange multipliers (6)</td><td>Q6c fixed, rest rotate</td></tr></table>
+<h3>The model paper to practise (predicted shape, 60 marks)</h3>
+<p><strong>Q1 (any 5 × 3):</strong> a) eigenvalues of a matrix function · b) LPP standard form or dual · c) Fourier a<sub>n</sub> · d) MGF / moments · e) remainder by modular arithmetic · f) Spearman rank correlation.</p>
+<p><strong>Q2 (4 + 5 + 6):</strong> a) Poisson · b) Pearson correlation · c) Fourier expansion of x² in (0, 2).</p>
+<p><strong>Q3 (4 + 5 + 6):</strong> a) regression line or straight-line fit · b) CRT · c) eigenvalues and eigenvectors.</p>
+<p><strong>Q4 (4 + 5 + 6):</strong> a) moments / MGF · b) diagonalisation · c) RSA.</p>
+<p><strong>Q5 (4 + 5 + 6):</strong> a) Cayley–Hamilton · b) normal distribution · c) simplex method.</p>
+<p><strong>Q6 (4 + 5 + 6):</strong> a) straight-line fit · b) Fourier expansion of x · c) Lagrange multipliers.</p>
+<p>If you can attempt Q1 + Q2 + Q3 + any one of Q4–Q6 from this shape, you are attempting 60 marks with the most predictable material first.</p>
+</section>
 
 <nav class="controls"><div class="wrap">
 <input id="search" type="search" placeholder="Search a topic or question… e.g. RSA, Fourier, regression" aria-label="Search questions">
@@ -304,14 +346,14 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </article></section>
 
 <section><div class="wrap">
-<h2>Next subjects — same format, coming next</h2>
-<p>Maths is done first so you can check the format. DSGT, AOA, COA and Gen AI will get the exact same treatment — unit, then topic, then subtopic, with min/max marks and every question extracted — once you say this Maths page is correct. No content is guessed for them here; their sections stay empty until their papers are cleaned the same way.</p>
-<div class="soon">
-<div><b>DSGT</b><br>Coming next</div>
-<div><b>AOA</b><br>Coming next</div>
-<div><b>COA</b><br>Coming next</div>
-<div><b>Gen AI (OE)</b><br>Coming next</div>
-</div>
+<h2>The whole sem, on this site — one format per subject</h2>
+<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers.</p>
+<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td></tr>
+<tr><td><b>Maths (N2113111)</b></td><td>Done — on this page</td><td>Done — above</td><td>Done — above</td><td>Done — /papers/</td></tr>
+<tr><td><b>DSGT</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
+<tr><td><b>AOA</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
+<tr><td><b>COA</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
+<tr><td><b>Gen AI (OE)</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr></table>
 </div></section>
 </main>
 
