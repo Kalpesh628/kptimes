@@ -128,9 +128,26 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
 .paper h3{color:#1a1a1a}
 .paper p{color:#222}
+
+html{scroll-behavior:smooth}
+::selection{background:var(--color-accent);color:#0b0b12}
+.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
+.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--color-accent);color:#0b0b12}
+h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.topic{transition:transform .2s,box-shadow .2s}
+.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
+.solslot summary{cursor:pointer;font-weight:700}
+.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.sitemap a{color:var(--color-muted);font-weight:600}
+.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
+.jumpcard b{font-size:1.1rem}
+.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
 </style></head><body><div class="blob b1"></div><div class="blob b2"></div>
 <header><div class="wrap">
-<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a></nav>
+<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
 <span class="kick">SE · SEM III — Open Elective · Computer · AI&amp;DS</span>
 <h1>Gen AI, cracked.</h1>
 <p class="lede">Generative AI — open elective, paper code 2013311. Read the format warning first: Dec 2025 is a <strong>60-mark / 2-hour</strong> paper, but May 2026 is a <strong>30-mark / 1-hour</b> paper. The Winter 2026 format is unconfirmed — this page covers both, and never mixes their marks up.</p>
@@ -146,13 +163,13 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div>
 </div></header>
 <main>
-<section><div class="wrap">
+<section id="pattern"><div class="wrap">
 <h2>The format warning — read this before studying</h2>
 <p><strong>Dec 2025:</strong> Q1 any three × 5 = 15, + any three of Q2–Q6 (15 each), Q6 itself any three × 5 = 15. Total 60, 2 hours.<br><strong>May 2026:</strong> Q1 any five × 2 = 10, + any two of Q2–Q5 (10 each, 5 + 5). Total 30, 1 hour.<br>If Winter 2026 returns to the 60-mark ESE format, the Dec paper is the template. If it stays 30 marks, the May paper is. <strong>Do not study one format's marks as if they were the other's.</strong> The tracker below scales topic coverage to the 60-mark scale as an estimate only.</p>
 <h2>The pattern — topics repeat, not slots</h2>
 <p>Gen AI has no slot map: the same topics reappear in different questions and different sizes. The repeaters: <strong>GPT architecture is asked three times</strong> (Dec Q4b 7, May Q2b 5, May Q5b 5 — the two May ones are the same question, attempt only one), CNN twice, RNN twice, GPT variants twice, ethics twice, LLM twice, pre-training twice. Six topics — GenAI definition, GPT architecture, GPT variants, CNN, RNN, ethics — cover questions in both papers.</p>
 </div></section>
-<section><div class="wrap">
+<section id="ranked"><div class="wrap">
 <h2>Ranked study — tick what you know</h2>
 <p>Topics ranked by printed marks across both papers (152 printed in total, across two different formats). Tick to update the estimate; milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b> on the Dec 60-mark scale. Estimate only — not a promised score, and the May format's pass band is different (roughly half: ~12–14 to pass). Progress saves on this device.</p>
 <div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
@@ -180,14 +197,14 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <div class="topic"><label><input type="checkbox" data-w="2"> <b>LSTM</b> — May only · 2 · Q1e</label><p>What is LSTM?</p></div>
 <div class="topic"><label><input type="checkbox" data-w="2"> <b>Tokenization in transformers</b> — May only · 2 · Q1f</label><p>What is tokenization in transformer model?</p></div>
 </div></section>
-<section><div class="wrap">
+<section id="model"><div class="wrap">
 <h2>Model paper — practice only, not the real paper</h2>
 <p>Two practice versions, because the format is unconfirmed. Both are built from PYQ questions only. <strong>Neither is the Winter 2026 paper.</strong></p>
 <table class="qtable"><tr><td><b>Version</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
 <tr><td><b>60-mark (Dec template)</b></td><td>Q1: definition + GPT variants + data importance · Q2: CNN + pre-training/fine-tuning · Q4: challenges + GPT architecture · Q5: Chat-GPT + LLM types · Q6: ethics + domains + self-attention</td><td>60</td></tr>
 <tr><td><b>30-mark (May template)</b></td><td>Q1: five 2-mark definitions (GenAI, GPT/Chat-GPT, LLM, pre-training, LSTM or tokenization) · any two of: CNN + GPT architecture · ethics + GPT variants · Transformer + five tools · RNN + GPT architecture</td><td>30</td></tr></table>
 </div></section>
-<section><div class="wrap">
+<section id="pass"><div class="wrap">
 <h2>Pass plan — Gen AI</h2>
 <table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
 <tr><td><b>Six repeaters</b></td><td>GenAI definition · GPT architecture · GPT variants · CNN · RNN · Ethics</td><td><b>Questions in both papers</b></td></tr>
@@ -195,7 +212,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <tr><td><b>30-mark format</b></td><td>Q1 (10, pick five definitions) + any two of Q2–Q5 (20)</td><td><b>30 attempted; pass ~12–14 (confirm from college)</b></td></tr></table>
 <p>Attempt order, 60-mark paper: Q1 (25 min) → GPT architecture + CNN (30) → strongest remaining (30) → check (15). For the 30-mark paper: Q1 definitions first (15 min), then the two strongest 10-mark questions (20 min each), check in the remaining time. Honest note: only 2 papers, in two different formats — the pattern here is topic repetition, not a slot map, and the Winter format itself is unconfirmed. This raises your odds; it is not a guarantee.</p>
 </div></section>
-<section><div class="wrap">
+<section id="exact"><div class="wrap">
 <h2>Exact papers — Gen AI</h2>
 <div class="paper">
 <h3>Dec 2025 — QP 25503 · 2 hours · 60 marks · 12/12/2025</h3>
@@ -216,7 +233,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div>
 <p class="small">For SE Sem III — open elective Generative AI (2013311); these papers show Computer · AI&amp;DS branches, and branches vary by elective choice. Questions extracted from the Dec 2025 (60-mark) and May 2026 (30-mark) NEP papers for study use. No names, no personal details on this page. <a href="/">← Back to Maths home</a> · <a href="/dsgt/">DSGT page</a> · <a href="/aoa/">AOA page</a> · <a href="/coa/">COA page</a> · <a href="/papers/">Exact papers hub</a></p>
 </div></section>
-</main>
+<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for GENAI. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: GPT architecture &amp; working</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: CNN — architecture &amp; working</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: RNN — architecture &amp; working</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: GPT variants</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Ethics in Generative AI</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: LLM — Large Language Models</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Generative AI tools / applications</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Pre-training</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Generative AI — definition &amp; scope</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Challenges in Generative AI</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Chat-GPT</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Multi-head mechanism in GPT</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Importance of data in training</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Importance in five real-world domains</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Traditional vs modern language models</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Self-attention in GPT</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Transformer architecture</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: GPT and Chat-GPT — definition</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: LSTM</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Tokenization in transformers</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><div class="sitemap"><b>Every page, every part:</b><a href="/">Maths home</a><a href="/#units">Maths ranked</a><a href="/#model-paper">Maths model paper</a><a href="/dsgt/">DSGT page</a><a href="/dsgt/#ranked">DSGT ranked</a><a href="/dsgt/#model">DSGT model</a><a href="/dsgt/#pass">DSGT pass plan</a><a href="/dsgt/#exact">DSGT exact papers</a><a href="/dsgt/#solutions">DSGT solutions</a><a href="/aoa/">AOA page</a><a href="/aoa/#ranked">AOA ranked</a><a href="/aoa/#model">AOA model</a><a href="/aoa/#pass">AOA pass plan</a><a href="/aoa/#exact">AOA exact papers</a><a href="/aoa/#solutions">AOA solutions</a><a href="/coa/">COA page</a><a href="/coa/#ranked">COA ranked</a><a href="/coa/#model">COA model</a><a href="/coa/#pass">COA pass plan</a><a href="/coa/#exact">COA exact papers</a><a href="/coa/#solutions">COA solutions</a><a href="/genai/">Gen AI page</a><a href="/genai/#ranked">Gen AI ranked</a><a href="/genai/#model">Gen AI model</a><a href="/genai/#pass">Gen AI pass plan</a><a href="/genai/#exact">Gen AI exact papers</a><a href="/genai/#solutions">Gen AI solutions</a><a href="/papers/">Exact papers hub</a><a href="/#solutions">Maths solutions</a></div></main>
 <script>
 (function(){
 var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
