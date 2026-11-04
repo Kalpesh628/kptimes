@@ -128,9 +128,26 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
 .paper h3{color:#1a1a1a}
 .paper p{color:#222}
+
+html{scroll-behavior:smooth}
+::selection{background:var(--color-accent);color:#0b0b12}
+.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
+.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--color-accent);color:#0b0b12}
+h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.topic{transition:transform .2s,box-shadow .2s}
+.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
+.solslot summary{cursor:pointer;font-weight:700}
+.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.sitemap a{color:var(--color-muted);font-weight:600}
+.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
+.jumpcard b{font-size:1.1rem}
+.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
 </style></head><body><div class="blob b1"></div><div class="blob b2"></div>
 <header><div class="wrap">
-<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/papers/">Exact papers</a><a href="/#how-to-pass">How to pass (Maths)</a></nav>
+<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
 <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
 <h1>DSGT, cracked.</h1>
 <p class="lede">Discrete Structures &amp; Graph Theory — paper code N2113112. 60 marks, 3 hours. This page is the same treatment as Maths: every question from both NEP papers, ranked by how often its topic was asked, with the marks it actually carried.</p>
@@ -147,7 +164,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div></header>
 
 <main>
-<section><div class="wrap">
+<section id="pattern"><div class="wrap">
 <h2>The pattern, first — because DSGT barely moves</h2>
 <p>DSGT is the most predictable paper of the semester. <strong>Every single slot asks the same topic in both papers.</strong> Q1a is equivalence both times, Q1b is logical equivalence both times, Q1c is pigeonhole both times — all the way down to Q6b, Euler/Hamiltonian both times. If you learn the slot list below, you have learned the paper. The only thing that changes is the story wrapped around the question.</p>
 <table class="qtable"><tr><td><b>Slot</b></td><td><b>Dec 2025</b></td><td><b>May 2026</b></td><td><b>Marks</b></td></tr>
@@ -169,7 +186,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p class="small">Q1 as printed in the scans: Dec shows a–e (its heading says six — a sixth subquestion is not in the scan); May shows only a–c. May Q2a and Q4a marks are taken as 8 because each question totals 15 and the b-part is 7. May Q6b's graph figure is not legible in the scan. Nothing here is invented to fill those gaps.</p>
 </div></section>
 
-<section><div class="wrap">
+<section id="ranked"><div class="wrap">
 <h2>Ranked study — tick what you know</h2>
 <p>Topics ranked by printed marks across both papers (190 printed in total). Ticking a topic updates your estimated marks out of 60 and lights up the milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b>. Estimate only, from PYQ coverage — not a promised score. Progress saves on this device.</p>
 <div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
@@ -199,7 +216,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <div class="topic"><label><input type="checkbox" data-w="5"> <b>Mapping: function / one-one / onto / many-one</b> — Dec only · 5 · Q1e</label><p>Tracks by score: Coding ≥ 80 → Software, Networks ≥ 75 → Network Security, Math ≥ 85 → Data Science (priority Data Science &gt; Software &gt; Network Security); students S1 (85,60,70), S2 (65,80,90), S3 (82,78,88), S4 (78,76,60) — map each student, check function / one-one / onto / many-one.</p></div>
 </div></section>
 
-<section><div class="wrap">
+<section id="model"><div class="wrap">
 <h2>Model paper — practice only, not the real paper</h2>
 <p>This is a predicted <strong>practice paper</strong> built from the slot map above, using the PYQ questions themselves as practice. It is <strong>not</strong> the Winter 2026 paper and nothing here is leaked or guessed from outside the two papers.</p>
 <table class="qtable"><tr><td><b>Q</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
@@ -212,7 +229,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Attempt Q1 + any three of Q2–Q6, exactly like the real paper. If you can do this practice paper cold, you can do the pattern.</p>
 </div></section>
 
-<section><div class="wrap">
+<section id="pass"><div class="wrap">
 <h2>Pass plan — DSGT</h2>
 <table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
 <tr><td><b>Q1's three fixed shorts</b></td><td>Equivalence · Logical equivalence · Pigeonhole</td><td><b>15</b></td></tr>
@@ -222,7 +239,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Pass is ~27, halfway 30, distinction 45. The minimum set above — Q1 + Q2 + Q3 — already puts 45 marks on the table from fully fixed slots, so even partial credit clears pass comfortably. The safe set adds Q5 (isomorphism + recurrence) for a full 60 attempted. Attempt order for the 3-hour paper: Q1 (30 min) → Q2 (35) → Q3 (35) → strongest of Q4/Q5/Q6 (35) → check with the remaining time. Use the full time on the graph questions' diagrams. Honest note: this pattern comes from only 2 papers — MU can break a slot. It raises your odds; it is not a guarantee.</p>
 </div></section>
 
-<section><div class="wrap">
+<section id="exact"><div class="wrap">
 <h2>Exact papers — DSGT</h2>
 <p>Both papers in original order and numbering, marks on the right, tables as printed. The full verbatim transcript lives in the study notes; the questions below are reproduced as printed, including the scan gaps flagged under the slot map.</p>
 
@@ -247,7 +264,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div>
 <p class="small">For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing this subject. Questions extracted from the Dec 2025 and May 2026 NEP papers (N2113112) for study use. No names, no personal details on this page. <a href="/">← Back to Maths home</a> · <a href="/papers/">Exact papers hub</a></p>
 </div></section>
-</main>
+<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for DSGT. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Inclusion–exclusion</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Transitive closure / Warshall</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Group under × mod 7</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Graph isomorphism</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Ring</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Function composition</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Hasse diagram / lattice</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Mathematical induction</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Recurrence relation</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Euler / Hamiltonian paths &amp; circuits</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Equivalence relation</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Logical equivalence</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Pigeonhole principle</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Truth table / access expression</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Mapping: function / one-one / onto / many-one</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><div class="sitemap"><b>Every page, every part:</b><a href="/">Maths home</a><a href="/#units">Maths ranked</a><a href="/#model-paper">Maths model paper</a><a href="/dsgt/">DSGT page</a><a href="/dsgt/#ranked">DSGT ranked</a><a href="/dsgt/#model">DSGT model</a><a href="/dsgt/#pass">DSGT pass plan</a><a href="/dsgt/#exact">DSGT exact papers</a><a href="/dsgt/#solutions">DSGT solutions</a><a href="/aoa/">AOA page</a><a href="/aoa/#ranked">AOA ranked</a><a href="/aoa/#model">AOA model</a><a href="/aoa/#pass">AOA pass plan</a><a href="/aoa/#exact">AOA exact papers</a><a href="/aoa/#solutions">AOA solutions</a><a href="/coa/">COA page</a><a href="/coa/#ranked">COA ranked</a><a href="/coa/#model">COA model</a><a href="/coa/#pass">COA pass plan</a><a href="/coa/#exact">COA exact papers</a><a href="/coa/#solutions">COA solutions</a><a href="/genai/">Gen AI page</a><a href="/genai/#ranked">Gen AI ranked</a><a href="/genai/#model">Gen AI model</a><a href="/genai/#pass">Gen AI pass plan</a><a href="/genai/#exact">Gen AI exact papers</a><a href="/genai/#solutions">Gen AI solutions</a><a href="/papers/">Exact papers hub</a><a href="/#solutions">Maths solutions</a></div></main>
 <script>
 (function(){
 var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
