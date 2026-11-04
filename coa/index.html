@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COA PYQs, Ranked — Sem III Exam Study</title>
+<meta name="description" content="Sem III COA (N2113114) PYQs ranked topic-wise with marks, from Dec 2025 + May 2026, for Computer, AI&DS and CS-IoT branches.">
+<meta property="og:title" content="COA PYQs, Ranked — Sem III Exam Study"><meta property="og:description" content="COA ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026."><meta property="og:type" content="website">
+<style>
+:root{
+  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
+  --color-ink:#f4f4f8; --color-muted:#a7a7bd; --color-accent:#c8f542; --color-accent-2:#a78bfa;
+  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
+body{line-height:1.7;font-size:18px}
+a{color:var(--color-accent)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px;min-width:0}
+h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
+h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
+h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin:0 0 .3rem;letter-spacing:-.02em;font-weight:700}
+h3{font-size:1.3rem;margin:.2rem 0 .5rem;letter-spacing:-.01em;font-weight:700}
+p{color:var(--color-muted)} p strong{color:var(--color-ink)}
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
+.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
+.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
+@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
+.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
+.lede{font-size:1.15rem;max-width:680px}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
+.pill b{color:var(--color-accent)}
+.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
+.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
+.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap}
+.fab:hover{transform:translateY(-1px)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow:auto}
+.modal-backdrop[hidden]{display:none}
+.modal-card{background:var(--color-paper-2);border:1px solid #2e2e46;border-radius:22px;padding:30px 32px;max-width:880px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.modal-close{float:right;background:transparent;border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:8px 16px;font-size:1rem;cursor:pointer}
+@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}.modal-card{padding:22px 18px}}
+.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
+.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
+.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
+.stat .l{color:var(--color-muted);font-size:.9rem}
+section{padding:34px 0}
+.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
+.callout p{margin:.3rem 0}
+.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
+.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
+.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
+.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
+.unit{border:1px solid #2e2e46;border-radius:24px;padding:36px 38px;margin:30px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
+.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
+.topic{background:var(--color-card);border:1px solid #34344e;border-radius:18px;padding:28px 30px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.badge{border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700;white-space:nowrap}
+.badge.repeat{background:#12351f;color:#7bf1a8}
+.badge.marks{background:#3a2f00;color:var(--color-mark)}
+.badge.papers{background:#241a4d;color:#c4b5fd}
+.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
+.q .meta{font-size:.82rem;color:var(--color-muted);margin-bottom:2px}
+.q .meta b{color:var(--color-accent)}
+.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
+.done input{accent-color:var(--color-accent);width:18px;height:18px}
+.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
+.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
+.milestones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ms{border:1px solid var(--color-line);border-radius:999px;padding:6px 13px;font-size:.9rem;color:var(--color-muted)}
+.ms.done{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) scale(.7);background:var(--color-accent);color:#0b0b12;font-weight:700;font-size:1.05rem;padding:16px 24px;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;text-align:center;max-width:92vw}
+.toast.show{opacity:1;transform:translateX(-50%) scale(1);animation:pop .45s ease}
+@keyframes pop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.08)}100%{transform:translateX(-50%) scale(1)}}
+.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
+.soon b{color:var(--color-ink)}
+footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
+@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
+
+.matrix-wrap{display:inline-flex;align-items:stretch;vertical-align:middle;margin:2px 4px}
+.matrix-wrap::before{content:"";width:9px;border:3px solid var(--color-ink);border-right:0}
+.matrix-wrap::after{content:"";width:9px;border:3px solid var(--color-ink);border-left:0}
+.matrix{display:inline-table;vertical-align:middle;border-collapse:collapse}
+.matrix td{padding:3px 10px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:1.12em;line-height:1.3}
+.qtable{border-collapse:collapse;margin:16px auto;font-size:1.08rem}
+.qtable td{border:1px solid #4a4a66;padding:9px 20px;text-align:center;color:#e8e8f2}
+.pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
+.eqblock{margin:12px 0 4px 4px;font-family:Georgia,'Times New Roman',serif;font-size:1.1em;line-height:1.65}
+.eqblock .obj{font-weight:700}
+.eqblock .cons{padding-left:32px}
+.pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
+.pw td{padding:2px 8px}
+.q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
+.q .meta{font-size:.86rem;letter-spacing:.02em}
+
+.paper{background:#fdfdf8;color:#111;border:1px solid #444;border-radius:6px;padding:28px 30px;margin:22px 0;font-family:Georgia,'Times New Roman',serif}
+.paper h3{font-family:Georgia,serif;color:#111;font-size:1.3rem;text-align:center}
+.paper .phead{text-align:center;font-weight:700;line-height:1.4}
+.paper .phead small{display:block;font-weight:400}
+.paper .prow{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.paper .pmarks{font-weight:700;white-space:nowrap}
+.paper .pq{margin:14px 0}
+.paper .sub{margin:8px 0 8px 28px}
+.paper .matrix td{color:#111}
+.paper .matrix-wrap::before,.paper .matrix-wrap::after{border-color:#111}
+.paper .pw .brace{color:#111}
+.ptable{border-collapse:collapse;margin:8px 0 8px 28px}
+.ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
+@media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
+
+.miles{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.miles span{padding:8px 14px;border-radius:999px;border:1px solid var(--color-line);color:var(--color-muted);font-weight:700}
+.miles span.on{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent)}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--color-accent);color:#0b0b12;font-weight:800;padding:14px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.topic{border:1px solid var(--color-line);border-radius:16px;padding:16px 18px;margin:14px 0}
+.topic label{font-size:1.05rem;cursor:pointer}
+.topic input{transform:scale(1.3);margin-right:8px}
+.paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
+.paper h3{color:#1a1a1a}
+.paper p{color:#222}
+</style></head><body><div class="blob b1"></div><div class="blob b2"></div>
+<header><div class="wrap">
+<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/papers/">Exact papers</a></nav>
+<span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
+<h1>COA, cracked.</h1>
+<p class="lede">Computer Organization &amp; Architecture — paper code N2113114. 60 marks, 2 hours. Same treatment as Maths, DSGT and AOA: every question from both NEP papers, ranked by the marks its topic actually carried. Note on both papers: a calculator with a number-conversion function is not allowed — so conversions must be done by hand, and they are asked every time.</p>
+<div class="pills">
+<span class="pill">Sources: <b>Dec 2025 (QP 98169)</b> + <b>May 2026 (QP 09161)</b></span>
+<span class="pill">Same paper for: <b>Computer · AI&amp;DS · CS-IoT</b></span>
+<span class="pill">Pattern: <b>Q1 any 3 × 5 (15) + any 3 of Q2–Q6 (15 each)</b></span>
+</div>
+<div class="stats"><div><b>2</b><span>papers</span></div><div><b>29</b><span>printed questions</span></div><div><b>19</b><span>topics</span></div><div><b id="heroMarks">0 / 60</b><span>estimated marks (tick topics below)</span></div></div>
+<div class="sharebar">
+<a class="sharebtn" href="https://wa.me/?text=Sem%20III%20COA%20PYQs%2C%20ranked%20topic-wise%2C%20with%20marks%20and%20both%20papers%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Fcoa%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+<button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/coa/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+</div>
+</div></header>
+<main>
+<section><div class="wrap">
+<h2>The pattern — Q5 never moves, the rest rotates</h2>
+<p>The safest 15 marks in COA: <strong>Q5 is identical in topic both papers — 8086 architecture (8) + Booth's algorithm (7)</strong>. Q1 always holds number conversion and associative memory, with two rotating slots. The other big topics — non-restoring division, cache mapping, pipeline hazards, I/O methods, control unit, Flynn's — all appear both times but <strong>move slots</strong> between Q2, Q3, Q4 and Q6. Learn the topic, not the slot.</p>
+<table class="qtable"><tr><td><b>Slot</b></td><td><b>Dec 2025</b></td><td><b>May 2026</b></td><td><b>Marks</b></td></tr>
+<tr><td><b>Q1 (any 3)</b></td><td>Number conversion · Addressing modes 8086 · Associative memory · ISA/PCI/USB buses</td><td>Hex conversion + addition · Instruction pipeline · Memory characteristics · Associative memory</td><td>5 each</td></tr>
+<tr><td><b>Q2</b></td><td>Non-restoring division (8) + Memory hierarchy (7)</td><td>IEEE 754 (8) + Pipeline hazards (7)</td><td>15, 15</td></tr>
+<tr><td><b>Q3</b></td><td>Cache mapping format (8) + I/O methods (7)</td><td>Non-restoring division (8) + Programmed/interrupt I/O (7)</td><td>15, 15</td></tr>
+<tr><td><b>Q4</b></td><td>Microprogrammed CU (8) + Pipeline hazards (7)</td><td>Cache mapping compare (8) + Hardwired vs Softwired CU (7)</td><td>15, 15</td></tr>
+<tr><td><b>Q5 — FIXED</b></td><td>8086 architecture (8) + Booth's multiply (7)</td><td>8086 architecture (8) + Booth's multiply (7)</td><td>15, 15</td></tr>
+<tr><td><b>Q6</b></td><td>Bus arbitration (5) + Flynn's (5) + Horizontal vs Vertical microinstruction (5)</td><td>Flynn's (8) + 80386DX operation modes (7)</td><td>15, 15</td></tr></table>
+</div></section>
+<section><div class="wrap">
+<h2>Ranked study — tick what you know</h2>
+<p>Topics ranked by printed marks across both papers (190 printed in total). Tick to update estimated marks out of 60; milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b>. Estimate only, from PYQ coverage — not a promised score. Progress saves on this device.</p>
+<div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
+<div id="toast"></div>
+<h3>Rank 1 — 16 marks each, asked 2/2 papers</h3>
+<div class="topic"><label><input type="checkbox" data-w="16"> <b>8086 architecture</b> — 2/2 · 8+8 · Q5a both papers, FIXED</label><p>Explain with a suitable diagram the architecture of the 8086 microprocessor — same question, same slot, same marks, both papers. Draw it once, neatly, and reuse it.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="16"> <b>Cache mapping</b> — 2/2 · 8+8</label><p>Dec Q3a: 64MB main memory, 32KB cache, 8-byte lines — memory-address format for Direct and Associative mapping. May Q4a: compare Direct, Associative, Set Associative cache mapping techniques.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="16"> <b>Non-restoring division</b> — 2/2 · 8+8</label><p>Dec Q2a: flowchart + implement for (13/3). May Q3a: flowchart + solve (15)₁₀ / (2)₁₀. Same algorithm, different numbers — practice it with any two numbers until the flowchart is automatic.</p></div>
+<h3>Rank 2 — control unit and the 14-mark topics</h3>
+<div class="topic"><label><input type="checkbox" data-w="8"> <b>Microprogrammed control unit</b> — Dec Q4a · 8</label><p>Explain micro-programmed control unit with a suitable diagram.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="7"> <b>Hardwired vs Softwired CU</b> — May Q4b · 7</label><p>Compare hardwired and softwired (microprogrammed) control unit design techniques.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Horizontal vs Vertical microinstruction</b> — Dec Q6c · 5</label><p>Differentiate horizontal and vertical microinstruction. (Control-unit family total: 20.)</p></div>
+<div class="topic"><label><input type="checkbox" data-w="14"> <b>Booth's algorithm</b> — 2/2 · 7+7 · Q5b both papers, FIXED</label><p>Dec: multiply (12)₁₀ and (−5)₁₀. May: multiply (−8)₁₀ and (−3)₁₀. Same slot as 8086 architecture — Q5 is a ready-made 15 marks.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="14"> <b>Pipeline hazards</b> — 2/2 · 7+7</label><p>Dec Q4b: various pipeline hazards + methods to resolve them. May Q2b: different pipeline hazards. (May Q1b also asks the instruction pipeline concept, 5 — counted separately below.)</p></div>
+<div class="topic"><label><input type="checkbox" data-w="14"> <b>I/O methods</b> — 2/2 · 7+7</label><p>Dec Q3b: programmed I/O, interrupt-driven I/O, DMA — explain and compare. May Q3b: programmed IO and interrupt-driven data transfer methods.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="13"> <b>Flynn's classification</b> — 2/2 · 5+8 · Q6 both papers</label><p>Dec Q6b (5), May Q6a (8) — explain Flynn's classification. In Q6 both times, but worth more in May.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="12"> <b>Memory hierarchy / characteristics</b> — 2/2 · 7+5</label><p>Dec Q2b (7): memory hierarchy with diagrams and characteristics of memory. May Q1c (5): characteristics of memory.</p></div>
+<h3>Rank 3 — Q1 regulars and single-paper topics</h3>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>Number conversion</b> — 2/2 · 5+5 · Q1A both papers</label><p>Dec: (345.35)₁₀ and (818.55)₁₀ to Binary, Octal, Hexadecimal. May: (74.25)₁₀ and (47.50)₁₀ to Hexadecimal + addition on the converted numbers. No conversion calculator allowed — practice by hand.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>Associative memory</b> — 2/2 · 5+5 · Q1 both papers</label><p>Dec Q1c: associative memory with usages. May Q1d: associative memory.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="8"> <b>IEEE 754 floating point</b> — May only · 8 · Q2a</label><p>Convert (56.45)₁₀ into IEEE 754 single-precision format.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="7"> <b>80386DX operation modes</b> — May only · 7 · Q6b</label><p>Differentiate between different operation modes of the 80386DX processor.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>ISA / PCI / USB buses</b> — Dec only · 5 · Q1d</label><p>Explain ISA, PCI and USB buses.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Bus arbitration</b> — Dec only · 5 · Q6a</label><p>Explain bus arbitration with examples.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Addressing modes of 8086</b> — Dec only · 5 · Q1b</label><p>Explain addressing modes of 8086 with a suitable example.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Instruction pipeline</b> — May only · 5 · Q1b</label><p>Explain the instruction pipeline. (Hazards themselves are counted above.)</p></div>
+</div></section>
+<section><div class="wrap">
+<h2>Model paper — practice only, not the real paper</h2>
+<p>Predicted <strong>practice paper</strong> from the pattern above, using PYQ questions as practice. <strong>Not</strong> the Winter 2026 paper.</p>
+<table class="qtable"><tr><td><b>Q</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
+<tr><td><b>Q1 — any 3</b></td><td>Number conversion (by hand) · Associative memory · Instruction pipeline · Memory characteristics</td><td>15</td></tr>
+<tr><td><b>Q2</b></td><td>IEEE 754 conversion + Pipeline hazards</td><td>8 + 7</td></tr>
+<tr><td><b>Q3</b></td><td>Non-restoring division flowchart + I/O methods</td><td>8 + 7</td></tr>
+<tr><td><b>Q4</b></td><td>Cache mapping compare + Hardwired vs Softwired CU</td><td>8 + 7</td></tr>
+<tr><td><b>Q5 — fixed</b></td><td>8086 architecture + Booth's multiply</td><td>8 + 7</td></tr>
+<tr><td><b>Q6</b></td><td>Flynn's classification + 80386DX modes</td><td>8 + 7</td></tr></table>
+</div></section>
+<section><div class="wrap">
+<h2>Pass plan — COA</h2>
+<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+<tr><td><b>Q1 — pick three</b></td><td>Number conversion + Associative memory + one more</td><td><b>15</b></td></tr>
+<tr><td><b>Q5 — fixed slot</b></td><td>8086 architecture + Booth's algorithm</td><td><b>15</b></td></tr>
+<tr><td><b>One more full question</b></td><td>Cache mapping or Non-restoring division</td><td><b>15</b></td></tr>
+<tr><td><b>Total on the table (safe set)</b></td><td></td><td><b>45</b></td></tr></table>
+<p>Pass ~27, halfway 30, distinction 45. Q1 (15) + Q5 (15) already puts 30 on the table — past pass at full marks — and the third question takes you to the distinction line. Attempt order for the 2-hour paper: Q1 (25 min) → Q5 (30) → strongest of Q3/Q4 (30) → check (15). Draw the 8086 diagram and the cache-mapping format once, neatly — they carry marks by themselves. Honest note: pattern from only 2 papers, and COA rotates slots, so learn the topic, not the slot. It raises your odds; it is not a guarantee.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Exact papers — COA</h2>
+<div class="paper">
+<h3>Dec 2025 — QP 98169 · 2 hours · 60 marks · 10/12/2025</h3>
+<p><b>Q1 — Attempt any THREE (5M each).</b> A: Convert (345.35)₁₀ and (818.55)₁₀ to Binary, Octal and Hexadecimal. B: Addressing modes of 8086 with example. C: Associative memory with usages. D: ISA, PCI and USB buses.</p>
+<p><b>Q2 A) (8)</b> Flowchart for non restoring division algorithm, implement for (13/3). <b>B) (7)</b> Memory hierarchy with diagrams and characteristics of memory.</p>
+<p><b>Q3 A) (8)</b> 64MB main memory, 32KB cache, 8-byte lines — memory-address format for Direct and Associative mapping. <b>B) (7)</b> Programmed I/O, interrupt-driven I/O, DMA — explain and compare.</p>
+<p><b>Q4 A) (8)</b> Micro-programmed control unit with diagram. <b>B) (7)</b> Various pipeline hazards + methods to resolve them, with drawings and explanation.</p>
+<p><b>Q5 A) (8)</b> Architecture of 8086 microprocessor with diagram. <b>B) (7)</b> Multiply (12)₁₀ and (−5)₁₀ using Booth's algorithm.</p>
+<p><b>Q6 A) (5)</b> Bus arbitration with examples. <b>B) (5)</b> Flynn's classification. <b>C) (5)</b> Horizontal vs vertical microinstruction.</p>
+</div>
+<div class="paper">
+<h3>May 2026 — QP 09161 · 2 hours · 60 marks · 11/06/2026</h3>
+<p><b>Q1 — Attempt any THREE (5M each).</b> A: Convert (74.25)₁₀ and (47.50)₁₀ into hexadecimal + addition on converted numbers. B: Instruction pipeline. C: Characteristics of memory. D: Associative memory.</p>
+<p><b>Q2 A) (8)</b> Convert (56.45)₁₀ into IEEE 754 floating-point Single Precision format. <b>B) (7)</b> Different pipeline hazards.</p>
+<p><b>Q3 A) (8)</b> Flowchart for nonrestoring division algorithm, solve (15)₁₀ / (2)₁₀. <b>B) (7)</b> Programmed IO and interrupt-driven data transfer methods.</p>
+<p><b>Q4 A) (8)</b> Compare Direct, Associative, Set Associative Cache Mapping techniques. <b>B) (7)</b> Compare Hardwired and Softwired control unit design techniques.</p>
+<p><b>Q5 A) (8)</b> Architecture of 8086 microprocessor. <b>B) (7)</b> Multiply (−8)₁₀ and (−3)₁₀ using Booth's algorithm.</p>
+<p><b>Q6 A) (8)</b> Flynn's classification. <b>B) (7)</b> Different operation modes of 80386DX processor.</p>
+</div>
+<p class="small">For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing this subject. Questions extracted from the Dec 2025 and May 2026 NEP papers (N2113114) for study use. No names, no personal details on this page. <a href="/">← Back to Maths home</a> · <a href="/dsgt/">DSGT page</a> · <a href="/aoa/">AOA page</a> · <a href="/papers/">Exact papers hub</a></p>
+</div></section>
+</main>
+<script>
+(function(){
+var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
+var hero=document.getElementById('heroMarks');var toast=document.getElementById('toast');
+var key='coa-study-done';var done={};try{done=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+var lit={};
+function render(celebrate){
+var s=0;boxes.forEach(function(b){if(b.checked)s+=+b.dataset.w;});
+var est=Math.round(s*60/190);hero.textContent=est+' / 60';
+document.querySelectorAll('.miles span').forEach(function(el){
+var m=+el.dataset.mile;var on=est>=m;el.classList.toggle('on',on);
+if(on&&!lit[m]&&celebrate){lit[m]=true;toast.textContent='Yay! You crossed '+m+' — '+(m==27?'you can pass!':m==30?'halfway there!':m==45?'distinction range!':'full paper!');toast.className='show';setTimeout(function(){toast.className=''},3500);}
+if(!on)lit[m]=false;});
+}
+boxes.forEach(function(b,i){b.checked=!!done[i];b.addEventListener('change',function(){done[i]=b.checked;try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}render(true);});});
+render(false);
+})();
+</script>
+</body></html>
