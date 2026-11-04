@@ -47,6 +47,13 @@ p{color:var(--color-muted)} p strong{color:var(--color-ink)}
 .sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
 .sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
 .sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
+.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap}
+.fab:hover{transform:translateY(-1px)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow:auto}
+.modal-backdrop[hidden]{display:none}
+.modal-card{background:var(--color-paper-2);border:1px solid #2e2e46;border-radius:22px;padding:30px 32px;max-width:880px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.modal-close{float:right;background:transparent;border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:8px 16px;font-size:1rem;cursor:pointer}
+@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}.modal-card{padding:22px 18px}}
 .sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
 .sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
 .sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
@@ -131,7 +138,6 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <span class="pill">Sources: <b>Dec 2025 (QP 00720)</b> + <b>May 2026 (QP 14664)</b></span>
 </div>
 <div class="sharebar">
-<a class="sharebtn" href="#how-to-pass" style="background:var(--color-accent-2);color:#fff">How to pass — minimum study</a>
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Maths%20PYQs%2C%20ranked%20unit-wise%20%3E%20topic-wise%20%3E%20subtopic-wise%2C%20with%20min%2Fmax%20marks%20and%20all%2042%20questions%20from%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
 <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
 <a class="sharebtn ghost" href="/papers/" style="text-decoration:none">Exact papers →</a>
@@ -156,22 +162,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div></section>
 
 
-<section class="unit reveal" id="how-to-pass"><div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · target 30+ / 60</span></div>
-<p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>35 marks on the table from just the Q1 short skills plus four full-question topics</strong> — so even with mistakes, you stay above the pass band. Add the safe set and it becomes 51 marks on the table.</p>
-<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
-<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
-<tr><td>Q1 short skills — eigenvalues shortcut, LPP standard form / dual, Fourier a<sub>n</sub>, MGF / moments, remainder, Spearman</td><td>Q1, any 5</td><td>15</td></tr>
-<tr><td>Poisson distribution</td><td>Q2a</td><td>4</td></tr>
-<tr><td>Karl Pearson correlation</td><td>Q2b</td><td>5</td></tr>
-<tr><td>Chinese Remainder Theorem</td><td>Q3b</td><td>5</td></tr>
-<tr><td>Fourier expansion (x² in (0, 2) is the repeat)</td><td>Q2c</td><td>6</td></tr>
-<tr><td><b>Total on the table</b></td><td></td><td><b>35</b></td></tr></table>
-<h3>Step 2 — the safe set (add these and you cover 51 marks)</h3>
-<p>Eigenvalues &amp; eigenvectors full question (6) + Cayley–Hamilton (4) + Lagrange multipliers (6) = 16 more marks. 35 + 16 = <strong>51 out of 60</strong> of the paper's usual shape.</p>
-<h3>Step 3 — how to attempt in the hall (2 hours)</h3>
-<p><strong>Q1 first (25 min)</strong> — the six short skills are the most predictable marks in the paper. <strong>Then Q2 (30 min), then Q3 (30 min)</strong> — both are templated, see the model paper below. <strong>Then your strongest remaining question (25 min), last 10 min to check.</strong> Attempt every part you touch, even half an answer — step marks add up, a blank scores zero. If a slot surprises you, fall back to the safe set instead of freezing on one question.</p>
-<div class="callout"><p><strong>Honest note, not a guarantee.</strong> This pattern comes from only two papers, and MU can break a slot any year. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: 35 marks on the table from the minimum set, 51 with the safe set, against a 27–30 pass band.</p></div>
-</section>
+
 
 <section class="unit reveal" id="model-paper"><div class="unit-head"><h2>Model paper — MU's strict pattern</h2><span class="rank">Predicted shape · practice only</span></div>
 <p>MU sets this paper to a strict template. The table below is that template, read off both papers slot by slot. Below it is a <strong>model paper built from the template for practice — it is NOT the real exam paper</strong>, and no question in it is claimed to be a leaked or real question. Practise each slot with the Dec / May question listed in the ranked study above.</p>
@@ -352,7 +343,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <h2>The whole sem, on this site — one format per subject</h2>
 <p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers.</p>
 <table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td></tr>
-<tr><td><b>Maths (N2113111)</b></td><td>Done — on this page</td><td>Done — above</td><td>Done — above</td><td>Done — /papers/</td></tr>
+<tr><td><b>Maths (N2113111)</b></td><td>Done — on this page</td><td>Done — above</td><td>Done — top-right button</td><td>Done — /papers/</td></tr>
 <tr><td><b>DSGT</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
 <tr><td><b>AOA</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
 <tr><td><b>COA</b></td><td>Next</td><td>Next</td><td>Next</td><td>Next — /papers/</td></tr>
@@ -366,7 +357,38 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>How to use it: start with Rank 1 units, tick topics done as you finish them, and use search to jump to a topic. Q1 first — it is the most predictable 15 marks in the paper.</p>
 </div></footer>
 
+<button class="fab" id="fabPass" type="button">Exam tension? How to pass</button>
+<div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
+<div class="modal-card"><button class="modal-close" id="passClose" type="button">✕ Close</button>
+<div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · target 30+ / 60</span></div>
+<p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>35 marks on the table from just the Q1 short skills plus four full-question topics</strong> — so even with mistakes, you stay above the pass band. Add the safe set and it becomes 51 marks on the table.</p>
+<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
+<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+<tr><td>Q1 short skills — eigenvalues shortcut, LPP standard form / dual, Fourier a<sub>n</sub>, MGF / moments, remainder, Spearman</td><td>Q1, any 5</td><td>15</td></tr>
+<tr><td>Poisson distribution</td><td>Q2a</td><td>4</td></tr>
+<tr><td>Karl Pearson correlation</td><td>Q2b</td><td>5</td></tr>
+<tr><td>Chinese Remainder Theorem</td><td>Q3b</td><td>5</td></tr>
+<tr><td>Fourier expansion (x² in (0, 2) is the repeat)</td><td>Q2c</td><td>6</td></tr>
+<tr><td><b>Total on the table</b></td><td></td><td><b>35</b></td></tr></table>
+<h3>Step 2 — the safe set (add these and you cover 51 marks)</h3>
+<p>Eigenvalues &amp; eigenvectors full question (6) + Cayley–Hamilton (4) + Lagrange multipliers (6) = 16 more marks. 35 + 16 = <strong>51 out of 60</strong> of the paper's usual shape.</p>
+<h3>Step 3 — how to attempt in the hall (2 hours)</h3>
+<p><strong>Q1 first (25 min)</strong> — the six short skills are the most predictable marks in the paper. <strong>Then Q2 (30 min), then Q3 (30 min)</strong> — both are templated, see the model paper below. <strong>Then your strongest remaining question (25 min), last 10 min to check.</strong> Attempt every part you touch, even half an answer — step marks add up, a blank scores zero. If a slot surprises you, fall back to the safe set instead of freezing on one question.</p>
+<div class="callout"><p><strong>Honest note, not a guarantee.</strong> This pattern comes from only two papers, and MU can break a slot any year. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: 35 marks on the table from the minimum set, 51 with the safe set, against a 27–30 pass band.</p></div>
+
+</div>
+</div>
 <script>
+
+const passModal=document.getElementById('passModal');
+function openPass(){passModal.hidden=false;document.body.style.overflow='hidden';}
+function closePass(){passModal.hidden=true;document.body.style.overflow='';}
+document.getElementById('fabPass').addEventListener('click',openPass);
+document.getElementById('passClose').addEventListener('click',closePass);
+passModal.addEventListener('click',e=>{if(e.target===passModal)closePass();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePass();});
+document.querySelectorAll('a[href="#how-to-pass"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openPass();}));
+if(location.hash==='#how-to-pass')openPass();
 document.getElementById('copyLink').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('https://kptimes.in/');document.getElementById('copyLink').textContent='Link copied ✓';}catch(e){document.getElementById('copyLink').textContent='https://kptimes.in/';}});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
