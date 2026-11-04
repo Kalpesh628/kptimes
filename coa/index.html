@@ -128,9 +128,26 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
 .paper h3{color:#1a1a1a}
 .paper p{color:#222}
+
+html{scroll-behavior:smooth}
+::selection{background:var(--color-accent);color:#0b0b12}
+.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
+.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--color-accent);color:#0b0b12}
+h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.topic{transition:transform .2s,box-shadow .2s}
+.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
+.solslot summary{cursor:pointer;font-weight:700}
+.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.sitemap a{color:var(--color-muted);font-weight:600}
+.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
+.jumpcard b{font-size:1.1rem}
+.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
 </style></head><body><div class="blob b1"></div><div class="blob b2"></div>
 <header><div class="wrap">
-<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/papers/">Exact papers</a></nav>
+<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
 <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
 <h1>COA, cracked.</h1>
 <p class="lede">Computer Organization &amp; Architecture — paper code N2113114. 60 marks, 2 hours. Same treatment as Maths, DSGT and AOA: every question from both NEP papers, ranked by the marks its topic actually carried. Note on both papers: a calculator with a number-conversion function is not allowed — so conversions must be done by hand, and they are asked every time.</p>
@@ -146,7 +163,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div>
 </div></header>
 <main>
-<section><div class="wrap">
+<section id="pattern"><div class="wrap">
 <h2>The pattern — Q5 never moves, the rest rotates</h2>
 <p>The safest 15 marks in COA: <strong>Q5 is identical in topic both papers — 8086 architecture (8) + Booth's algorithm (7)</strong>. Q1 always holds number conversion and associative memory, with two rotating slots. The other big topics — non-restoring division, cache mapping, pipeline hazards, I/O methods, control unit, Flynn's — all appear both times but <strong>move slots</strong> between Q2, Q3, Q4 and Q6. Learn the topic, not the slot.</p>
 <table class="qtable"><tr><td><b>Slot</b></td><td><b>Dec 2025</b></td><td><b>May 2026</b></td><td><b>Marks</b></td></tr>
@@ -157,7 +174,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <tr><td><b>Q5 — FIXED</b></td><td>8086 architecture (8) + Booth's multiply (7)</td><td>8086 architecture (8) + Booth's multiply (7)</td><td>15, 15</td></tr>
 <tr><td><b>Q6</b></td><td>Bus arbitration (5) + Flynn's (5) + Horizontal vs Vertical microinstruction (5)</td><td>Flynn's (8) + 80386DX operation modes (7)</td><td>15, 15</td></tr></table>
 </div></section>
-<section><div class="wrap">
+<section id="ranked"><div class="wrap">
 <h2>Ranked study — tick what you know</h2>
 <p>Topics ranked by printed marks across both papers (190 printed in total). Tick to update estimated marks out of 60; milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b>. Estimate only, from PYQ coverage — not a promised score. Progress saves on this device.</p>
 <div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
@@ -185,7 +202,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <div class="topic"><label><input type="checkbox" data-w="5"> <b>Addressing modes of 8086</b> — Dec only · 5 · Q1b</label><p>Explain addressing modes of 8086 with a suitable example.</p></div>
 <div class="topic"><label><input type="checkbox" data-w="5"> <b>Instruction pipeline</b> — May only · 5 · Q1b</label><p>Explain the instruction pipeline. (Hazards themselves are counted above.)</p></div>
 </div></section>
-<section><div class="wrap">
+<section id="model"><div class="wrap">
 <h2>Model paper — practice only, not the real paper</h2>
 <p>Predicted <strong>practice paper</strong> from the pattern above, using PYQ questions as practice. <strong>Not</strong> the Winter 2026 paper.</p>
 <table class="qtable"><tr><td><b>Q</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
@@ -196,7 +213,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <tr><td><b>Q5 — fixed</b></td><td>8086 architecture + Booth's multiply</td><td>8 + 7</td></tr>
 <tr><td><b>Q6</b></td><td>Flynn's classification + 80386DX modes</td><td>8 + 7</td></tr></table>
 </div></section>
-<section><div class="wrap">
+<section id="pass"><div class="wrap">
 <h2>Pass plan — COA</h2>
 <table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
 <tr><td><b>Q1 — pick three</b></td><td>Number conversion + Associative memory + one more</td><td><b>15</b></td></tr>
@@ -205,7 +222,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <tr><td><b>Total on the table (safe set)</b></td><td></td><td><b>45</b></td></tr></table>
 <p>Pass ~27, halfway 30, distinction 45. Q1 (15) + Q5 (15) already puts 30 on the table — past pass at full marks — and the third question takes you to the distinction line. Attempt order for the 2-hour paper: Q1 (25 min) → Q5 (30) → strongest of Q3/Q4 (30) → check (15). Draw the 8086 diagram and the cache-mapping format once, neatly — they carry marks by themselves. Honest note: pattern from only 2 papers, and COA rotates slots, so learn the topic, not the slot. It raises your odds; it is not a guarantee.</p>
 </div></section>
-<section><div class="wrap">
+<section id="exact"><div class="wrap">
 <h2>Exact papers — COA</h2>
 <div class="paper">
 <h3>Dec 2025 — QP 98169 · 2 hours · 60 marks · 10/12/2025</h3>
@@ -227,7 +244,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </div>
 <p class="small">For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing this subject. Questions extracted from the Dec 2025 and May 2026 NEP papers (N2113114) for study use. No names, no personal details on this page. <a href="/">← Back to Maths home</a> · <a href="/dsgt/">DSGT page</a> · <a href="/aoa/">AOA page</a> · <a href="/papers/">Exact papers hub</a></p>
 </div></section>
-</main>
+<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for COA. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: 8086 architecture</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Cache mapping</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Non-restoring division</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Microprogrammed control unit</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Hardwired vs Softwired CU</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Horizontal vs Vertical microinstruction</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Booth's algorithm</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Pipeline hazards</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: I/O methods</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Flynn's classification</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Memory hierarchy / characteristics</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Number conversion</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Associative memory</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: IEEE 754 floating point</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: 80386DX operation modes</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: ISA / PCI / USB buses</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Bus arbitration</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Addressing modes of 8086</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Instruction pipeline</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><div class="sitemap"><b>Every page, every part:</b><a href="/">Maths home</a><a href="/#units">Maths ranked</a><a href="/#model-paper">Maths model paper</a><a href="/dsgt/">DSGT page</a><a href="/dsgt/#ranked">DSGT ranked</a><a href="/dsgt/#model">DSGT model</a><a href="/dsgt/#pass">DSGT pass plan</a><a href="/dsgt/#exact">DSGT exact papers</a><a href="/dsgt/#solutions">DSGT solutions</a><a href="/aoa/">AOA page</a><a href="/aoa/#ranked">AOA ranked</a><a href="/aoa/#model">AOA model</a><a href="/aoa/#pass">AOA pass plan</a><a href="/aoa/#exact">AOA exact papers</a><a href="/aoa/#solutions">AOA solutions</a><a href="/coa/">COA page</a><a href="/coa/#ranked">COA ranked</a><a href="/coa/#model">COA model</a><a href="/coa/#pass">COA pass plan</a><a href="/coa/#exact">COA exact papers</a><a href="/coa/#solutions">COA solutions</a><a href="/genai/">Gen AI page</a><a href="/genai/#ranked">Gen AI ranked</a><a href="/genai/#model">Gen AI model</a><a href="/genai/#pass">Gen AI pass plan</a><a href="/genai/#exact">Gen AI exact papers</a><a href="/genai/#solutions">Gen AI solutions</a><a href="/papers/">Exact papers hub</a><a href="/#solutions">Maths solutions</a></div></main>
 <script>
 (function(){
 var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
