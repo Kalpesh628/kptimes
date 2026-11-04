@@ -27,7 +27,7 @@ p{color:var(--color-muted)} p strong{color:var(--color-ink)}
 .kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
 .lede{font-size:1.15rem;max-width:680px}
 .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:normal;overflow-wrap:anywhere}
 .pill b{color:var(--color-accent)}
 .sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
 .sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
@@ -159,12 +159,12 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 <span class="kick">SE · SEM III — Open Elective · Computer · AI&amp;DS</span>
 <h1>Gen AI, cracked.</h1>
 <p class="lede">Generative AI — open elective, paper code 2013311. Read the format warning first: Dec 2025 is a <strong>60-mark / 2-hour</strong> paper, but May 2026 is a <strong>30-mark / 1-hour</b> paper. The Winter 2026 format is unconfirmed — this page covers both, and never mixes their marks up.</p>
-<div class="pills">
+<div class="pillrow">
 <span class="pill">Sources: <b>Dec 2025 (QP 25503, 60 marks)</b> + <b>May 2026 (QP 3001, 30 marks)</b></span>
 <span class="pill">Open elective — branches vary by choice; these papers show Computer · AI&amp;DS</span>
 <span class="pill">Pattern: <b>topics repeat, slots don't — and formats differ</b></span>
 </div>
-<div class="stats"><div><b>2</b><span>papers</span></div><div><b>30</b><span>printed questions</span></div><div><b>20</b><span>topics</span></div><div><b id="heroMarks">0 / 60</b><span>estimated marks, Dec-format scale (tick topics below)</span></div></div>
+<div class="stats"><div class="stat"><div class="n">2</div><div class="l">papers</div></div><div class="stat"><div class="n">30</div><div class="l">printed questions</div></div><div class="stat"><div class="n">20</div><div class="l">topics</div></div><div class="stat"><div class="n" id="heroMarks">0 / 60</div><div class="l">estimated marks, Dec-format scale (tick topics below)</div></div></div>
 <div class="sharebar">
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Gen%20AI%20PYQs%2C%20ranked%20topic-wise%2C%20with%20both%20papers%20Dec%202025%20%2860%20marks%29%20%2B%20May%202026%20%2830%20marks%29%3A%20https%3A%2F%2Fkptimes.in%2Fgenai%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
 <button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/genai/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
