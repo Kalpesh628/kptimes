@@ -85,6 +85,12 @@ section{padding:34px 0}
 .done input{accent-color:var(--color-accent);width:18px;height:18px}
 .prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
 .prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
+.milestones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ms{border:1px solid var(--color-line);border-radius:999px;padding:6px 13px;font-size:.9rem;color:var(--color-muted)}
+.ms.done{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) scale(.7);background:var(--color-accent);color:#0b0b12;font-weight:700;font-size:1.05rem;padding:16px 24px;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;text-align:center;max-width:92vw}
+.toast.show{opacity:1;transform:translateX(-50%) scale(1);animation:pop .45s ease}
+@keyframes pop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.08)}100%{transform:translateX(-50%) scale(1)}}
 .soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
 .soon b{color:var(--color-ink)}
@@ -147,9 +153,11 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
 <div class="stat"><div class="n">42</div><div class="l">unique questions extracted, both papers (one question cross-listed under Moments + MGF)</div></div>
 <div class="stat"><div class="n">6</div><div class="l">units, ranked by how often they show up</div></div>
-<div class="stat"><div class="n" id="overallPct">0%</div><div class="l">topics ticked done — your progress, saved on this device</div></div>
+<div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div>
 </div>
 <div class="prog"><i id="overallBar"></i></div>
+<div class="milestones" id="milestones"></div>
+<p style="font-size:.85rem">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
 </div><div class="blob b1"></div><div class="blob b2"></div></header>
 
 <section><div class="wrap">
@@ -201,7 +209,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Eigenvalues run this unit. Every paper asks them twice: once as a 3-mark short, once as a full 6-mark question.</p>
 
 <article class="topic"><div class="topic-head"><h3>Eigenvalues &amp; eigenvectors</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 6 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="18"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1a · 3 marks</b></div>If A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>0</td><td>−1</td><td>4</td></tr><tr><td>0</td><td>0</td><td>−2</td></tr></table></span>, find eigenvalues of A⁻¹ + 6I.</div>
 <div class="q"><div class="meta"><b>Dec 2025 · Q3c · 6 marks</b></div>Find eigenvalues and eigenvectors of A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>5</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>3</td></tr></table></span>.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q1a · 3 marks</b></div>Find the sum and product of the eigenvalues of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−2</td><td>−9</td><td>5</td></tr><tr><td>−5</td><td>−10</td><td>7</td></tr><tr><td>−9</td><td>−21</td><td>14</td></tr></table></span>. (Shortcut: sum = trace, product = determinant.)</div>
@@ -209,13 +217,13 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Diagonalisation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 6 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="11"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q4b · 5 marks</b></div>Show that A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>1</td><td>3</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr></table></span> is diagonalisable, hence find its diagonalisable matrix.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q4c · 6 marks</b></div>Check whether A = <span class="matrix-wrap"><table class="matrix"><tr><td>8</td><td>−8</td><td>−2</td></tr><tr><td>4</td><td>−3</td><td>−2</td></tr><tr><td>3</td><td>−4</td><td>1</td></tr></table></span> is diagonalisable; if yes, find the diagonalising matrix P and the diagonal matrix D.</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Cayley–Hamilton theorem</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q5a · 4 marks</b></div>Verify Cayley–Hamilton theorem for A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>2</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>2</td></tr></table></span>.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q5a · 4 marks</b></div>Verify Cayley–Hamilton theorem for A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>3</td><td>2</td><td>1</td></tr></table></span>.</div>
 </article></section>
@@ -225,25 +233,25 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Four topics, two questions each, no surprises. The data tables change; the method never does.</p>
 
 <article class="topic"><div class="topic-head"><h3>Spearman rank correlation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1f · 3 marks</b></div>Obtain Spearman's rank correlation coefficient for following data<table class="qtable"><tr><td>X</td><td>24</td><td>24</td><td>24</td><td>55</td><td>25</td></tr><tr><td>Y</td><td>24</td><td>31</td><td>51</td><td>40</td><td>38</td></tr></table></div>
 <div class="q"><div class="meta"><b>May 2026 · Q1f · 3 marks</b></div>Obtain Spearman's rank correlation coefficient for following data<table class="qtable"><tr><td>X</td><td>18</td><td>17</td><td>13</td><td>17</td><td>19</td><td>21</td></tr><tr><td>Y</td><td>21</td><td>22</td><td>14</td><td>17</td><td>18</td><td>13</td></tr></table></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Karl Pearson correlation coefficient</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q2b · 5 marks</b></div>Five students got the following percentage of marks in mathematics and statistics<br>Calculate the coefficient of correlation.<table class="qtable"><tr><td>Maths</td><td>28</td><td>34</td><td>18</td><td>25</td><td>75</td><td>23</td><td>24</td><td>33</td><td>37</td><td>43</td></tr><tr><td>Stats</td><td>24</td><td>31</td><td>11</td><td>34</td><td>65</td><td>24</td><td>23</td><td>53</td><td>53</td><td>42</td></tr></table></div>
 <div class="q"><div class="meta"><b>May 2026 · Q2b · 5 marks</b></div>Calculate the correlation coefficient for the following heights of fathers (X) and their sons (Y)<table class="qtable"><tr><td>X</td><td>65</td><td>66</td><td>67</td><td>67</td><td>68</td><td>69</td><td>70</td><td>72</td></tr><tr><td>Y</td><td>67</td><td>68</td><td>65</td><td>68</td><td>72</td><td>72</td><td>69</td><td>71</td></tr></table></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Regression lines</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 4 · max 5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="9"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q3a · 4 marks</b></div>Obtain equations of line of regression of x on y for following data.<table class="qtable"><tr><td>X</td><td>31</td><td>44</td><td>65</td><td>49</td><td>41</td></tr><tr><td>Y</td><td>48</td><td>32</td><td>21</td><td>66</td><td>43</td></tr></table></div>
 <div class="q"><div class="meta"><b>May 2026 · Q6b · 5 marks</b></div>Obtain the equation of line of regression of X on Y<table class="qtable"><tr><td>X</td><td>21</td><td>23</td><td>25</td><td>27</td><td>28</td><td>20</td></tr><tr><td>Y</td><td>8</td><td>12</td><td>15</td><td>17</td><td>18</td><td>20</td></tr></table></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Fitting a straight line y = a + bx</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q6a · 4 marks</b></div>Fit a straight line of the form y = a + bx to the following data<table class="qtable"><tr><td>X</td><td>1</td><td>4</td><td>7</td><td>9</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>18</td><td>14</td><td>19</td><td>27</td><td>18</td><td>28</td></tr></table></div>
 <div class="q"><div class="meta"><b>May 2026 · Q3a · 4 marks</b></div>Fit a straight line of the form y = a + bx to the following data<table class="qtable"><tr><td>X</td><td>1</td><td>3</td><td>5</td><td>7</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>8</td><td>4</td><td>5</td><td>7</td><td>8</td><td>4</td></tr></table></div>
 </article></section>
@@ -253,26 +261,26 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Moments and MGF overlap in the same questions — learn them together, not as two topics.</p>
 
 <article class="topic"><div class="topic-head"><h3>Moments (raw moments, moments about origin / mean)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 4 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="11"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q4a · 4 marks</b></div>A random variable X has probability density function<br>f(x) = x²e<sup>−x</sup>&nbsp;&nbsp;&nbsp;&nbsp;x ≥ 0<br>Find 2 moments about origin and mean.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q1d · 3 marks</b></div>Calculate first 2 raw moments for probability density function<br>f(x) = <span class="pw"><span class="brace">{</span><table><tr><td>xe<sup>−x</sup></td><td>x ≥ 0</td></tr><tr><td>0</td><td>Otherwise</td></tr></table></span></div>
 <div class="q"><div class="meta"><b>May 2026 · Q4a · 4 marks</b></div>A random variable X has the following probability distribution<table class="qtable"><tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>P(X = x)</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.2</td></tr></table>Find moment generating function about origin of x, hence find first two raw moments.</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Moment generating function (MGF)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 4 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1d · 3 marks</b></div>A random variable x defines the possible outcomes of tossing a fair die, find moment generating function of x about origin</div>
 <div class="q"><div class="meta"><b>May 2026 · Q4a · 4 marks</b></div>A random variable X has the following probability distribution<table class="qtable"><tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>P(X = x)</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.2</td></tr></table>Find moment generating function about origin of x, hence find first two raw moments.</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Poisson distribution</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q2a · 4 marks</b></div>It is known that the probability of an item produced by a certain machine will be defective is 0.001. If the produced items are sent to the market in packets of 100, find the number of packets containing at least 2 are defective in the consignment of 2000 Packets.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q2a · 4 marks</b></div>The number of traffic accidents that occur on a particular stretch of road during a month follows a Poisson distribution with a mean of 7. Find the probability of observing exactly three accidents on this stretch of road next month.</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Normal distribution</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q5b · 5 marks</b></div>The height of school children of one school is normally distributed with mean of 54 inches and standard deviation 12 inches. What proportion of students have height between i. 46 and 56 inches&nbsp;&nbsp; ii. More than 56</div>
 <div class="q"><div class="meta"><b>May 2026 · Q4b · 5 marks</b></div>The distribution of wait times at a drive-through restaurant is approximately normal with mean 185 seconds and standard deviation 15 seconds. Find the percentage of wait times that are<br>i. between 155 and 215 seconds.<br>ii. more than 170 seconds.</div>
 </article></section>
@@ -282,19 +290,19 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Only unit where the two papers split the short question: standard form in Dec, dual in May. Learn both — they are one skill.</p>
 
 <article class="topic"><div class="topic-head"><h3>Lagrange multipliers (NLPP)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">6 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="12"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve the following NLPP:<div class="eqblock"><div class="eqline obj">Optimise&nbsp;&nbsp; z = −x₁² − x₂² + 4x₁ + 8x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ = 4</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 <div class="q"><div class="meta"><b>May 2026 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve the following NLPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ + x₃ = 7</div><div class="eqline cons">x₁, x₂, x₃ ≥ 0</div></div></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Solving an LPP (Simplex method)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 6 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="11"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q5c · 6 marks</b></div>Applying Simplex method, solve the following LPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 3x₁ + 2x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ + x₂ ≤ 4</div><div class="eqline cons">x₁ − x₃ ≤ 2</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 <div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div><div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 7x₁ + 5x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">−x₁ − 2x₂ ≥ −6</div><div class="eqline cons">4x₁ + 3x₂ ≤ 12</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>LPP standard form &amp; dual</h3><span><span class="badge papers">1 paper each</span> <span class="badge marks">3 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Transform the LPP to standard form:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 2x₁ + x₂ + 4x₃</div><div class="eqline">Subject to:</div><div class="eqline cons">x₁ − x₂ + 2x₃ ≤ 5</div><div class="eqline cons">3x₁ + x₂ + 5x₃ ≥ 14</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 <div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Construct the dual of the following LPP:<div class="eqblock"><div class="eqline obj">Maximise&nbsp;&nbsp; Z = 5x₁ + 4x₂</div><div class="eqline">Subject to:</div><div class="eqline cons">2x₁ + 6x₂ ≤ 5</div><div class="eqline cons">7x₁ + 3x₂ ≤ 2</div><div class="eqline cons">x₁, x₂ ≥ 0</div></div></div>
 </article></section>
@@ -304,19 +312,19 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>The most predictable unit after Q1: CRT, RSA and a remainder question, every single paper.</p>
 
 <article class="topic"><div class="topic-head"><h3>Chinese Remainder Theorem (CRT)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q3b · 5 marks</b></div>By using Chinese Remainder theorem, solve x ≡ 1 (mod 3), x ≡ 2 (mod 4), x ≡ 3 (mod 5).</div>
 <div class="q"><div class="meta"><b>May 2026 · Q3b · 5 marks</b></div>By using Chinese Remainder theorem, solve x ≡ 3 (mod 4), x ≡ 5 (mod 7).</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>RSA algorithm</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">6 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="12"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q4c · 6 marks</b></div>In RSA system the public key (E, N) of user A is (7, 187). Calculate φ(N) and private key D. What is the cipher text for M = 10 using the public key?</div>
 <div class="q"><div class="meta"><b>May 2026 · Q5c · 6 marks</b></div>Perform key generation, encryption and decryption for RSA algorithm with primes p = 3, q = 11, message M = 5.</div>
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Remainder by modular arithmetic</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1e · 3 marks</b></div>What is the remainder when 13⁷⁰ is divided by 21?</div>
 <div class="q"><div class="meta"><b>May 2026 · Q1e · 3 marks</b></div>What is the remainder when 5¹¹ is divided by 7?</div>
 </article></section>
@@ -326,7 +334,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <p>Only two skills, repeated endlessly: expand the series, and find a<sub>n</sub>.</p>
 
 <article class="topic"><div class="topic-head"><h3>Full Fourier expansion</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 4 · max 6 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="21"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q2c · 6 marks</b></div>Expand Fourier series for f(x) = x² in (0, 2).</div>
 <div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Find Fourier series for f(x) = x, 0 &lt; x &lt; 2π.</div>
 <div class="q"><div class="meta"><b>May 2026 · Q2c · 6 marks</b></div>Expand Fourier series for f(x) = x² in (0, 2). — the exact repeat.</div>
@@ -334,7 +342,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </article>
 
 <article class="topic"><div class="topic-head"><h3>Finding a<sub>n</sub> in a Fourier expansion</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
 <div class="q"><div class="meta"><b>Dec 2025 · Q1c · 3 marks</b></div>Find the value of a<sub>n</sub> in the expansion of Fourier series for f(x) = 4 − x² in (0, 2π).</div>
 <div class="q"><div class="meta"><b>May 2026 · Q1c · 3 marks</b></div>Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π).</div>
 </article></section>
@@ -378,6 +386,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 
 </div>
 </div>
+<div class="toast" id="toast"></div>
 <script>
 
 const passModal=document.getElementById('passModal');
@@ -396,8 +405,16 @@ const boxes=[...document.querySelectorAll('[data-topic]')];
 const KEY='maths-study-done';
 let done=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
 boxes.forEach((b,i)=>{b.checked=done.has(i);b.addEventListener('change',()=>{b.checked?done.add(i):done.delete(i);localStorage.setItem(KEY,JSON.stringify([...done]));update();})});
-function update(){const p=boxes.length?Math.round(done.size/boxes.length*100):0;document.getElementById('overallPct').textContent=p+'%';document.getElementById('overallBar').style.width=p+'%';}
-update();
+const MILESTONES=[{m:27,t:'Pass zone crossed — you are above 45%!'},{m:30,t:'Halfway there — 50% of the paper!'},{m:45,t:'Distinction zone — 75%!'},{m:60,t:'Full paper — you can attempt everything!'}];
+const TOTAL_W=190;
+let prevLevel=0, toastTimer=null;
+function securedMarks(){let s=0;boxes.forEach((b,i)=>{if(done.has(i))s+=parseInt(b.dataset.w||0,10);});return Math.round(s/TOTAL_W*60);}
+function levelOf(m){let l=0;MILESTONES.forEach((x,i)=>{if(m>=x.m)l=i+1;});return l;}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
+function renderMilestones(m){document.getElementById('milestones').innerHTML=MILESTONES.map(x=>`<span class="ms ${m>=x.m?'done':''}">${m>=x.m?'✓ ':''}${x.m} — ${x.m===27?'Pass':x.m===30?'Halfway':x.m===45?'Distinction':'Full paper'}</span>`).join('');}
+function update(silent){const m=securedMarks();document.getElementById('overallPct').textContent=m+' / 60';document.getElementById('overallBar').style.width=(m/60*100)+'%';renderMilestones(m);const lv=levelOf(m);if(!silent&&lv>prevLevel){showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');}else if(!silent){showToast('Yay! You can secure '+m+' marks in the exam!');}prevLevel=lv;}
+boxes.forEach((b,i)=>{b.checked=done.has(i);});
+update(true);
 const chips=[...document.querySelectorAll('.chip')];let cur='all';
 chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');cur=c.dataset.unit;filter();}));
 const search=document.getElementById('search');search.addEventListener('input',filter);
