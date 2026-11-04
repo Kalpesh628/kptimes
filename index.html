@@ -145,13 +145,13 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 .openbtn:hover{filter:brightness(1.1)}
 .parts{margin-top:12px;display:flex;gap:14px;flex-wrap:wrap}
 .parts a{color:var(--color-muted);font-weight:700}
-.nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}</style></head><body><div class="blob b1"></div><div class="blob b2"></div>
+.nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}html{scroll-behavior:smooth}.stats b{font-variant-numeric:tabular-nums}.subjcard{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1),border-color .35s}.openbtn{transition:filter .3s cubic-bezier(.22,1,.36,1),transform .3s cubic-bezier(.22,1,.36,1)}.openbtn:hover{transform:translateY(-1px)}.nav a{transition:color .25s,border-color .25s}</style></head><body><div class="blob b1"></div><div class="blob b2"></div>
 <nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/">Home</a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a></nav>
 <header><div class="wrap">
 <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
 <h1>Sem III, cracked.</h1>
 <p class="lede">Real Dec 2025 + May 2026 papers, ranked by marks. Pick a subject.</p>
-<div class="stats"><div><b>5</b><span>subjects</span></div><div><b>10</b><span>papers</span></div><div><b>163</b><span>questions</span></div></div>
+<div class="stats"><div><b data-count="5">0</b><span>subjects</span></div><div><b data-count="10">0</b><span>papers</span></div><div><b data-count="163" data-plus="1">0</b><span>questions</span></div></div>
 <p class="small">Exams expected 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm — not confirmed yet. Solutions from tomorrow.</p>
 <div class="sharebar">
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20exam%20study%20—%20Maths%2C%20DSGT%2C%20AOA%2C%20COA%20%26%20Gen%20AI%3A%20https%3A%2F%2Fkptimes.in%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
@@ -167,4 +167,4 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 <div class="subjcard"><b>Exact papers</b><div class="meta">All papers, as printed</div><a class="openbtn" href="/papers/">Open exact papers →</a></div>
 </div></section></main>
 <footer class="foot"><div class="wrap">Sem III Exam Study · Solutions from tomorrow.</div></footer>
-</body></html>
+<script>(function(){var els=document.querySelectorAll('[data-count]');if(!els.length)return;var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;function run(el){var target=+el.dataset.count;if(reduced){el.textContent=target+(el.dataset.plus?'+':'');return;}var dur=1600,start=null;function tick(t){if(!start)start=t;var p=Math.min((t-start)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=Math.round(target*e)+(p===1&&el.dataset.plus?'+':'');if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);}if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target);}});},{threshold:.4});els.forEach(function(el){io.observe(el);});}else{els.forEach(run);}})();</script></body></html>
