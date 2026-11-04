@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gen AI PYQs, Ranked — Sem III Exam Study</title>
+<meta name="description" content="Sem III Gen AI open elective (2013311) PYQs ranked topic-wise, from Dec 2025 (60 marks) + May 2026 (30 marks).">
+<meta property="og:title" content="Gen AI PYQs, Ranked — Sem III Exam Study"><meta property="og:description" content="Gen AI ranked topic-wise, with both papers Dec 2025 (60 marks) + May 2026 (30 marks)."><meta property="og:type" content="website">
+<style>
+:root{
+  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
+  --color-ink:#f4f4f8; --color-muted:#a7a7bd; --color-accent:#c8f542; --color-accent-2:#a78bfa;
+  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
+body{line-height:1.7;font-size:18px}
+a{color:var(--color-accent)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px;min-width:0}
+h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
+h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
+h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin:0 0 .3rem;letter-spacing:-.02em;font-weight:700}
+h3{font-size:1.3rem;margin:.2rem 0 .5rem;letter-spacing:-.01em;font-weight:700}
+p{color:var(--color-muted)} p strong{color:var(--color-ink)}
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
+.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
+.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
+@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
+.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
+.lede{font-size:1.15rem;max-width:680px}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
+.pill b{color:var(--color-accent)}
+.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
+.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
+.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap}
+.fab:hover{transform:translateY(-1px)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow:auto}
+.modal-backdrop[hidden]{display:none}
+.modal-card{background:var(--color-paper-2);border:1px solid #2e2e46;border-radius:22px;padding:30px 32px;max-width:880px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.modal-close{float:right;background:transparent;border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:8px 16px;font-size:1rem;cursor:pointer}
+@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}.modal-card{padding:22px 18px}}
+.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
+.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
+.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
+.stat .l{color:var(--color-muted);font-size:.9rem}
+section{padding:34px 0}
+.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
+.callout p{margin:.3rem 0}
+.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
+.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
+.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
+.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
+.unit{border:1px solid #2e2e46;border-radius:24px;padding:36px 38px;margin:30px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
+.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
+.topic{background:var(--color-card);border:1px solid #34344e;border-radius:18px;padding:28px 30px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.badge{border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700;white-space:nowrap}
+.badge.repeat{background:#12351f;color:#7bf1a8}
+.badge.marks{background:#3a2f00;color:var(--color-mark)}
+.badge.papers{background:#241a4d;color:#c4b5fd}
+.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
+.q .meta{font-size:.82rem;color:var(--color-muted);margin-bottom:2px}
+.q .meta b{color:var(--color-accent)}
+.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
+.done input{accent-color:var(--color-accent);width:18px;height:18px}
+.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
+.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
+.milestones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ms{border:1px solid var(--color-line);border-radius:999px;padding:6px 13px;font-size:.9rem;color:var(--color-muted)}
+.ms.done{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) scale(.7);background:var(--color-accent);color:#0b0b12;font-weight:700;font-size:1.05rem;padding:16px 24px;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;text-align:center;max-width:92vw}
+.toast.show{opacity:1;transform:translateX(-50%) scale(1);animation:pop .45s ease}
+@keyframes pop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.08)}100%{transform:translateX(-50%) scale(1)}}
+.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
+.soon b{color:var(--color-ink)}
+footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
+@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
+
+.matrix-wrap{display:inline-flex;align-items:stretch;vertical-align:middle;margin:2px 4px}
+.matrix-wrap::before{content:"";width:9px;border:3px solid var(--color-ink);border-right:0}
+.matrix-wrap::after{content:"";width:9px;border:3px solid var(--color-ink);border-left:0}
+.matrix{display:inline-table;vertical-align:middle;border-collapse:collapse}
+.matrix td{padding:3px 10px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:1.12em;line-height:1.3}
+.qtable{border-collapse:collapse;margin:16px auto;font-size:1.08rem}
+.qtable td{border:1px solid #4a4a66;padding:9px 20px;text-align:center;color:#e8e8f2}
+.pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
+.eqblock{margin:12px 0 4px 4px;font-family:Georgia,'Times New Roman',serif;font-size:1.1em;line-height:1.65}
+.eqblock .obj{font-weight:700}
+.eqblock .cons{padding-left:32px}
+.pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
+.pw td{padding:2px 8px}
+.q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
+.q .meta{font-size:.86rem;letter-spacing:.02em}
+
+.paper{background:#fdfdf8;color:#111;border:1px solid #444;border-radius:6px;padding:28px 30px;margin:22px 0;font-family:Georgia,'Times New Roman',serif}
+.paper h3{font-family:Georgia,serif;color:#111;font-size:1.3rem;text-align:center}
+.paper .phead{text-align:center;font-weight:700;line-height:1.4}
+.paper .phead small{display:block;font-weight:400}
+.paper .prow{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.paper .pmarks{font-weight:700;white-space:nowrap}
+.paper .pq{margin:14px 0}
+.paper .sub{margin:8px 0 8px 28px}
+.paper .matrix td{color:#111}
+.paper .matrix-wrap::before,.paper .matrix-wrap::after{border-color:#111}
+.paper .pw .brace{color:#111}
+.ptable{border-collapse:collapse;margin:8px 0 8px 28px}
+.ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
+@media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
+
+.miles{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.miles span{padding:8px 14px;border-radius:999px;border:1px solid var(--color-line);color:var(--color-muted);font-weight:700}
+.miles span.on{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent)}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--color-accent);color:#0b0b12;font-weight:800;padding:14px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.topic{border:1px solid var(--color-line);border-radius:16px;padding:16px 18px;margin:14px 0}
+.topic label{font-size:1.05rem;cursor:pointer}
+.topic input{transform:scale(1.3);margin-right:8px}
+.paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
+.paper h3{color:#1a1a1a}
+.paper p{color:#222}
+</style></head><body><div class="blob b1"></div><div class="blob b2"></div>
+<header><div class="wrap">
+<nav class="nav"><a href="/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a></nav>
+<span class="kick">SE · SEM III — Open Elective · Computer · AI&amp;DS</span>
+<h1>Gen AI, cracked.</h1>
+<p class="lede">Generative AI — open elective, paper code 2013311. Read the format warning first: Dec 2025 is a <strong>60-mark / 2-hour</strong> paper, but May 2026 is a <strong>30-mark / 1-hour</b> paper. The Winter 2026 format is unconfirmed — this page covers both, and never mixes their marks up.</p>
+<div class="pills">
+<span class="pill">Sources: <b>Dec 2025 (QP 25503, 60 marks)</b> + <b>May 2026 (QP 3001, 30 marks)</b></span>
+<span class="pill">Open elective — branches vary by choice; these papers show Computer · AI&amp;DS</span>
+<span class="pill">Pattern: <b>topics repeat, slots don't — and formats differ</b></span>
+</div>
+<div class="stats"><div><b>2</b><span>papers</span></div><div><b>30</b><span>printed questions</span></div><div><b>20</b><span>topics</span></div><div><b id="heroMarks">0 / 60</b><span>estimated marks, Dec-format scale (tick topics below)</span></div></div>
+<div class="sharebar">
+<a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Gen%20AI%20PYQs%2C%20ranked%20topic-wise%2C%20with%20both%20papers%20Dec%202025%20%2860%20marks%29%20%2B%20May%202026%20%2830%20marks%29%3A%20https%3A%2F%2Fkptimes.in%2Fgenai%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+<button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/genai/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+</div>
+</div></header>
+<main>
+<section><div class="wrap">
+<h2>The format warning — read this before studying</h2>
+<p><strong>Dec 2025:</strong> Q1 any three × 5 = 15, + any three of Q2–Q6 (15 each), Q6 itself any three × 5 = 15. Total 60, 2 hours.<br><strong>May 2026:</strong> Q1 any five × 2 = 10, + any two of Q2–Q5 (10 each, 5 + 5). Total 30, 1 hour.<br>If Winter 2026 returns to the 60-mark ESE format, the Dec paper is the template. If it stays 30 marks, the May paper is. <strong>Do not study one format's marks as if they were the other's.</strong> The tracker below scales topic coverage to the 60-mark scale as an estimate only.</p>
+<h2>The pattern — topics repeat, not slots</h2>
+<p>Gen AI has no slot map: the same topics reappear in different questions and different sizes. The repeaters: <strong>GPT architecture is asked three times</strong> (Dec Q4b 7, May Q2b 5, May Q5b 5 — the two May ones are the same question, attempt only one), CNN twice, RNN twice, GPT variants twice, ethics twice, LLM twice, pre-training twice. Six topics — GenAI definition, GPT architecture, GPT variants, CNN, RNN, ethics — cover questions in both papers.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Ranked study — tick what you know</h2>
+<p>Topics ranked by printed marks across both papers (152 printed in total, across two different formats). Tick to update the estimate; milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b> on the Dec 60-mark scale. Estimate only — not a promised score, and the May format's pass band is different (roughly half: ~12–14 to pass). Progress saves on this device.</p>
+<div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
+<div id="toast"></div>
+<h3>Rank 1 — asked in both papers</h3>
+<div class="topic"><label><input type="checkbox" data-w="17"> <b>GPT architecture &amp; working</b> — 3 appearances · 7+5+5</label><p>Dec Q4b (7): short note on architecture and working of GPT models. May Q2b (5) and May Q5b (5): architecture and working of GPT models / GPT architecture and working — the same question twice in one paper; attempt only one.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="13"> <b>CNN — architecture &amp; working</b> — 2/2 · 8+5</label><p>Dec Q2a (8): explain how CNN works. May Q2a (5): architecture of CNN &amp; how it works.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="13"> <b>RNN — architecture &amp; working</b> — 2/2 · 8+5</label><p>Dec Q3b (8): architecture of RNN &amp; how it works. May Q5a (5): RNN and its limitations.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>GPT variants</b> — 2/2 · 5+5</label><p>Dec Q1b (5): three GPT variants + one use case each. May Q3b (5): different GPT variants and their applications.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>Ethics in Generative AI</b> — 2/2 · 5+5</label><p>Dec Q6a (5): ethical concerns related to Generative AI. May Q3a (5): ethical issues in Generative AI.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>LLM — Large Language Models</b> — 2/2 · 8+2</label><p>Dec Q5b (8): what is LLM and types of LLM. May Q1c (2): define LLM.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="10"> <b>Generative AI tools / applications</b> — 5+5</label><p>Dec Q1d (5): "text-to-image" tools with an example. May Q4b (5): any five Generative AI tools with examples. (Dec Q6b, importance in five real-world domains, 5, is counted separately below.)</p></div>
+<div class="topic"><label><input type="checkbox" data-w="9"> <b>Pre-training</b> — 2/2 · 7+2</label><p>Dec Q2b (7): pre-training, fine tuning and instruct tuning in gen-AI. May Q1d (2): what is pre-training?</p></div>
+<div class="topic"><label><input type="checkbox" data-w="7"> <b>Generative AI — definition &amp; scope</b> — 2/2 · 5+2</label><p>Dec Q1a (5): define Generative AI, explain scope with examples. May Q1a (2): define Generative AI.</p></div>
+<h3>Rank 2 — Dec only, and May only</h3>
+<div class="topic"><label><input type="checkbox" data-w="8"> <b>Challenges in Generative AI</b> — Dec only · 8 · Q4a</label><p>What are the challenges in Generative AI?</p></div>
+<div class="topic"><label><input type="checkbox" data-w="7"> <b>Chat-GPT</b> — Dec only · 7 · Q5a</label><p>What is chat-GPT and how does it work? (May Q1b asks "What is GPT and Chat-GPT?" for 2 — counted under GPT/Chat-GPT definition below.)</p></div>
+<div class="topic"><label><input type="checkbox" data-w="7"> <b>Multi-head mechanism in GPT</b> — Dec only · 7 · Q3a</label><p>Printed as "multiread mechanism in GPT" — read as the multi-head attention mechanism.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Importance of data in training</b> — Dec only · 5 · Q1c</label><p>What is the importance of data in training the AI model?</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Importance in five real-world domains</b> — Dec only · 5 · Q6b</label><p>Explain the importance of Generative AI in any five real-world domains.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Traditional vs modern language models</b> — Dec only · 5 · Q6c</label><p>Differentiate between traditional language models and modern language models.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Self-attention in GPT</b> — Dec only · 5 · Q6d</label><p>Importance and role of self-attention in GPT models.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="5"> <b>Transformer architecture</b> — May only · 5 · Q4a</label><p>Architecture and working of Transformer models.</p></div>
+<div class="topic"><label><input type="checkbox" data-w="2"> <b>GPT and Chat-GPT — definition</b> — May only · 2 · Q1b</label><p>What is GPT and Chat-GPT?</p></div>
+<div class="topic"><label><input type="checkbox" data-w="2"> <b>LSTM</b> — May only · 2 · Q1e</label><p>What is LSTM?</p></div>
+<div class="topic"><label><input type="checkbox" data-w="2"> <b>Tokenization in transformers</b> — May only · 2 · Q1f</label><p>What is tokenization in transformer model?</p></div>
+</div></section>
+<section><div class="wrap">
+<h2>Model paper — practice only, not the real paper</h2>
+<p>Two practice versions, because the format is unconfirmed. Both are built from PYQ questions only. <strong>Neither is the Winter 2026 paper.</strong></p>
+<table class="qtable"><tr><td><b>Version</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
+<tr><td><b>60-mark (Dec template)</b></td><td>Q1: definition + GPT variants + data importance · Q2: CNN + pre-training/fine-tuning · Q4: challenges + GPT architecture · Q5: Chat-GPT + LLM types · Q6: ethics + domains + self-attention</td><td>60</td></tr>
+<tr><td><b>30-mark (May template)</b></td><td>Q1: five 2-mark definitions (GenAI, GPT/Chat-GPT, LLM, pre-training, LSTM or tokenization) · any two of: CNN + GPT architecture · ethics + GPT variants · Transformer + five tools · RNN + GPT architecture</td><td>30</td></tr></table>
+</div></section>
+<section><div class="wrap">
+<h2>Pass plan — Gen AI</h2>
+<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+<tr><td><b>Six repeaters</b></td><td>GenAI definition · GPT architecture · GPT variants · CNN · RNN · Ethics</td><td><b>Questions in both papers</b></td></tr>
+<tr><td><b>60-mark format</b></td><td>Q1 (15, pick three) + any three of Q2–Q6 (45)</td><td><b>60 attempted; pass ~27, distinction 45</b></td></tr>
+<tr><td><b>30-mark format</b></td><td>Q1 (10, pick five definitions) + any two of Q2–Q5 (20)</td><td><b>30 attempted; pass ~12–14 (confirm from college)</b></td></tr></table>
+<p>Attempt order, 60-mark paper: Q1 (25 min) → GPT architecture + CNN (30) → strongest remaining (30) → check (15). For the 30-mark paper: Q1 definitions first (15 min), then the two strongest 10-mark questions (20 min each), check in the remaining time. Honest note: only 2 papers, in two different formats — the pattern here is topic repetition, not a slot map, and the Winter format itself is unconfirmed. This raises your odds; it is not a guarantee.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Exact papers — Gen AI</h2>
+<div class="paper">
+<h3>Dec 2025 — QP 25503 · 2 hours · 60 marks · 12/12/2025</h3>
+<p><b>1 — Attempt any Three [15].</b> a: Define Generative AI. Explain its scope with suitable examples? [5] b: List any three GPT variants and mention one use case for each. [5] c: What is the importance of data in training the AI model? [5] d: Explain "text-to-image" tools with an example. [5]</p>
+<p><b>2 a) [8]</b> Explain How CNN Works? <b>b) [7]</b> Explain pre-training and fine tuning and instruct tuning in gen-AI?</p>
+<p><b>3 a) [7]</b> What is the multiread mechanism in GPT? <b>b) [8]</b> Explain the architecture of RNN &amp; how it works?</p>
+<p><b>4 a) [8]</b> What are the challenges in Generative AI? <b>b) [7]</b> Write a short note on the architecture and working of GPT models.</p>
+<p><b>5 a) [7]</b> What is chat-GPT and how does it work? <b>b) [8]</b> What is LLM and Types of LLM explain?</p>
+<p><b>6 — Attempt any 3 [15].</b> a: Ethical concerns related to Generative AI. [5] b: Importance of Generative AI in any five real-world domains. [5] c: Traditional vs modern language models. [5] d: Importance and role of self-attention in GPT models. [5]</p>
+</div>
+<div class="paper">
+<h3>May 2026 — QP 3001 · 1 hour · 30 marks · 15/06/2026</h3>
+<p><b>1 — Attempt any five [10].</b> (a) Define Generative AI [2]; (b) What is GPT and Chat-GPT? [2]; (c) Define LLM. [2]; (d) What is pre-training? [2]; (e) What is LSTM? [2]; (f) What is tokenization in transformer model? [2]</p>
+<p><b>2 (a) [5]</b> Architecture of CNN &amp; how it works? <b>(b) [5]</b> Architecture and working of GPT models.</p>
+<p><b>3 (a) [5]</b> Ethical issues in Generative AI. <b>(b) [5]</b> Different GPT variants and their applications.</p>
+<p><b>4 (a) [5]</b> Architecture and working of Transformer models. <b>(b) [5]</b> Any five Generative AI tools with examples.</p>
+<p><b>5 (a) [5]</b> RNN and its limitations. <b>(b) [5]</b> GPT architecture and working.</p>
+</div>
+<p class="small">For SE Sem III — open elective Generative AI (2013311); these papers show Computer · AI&amp;DS branches, and branches vary by elective choice. Questions extracted from the Dec 2025 (60-mark) and May 2026 (30-mark) NEP papers for study use. No names, no personal details on this page. <a href="/">← Back to Maths home</a> · <a href="/dsgt/">DSGT page</a> · <a href="/aoa/">AOA page</a> · <a href="/coa/">COA page</a> · <a href="/papers/">Exact papers hub</a></p>
+</div></section>
+</main>
+<script>
+(function(){
+var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
+var hero=document.getElementById('heroMarks');var toast=document.getElementById('toast');
+var key='genai-study-done';var done={};try{done=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+var lit={};
+function render(celebrate){
+var s=0;boxes.forEach(function(b){if(b.checked)s+=+b.dataset.w;});
+var est=Math.round(s*60/152);hero.textContent=est+' / 60';
+document.querySelectorAll('.miles span').forEach(function(el){
+var m=+el.dataset.mile;var on=est>=m;el.classList.toggle('on',on);
+if(on&&!lit[m]&&celebrate){lit[m]=true;toast.textContent='Yay! You crossed '+m+' — '+(m==27?'you can pass!':m==30?'halfway there!':m==45?'distinction range!':'full paper!');toast.className='show';setTimeout(function(){toast.className=''},3500);}
+if(!on)lit[m]=false;});
+}
+boxes.forEach(function(b,i){b.checked=!!done[i];b.addEventListener('change',function(){done[i]=b.checked;try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}render(true);});});
+render(false);
+})();
+</script>
+</body></html>
