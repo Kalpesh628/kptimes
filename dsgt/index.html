@@ -27,7 +27,7 @@ p{color:var(--color-muted)} p strong{color:var(--color-ink)}
 .kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
 .lede{font-size:1.15rem;max-width:680px}
 .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:normal;overflow-wrap:anywhere}
 .pill b{color:var(--color-accent)}
 .sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
 .sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
@@ -159,12 +159,12 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
 <h1>DSGT, cracked.</h1>
 <p class="lede">Discrete Structures &amp; Graph Theory — paper code N2113112. 60 marks, 3 hours. This page is the same treatment as Maths: every question from both NEP papers, ranked by how often its topic was asked, with the marks it actually carried.</p>
-<div class="pills">
+<div class="pillrow">
 <span class="pill">Sources: <b>Dec 2025 (QP 99814)</b> + <b>May 2026 (QP 14827)</b></span>
 <span class="pill">Same paper for: <b>Computer · AI&amp;DS · CS-IoT</b></span>
 <span class="pill">Pattern: <b>Q1 (15) + any 3 of Q2–Q6 (15 each)</b></span>
 </div>
-<div class="stats"><div><b>2</b><span>papers</span></div><div><b>28</b><span>printed questions</span></div><div><b>15</b><span>topics</span></div><div><b id="heroMarks">0 / 60</b><span>estimated marks (tick topics below)</span></div></div>
+<div class="stats"><div class="stat"><div class="n">2</div><div class="l">papers</div></div><div class="stat"><div class="n">28</div><div class="l">printed questions</div></div><div class="stat"><div class="n">15</div><div class="l">topics</div></div><div class="stat"><div class="n" id="heroMarks">0 / 60</div><div class="l">estimated marks (tick topics below)</div></div></div>
 <div class="sharebar">
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20DSGT%20PYQs%2C%20ranked%20topic-wise%2C%20with%20marks%20and%20both%20papers%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Fdsgt%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
 <button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/dsgt/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
