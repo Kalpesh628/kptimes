@@ -6,6 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sem III Exam Study — Maths PYQs, Ranked | kptimes.in</title>
 <meta name="description" content="Mathematics for Computer Engineering (N2113111) previous-year questions from Dec 2025 and May 2026, cleaned and ranked unit-wise, then topic-wise, then subtopic-wise, with min/max marks per topic and every question extracted.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kptimes.in">
+<meta property="og:title" content="Maths PYQs, Ranked — Sem III Exam Study">
+<meta property="og:description" content="All 42 Maths questions from Dec 2025 + May 2026, ranked unit-wise, topic-wise, subtopic-wise, with min/max marks per topic. Start with Rank 1 units.">
+<meta property="og:url" content="https://kptimes.in/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maths PYQs, Ranked — Sem III Exam Study">
+<meta name="twitter:description" content="All 42 Maths questions from Dec 2025 + May 2026, ranked unit-wise, topic-wise, subtopic-wise, with min/max marks per topic.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,6 +44,9 @@ p{color:var(--color-muted)} p strong{color:var(--color-ink)}
 .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
 .pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
 .pill b{color:var(--color-accent)}
+.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
+.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
 .stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
 .stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
@@ -84,6 +95,10 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <span class="pill">Pattern: Q1 compulsory, any 5 × 3 marks</span>
 <span class="pill">Then any 3 of Q2–Q6 × 15 marks</span>
 <span class="pill">Sources: <b>Dec 2025 (QP 00720)</b> + <b>May 2026 (QP 14664)</b></span>
+</div>
+<div class="sharebar">
+<a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Maths%20PYQs%2C%20ranked%20unit-wise%20%3E%20topic-wise%20%3E%20subtopic-wise%2C%20with%20min%2Fmax%20marks%20and%20all%2042%20questions%20from%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+<button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
 </div>
 <div class="stats">
 <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
@@ -272,11 +287,12 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 </main>
 
 <footer><div class="wrap">
-<p><strong style="color:var(--color-ink)">Sem III Exam Study — kptimes.in</strong> · Built for one student, from his own papers. Questions are extracted from the Dec 2025 and May 2026 NEP papers (N2113111) for study use. Exam dates on this page are expected, not confirmed, for AI &amp; DS. Previous KPTimes business homepage is backed up on this machine and can be restored.</p>
+<p><strong style="color:var(--color-ink)">Sem III Exam Study — kptimes.in</strong> · For SE (AI &amp; DS) Sem III. Questions are extracted from the Dec 2025 and May 2026 NEP papers (N2113111) for study use. Exam dates on this page are expected, not confirmed, for AI &amp; DS. Share it with the class — no names, no personal details on this page.</p>
 <p>How to use it: start with Rank 1 units, tick topics done as you finish them, and use search to jump to a topic. Q1 first — it is the most predictable 15 marks in the paper.</p>
 </div></footer>
 
 <script>
+document.getElementById('copyLink').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('https://kptimes.in/');document.getElementById('copyLink').textContent='Link copied ✓';}catch(e){document.getElementById('copyLink').textContent='https://kptimes.in/';}});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const boxes=[...document.querySelectorAll('[data-topic]')];
