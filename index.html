@@ -131,6 +131,23 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .ptable{border-collapse:collapse;margin:8px 0 8px 28px}
 .ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
 @media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
+
+html{scroll-behavior:smooth}
+::selection{background:var(--color-accent);color:#0b0b12}
+.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
+.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--color-accent);color:#0b0b12}
+h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.topic{transition:transform .2s,box-shadow .2s}
+.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
+.solslot summary{cursor:pointer;font-weight:700}
+.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.sitemap a{color:var(--color-muted);font-weight:600}
+.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
+.jumpcard b{font-size:1.1rem}
+.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
 </style>
 </head>
 <body>
@@ -149,7 +166,7 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
 <a class="sharebtn ghost" href="/papers/" style="text-decoration:none">Exact papers →</a>
 </div>
-<nav class="sitenav" aria-label="Site"><a href="#how-to-pass">How to pass</a><a href="#model-paper">Model paper</a><a href="#units">Ranked study</a><a href="/papers/">Exact papers</a></nav>
+<nav class="sitenav" aria-label="Site"><a href="#how-to-pass">How to pass</a><a href="#model-paper">Model paper</a><a href="#units">Ranked study</a><a href="/papers/">Exact papers</a><a href="#subjects">Subjects</a><a href="#solutions">Solutions</a></nav>
 <div class="stats">
 <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
 <div class="stat"><div class="n">42</div><div class="l">unique questions extracted, both papers (one question cross-listed under Moments + MGF)</div></div>
@@ -203,7 +220,13 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <button class="chip" data-unit="u6">Unit VI</button>
 </div></nav>
 
-<main class="wrap" id="units">
+<main class="wrap" id="units"><section><div class="wrap"><h2>Find anything in 2 taps</h2><p>Every subject, every part — pick the subject, then the part you need.</p><div class="jumpgrid">
+<div class="jumpcard"><b>Maths</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></div>
+<div class="jumpcard"><b>DSGT</b><a href="/dsgt/#ranked">Ranked PYQs</a><a href="/dsgt/#model">Model paper</a><a href="/dsgt/#pass">Pass plan</a><a href="/dsgt/#exact">Exact papers</a><a href="/dsgt/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>AOA</b><a href="/aoa/#ranked">Ranked PYQs</a><a href="/aoa/#model">Model paper</a><a href="/aoa/#pass">Pass plan</a><a href="/aoa/#exact">Exact papers</a><a href="/aoa/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>COA</b><a href="/coa/#ranked">Ranked PYQs</a><a href="/coa/#model">Model paper</a><a href="/coa/#pass">Pass plan</a><a href="/coa/#exact">Exact papers</a><a href="/coa/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>Gen AI</b><a href="/genai/#ranked">Ranked PYQs</a><a href="/genai/#model">Model paper</a><a href="/genai/#pass">Pass plan</a><a href="/genai/#exact">Exact papers</a><a href="/genai/#solutions">Solutions</a></div>
+</div></div></section>
 
 <!-- RANK 1 · UNIT I -->
 <section class="unit reveal" data-unit="u1"><div class="unit-head"><h2>Unit I — Linear Algebra</h2><span class="rank">Rank 1 · 8 questions</span></div>
@@ -348,17 +371,17 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 <div class="q"><div class="meta"><b>May 2026 · Q1c · 3 marks</b></div>Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π).</div>
 </article></section>
 
-<section><div class="wrap">
+<section id="subjects"><div class="wrap">
 <h2>The whole sem, on this site — one format per subject</h2>
-<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers.</p>
-<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td></tr>
-<tr><td><b>Maths (N2113111)</b><br>Computer · AI&amp;DS · CS-IoT</td><td>Done — on this page</td><td>Done — above</td><td>Done — top-right button</td><td>Done — /papers/</td></tr>
-<tr><td><b><a href="/dsgt/" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td></tr>
-<tr><td><b><a href="/aoa/" style="color:var(--color-ink)">AOA (N2113113)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td></tr>
-<tr><td><b><a href="/coa/" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td></tr>
-<tr><td><b><a href="/genai/" style="color:var(--color-ink)">Gen AI (OE, 2013311)</a></b><br>Computer · AI&amp;DS</td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td></tr></table>
+<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers — plus solutions, which start landing from tomorrow, one per question.</p>
+<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
+<tr><td><b>Maths (N2113111)</b><br>Computer · AI&amp;DS · CS-IoT</td><td>Done — on this page</td><td>Done — above</td><td>Done — top-right button</td><td>Done — /papers/</td><td><a href="#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/dsgt/" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/">Done — own page</a></td><td><a href="/dsgt/#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/aoa/" style="color:var(--color-ink)">AOA (N2113113)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/">Done — own page</a></td><td><a href="/aoa/#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/coa/" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/">Done — own page</a></td><td><a href="/coa/#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/genai/" style="color:var(--color-ink)">Gen AI (OE, 2013311)</a></b><br>Computer · AI&amp;DS</td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/#solutions">From tomorrow</a></td></tr></table>
 </div></section>
-</main>
+<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Maths solutions. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Q1 — six short skills</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit I — Linear Algebra</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit II — LPP & NLPP</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit III — Modular Arithmetic</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit IV — Fourier Series</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit V — Statistics</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit VI — Probability</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><div class="sitemap"><b>Every page, every part:</b><a href="/">Maths home</a><a href="/#units">Maths ranked</a><a href="/#model-paper">Maths model paper</a><a href="/dsgt/">DSGT page</a><a href="/dsgt/#ranked">DSGT ranked</a><a href="/dsgt/#model">DSGT model</a><a href="/dsgt/#pass">DSGT pass plan</a><a href="/dsgt/#exact">DSGT exact papers</a><a href="/dsgt/#solutions">DSGT solutions</a><a href="/aoa/">AOA page</a><a href="/aoa/#ranked">AOA ranked</a><a href="/aoa/#model">AOA model</a><a href="/aoa/#pass">AOA pass plan</a><a href="/aoa/#exact">AOA exact papers</a><a href="/aoa/#solutions">AOA solutions</a><a href="/coa/">COA page</a><a href="/coa/#ranked">COA ranked</a><a href="/coa/#model">COA model</a><a href="/coa/#pass">COA pass plan</a><a href="/coa/#exact">COA exact papers</a><a href="/coa/#solutions">COA solutions</a><a href="/genai/">Gen AI page</a><a href="/genai/#ranked">Gen AI ranked</a><a href="/genai/#model">Gen AI model</a><a href="/genai/#pass">Gen AI pass plan</a><a href="/genai/#exact">Gen AI exact papers</a><a href="/genai/#solutions">Gen AI solutions</a><a href="/papers/">Exact papers hub</a><a href="/#solutions">Maths solutions</a></div></main>
 
 
 <footer><div class="wrap">
