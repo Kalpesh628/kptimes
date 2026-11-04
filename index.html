@@ -1,285 +1,297 @@
 <!DOCTYPE html>
+<!-- Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 · Genre: playful · Macrostructure: Workbench · Theme: custom dark study (paper dark · grotesk-sans · lime/violet accent) · Audience: kp, SE AI&DS Sem III · Use: study Maths PYQs in rank order · Tone: playful, focused -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KPTimes — Websites, Apps, Software &amp; AI</title>
-<meta name="description" content="KPTimes builds websites, mobile apps, web apps, custom software and practical AI automation for small businesses. Founder-led, based in Kharghar, Navi Mumbai.">
-<link rel="canonical" href="https://kptimes.in/">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KPTimes">
-<meta property="og:title" content="KPTimes — Websites, Apps, Software &amp; AI">
-<meta property="og:description" content="We build websites, apps, custom software and practical AI solutions around what your business actually needs. Founder-led, Kharghar / Navi Mumbai.">
-<meta property="og:url" content="https://kptimes.in/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KPTimes — Websites, Apps, Software &amp; AI">
-<meta name="twitter:description" content="Websites, apps, custom software and practical AI solutions for small businesses.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230038D0'/%3E%3Ctext x='50' y='70' font-size='48' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'%3EKT%3C/text%3E%3C/svg%3E">
+<title>Sem III Exam Study — Maths PYQs, Ranked | kptimes.in</title>
+<meta name="description" content="Mathematics for Computer Engineering (N2113111) previous-year questions from Dec 2025 and May 2026, cleaned and ranked unit-wise, then topic-wise, then subtopic-wise, with min/max marks per topic and every question extracted.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "KPTimes",
-  "url": "https://kptimes.in/",
-  "description": "KPTimes builds websites, apps, custom software and practical AI solutions for small businesses.",
-  "founder": { "@type": "Person", "name": "Kalpesh Patil" },
-  "knowsAbout": ["Web Development", "App Development", "Custom Software", "AI Automation"]
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
+  --color-ink:#f4f4f8; --color-muted:#a7a7bd; --color-accent:#c8f542; --color-accent-2:#a78bfa;
+  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
 }
-</script>
+*{box-sizing:border-box}
+html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
+body{line-height:1.55}
+a{color:var(--color-accent)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px;min-width:0}
+h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
+h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);margin:0 0 .3rem}
+h3{font-size:1.15rem;margin:.2rem 0 .4rem}
+p{color:var(--color-muted)} p strong{color:var(--color-ink)}
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
+.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
+.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
+@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
+.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
+.lede{font-size:1.15rem;max-width:680px}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
+.pill b{color:var(--color-accent)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
+.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
+.stat .l{color:var(--color-muted);font-size:.9rem}
+section{padding:34px 0}
+.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
+.callout p{margin:.3rem 0}
+.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
+.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
+.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
+.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
+.unit{border:1px solid var(--color-line);border-radius:22px;padding:22px;margin:22px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
+.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
+.topic{background:var(--color-card);border:1px solid var(--color-line);border-radius:16px;padding:16px 18px;margin:16px 0}
+.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.badge{border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700;white-space:nowrap}
+.badge.repeat{background:#12351f;color:#7bf1a8}
+.badge.marks{background:#3a2f00;color:var(--color-mark)}
+.badge.papers{background:#241a4d;color:#c4b5fd}
+.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
+.q .meta{font-size:.82rem;color:var(--color-muted);margin-bottom:2px}
+.q .meta b{color:var(--color-accent)}
+.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
+.done input{accent-color:var(--color-accent);width:18px;height:18px}
+.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
+.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
+.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
+.soon b{color:var(--color-ink)}
+footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
+@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<header class="hero"><div class="wrap" style="position:relative">
+<span class="kick">SE · AI &amp; DS · SEM III</span>
+<h1>Maths, <span class="lime">cracked.</span><br>Not crammed, <span class="violet">ranked.</span></h1>
+<p class="lede">Mathematics for Computer Engineering — <strong>paper code N2113111</strong>, 60 marks, 2 hours. Every question from the only two NEP papers before your batch, cleaned and ranked: <strong>unit first, topic second, subtopic third</strong>, with the min and max marks each topic has actually carried.</p>
+<div class="pillrow">
+<span class="pill">Pattern: Q1 compulsory, any 5 × 3 marks</span>
+<span class="pill">Then any 3 of Q2–Q6 × 15 marks</span>
+<span class="pill">Sources: <b>Dec 2025 (QP 00720)</b> + <b>May 2026 (QP 14664)</b></span>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
+<div class="stat"><div class="n">42</div><div class="l">unique questions extracted, both papers (one question cross-listed under Moments + MGF)</div></div>
+<div class="stat"><div class="n">6</div><div class="l">units, ranked by how often they show up</div></div>
+<div class="stat"><div class="n" id="overallPct">0%</div><div class="l">topics ticked done — your progress, saved on this device</div></div>
+</div>
+<div class="prog"><i id="overallBar"></i></div>
+</div><div class="blob b1"></div><div class="blob b2"></div></header>
 
-<header class="bar">
-  <div class="wrap bar-in">
-    <a class="wordmark" href="/">KPTIMES</a>
-    <nav aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#process">Process</a>
-      <a href="#ai">AI</a>
-      <a href="#about">About</a>
-    </nav>
-    <a class="btn-solid sm" href="#contact">Start a project</a>
-  </div>
-</header>
+<section><div class="wrap">
+<div class="callout reveal">
+<p><strong>Read this first — the cheat code inside the papers.</strong></p>
+<p>Q1 is identical topic-for-topic in both papers, in the same a–f order: eigenvalues, LPP, Fourier a<sub>n</sub>, moments / MGF, remainder, Spearman. Learn those six short-answer skills and Q1 stops being a lottery.</p>
+<p>One full question repeats word-for-word: Fourier expansion of x² in (0, 2) is Q2c in <em>both</em> papers.</p>
+<p>Exam dates are <strong>expected, not confirmed</strong> for AI &amp; DS (taken from the AI &amp; ML sheet: 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm). Treat them as expected until the official sheet is seen.</p>
+</div>
+</div></section>
 
-<main id="main">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="kick reveal">Software · Apps · Web · AI</p>
-      <h1 class="reveal">Turn your idea into something people can actually use.</h1>
-    </div>
-    <div class="band">
-      <div class="wrap band-in">
-        <p class="lede reveal">KPTimes builds websites, apps, custom software and practical AI solutions for small businesses — from first sketch to launched product.</p>
-        <p class="cta-row reveal">
-          <a class="btn-solid inv" href="#contact">Start a project</a>
-          <a class="btn-ghost inv" href="#work">See the work</a>
-        </p>
-        <p class="hero-note reveal">Founder-led · Based in Kharghar, Navi Mumbai. You talk to the person who builds it.</p>
-      </div>
-    </div>
-  </section>
+<nav class="controls"><div class="wrap">
+<input id="search" type="search" placeholder="Search a topic or question… e.g. RSA, Fourier, regression" aria-label="Search questions">
+<button class="chip on" data-unit="all">All units</button>
+<button class="chip" data-unit="u1">Unit I</button>
+<button class="chip" data-unit="u2">Unit II</button>
+<button class="chip" data-unit="u3">Unit III</button>
+<button class="chip" data-unit="u4">Unit IV</button>
+<button class="chip" data-unit="u5">Unit V</button>
+<button class="chip" data-unit="u6">Unit VI</button>
+</div></nav>
 
-  <!-- TICKER -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Websites</span><i>·</i><span>Mobile Apps</span><i>·</i><span>Web Apps</span><i>·</i><span>Custom Software</span><i>·</i><span>AI Assistants</span><i>·</i><span>Automation</span><i>·</i><span>Product Development</span><i>·</i>
-      <span>Websites</span><i>·</i><span>Mobile Apps</span><i>·</i><span>Web Apps</span><i>·</i><span>Custom Software</span><i>·</i><span>AI Assistants</span><i>·</i><span>Automation</span><i>·</i><span>Product Development</span><i>·</i>
-    </div>
-  </div>
+<main class="wrap" id="units">
 
-  <!-- SERVICES -->
-  <section class="block" id="services">
-    <div class="wrap">
-      <p class="kick reveal">01 — Services</p>
-      <h2 class="reveal">What you can hire us for.</h2>
-      <p class="sub reveal">Every engagement starts the same way: we figure out the actual problem first, then build the smallest thing that solves it well.</p>
-      <div class="svc-grid">
-        <article class="svc s7 reveal"><p class="no">01</p><h3>Websites</h3><p><b>Problem:</b> customers can't find you, or what they find looks abandoned.<br><b>We build:</b> business websites, landing pages and service sites that load fast and look credible on a phone.<br><b>Result:</b> a site you're proud to put on your shop board.</p></article>
-        <article class="svc s5 reveal"><p class="no">02</p><h3>Web Apps</h3><p><b>Problem:</b> your workflow lives in spreadsheets, registers and memory.<br><b>We build:</b> custom browser-based apps shaped around how your business actually runs.<br><b>Result:</b> the messy process becomes a tool your team just opens.</p></article>
-        <article class="svc s5 reveal"><p class="no">03</p><h3>Mobile Apps</h3><p><b>Problem:</b> your customers live on their phones and you have no presence there.<br><b>We build:</b> Android / iOS or cross-platform apps, scoped to what the project genuinely needs.<br><b>Result:</b> your business in their pocket, not just their browser.</p></article>
-        <article class="svc s7 reveal"><p class="no">04</p><h3>Custom Software</h3><p><b>Problem:</b> off-the-shelf tools almost fit — and "almost" is costing you hours.<br><b>We build:</b> internal tools, dashboards and management systems for your specific operation.<br><b>Result:</b> software that fits like it was made for you. Because it was.</p></article>
-        <article class="svc s7 reveal"><p class="no">05</p><h3>AI &amp; Automation</h3><p><b>Problem:</b> repetitive work — answering the same questions, handling leads, moving data around.<br><b>We build:</b> AI assistants, lead-handling flows and workflow automations tied to your real process.<br><b>Result:</b> the boring work happens on its own; your people do the human work.</p></article>
-        <article class="svc s5 reveal"><p class="no">06</p><h3>Product Development</h3><p><b>Problem:</b> you have an idea for a digital product but no team to build it.<br><b>We build:</b> working first versions — designed, developed and launched, then improved with real feedback.<br><b>Result:</b> an idea becomes something you can show, test and grow.</p></article>
-      </div>
-    </div>
-  </section>
+<!-- RANK 1 · UNIT I -->
+<section class="unit reveal" data-unit="u1"><div class="unit-head"><h2>Unit I — Linear Algebra</h2><span class="rank">Rank 1 · 8 questions</span></div>
+<p>Eigenvalues run this unit. Every paper asks them twice: once as a 3-mark short, once as a full 6-mark question.</p>
 
-  <!-- WORK -->
-  <section class="block" id="work">
-    <div class="wrap">
-      <p class="kick reveal">02 — Work</p>
-      <h2 class="reveal">Selected builds.</h2>
-      <p class="sub reveal">Real things we've designed and built — not mockups, not concepts. Each one runs.</p>
-      <div class="work-list">
-        <article class="work reveal">
-          <span class="idx" aria-hidden="true">A</span>
-          <div><p class="wtag">Full-stack web app · Live</p><h3>Campus Canteen Pre-Order &amp; Pickup</h3>
-          <p>College canteen rush — long queues, missed orders, chaos at peak hours. Students pre-order from their phone and reserve a pickup slot; staff run an order pipeline: menu, slots, statuses, feedback. Java / JSP / MySQL / Tomcat. Deployed live, built end to end.</p>
-          <p class="cta-row"><a class="btn-solid sm" href="https://canteen.kptimes.in" target="_blank" rel="noopener">Live demo</a><a class="tlink" href="/projects/canteen/">Case study →</a></p></div>
-        </article>
-        <article class="work reveal">
-          <span class="idx" aria-hidden="true">B</span>
-          <div><p class="wtag">Business website · Concept</p><h3>Star Electrical Service</h3>
-          <p>A skilled Kharghar electrician existed only as one line in a business directory. A trilingual (English / Hindi / Marathi) website concept — services, real shop imagery, precise map location, one-tap call and WhatsApp.</p>
-          <p class="cta-row"><a class="btn-solid sm" href="https://demo.kptimes.in" target="_blank" rel="noopener">View concept</a></p></div>
-        </article>
-        <article class="work reveal">
-          <span class="idx" aria-hidden="true">C</span>
-          <div><p class="wtag">Internal experiment · Prototype</p><h3>PaperTrade Terminal</h3>
-          <p>A TradingView-style terminal for learning to trade without risking real money — live NSE, crypto and commodity prices, candlestick charts, virtual ₹1,00,000 portfolio, honest trade journal. Internal build — demo on request.</p></div>
-        </article>
-      </div>
-      <p class="more reveal"><a class="tlink" href="/projects/">More builds →</a></p>
+<article class="topic"><div class="topic-head"><h3>Eigenvalues &amp; eigenvectors</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 6 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1a · 3 marks</b></div>If A = [[3, 2, 1], [0, −1, 4], [0, 0, −2]], find eigenvalues of A⁻¹ + 6I.</div>
+<div class="q"><div class="meta"><b>Dec 2025 · Q3c · 6 marks</b></div>Find eigenvalues and eigenvectors of A = [[3, −1, 1], [−1, 5, −1], [1, −1, 3]].</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1a · 3 marks</b></div>Find the sum and product of the eigenvalues of A = [[−2, −9, 5], [−5, −10, 7], [−9, −21, 14]]. (Shortcut: sum = trace, product = determinant.)</div>
+<div class="q"><div class="meta"><b>May 2026 · Q3c · 6 marks</b></div>Find eigenvalues and eigenvectors of A = [[−9, 4, 4], [−8, 3, 4], [−16, 8, 7]].</div>
+</article>
 
-      <h3 class="h3 reveal">What we can build for you</h3>
-      <ul class="caps">
-        <li class="reveal"><strong>Website</strong><span>Business sites, landing pages, portfolios</span></li>
-        <li class="reveal"><strong>Mobile app</strong><span>Android / iOS / cross-platform</span></li>
-        <li class="reveal"><strong>Web app</strong><span>Custom browser-based tools</span></li>
-        <li class="reveal"><strong>Dashboard</strong><span>See your business at a glance</span></li>
-        <li class="reveal"><strong>AI assistant</strong><span>Answers, qualifies, helps customers</span></li>
-        <li class="reveal"><strong>Automation</strong><span>Repetitive work, handled</span></li>
-        <li class="reveal"><strong>Custom tool</strong><span>Built for one job, done well</span></li>
-        <li class="reveal"><strong>Digital product</strong><span>Your idea, launched</span></li>
-      </ul>
-    </div>
-  </section>
+<article class="topic"><div class="topic-head"><h3>Diagonalisation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 6 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q4b · 5 marks</b></div>Show that A = [[2, 2, 1], [1, 3, 1], [1, 2, 2]] is diagonalisable, hence find its diagonalisable matrix.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4c · 6 marks</b></div>Check whether A = [[8, −8, −2], [4, −3, −2], [3, −4, 1]] is diagonalisable; if yes, find the diagonalising matrix P and the diagonal matrix D.</div>
+</article>
 
-  <!-- PROCESS -->
-  <section class="block" id="process">
-    <div class="wrap">
-      <p class="kick reveal">03 — How we work</p>
-      <h2 class="reveal">A clear process, no black box.</h2>
-      <p class="sub reveal">You'll always know what's happening, what's next, and what it costs before we build it.</p>
-      <ol class="steps">
-        <li class="reveal"><span class="sno">01</span><h3>Understand</h3><p>We learn your business and the actual problem — not just the feature you asked for.</p></li>
-        <li class="reveal"><span class="sno">02</span><h3>Plan</h3><p>We agree on what gets built — and just as importantly, what doesn't.</p></li>
-        <li class="reveal"><span class="sno">03</span><h3>Build</h3><p>Design and development, in the open. You see progress as it happens.</p></li>
-        <li class="reveal"><span class="sno">04</span><h3>Test</h3><p>We break it before your customers can — then fix it and polish the experience.</p></li>
-        <li class="reveal"><span class="sno">05</span><h3>Launch</h3><p>Deployed, live, and ready for real users. No "it works on my machine."</p></li>
-        <li class="reveal"><span class="sno">06</span><h3>Improve</h3><p>We keep refining based on how people actually use it.</p></li>
-      </ol>
-    </div>
-  </section>
+<article class="topic"><div class="topic-head"><h3>Cayley–Hamilton theorem</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5a · 4 marks</b></div>Verify Cayley–Hamilton theorem for A = [[2, −1, 1], [−1, 2, −1], [1, −1, 2]].</div>
+<div class="q"><div class="meta"><b>May 2026 · Q5a · 4 marks</b></div>Verify Cayley–Hamilton theorem for A = [[3, 2, 1], [1, 2, 2], [3, 2, 1]].</div>
+</article></section>
 
-  <!-- AI -->
-  <section class="band" id="ai">
-    <div class="wrap">
-      <p class="kick inv reveal">04 — AI &amp; Automation</p>
-      <h2 class="reveal">AI should solve a real problem — not just be trendy.</h2>
-      <p class="sub inv reveal">We look at the repetitive work inside your business and automate that: the same questions answered daily, leads going cold, data moved by hand from one place to another.</p>
-      <ul class="ai-list">
-        <li class="reveal"><strong>AI customer support</strong><span>Answer common questions instantly, day and night — with a clean handoff to a human when it matters.</span></li>
-        <li class="reveal"><strong>Lead qualification</strong><span>Capture enquiries, ask the right follow-ups, hand you leads ready to talk.</span></li>
-        <li class="reveal"><strong>Content workflows</strong><span>Drafts, summaries and updates from your own material. You approve, it publishes.</span></li>
-        <li class="reveal"><strong>Requirement analysis</strong><span>Turn messy notes, messages and documents into clear requirements.</span></li>
-        <li class="reveal"><strong>Information processing</strong><span>Extract what matters from invoices, forms and records. No retyping.</span></li>
-        <li class="reveal"><strong>Workflow automation</strong><span>Connect the tools you already use so repetitive steps just happen.</span></li>
-        <li class="reveal"><strong>Internal AI tools</strong><span>Small, private assistants for your team — trained on your business.</span></li>
-        <li class="reveal"><strong>AI-assisted development</strong><span>We use AI heavily in our own build process. That's part of why we ship fast.</span></li>
-        <li class="reveal"><strong>Intelligent assistants</strong><span>Helpers that understand context and get things done, not toys that chat.</span></li>
-      </ul>
-      <aside class="note reveal">
-        <p><strong>Honest about where we are:</strong> we're an early-stage team going deep on practical AI — the kind that saves hours every week, not demo-day tricks. If AI genuinely fits your problem, we'll tell you. If it doesn't, we'll tell you that too.</p>
-        <p><a class="btn-ghost inv" href="#contact">Discuss an automation idea</a></p>
-      </aside>
-    </div>
-  </section>
+<!-- RANK 1 · UNIT V -->
+<section class="unit reveal" data-unit="u5"><div class="unit-head"><h2>Unit V — Statistics</h2><span class="rank">Rank 1 · 8 questions</span></div>
+<p>Four topics, two questions each, no surprises. The data tables change; the method never does.</p>
 
-  <!-- WHY -->
-  <section class="block" id="why">
-    <div class="wrap why-grid">
-      <div>
-        <p class="kick reveal">05 — Why KPTimes</p>
-        <h2 class="reveal">Small team.<br>Serious output.</h2>
-        <p class="sub reveal">We're not the right fit for everyone — and we'd rather say so upfront than waste your time.</p>
-        <p class="reveal"><a class="btn-solid sm" href="#contact">See if we're a fit</a></p>
-      </div>
-      <ul class="why-list">
-        <li class="reveal"><strong>Built around your actual problem.</strong> We start from what your business needs, not from a template.</li>
-        <li class="reveal"><strong>Founder-led and hands-on.</strong> The person you talk to is the person building it.</li>
-        <li class="reveal"><strong>Fast iteration.</strong> Small team, short feedback loops, working software early.</li>
-        <li class="reveal"><strong>Modern technology.</strong> Current tools and practices — no legacy baggage.</li>
-        <li class="reveal"><strong>AI where it's genuinely useful.</strong> Automation that earns its place, not decoration.</li>
-        <li class="reveal"><strong>Usable products, not just designs.</strong> We ship things that work, then keep improving them.</li>
-      </ul>
-    </div>
-  </section>
+<article class="topic"><div class="topic-head"><h3>Spearman rank correlation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1f · 3 marks</b></div>Obtain Spearman's rank correlation coefficient for X = 24, 24, 24, 55, 25 and Y = 24, 31, 51, 40, 38.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1f · 3 marks</b></div>Obtain Spearman's rank correlation coefficient for X = 18, 17, 13, 17, 19, 21 and Y = 21, 22, 14, 17, 18, 13.</div>
+</article>
 
-  <!-- ABOUT -->
-  <section class="block" id="about">
-    <div class="wrap">
-      <p class="kick reveal">06 — About</p>
-      <h2 class="reveal">A small company with a long view.</h2>
-      <div class="about-grid">
-        <div class="prose reveal">
-          <p>KPTimes started from a simple idea: build useful digital products, and help businesses solve real problems with software.</p>
-          <p>Today that means websites, apps and custom digital solutions for small businesses — the kind of work where good software makes an immediate, visible difference. Along the way we're going deeper into AI and automation: not as a buzzword, but as a practical way to remove repetitive work.</p>
-          <p>The long-term ambition is bigger than client work. As we solve the same problems well, we turn the best solutions into reusable tools and products — so more businesses can benefit from them.</p>
-          <p>We're early. We'd rather show you working software than make big claims.</p>
-        </div>
-        <aside class="founder reveal">
-          <span class="fmark" aria-hidden="true">KP</span>
-          <div><h3>Kalpesh Patil</h3><p class="role">Founder, KPTimes</p>
-          <p>Designs it, builds it, ships it. If you start a project with KPTimes, this is who you'll be talking to.</p></div>
-        </aside>
-      </div>
-    </div>
-  </section>
+<article class="topic"><div class="topic-head"><h3>Karl Pearson correlation coefficient</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q2b · 5 marks</b></div>Five students' percentages in mathematics and statistics are given (10 pairs: Maths 28, 34, 18, 25, 75, 23, 24, 33, 37, 43; Stats 24, 31, 11, 34, 65, 24, 23, 53, 53, 42). Calculate the coefficient of correlation.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q2b · 5 marks</b></div>Calculate the correlation coefficient for heights of fathers (X) and their sons (Y): X = 65, 66, 67, 67, 68, 69, 70, 72; Y = 67, 68, 65, 68, 72, 72, 69, 71.</div>
+</article>
 
-  <!-- CONTACT -->
-  <section class="block" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="kick reveal">07 — Contact</p>
-        <h2 class="reveal">Have something in mind?</h2>
-        <p class="sub reveal">Tell us what you're building — a website, an app, an automation, or just a rough idea. We'll reply with honest thoughts on whether we can help, and what it would take.</p>
-        <ul class="points reveal">
-          <li><strong>No pressure.</strong> A conversation, not a sales call.</li>
-          <li><strong>Straight answers.</strong> If we're not the right fit, we'll say so.</li>
-          <li><strong>Realistic scope.</strong> You'll know what it costs before we start.</li>
-        </ul>
-      </div>
-      <form id="contactForm" novalidate class="reveal">
-        <div class="field"><label for="fName">Name *</label><input id="fName" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="fEmail">Email *</label><input id="fEmail" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="fBiz">Business / Company</label><input id="fBiz" name="business" type="text" autocomplete="organization"></div>
-        <div class="field"><label for="fWant">What do you want to build? *</label>
-          <select id="fWant" name="want" required><option value="">Choose one…</option><option>Website</option><option>Mobile app</option><option>Web app / custom software</option><option>AI / automation</option><option>Something else / not sure yet</option></select></div>
-        <div class="field"><label for="fBudget">Budget <span class="opt">(optional)</span></label>
-          <select id="fBudget" name="budget"><option value="">Prefer not to say</option><option>Under ₹10k</option><option>₹10k – ₹50k</option><option>₹50k – ₹2L</option><option>₹2L+</option></select></div>
-        <div class="field"><label for="fMsg">Message *</label><textarea id="fMsg" name="message" rows="5" required></textarea></div>
-        <p class="form-err" id="formErr" role="alert" hidden></p>
-        <button class="btn-solid" type="submit">Let's build it</button>
-        <p class="form-note">Opens your email app with everything filled in — nothing gets sent without you pressing send.</p>
-      </form>
-    </div>
-  </section>
+<article class="topic"><div class="topic-head"><h3>Regression lines</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 4 · max 5 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q3a · 4 marks</b></div>Obtain equations of line of regression of x on y for X = 31, 44, 65, 49, 41 and Y = 48, 32, 21, 66, 43.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q6b · 5 marks</b></div>Obtain the equation of line of regression of X on Y for X = 21, 23, 25, 27, 28, 20 and Y = 8, 12, 15, 17, 18, 20.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Fitting a straight line y = a + bx</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6a · 4 marks</b></div>Fit a straight line of the form y = a + bx to X = 1, 4, 7, 9, 8, 10 and Y = 18, 14, 19, 27, 18, 28.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q3a · 4 marks</b></div>Fit a straight line of the form y = a + bx to X = 1, 3, 5, 7, 8, 10 and Y = 8, 4, 5, 7, 8, 4.</div>
+</article></section>
+
+<!-- RANK 1 · UNIT VI -->
+<section class="unit reveal" data-unit="u6"><div class="unit-head"><h2>Unit VI — Probability</h2><span class="rank">Rank 1 · 8 questions</span></div>
+<p>Moments and MGF overlap in the same questions — learn them together, not as two topics.</p>
+
+<article class="topic"><div class="topic-head"><h3>Moments (raw moments, moments about origin / mean)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 4 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q4a · 4 marks</b></div>A random variable X has pdf f(x) = x²e<sup>−x</sup>, x ≥ 0. Find 2 moments about origin and mean.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1d · 3 marks</b></div>Calculate first 2 raw moments for pdf f(x) = xe<sup>−x</sup> for x ≥ 0, 0 otherwise.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4a · 4 marks</b></div>X has distribution X = 1, 2, 3, 4 with P(X = x) = 0.2, 0.3, 0.3, 0.2. Find moment generating function about origin of x, hence find first two raw moments.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Moment generating function (MGF)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 4 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1d · 3 marks</b></div>A random variable x defines the possible outcomes of tossing a fair die. Find moment generating function of x about origin.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4a · 4 marks</b></div>Same question as above under Moments — one 4-mark question covers both MGF and raw moments.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Poisson distribution</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">4 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q2a · 4 marks</b></div>Probability an item produced by a machine is defective is 0.001. Items are sent in packets of 100; find the number of packets containing at least 2 defectives in a consignment of 2000 packets.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q2a · 4 marks</b></div>Traffic accidents on a stretch of road in a month follow a Poisson distribution with mean 7. Find the probability of observing exactly three accidents next month.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Normal distribution</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5b · 5 marks</b></div>Heights of school children are normally distributed with mean 54 inches and standard deviation 12 inches. What proportion have height (i) between 46 and 56 inches, (ii) more than 56 inches?</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4b · 5 marks</b></div>Wait times at a drive-through are approximately normal with mean 185 seconds and standard deviation 15 seconds. Find the percentage of wait times that are (i) between 155 and 215 seconds, (ii) more than 170 seconds.</div>
+</article></section>
+
+<!-- RANK 2 · UNIT II -->
+<section class="unit reveal" data-unit="u2"><div class="unit-head"><h2>Unit II — LPP &amp; NLPP</h2><span class="rank">Rank 2 · 6 questions</span></div>
+<p>Only unit where the two papers split the short question: standard form in Dec, dual in May. Learn both — they are one skill.</p>
+
+<article class="topic"><div class="topic-head"><h3>Lagrange multipliers (NLPP)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">6 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve: Optimise z = −x₁² − x₂² + 4x₁ + 8x₂, subject to x₁ + x₂ = 4, x₁, x₂ ≥ 0.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q6c · 6 marks</b></div>Using Lagrange's multipliers, solve: Maximise Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃, subject to x₁ + x₂ + x₃ = 7, x₁, x₂, x₃ ≥ 0.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Solving an LPP (Simplex method)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 6 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5c · 6 marks</b></div>Applying Simplex method, solve: Maximise Z = 3x₁ + 2x₂, subject to x₁ + x₂ ≤ 4, x₁ − x₃ ≤ 2, x₁, x₂ ≥ 0.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div>Maximise Z = 7x₁ + 5x₂, subject to −x₁ − 2x₂ ≥ −6, 4x₁ + 3x₂ ≤ 12, x₁, x₂ ≥ 0.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>LPP standard form &amp; dual</h3><span><span class="badge papers">1 paper each</span> <span class="badge marks">3 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Transform the LPP to standard form: Maximise Z = 2x₁ + x₂ + 4x₃, subject to x₁ − x₂ + 2x₃ ≤ 5, 3x₁ + x₂ + 5x₃ ≥ 14, x₁, x₂ ≥ 0.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Construct the dual of: Maximise Z = 5x₁ + 4x₂, subject to 2x₁ + 6x₂ ≤ 5, 7x₁ + 3x₂ ≤ 2, x₁, x₂ ≥ 0.</div>
+</article></section>
+
+<!-- RANK 2 · UNIT III -->
+<section class="unit reveal" data-unit="u3"><div class="unit-head"><h2>Unit III — Modular Arithmetic</h2><span class="rank">Rank 2 · 6 questions</span></div>
+<p>The most predictable unit after Q1: CRT, RSA and a remainder question, every single paper.</p>
+
+<article class="topic"><div class="topic-head"><h3>Chinese Remainder Theorem (CRT)</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q3b · 5 marks</b></div>By using Chinese Remainder theorem, solve x ≡ 1 (mod 3), x ≡ 2 (mod 4), x ≡ 3 (mod 5).</div>
+<div class="q"><div class="meta"><b>May 2026 · Q3b · 5 marks</b></div>By using Chinese Remainder theorem, solve x ≡ 3 (mod 4), x ≡ 5 (mod 7).</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>RSA algorithm</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">6 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q4c · 6 marks</b></div>In RSA system the public key (E, N) of user A is (7, 187). Calculate φ(N) and private key D. What is the cipher text for M = 10 using the public key?</div>
+<div class="q"><div class="meta"><b>May 2026 · Q5c · 6 marks</b></div>Perform key generation, encryption and decryption for RSA algorithm with primes p = 3, q = 11, message M = 5.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Remainder by modular arithmetic</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1e · 3 marks</b></div>What is the remainder when 13⁷⁰ is divided by 21?</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1e · 3 marks</b></div>What is the remainder when 5¹¹ is divided by 7?</div>
+</article></section>
+
+<!-- RANK 2 · UNIT IV -->
+<section class="unit reveal" data-unit="u4"><div class="unit-head"><h2>Unit IV — Fourier Series</h2><span class="rank">Rank 2 · 6 questions</span></div>
+<p>Only two skills, repeated endlessly: expand the series, and find a<sub>n</sub>.</p>
+
+<article class="topic"><div class="topic-head"><h3>Full Fourier expansion</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 4 · max 6 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q2c · 6 marks</b></div>Expand Fourier series for f(x) = x² in (0, 2).</div>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Find Fourier series for f(x) = x, 0 &lt; x &lt; 2π.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q2c · 6 marks</b></div>Expand Fourier series for f(x) = x² in (0, 2). — the exact repeat.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q6a · 4 marks</b></div>Expand Fourier series for f(x) = x in (−π, π).</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Finding a<sub>n</sub> in a Fourier expansion</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1c · 3 marks</b></div>Find the value of a<sub>n</sub> in the expansion of Fourier series for f(x) = 4 − x² in (0, 2π).</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1c · 3 marks</b></div>Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π).</div>
+</article></section>
+
+<section><div class="wrap">
+<h2>Next subjects — same format, coming next</h2>
+<p>Maths is done first so you can check the format. DSGT, AOA, COA and Gen AI will get the exact same treatment — unit, then topic, then subtopic, with min/max marks and every question extracted — once you say this Maths page is correct. No content is guessed for them here; their sections stay empty until their papers are cleaned the same way.</p>
+<div class="soon">
+<div><b>DSGT</b><br>Coming next</div>
+<div><b>AOA</b><br>Coming next</div>
+<div><b>COA</b><br>Coming next</div>
+<div><b>Gen AI (OE)</b><br>Coming next</div>
+</div>
+</div></section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <p class="foot-big reveal">Have an idea?<br>Let's build it.</p>
-    <div class="foot-row reveal">
-      <nav aria-label="Footer">
-        <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#ai">AI</a><a href="#about">About</a><a href="#contact">Contact</a><a href="/projects/">Projects</a>
-      </nav>
-      <p class="foot-base">© 2026 KPTimes · kptimes.in</p>
-    </div>
-  </div>
-</footer>
+<footer><div class="wrap">
+<p><strong style="color:var(--color-ink)">Sem III Exam Study — kptimes.in</strong> · Built for one student, from his own papers. Questions are extracted from the Dec 2025 and May 2026 NEP papers (N2113111) for study use. Exam dates on this page are expected, not confirmed, for AI &amp; DS. Previous KPTimes business homepage is backed up on this machine and can be restored.</p>
+<p>How to use it: start with Rank 1 units, tick topics done as you finish them, and use search to jump to a topic. Q1 first — it is the most predictable 15 marks in the paper.</p>
+</div></footer>
 
 <script>
-(function(){
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: 0.1});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-  var form = document.getElementById('contactForm');
-  var err = document.getElementById('formErr');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = document.getElementById('fName').value.trim();
-    var email = document.getElementById('fEmail').value.trim();
-    var want = document.getElementById('fWant').value;
-    var msg = document.getElementById('fMsg').value.trim();
-    if(!name || !email || !want || !msg){ err.textContent = 'Please fill in name, email, what you want to build, and your message.'; err.hidden = false; return; }
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ err.textContent = 'That email address doesn\u2019t look right.'; err.hidden = false; return; }
-    err.hidden = true;
-    var biz = document.getElementById('fBiz').value.trim();
-    var budget = document.getElementById('fBudget').value;
-    var body = 'Name: ' + name + '\nEmail: ' + email + (biz ? '\nBusiness: ' + biz : '') + '\nWants: ' + want + (budget ? '\nBudget: ' + budget : '') + '\n\n' + msg;
-    window.location.href = 'mailto:hello@kptimes.in?subject=' + encodeURIComponent('Project enquiry — ' + name) + '&body=' + encodeURIComponent(body);
-  });
-})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const boxes=[...document.querySelectorAll('[data-topic]')];
+const KEY='maths-study-done';
+let done=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+boxes.forEach((b,i)=>{b.checked=done.has(i);b.addEventListener('change',()=>{b.checked?done.add(i):done.delete(i);localStorage.setItem(KEY,JSON.stringify([...done]));update();})});
+function update(){const p=boxes.length?Math.round(done.size/boxes.length*100):0;document.getElementById('overallPct').textContent=p+'%';document.getElementById('overallBar').style.width=p+'%';}
+update();
+const chips=[...document.querySelectorAll('.chip')];let cur='all';
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');cur=c.dataset.unit;filter();}));
+const search=document.getElementById('search');search.addEventListener('input',filter);
+function filter(){const q=search.value.trim().toLowerCase();
+document.querySelectorAll('.unit').forEach(u=>{const okUnit=cur==='all'||u.dataset.unit===cur;let any=false;
+u.querySelectorAll('.topic').forEach(t=>{const hit=!q||t.textContent.toLowerCase().includes(q);t.style.display=hit?'':'none';if(hit)any=true;});
+u.style.display=(okUnit&&any)?'':'none';});}
 </script>
 </body>
 </html>
