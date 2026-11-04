@@ -1,21 +1,13 @@
-# KPTimes
+# Sem III Exam Study — kptimes.in
 
-**Websites, Apps, Software & AI.**
+SE Semester III exam study site for Computer, AI&DS and CS-IoT branches: previous-year questions ranked by the marks they actually carried, model papers, pass plans and exact papers from the real Dec 2025 and May 2026 NEP papers.
 
-This repository holds the source of [kptimes.in](https://kptimes.in) — the home of **KPTimes**, a founder-led software studio based in Kharghar, Navi Mumbai, run by [Kalpesh Patil](https://www.linkedin.com/in/kalpeshpatil-kptimes).
+- `/` — home: one button per subject
+- `/maths/` — Mathematics for Computer Engineering (N2113111)
+- `/dsgt/` — Discrete Structures & Graph Theory (N2113112)
+- `/aoa/` — Analysis of Algorithms (N2113113)
+- `/coa/` — Computer Organization & Architecture (N2113114)
+- `/genai/` — Open Elective: Generative AI (2013311)
+- `/papers/` — exact papers hub
 
-KPTimes builds practical software for local businesses: fast websites, custom web apps, and AI tools that solve a real problem in the client's day — not demos that die after the pitch.
-
-## What's here
-
-- The production website served at [kptimes.in](https://kptimes.in) via GitHub Pages
-- Hand-written HTML, CSS and JavaScript — no framework, no build step
-
-## Work
-
-- **Campus Canteen** — a production pre-order & pickup system for a college canteen (Java, Tomcat, MySQL): [canteen.kptimes.in](https://canteen.kptimes.in) · [source](https://github.com/Kalpesh628/campus-canteen)
-
-## Contact
-
-- Website: [kptimes.in](https://kptimes.in)
-- LinkedIn: [kalpeshpatil-kptimes](https://www.linkedin.com/in/kalpeshpatil-kptimes)
+Static site, no build step, no backend. Solutions land per question from 5 Nov 2026, only after manual review.
