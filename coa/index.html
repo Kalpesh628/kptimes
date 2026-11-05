@@ -222,7 +222,7 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 <div class="jumpcard"><b>DSGT</b><a href="/dsgt/#ranked">Ranked PYQs</a><a href="/dsgt/#model">Model paper</a><a href="/dsgt/#pass">Pass plan</a><a href="/dsgt/#exact">Exact papers</a><a href="/dsgt/#solutions">Solutions</a></div>
 <div class="jumpcard"><b>AOA</b><a href="/aoa/#ranked">Ranked PYQs</a><a href="/aoa/#model">Model paper</a><a href="/aoa/#pass">Pass plan</a><a href="/aoa/#exact">Exact papers</a><a href="/aoa/#solutions">Solutions</a></div>
 <div class="jumpcard"><b>COA</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="/papers/#coa">Exact papers</a><a href="#solutions">Solutions</a></div>
-<div class="jumpcard"><b>Gen AI</b><a href="/genai/#ranked">Ranked PYQs</a><a href="/genai/#model">Model paper</a><a href="/genai/#pass">Pass plan</a><a href="/genai/#exact">Exact papers</a><a href="/genai/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>Gen AI</b><a href="/genai/#units">Ranked PYQs</a><a href="/genai/#model-paper">Model paper</a><a href="/genai/#how-to-pass">Pass plan</a><a href="/papers/#genai">Exact papers</a><a href="/genai/#solutions">Solutions</a></div>
 </div></div></section><section class="unit reveal" data-unit="u3"><div class="unit-head"><h2>Module III — Processor Organization and Control Unit Design</h2><span class="rank">Rank 1 · 6 questions</span></div>
 <p>The processor itself: the 8086, its addressing modes, and the two ways to build a control unit — hardwired and microprogrammed.</p>
 
@@ -426,7 +426,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targe
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const boxes=[...document.querySelectorAll('[data-topic]')];
 const KEY='coa-study-done';
-let done=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+let done=(function(){try{var _s=JSON.parse(localStorage.getItem(KEY)||'[]');return new Set(Array.isArray(_s)?_s:[])}catch(e){return new Set()}})();
 boxes.forEach((b,i)=>{b.checked=done.has(i);b.addEventListener('change',()=>{b.checked?done.add(i):done.delete(i);localStorage.setItem(KEY,JSON.stringify([...done]));update();})});
 const MILESTONES=[{m:27,t:'Pass zone crossed — you are above 45%!'},{m:30,t:'Halfway there — 50% of the paper!'},{m:45,t:'Distinction zone — 75%!'},{m:60,t:'Full paper — you can attempt everything!'}];
 const TOTAL_W=190;
