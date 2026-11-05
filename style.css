@@ -1396,6 +1396,7 @@ footer, .foot {
   .paper .sub, .ptable { margin-left: 10px; }
   .qtable, .ptable { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .wrap { padding: 0 16px; }
+  .pill { white-space: normal; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
