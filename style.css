@@ -45,6 +45,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip; /* abs-positioned hero blobs (right:-80px) widened the mobile
+    layout viewport to ~459px on a 390px phone, cutting the page's right edge;
+    body{overflow-x:clip} alone did not stop it — html must clip too.
+    clip (not hidden) keeps position:sticky working. */
 }
 body {
   overflow-x: clip;
