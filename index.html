@@ -25,7 +25,7 @@
   <a href="coa/index.html">COA</a>
   <a href="genai/index.html">Gen AI</a>
   <a href="papers/index.html">Exact papers</a>
-  <a class="nav-timer" href="#countdownSection" title="Time remaining until 17th Nov Exam"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+  <a class="nav-timer" href="#countdownSection" title="Time remaining until nearest exam"><span class="pulse"></span> <span id="navTimerVal">--</span></a>
 </nav>
 
 <!-- Epic Hero Section -->
@@ -77,37 +77,8 @@
 
       <!-- Exact sentence format as requested by user -->
       <div class="countdown-sentence">
-        ⏳ <span id="cdSentence"><b>-- days -- hrs -- mins -- secs</b> remaining until 17th of Nov</span>
+        ⏳ <span id="cdSentence"><b>-- days -- hrs -- mins -- secs</b> remaining until next exam</span>
       </div>
-
-      <!-- Interactive exam switch tabs -->
-      <div class="countdown-tabs">
-        <span class="tab-label">Switch Target:</span>
-        <button class="countdown-tab active" type="button" data-subject="maths">Maths (17 Nov)</button>
-        <button class="countdown-tab" type="button" data-subject="dsgt">DSGT (19 Nov)</button>
-        <button class="countdown-tab" type="button" data-subject="aoa">AOA (21 Nov)</button>
-        <button class="countdown-tab" type="button" data-subject="coa">COA (25 Nov)</button>
-        <button class="countdown-tab" type="button" data-subject="genai">Gen AI (27 Nov)</button>
-      </div>
-    </div>
-
-    <!-- Exam Timetable Announcement -->
-    <div style="background:var(--color-card);border:1px solid var(--color-line);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0;">
-      <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-mark);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">
-        <span>📅 Expected Exam Dates (2:30–4:30 pm · AI&amp;DS / Computer)</span>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px 14px;font-size:0.9rem;color:#d8d8ee">
-        <span><b>17 Nov:</b> Maths</span>
-        <span style="color:var(--color-faint)">·</span>
-        <span><b>19 Nov:</b> DSGT (2:30–5:30)</span>
-        <span style="color:var(--color-faint)">·</span>
-        <span><b>21 Nov:</b> AOA</span>
-        <span style="color:var(--color-faint)">·</span>
-        <span><b>25 Nov:</b> COA</span>
-        <span style="color:var(--color-faint)">·</span>
-        <span><b>27 Nov:</b> Gen AI</span>
-      </div>
-      <p style="margin:6px 0 0;font-size:0.82rem;color:var(--color-faint)">Expected schedule from university sheet. Keep checking official notifications.</p>
     </div>
 
     <!-- Quick Action Sharebar -->
@@ -351,17 +322,16 @@
   }
 })();
 
-// ── Interactive Reverse Exam Countdown Timer ──────────────────
+// ── Dynamic Reverse Exam Countdown Timer (Targets Nearest Paper Automatically) ──
 (function(){
-  var EXAMS = {
-    maths: { name: 'Maths (N2113111)', date: new Date('2026-11-17T14:30:00+05:30'), label: '17 Nov 2026 · 2:30 PM', targetText: '17th of Nov' },
-    dsgt:  { name: 'DSGT (N2113112)',  date: new Date('2026-11-19T14:30:00+05:30'), label: '19 Nov 2026 · 2:30 PM', targetText: '19th of Nov' },
-    aoa:   { name: 'AOA (N2113113)',   date: new Date('2026-11-21T14:30:00+05:30'), label: '21 Nov 2026 · 2:30 PM', targetText: '21st of Nov' },
-    coa:   { name: 'COA (N2113114)',   date: new Date('2026-11-25T14:30:00+05:30'), label: '25 Nov 2026 · 2:30 PM', targetText: '25th of Nov' },
-    genai: { name: 'Gen AI (2013311)', date: new Date('2026-11-27T14:30:00+05:30'), label: '27 Nov 2026 · 2:30 PM', targetText: '27th of Nov' }
-  };
+  var EXAMS = [
+    { id: 'maths', name: 'Maths (N2113111)', shortName: 'Maths', date: new Date('2026-11-17T14:30:00+05:30'), endDate: new Date('2026-11-17T16:30:00+05:30'), label: '17 Nov 2026 · 2:30 PM', targetText: '17th of Nov' },
+    { id: 'dsgt',  name: 'DSGT (N2113112)',  shortName: 'DSGT',  date: new Date('2026-11-19T14:30:00+05:30'), endDate: new Date('2026-11-19T17:30:00+05:30'), label: '19 Nov 2026 · 2:30 PM', targetText: '19th of Nov' },
+    { id: 'aoa',   name: 'AOA (N2113113)',   shortName: 'AOA',   date: new Date('2026-11-21T14:30:00+05:30'), endDate: new Date('2026-11-21T16:30:00+05:30'), label: '21 Nov 2026 · 2:30 PM', targetText: '21st of Nov' },
+    { id: 'coa',   name: 'COA (N2113114)',   shortName: 'COA',   date: new Date('2026-11-25T14:30:00+05:30'), endDate: new Date('2026-11-25T16:30:00+05:30'), label: '25 Nov 2026 · 2:30 PM', targetText: '25th of Nov' },
+    { id: 'genai', name: 'Gen AI (2013311)', shortName: 'Gen AI', date: new Date('2026-11-27T14:30:00+05:30'), endDate: new Date('2026-11-27T16:30:00+05:30'), label: '27 Nov 2026 · 2:30 PM', targetText: '27th of Nov' }
+  ];
 
-  var activeKey = 'maths';
   var targetNameEl = document.getElementById('countdownTargetName');
   var dateBadgeEl = document.getElementById('countdownDateBadge');
   var daysEl = document.getElementById('cdDays');
@@ -371,20 +341,49 @@
   var sentenceEl = document.getElementById('cdSentence');
   var navTimerVal = document.getElementById('navTimerVal');
 
-  function updateTimer() {
-    var exam = EXAMS[activeKey];
-    var now = new Date();
-    var diff = exam.date.getTime() - now.getTime();
+  function getActiveExam(now) {
+    var nowMs = now.getTime();
+    for (var i = 0; i < EXAMS.length; i++) {
+      if (nowMs < EXAMS[i].endDate.getTime()) {
+        return EXAMS[i];
+      }
+    }
+    return null;
+  }
 
-    if (diff <= 0) {
+  function updateTimer() {
+    var now = new Date();
+    var exam = getActiveExam(now);
+
+    if (!exam) {
+      if (targetNameEl) targetNameEl.textContent = 'Sem III Exams Concluded';
+      if (dateBadgeEl) dateBadgeEl.textContent = '🎓 Winter 2026 Completed';
       if (daysEl) daysEl.textContent = '00';
       if (hoursEl) hoursEl.textContent = '00';
       if (minsEl) minsEl.textContent = '00';
       if (secsEl) secsEl.textContent = '00';
-      if (sentenceEl) sentenceEl.innerHTML = '🎉 <b>' + exam.name + '</b> exam session has started!';
-      if (navTimerVal) navTimerVal.textContent = 'Live now!';
+      if (sentenceEl) sentenceEl.innerHTML = '🎉 <b>All Sem III Exams have concluded!</b> Hope you aced every paper!';
+      if (navTimerVal) navTimerVal.textContent = 'Exams Done 🎉';
       return;
     }
+
+    var diff = exam.date.getTime() - now.getTime();
+
+    // Check if the exam is actively happening right now (between start and end time)
+    if (diff <= 0) {
+      if (targetNameEl) targetNameEl.textContent = 'Exam In Progress: ' + exam.name;
+      if (dateBadgeEl) dateBadgeEl.textContent = '🔥 LIVE NOW (' + exam.label + ')';
+      if (daysEl) daysEl.textContent = '00';
+      if (hoursEl) hoursEl.textContent = '00';
+      if (minsEl) minsEl.textContent = '00';
+      if (secsEl) secsEl.textContent = '00';
+      if (sentenceEl) sentenceEl.innerHTML = '⚡ <b>' + exam.name + '</b> exam session is live right now! Give your best!';
+      if (navTimerVal) navTimerVal.textContent = exam.shortName + ' Live Now ⚡';
+      return;
+    }
+
+    if (targetNameEl) targetNameEl.textContent = 'Nearest Exam: ' + exam.name;
+    if (dateBadgeEl) dateBadgeEl.textContent = '📅 ' + exam.label;
 
     var d = Math.floor(diff / (1000 * 60 * 60 * 24));
     var h = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -398,24 +397,12 @@
 
     var formatted = d + ' days ' + h + ' hrs ' + m + ' mins ' + s + ' secs';
     if (sentenceEl) {
-      sentenceEl.innerHTML = '<b>' + formatted + '</b> remaining until ' + exam.targetText + ' (' + exam.name + ')';
+      sentenceEl.innerHTML = '<b>' + formatted + '</b> remaining until ' + exam.targetText + ' (' + exam.shortName + ')';
     }
     if (navTimerVal) {
-      navTimerVal.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
+      navTimerVal.textContent = exam.shortName + ' · ' + d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
     }
   }
-
-  document.querySelectorAll('.countdown-tab').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.countdown-tab').forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      activeKey = btn.dataset.subject;
-      var exam = EXAMS[activeKey];
-      if (targetNameEl) targetNameEl.textContent = 'Countdown to ' + exam.name;
-      if (dateBadgeEl) dateBadgeEl.textContent = '📅 ' + exam.label;
-      updateTimer();
-    });
-  });
 
   updateTimer();
   setInterval(updateTimer, 1000);

@@ -1220,45 +1220,6 @@ body.paper-theme-dark .paper {
   color: var(--color-accent);
   font-weight: 800;
 }
-.countdown-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-  align-items: center;
-}
-.countdown-tabs .tab-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--color-faint);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-right: 4px;
-}
-.countdown-tab {
-  background: var(--color-paper-2);
-  border: 1px solid var(--color-line);
-  color: var(--color-muted);
-  font-size: 0.84rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s var(--ease);
-  font-family: var(--font-body);
-}
-.countdown-tab:hover {
-  color: var(--color-ink);
-  border-color: var(--color-line-bright);
-  background: var(--color-card);
-}
-.countdown-tab.active {
-  background: var(--color-accent);
-  color: #07070d;
-  font-weight: 800;
-  border-color: var(--color-accent);
-  box-shadow: 0 2px 12px rgba(200, 245, 66, 0.3);
-}
 
 /* Question Action Buttons */
 .q-actions {

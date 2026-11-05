@@ -14,7 +14,7 @@
 
 <div class="wrap" style="max-width:640px;position:relative;z-index:2">
   <div style="margin-bottom:18px">
-    <a class="nav-timer" href="index.html#countdownSection" style="margin:0 auto;display:inline-flex"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+    <a class="nav-timer" href="index.html#countdownSection" style="margin:0 auto;display:inline-flex"><span class="pulse"></span> <span id="navTimerVal">--</span></a>
   </div>
   <span class="kick" style="margin-bottom:14px">404 — Page Not Found</span>
   <h1 style="font-size:clamp(2.4rem,6vw,4rem);margin:12px 0 16px"><span class="lime">Lost in</span> the syllabus?</h1>
@@ -38,20 +38,32 @@
 </div>
 <script>
 (function(){
-  var navTimer=document.getElementById('navTimerVal');
-  if(!navTimer) return;
-  var target=new Date('2026-11-17T14:30:00+05:30');
+  var navTimer = document.getElementById('navTimerVal');
+  if (!navTimer) return;
+  var EXAMS = [
+    { shortName: 'Maths', date: new Date('2026-11-17T14:30:00+05:30'), endDate: new Date('2026-11-17T16:30:00+05:30') },
+    { shortName: 'DSGT',  date: new Date('2026-11-19T14:30:00+05:30'), endDate: new Date('2026-11-19T17:30:00+05:30') },
+    { shortName: 'AOA',   date: new Date('2026-11-21T14:30:00+05:30'), endDate: new Date('2026-11-21T16:30:00+05:30') },
+    { shortName: 'COA',   date: new Date('2026-11-25T14:30:00+05:30'), endDate: new Date('2026-11-25T16:30:00+05:30') },
+    { shortName: 'Gen AI',date: new Date('2026-11-27T14:30:00+05:30'), endDate: new Date('2026-11-27T16:30:00+05:30') }
+  ];
   function updateNavTimer(){
-    var diff=target.getTime()-Date.now();
-    if(diff<=0){ navTimer.textContent='Live now!'; return; }
-    var d=Math.floor(diff/(1000*60*60*24));
-    var h=Math.floor((diff/(1000*60*60))%24);
-    var m=Math.floor((diff/(1000*60))%60);
-    var s=Math.floor((diff/1000)%60);
-    navTimer.textContent=d+'d '+h+'h '+m+'m '+s+'s';
+    var nowMs = Date.now();
+    var active = null;
+    for (var i = 0; i < EXAMS.length; i++) {
+      if (nowMs < EXAMS[i].endDate.getTime()) { active = EXAMS[i]; break; }
+    }
+    if (!active) { navTimer.textContent = 'Exams Done 🎉'; return; }
+    var diff = active.date.getTime() - nowMs;
+    if (diff <= 0) { navTimer.textContent = active.shortName + ' Live Now ⚡'; return; }
+    var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    var m = Math.floor((diff / (1000 * 60)) % 60);
+    var s = Math.floor((diff / 1000) % 60);
+    navTimer.textContent = active.shortName + ' · ' + d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
   }
   updateNavTimer();
-  setInterval(updateNavTimer,1000);
+  setInterval(updateNavTimer, 1000);
 })();
 </script>
 <script src="lamp.js"></script>
