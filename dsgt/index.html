@@ -1,7 +1,22 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<!-- Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 · Genre: playful · Macrostructure: Workbench · Theme: custom dark study (paper dark · grotesk-sans · lime/violet accent) · Audience: kp, SE AI&DS Sem III · Use: study DSGT PYQs in rank order · Tone: playful, focused -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DSGT PYQs, Ranked — Sem III Exam Study</title>
 <meta name="description" content="Sem III DSGT (N2113112) PYQs ranked topic-wise with marks, from Dec 2025 + May 2026, for Computer, AI&DS and CS-IoT branches.">
-<meta property="og:title" content="DSGT PYQs, Ranked — Sem III Exam Study"><meta property="og:description" content="DSGT ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026."><meta property="og:type" content="website">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kptimes.in">
+<meta property="og:title" content="DSGT PYQs, Ranked — Sem III Exam Study">
+<meta property="og:description" content="DSGT ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026.">
+<meta property="og:url" content="https://kptimes.in/dsgt/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DSGT PYQs, Ranked — Sem III Exam Study">
+<meta name="twitter:description" content="DSGT ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
@@ -27,7 +42,7 @@ p{color:#e8e8f2} p strong{color:var(--color-ink)}
 .kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
 .lede{font-size:1.15rem;max-width:680px}
 .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:normal;overflow-wrap:anywhere}
+.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
 .pill b{color:var(--color-accent)}
 .sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
 .sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
@@ -117,18 +132,6 @@ footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-m
 .ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
 @media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
 
-.miles{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-.miles span{padding:8px 14px;border-radius:999px;border:1px solid var(--color-line);color:var(--color-muted);font-weight:700}
-.miles span.on{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent)}
-#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--color-accent);color:#0b0b12;font-weight:800;padding:14px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
-#toast.show{opacity:1;transform:translate(-50%,0)}
-.topic{border:1px solid var(--color-line);border-radius:16px;padding:16px 18px;margin:14px 0}
-.topic label{font-size:1.05rem;cursor:pointer}
-.topic input{transform:scale(1.3);margin-right:8px}
-.paper{background:#f7f4ee;color:#1a1a1a;border-radius:18px;padding:28px 32px;margin:22px 0}
-.paper h3{color:#1a1a1a}
-.paper p{color:#222}
-
 html{scroll-behavior:smooth}
 ::selection{background:var(--color-accent);color:#0b0b12}
 .nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
@@ -145,156 +148,259 @@ h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-backgro
 .jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
 .jumpcard b{font-size:1.1rem}
 .jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
-
-.foot{border-top:1px solid var(--color-line);padding:22px 0;color:var(--color-muted);font-weight:600}
-.foot a{color:var(--color-ink)}
-.subjbtn{display:block;border:1px solid var(--color-line);border-radius:20px;padding:22px 24px;margin:16px 0;text-decoration:none;color:var(--color-ink);transition:transform .2s,box-shadow .2s,border-color .2s}
-.subjbtn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.4);border-color:var(--color-accent)}
-.subjbtn b{font-size:1.5rem;display:block}
-.subjbtn span{color:var(--color-muted);font-weight:600}
-.subjbtn i{display:block;font-style:normal;margin-top:8px;color:var(--color-muted)}
 .nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}section[id]{scroll-margin-top:88px}
 /* Readability fix 2026-11-05: every word clear and visible on phone */
 @media(max-width:768px){.qtable{font-size:1rem}.qtable td{padding:8px 10px}.topic{padding:18px 16px}body{font-size:18px}}
 .solslot{border:1px solid var(--color-line);border-radius:16px;padding:18px;margin:16px 0;background:var(--color-card)}
 .solslot h3{margin-top:0}
 .solslot p, .solslot li{color:#e8e8f2}
-</style></head><body><div class="blob b1"></div><div class="blob b2"></div>
-<header><div class="wrap">
-<nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap" style="position:relative">
 <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
-<h1>DSGT, cracked.</h1>
-<p class="lede">Discrete Structures &amp; Graph Theory — paper code N2113112. 60 marks, 3 hours. This page is the same treatment as Maths: every question from both NEP papers, ranked by how often its topic was asked, with the marks it actually carried.</p>
+<h1>DSGT, <span class="lime">cracked.</span><br>Not crammed, <span class="violet">ranked.</span></h1>
+<p class="lede">Discrete Structures &amp; Graph Theory — <strong>paper code N2113112</strong>, 60 marks, 3 hours. Every question from the only two NEP papers before your batch, cleaned and ranked: <strong>unit first, topic second</strong>, with the min and max marks each topic has actually carried.</p>
 <div class="pillrow">
+<span class="pill">Pattern: Q1 compulsory, any 3 × 5 marks</span>
+<span class="pill">Then any 3 of Q2–Q6 × 15 marks</span>
 <span class="pill">Sources: <b>Dec 2025 (QP 99814)</b> + <b>May 2026 (QP 14827)</b></span>
 <span class="pill">Same paper for: <b>Computer · AI&amp;DS · CS-IoT</b></span>
-<span class="pill">Pattern: <b>Q1 (15) + any 3 of Q2–Q6 (15 each)</b></span>
 </div>
-<div class="stats"><div class="stat"><div class="n">2</div><div class="l">papers</div></div><div class="stat"><div class="n">28</div><div class="l">printed questions</div></div><div class="stat"><div class="n">15</div><div class="l">topics</div></div><div class="stat"><div class="n" id="heroMarks">0 / 60</div><div class="l">estimated marks (tick topics below)</div></div></div>
 <div class="sharebar">
 <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20DSGT%20PYQs%2C%20ranked%20topic-wise%2C%20with%20marks%20and%20both%20papers%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Fdsgt%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
-<button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/dsgt/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button>
+<button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
+<a class="sharebtn ghost" href="/papers/#dsgt" style="text-decoration:none">Exact papers →</a>
 </div>
-</div></header>
-
-<main><section><div class="wrap"><h2>Find anything in 2 taps</h2><p>Every subject, every part — pick the subject, then the part you need.</p><div class="jumpgrid"><div class="jumpcard"><b>Maths</b><a href="/maths/#units">Ranked PYQs</a><a href="/maths/#model-paper">Model paper</a><a href="/maths/#how-to-pass">Pass plan</a><a href="/papers/">Exact papers</a><a href="/maths/#solutions">Solutions</a></div><div class="jumpcard"><b>DSGT</b><a href="#ranked">Ranked PYQs</a><a href="#model">Model paper</a><a href="#pass">Pass plan</a><a href="#exact">Exact papers</a><a href="#solutions">Solutions</a></div><div class="jumpcard"><b>AOA</b><a href="/aoa/#ranked">Ranked PYQs</a><a href="/aoa/#model">Model paper</a><a href="/aoa/#pass">Pass plan</a><a href="/aoa/#exact">Exact papers</a><a href="/aoa/#solutions">Solutions</a></div><div class="jumpcard"><b>COA</b><a href="/coa/#ranked">Ranked PYQs</a><a href="/coa/#model">Model paper</a><a href="/coa/#pass">Pass plan</a><a href="/coa/#exact">Exact papers</a><a href="/coa/#solutions">Solutions</a></div><div class="jumpcard"><b>Gen AI</b><a href="/genai/#ranked">Ranked PYQs</a><a href="/genai/#model">Model paper</a><a href="/genai/#pass">Pass plan</a><a href="/genai/#exact">Exact papers</a><a href="/genai/#solutions">Solutions</a></div></div></div></section>
-<section id="pattern"><div class="wrap">
-<h2>The pattern, first — because DSGT barely moves</h2>
+<nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
+<div class="stats">
+<div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
+<div class="stat"><div class="n">28</div><div class="l">printed questions, both papers</div></div>
+<div class="stat"><div class="n">6</div><div class="l">units, ranked by how often they show up</div></div>
+<div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div>
+</div>
+<div class="prog"><i id="overallBar"></i></div>
+<div class="milestones" id="milestones"></div>
+<p style="font-size:.85rem">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
+</div><div class="blob b1"></div><div class="blob b2"></div></header>
+<section><div class="wrap">
+<div class="callout reveal">
+<p><strong>Read this first — the cheat code inside the papers.</strong></p>
 <p>DSGT is the most predictable paper of the semester. <strong>Every single slot asks the same topic in both papers.</strong> Q1a is equivalence both times, Q1b is logical equivalence both times, Q1c is pigeonhole both times — all the way down to Q6b, Euler/Hamiltonian both times. If you learn the slot list below, you have learned the paper. The only thing that changes is the story wrapped around the question.</p>
-<table class="qtable"><tr><td><b>Slot</b></td><td><b>Dec 2025</b></td><td><b>May 2026</b></td><td><b>Marks</b></td></tr>
-<tr><td><b>Q1a</b></td><td>Equivalence relation</td><td>Equivalence relation</td><td>5, 5</td></tr>
-<tr><td><b>Q1b</b></td><td>Logical equivalence</td><td>Logical equivalence</td><td>5, 5</td></tr>
-<tr><td><b>Q1c</b></td><td>Pigeonhole principle</td><td>Pigeonhole principle</td><td>5, 5</td></tr>
-<tr><td><b>Q1d</b></td><td>Truth table / access expression</td><td><i>not in May scan</i></td><td>5</td></tr>
-<tr><td><b>Q1e</b></td><td>Mapping: function / one-one / onto / many-one</td><td><i>not in May scan</i></td><td>5</td></tr>
-<tr><td><b>Q2a</b></td><td>Inclusion–exclusion</td><td>Inclusion–exclusion</td><td>8, 8</td></tr>
-<tr><td><b>Q2b</b></td><td>Function composition</td><td>Function composition</td><td>7, 7</td></tr>
-<tr><td><b>Q3a</b></td><td>Transitive closure / Warshall</td><td>Transitive closure / reachability</td><td>8, 8</td></tr>
-<tr><td><b>Q3b</b></td><td>Hasse diagram / lattice</td><td>Hasse diagram / lattice</td><td>7, 7</td></tr>
-<tr><td><b>Q4a</b></td><td>Group under × mod 7</td><td>Group (cyclic) under × mod 7</td><td>8, 8</td></tr>
-<tr><td><b>Q4b</b></td><td>Mathematical induction</td><td>Mathematical induction</td><td>7, 7</td></tr>
-<tr><td><b>Q5a</b></td><td>Graph isomorphism</td><td>Graph isomorphism</td><td>8, 8</td></tr>
-<tr><td><b>Q5b</b></td><td>Recurrence relation</td><td>Recurrence relation</td><td>7, 7</td></tr>
-<tr><td><b>Q6a</b></td><td>Ring (Z₆)</td><td>Ring (Z₄)</td><td>8, 8</td></tr>
-<tr><td><b>Q6b</b></td><td>Euler / Hamiltonian paths &amp; circuits</td><td>Euler / Hamiltonian paths &amp; circuits</td><td>7, 7</td></tr></table>
+<p>Q1 + Q2 + Q3 is <strong>45 marks on the table from fully fixed slots</strong> — learn those three questions first and you are already past the pass line at full marks.</p>
+<p>Exam dates are <strong>expected, not confirmed</strong> for AI &amp; DS (taken from the AI &amp; ML sheet: 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm). Treat them as expected until the official sheet is seen.</p>
+</div>
+</div></section>
+<section class="unit reveal" id="model-paper"><div class="unit-head"><h2>Model paper — MU's strict pattern</h2><span class="rank">Predicted shape · practice only</span></div>
+<p>MU sets this paper to a strict template — every slot asks the same topic in both papers. The table below is that template, read off both papers slot by slot. Below it is a <strong>model paper built from the template for practice — it is NOT the real exam paper</strong>, and no question in it is claimed to be a leaked or real question. Practise each slot with the Dec / May question listed in the ranked study below.</p>
+<table class="qtable"><tr><td><b>Question</b></td><td><b>a (marks)</b></td><td><b>b (marks)</b></td><td><b>c (marks)</b></td><td><b>Evidence</b></td></tr>
+<tr><td><b>Q1 — any 3</b></td><td>Equivalence relation (5)</td><td>Logical equivalence (5)</td><td>Pigeonhole principle (5) — Dec also Q1d Truth table, Q1e Mapping (5 each)</td><td>Q1a–c identical topics both papers; Q1d/Q1e Dec-only in the scan</td></tr>
+<tr><td><b>Q2</b></td><td>Inclusion–exclusion (8)</td><td>Function composition (7)</td><td>—</td><td>Identical topics both papers</td></tr>
+<tr><td><b>Q3</b></td><td>Transitive closure / Warshall (8)</td><td>Hasse diagram / lattice (7)</td><td>—</td><td>Identical topics both papers</td></tr>
+<tr><td><b>Q4</b></td><td>Group under × mod 7 (8)</td><td>Mathematical induction (7)</td><td>—</td><td>Identical topics both papers</td></tr>
+<tr><td><b>Q5</b></td><td>Graph isomorphism (8)</td><td>Recurrence relation (7)</td><td>—</td><td>Identical topics both papers</td></tr>
+<tr><td><b>Q6</b></td><td>Ring (8)</td><td>Euler / Hamiltonian paths &amp; circuits (7)</td><td>—</td><td>Identical topics both papers</td></tr></table>
 <p class="small">Q1 as printed in the scans: Dec shows a–e (its heading says six — a sixth subquestion is not in the scan); May shows only a–c. May Q2a and Q4a marks are taken as 8 because each question totals 15 and the b-part is 7. May Q6b's graph figure is not legible in the scan. Nothing here is invented to fill those gaps.</p>
-</div></section>
-
-<section id="ranked"><div class="wrap">
-<h2>Ranked study — tick what you know</h2>
-<p>Topics ranked by printed marks across both papers (190 printed in total). Ticking a topic updates your estimated marks out of 60 and lights up the milestones: <b>Pass 27 → Halfway 30 → Distinction 45 → Full paper 60</b>. Estimate only, from PYQ coverage — not a promised score. Progress saves on this device.</p>
-<div class="miles"><span data-mile="27">Pass · 27</span><span data-mile="30">Halfway · 30</span><span data-mile="45">Distinction · 45</span><span data-mile="60">Full paper · 60</span></div>
-<div id="toast"></div>
-
-<h3>Rank 1 — 16 marks each, asked 2/2 papers</h3>
-<div class="topic"><label><input type="checkbox" data-w="16"> <b>Inclusion–exclusion</b> — 2/2 · 8+8 · Q2a both papers</label><p>Dec: event-app sections (E 140, C 110, R 120, overlaps 65/70/55, total 200) — all three sections, only one section. May: drug trial on 1000 people (symptoms 122/88/112, pairs 27/29/32, all three 10) — at least one symptom, exactly one symptom, Venn diagram.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="16"> <b>Transitive closure / Warshall</b> — 2/2 · 8+8 · Q3a both papers</label><p>Dec: prerequisite network M1–M5, relation {(1,2),(2,3),(3,4),(4,5),(1,1),(3,3),(5,5)} — Warshall's algorithm, modules each Mi unlocks, root and terminal modules. May: airline network V = {a,b,c,d}, R = {(a,b),(b,d),(d,c),(d,a)} — direct routes, routes with layovers, circular routes, final connectivity relation.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="16"> <b>Group under × mod 7</b> — 2/2 · 8+8 · Q4a both papers</label><p>Dec: token T(a) = (a × k) mod 7, a ∈ {1…6} — multiplication table, inverses of 2, 3, 5 mod 7, is ({1…6}, ×₇) a group? May: G = {1,2,3,4,5,6} under multiplication mod 7 — table, inverses of 2, 3, 5, 6, is G cyclic, find a generator.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="16"> <b>Graph isomorphism</b> — 2/2 · 8+8 · Q5a both papers</label><p>Dec: surveillance networks G₁ (A,B,C,D) vs G₂ (P,Q,R,S) — isomorphic? give the mapping. May: network layouts G₁ (A,B,C,X,Y,Z) vs G₂ (1–6) with full edge lists — define isomorphism, decide, give the one-to-one correspondence, justify by degree sequence and adjacency.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="16"> <b>Ring</b> — 2/2 · 8+8 · Q6a both papers</label><p>Dec: (Z₆, ⊕, ⊗) with a ⊕ b = (a+b) mod 6, a ⊗ b = (a×b) mod 6 — abelian group check, closure/associativity, distributivity, is it a ring? May: Z₄ = {0,1,2,3} with addition and multiplication mod 4 — both tables, ring properties, additive identity/inverse, associativity, distributive laws.</p></div>
-
-<h3>Rank 2 — 14 marks each, asked 2/2 papers</h3>
-<div class="topic"><label><input type="checkbox" data-w="14"> <b>Function composition</b> — 2/2 · 7+7 · Q2b both papers</label><p>Dec: M(x) = x + 5, W(x) = 0.4x — compute W∘M, M∘W, M∘M, W∘W, and say which are academically meaningful. May: shirt Rs. 1000, 15% discount then 8% tax — functions for discount and tax, composite function for final cost, final amount.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="14"> <b>Hasse diagram / lattice</b> — 2/2 · 7+7 · Q3b both papers</label><p>Dec: S = {1 TB, 2 TB, 4 TB, 8 TB, 16 TB} under divisibility — Hasse diagram, all (a,b) with a | b, is S a lattice? May: A = {1,2,3,6,12,24,36,72}, (x,y) ∈ R if x | y — all ordered pairs, Hasse diagram, lattice? justify with meet and join.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="14"> <b>Mathematical induction</b> — 2/2 · 7+7 · Q4b both papers</label><p>Dec: prove Sₙ = 4n − 1 is always odd for all natural n. May: prove Σ<sub>r=1</sub><sup>n</sup> r(r + 3) = (1/3)n(n + 1)(n + 5) for all n ≥ 1 — base case, inductive step, conclusion.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="14"> <b>Recurrence relation</b> — 2/2 · 7+7 · Q5b both papers</label><p>Dec: Fₙ = 4Fₙ₋₁ − 4Fₙ₋₂, F₀ = 10, F₁ = 30 — solve it, describe growth (linear/exponential), is it realistic long term? May: Fₙ = 3Fₙ₋₁ + 10Fₙ₋₂ + 7·5ⁿ, F₀ = 4, F₁ = −3 — solve, general expression, effect of the 7·5ⁿ forcing term.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="14"> <b>Euler / Hamiltonian paths &amp; circuits</b> — 2/2 · 7+7 · Q6b both papers</label><p>Dec: graph V = {A,B,C,D,E,F}, E = {AB, AC, BC, BD, CE, DE, DF, EF} — Euler path, Euler circuit, Hamiltonian path, Hamiltonian circuit: exist? construct if so. May: road network on six locations A–F (graph figure not legible in scan) — same four determinations, justified by vertex degrees and traversal conditions.</p></div>
-
-<h3>Rank 3 — 10 marks each, asked 2/2 papers (Q1 shorts)</h3>
-<div class="topic"><label><input type="checkbox" data-w="10"> <b>Equivalence relation</b> — 2/2 · 5+5 · Q1a both papers</label><p>Dec: feedback responses grouped by satisfaction band (1–2 Low, 3 Medium, 4–5 High) — is "similarity" an equivalence relation? May: polygons grouped by number of sides, R = {(P₁,P₂): same number of sides} — equivalence classes for triangles, quadrilaterals, pentagons.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="10"> <b>Logical equivalence</b> — 2/2 · 5+5 · Q1b both papers</label><p>Dec: prove (P ∨ Q) → R ≡ (P → R) ∧ (Q → R) using logical equivalence laws. May: prove ((p → q) → r) ≡ (p ∧ ¬q) ∨ r using a series of logical equivalences.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="10"> <b>Pigeonhole principle</b> — 2/2 · 5+5 · Q1c both papers</label><p>Dec: 240 contestants, 12 judging terminals — minimum sharing a terminal. May: 10 pairs of socks in a drawer — minimum socks to guarantee a matching pair.</p></div>
-
-<h3>Rank 4 — Dec only, 5 marks each</h3>
-<div class="topic"><label><input type="checkbox" data-w="5"> <b>Truth table / access expression</b> — Dec only · 5 · Q1d</label><p>Access A = (P ∧ Q) ∨ (P ∧ R) with P: lab clearance, Q: signed NDA, R: safety briefing — truth table, wrongly-granted combinations, consequences for security and audit.</p></div>
-<div class="topic"><label><input type="checkbox" data-w="5"> <b>Mapping: function / one-one / onto / many-one</b> — Dec only · 5 · Q1e</label><p>Tracks by score: Coding ≥ 80 → Software, Networks ≥ 75 → Network Security, Math ≥ 85 → Data Science (priority Data Science &gt; Software &gt; Network Security); students S1 (85,60,70), S2 (65,80,90), S3 (82,78,88), S4 (78,76,60) — map each student, check function / one-one / onto / many-one.</p></div>
-</div></section>
-
-<section id="model"><div class="wrap">
-<h2>Model paper — practice only, not the real paper</h2>
-<p>This is a predicted <strong>practice paper</strong> built from the slot map above, using the PYQ questions themselves as practice. It is <strong>not</strong> the Winter 2026 paper and nothing here is leaked or guessed from outside the two papers.</p>
-<table class="qtable"><tr><td><b>Q</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
-<tr><td><b>Q1 — any 3</b></td><td>Equivalence (polygons) · Logical equivalence (bus attendance) · Pigeonhole (socks)</td><td>15</td></tr>
-<tr><td><b>Q2</b></td><td>Inclusion–exclusion (drug trial) + Function composition (discount + tax)</td><td>8 + 7</td></tr>
-<tr><td><b>Q3</b></td><td>Transitive closure (airline network) + Hasse / lattice (permission levels)</td><td>8 + 7</td></tr>
-<tr><td><b>Q4</b></td><td>Group mod 7 (cyclic + generator) + Induction (sum series)</td><td>8 + 7</td></tr>
-<tr><td><b>Q5</b></td><td>Graph isomorphism (network layouts) + Recurrence (portfolio model)</td><td>8 + 7</td></tr>
-<tr><td><b>Q6</b></td><td>Ring (Z₄ tables) + Euler / Hamiltonian (conference venue graph)</td><td>8 + 7</td></tr></table>
+<h3>The model paper to practise (predicted shape, 60 marks)</h3>
+<p><strong>Q1 (any 3 × 5):</strong> Equivalence (polygons) · Logical equivalence (bus attendance) · Pigeonhole (socks).</p>
+<p><strong>Q2 (8 + 7):</strong> Inclusion–exclusion (drug trial) + Function composition (discount + tax).</p>
+<p><strong>Q3 (8 + 7):</strong> Transitive closure (airline network) + Hasse / lattice (permission levels).</p>
+<p><strong>Q4 (8 + 7):</strong> Group mod 7 (cyclic + generator) + Induction (sum series).</p>
+<p><strong>Q5 (8 + 7):</strong> Graph isomorphism (network layouts) + Recurrence (portfolio model).</p>
+<p><strong>Q6 (8 + 7):</strong> Ring (Z₄ tables) + Euler / Hamiltonian (conference venue graph).</p>
 <p>Attempt Q1 + any three of Q2–Q6, exactly like the real paper. If you can do this practice paper cold, you can do the pattern.</p>
-</div></section>
+</section>
+<nav class="controls"><div class="wrap">
+<input id="search" type="search" placeholder="Search a topic or question… e.g. inclusion–exclusion, Warshall, induction" aria-label="Search questions">
+<button class="chip on" data-unit="all">All units</button>
+<button class="chip" data-unit="u1">Unit I</button>
+<button class="chip" data-unit="u2">Unit II</button>
+<button class="chip" data-unit="u3">Unit III</button>
+<button class="chip" data-unit="u4">Unit IV</button>
+<button class="chip" data-unit="u5">Unit V</button>
+<button class="chip" data-unit="u6">Unit VI</button>
+</div></nav>
+<main class="wrap" id="units"><section><div class="wrap"><h2>Find anything in 2 taps</h2><p>Every subject, every part — pick the subject, then the part you need.</p><div class="jumpgrid">
+<div class="jumpcard"><b>Maths</b><a href="/maths/#units">Ranked PYQs</a><a href="/maths/#model-paper">Model paper</a><a href="/maths/#how-to-pass">Pass plan</a><a href="/papers/">Exact papers</a><a href="/maths/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>DSGT</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="/papers/#dsgt">Exact papers</a><a href="#solutions">Solutions</a></div>
+<div class="jumpcard"><b>AOA</b><a href="/aoa/#units">Ranked PYQs</a><a href="/aoa/#model-paper">Model paper</a><a href="/aoa/#how-to-pass">Pass plan</a><a href="/papers/#aoa">Exact papers</a><a href="/aoa/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>COA</b><a href="/coa/#units">Ranked PYQs</a><a href="/coa/#model-paper">Model paper</a><a href="/coa/#how-to-pass">Pass plan</a><a href="/papers/#coa">Exact papers</a><a href="/coa/#solutions">Solutions</a></div>
+<div class="jumpcard"><b>Gen AI</b><a href="/genai/#ranked">Ranked PYQs</a><a href="/genai/#model">Model paper</a><a href="/genai/#pass">Pass plan</a><a href="/genai/#exact">Exact papers</a><a href="/genai/#solutions">Solutions</a></div>
+</div></div></section><!-- RANK 1 · UNIT II -->
+<section class="unit reveal" data-unit="u2"><div class="unit-head"><h2>Unit II — Mathematical Relations</h2><span class="rank">Rank 1 · 6 questions</span></div>
+<p>Relations run this paper. Equivalence, Warshall's transitive closure, and Hasse diagrams with lattices fill Q1a, Q3a and Q3b in both papers — three fixed slots, six questions between them.</p>
 
-<section id="pass"><div class="wrap">
-<h2>Pass plan — DSGT</h2>
+<article class="topic"><div class="topic-head"><h3>Transitive closure / Warshall</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">8 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="16"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q3a · 8 marks</b></div>A Data Science program has a prerequisite network among modules: M1: Python Basics; M2: DS Foundation; M3: Machine Learning; M4: Deep Learning; M5: Deployment. Given relation R = {(1,2), (2,3), (3,4), (4,5), (1,1), (3,3), (5,5)}. i. Apply Warshall's Algorithm to compute transitive closure. ii. For each Mi, list all modules it can unlock. iii. Identify root modules and terminal modules. iv. Explain how this helps curriculum planners maintain valid learning paths.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q3a · 8 marks</b></div>A domestic airline company maintains a directed flight network among four cities: V = {a, b, c, d}. The direct flight connections are represented by the relation: R = {(a,b), (b,d), (d,c), (d,a)}. The company wants to analyze all possible direct and indirect travel routes, including circular journeys. Based on the given flight network: 1. Identify and explain the concept of reachability / transitive closure used in the graph. 2. Determine all possible ordered pairs of cities connected through: direct routes, routes with layovers, and circular routes. 3. Analyze how graph connectivity helps optimize airline route planning. 4. Represent the final connectivity relation for the graph.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Hasse diagram / lattice</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">7 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="14"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q3b · 7 marks</b></div>Data storage providers offer plans of sizes: S = {1 TB, 2 TB, 4 TB, 8 TB, 16 TB}. Relation a | b (a divides b). i. Draw the Hasse diagram. ii. List all (a,b) where a divides b. iii. Check whether S forms a lattice (meet &amp; join for every pair). iv. Explain impact on designing upgrade/downgrade recommendations and plan combinations in the storage app.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q3b · 7 marks</b></div>A cloud access-control system organizes permission levels using divisibility-based hierarchy. The permission levels are: A = {1,2,3,6,12,24,36,72}. A relation R is defined on A as: (x,y) ∈ R if x | y. Based on this hierarchy: 1. Write all ordered pairs of relation R. 2. Construct the Hasse Diagram of the poset. 3. Analyze whether the given poset forms a lattice. 4. Justify your answer using suitable meet and join examples.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Equivalence relation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1a · 5 marks</b></div>A student-feedback system groups teacher responses using the rule: Two responses x and y are "similar" if they fall in the same satisfaction band (e.g., 1–2 = Low, 3 = Medium, 4–5 = High). i. Using definitions of reflexive, symmetric, transitive, determine whether "similarity" is an equivalence relation. ii. Explain the classroom-level meaning of each property. iii. Discuss how violating any property affects AI-based feedback analytics and dashboard reports.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1a · 5 marks</b></div>A digital geometry learning platform groups polygons based on the number of sides for automatic classification and retrieval. Let A be the set of all polygons. A relation R is defined on A as: R = {(P<sub>1</sub>, P<sub>2</sub>): P<sub>1</sub> and P<sub>2</sub> have the same number of sides}. Based on this classification system: 1. Analyze whether the relation R is an equivalence relation on A. 2. Verify the properties of reflexivity, symmetry, and transitivity. 3. Construct suitable equivalence classes for triangles, quadrilaterals, and pentagons. 4. Interpret how equivalence relations help organize geometric data in digital systems.</div>
+</article></section>
+
+<!-- RANK 1 · UNIT IV -->
+<section class="unit reveal" data-unit="u4"><div class="unit-head"><h2>Unit IV — Counting</h2><span class="rank">Rank 1 · 6 questions</span></div>
+<p>Counting pays in every paper. Inclusion–exclusion and recurrence are full 8- and 7-mark questions, and the pigeonhole principle is a fixed Q1 short. Three topics, all asked in both papers.</p>
+
+<article class="topic"><div class="topic-head"><h3>Inclusion–exclusion</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">8 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="16"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q2a · 8 marks</b></div>A campus event app records students who use three app sections: E: Event Announcements; C: Clubs &amp; Communities; R: Reels / Short videos. Survey data table: E 140; C 110; R 120; E∩C 65; E∩R 70; C∩R 55; Total Students 200. i. Using inclusion–exclusion, compute how many students use all three sections. ii. Find students who use only one section. iii. Explain how this analysis helps app developers and event committees design targeted notifications and UI improvements.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q2a · 8 marks</b></div>A pharmaceutical company conducts a drug trial on 1000 people to analyze the side effects of a newly developed medicine. The following observations are recorded: 122 people develop symptom A; 88 people develop symptom B; 112 people develop symptom C; 27 people develop both symptoms A and B; 29 people develop both symptoms A and C; 32 people develop both symptoms B and C; 10 people develop all three symptoms A, B, and C. Using the Principle of Inclusion and Exclusion: 1. Analyze how many people develop at least one symptom. 2. Determine the number of people who show exactly one symptom. 3. Construct a Venn diagram and fill all regions appropriately.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Recurrence relation</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">7 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="14"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5b · 7 marks</b></div>A student club records followers using recurrence: F<sub>n</sub> = 4F<sub>n−1</sub> − 4F<sub>n−2</sub>. With, F<sub>0</sub> = 10 (core team); F<sub>1</sub> = 30 (after first promotion). i. Solve the recurrence relation. ii. Describe growth pattern (linear/exponential). iii. Comment whether such growth is realistic for a campus club in long term.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q5b · 7 marks</b></div>A financial analytics company models the quarterly growth of a digital investment portfolio using a recurrence relation. Let F<sub>n</sub> represent the portfolio value during the n<sup>th</sup> quarter. The growth pattern is governed by: F<sub>n</sub> = 3F<sub>n−1</sub> + 10F<sub>n−2</sub> + 7·5<sup>n</sup>, with initial conditions: F<sub>0</sub> = 4, F<sub>1</sub> = −3. Based on this predictive model: 1. Solve the given recurrence relation using an appropriate method. 2. Determine the general expression for F<sub>n</sub>. 3. Analyze the effect of the exponential forcing term 7·5<sup>n</sup> on the sequence growth. 4. Interpret how recurrence relations are useful in financial forecasting and computational modeling.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Pigeonhole principle</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1c · 5 marks</b></div>A programming contest has 240 participants and 12 judging terminals. i. Using Pigeonhole Principle, find the minimum number of contestants who must end up using the same terminal. ii. Explain how this insight helps in contest scheduling, load balancing, and avoiding terminal bottlenecks.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1c · 5 marks</b></div>A quality control department stores 10 pairs of socks of different colors in a drawer for packaging verification. Using the Pigeonhole Principle, analyze the minimum number of socks that must be selected randomly to guarantee that at least one matching pair of the same color is obtained. Justify your answer with suitable reasoning.</div>
+</article></section>
+
+<!-- RANK 2 · UNIT I -->
+<section class="unit reveal" data-unit="u1"><div class="unit-head"><h2>Unit I — Crisp Set Theory and Logic</h2><span class="rank">Rank 2 · 5 questions</span></div>
+<p>Logic is the Q1 engine: logical equivalence and truth tables are fixed shorts, and mathematical induction is a full 7-mark question in Q4b both times.</p>
+
+<article class="topic"><div class="topic-head"><h3>Mathematical induction</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">7 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="14"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q4b · 7 marks</b></div>A student deposits savings in a fund according to: Daily saving: S<sub>n</sub> = 4n − 1. They want to verify if S<sub>n</sub> is always odd for all natural numbers n. i. Prove the statement using mathematical induction. ii. Explain the meaning for planning weekly budgets and long-term savings.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4b · 7 marks</b></div>A data analyst observes that the cumulative computational cost of a repeated process is modeled by the series: Σ<sub>r=1</sub><sup>n</sup> r(r + 3). The analyst claims that for every positive integer n, Σ<sub>r=1</sub><sup>n</sup> r(r + 3) = (1/3)n(n + 1)(n + 5), n ≥ 1, n ∈ N. Using the principle of mathematical induction: 1. Verify the result for the base case. 2. Prove the inductive step. 3. Conclude that the formula is valid for all n ≥ 1. 4. Interpret how induction helps validate formulas in algorithm analysis.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Logical equivalence</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 5 marks</b></div>A college bus attendance system gives "Boarded = True" when: P: The student taps RFID card; Q: Bus mentor manually verifies student; R: The system logs boarding record. The transport officer rewrites: (P ∨ Q) → R ≡ (P → R) ∧ (Q → R). i. Prove the above using logical equivalence laws step-by-step. ii. Explain how this version ensures no boarding method is ignored, improves data consistency, and reduces false "absent" cases.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q1b · 5 marks</b></div>A software security system uses logical rules to decide whether access should be granted, denied, or forwarded for further verification. Consider the following logical expressions: ((p → q) → r) and (p ∧ ¬q) ∨ r. Using a series of logical equivalences, prove that the two expressions are logically equivalent. Also interpret how logical equivalence helps simplify decision rules in software systems.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Truth table / access expression</h3><span><span class="badge papers">Dec 2025 only</span> <span class="badge marks">5 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1d · 5 marks</b></div>A Cybersecurity lab access is granted if: P: Student has lab clearance; Q: Student has signed NDA; R: Student completed safety briefing. Access expression: A = (P ∧ Q) ∨ (P ∧ R). i. Construct truth table for A. ii. Identify combinations where access is wrongly granted. iii. Explain consequences for security, safety compliance, and audit records.</div>
+</article></section>
+
+<!-- RANK 3 · UNIT V -->
+<section class="unit reveal" data-unit="u5"><div class="unit-head"><h2>Unit V — Algebraic Structures</h2><span class="rank">Rank 3 · 4 questions</span></div>
+<p>Groups and rings are Q4a and Q6a in both papers — the same two slots, the same 8 marks each, only the modulus changes.</p>
+
+<article class="topic"><div class="topic-head"><h3>Group under × mod 7</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">8 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="16"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q4a · 8 marks</b></div>A QR-based token system transforms token number a into: T(a) = (a × k) mod 7, with a ∈ {1…6}. i. Construct multiplication table (×<sub>7</sub>). ii. Find modular inverses of 2, 3, 5 under mod 7. iii. Determine if ({1…6}, ×<sub>7</sub>) forms a group. iv. Comment on whether this token transformation ensures reversibility, forgery prevention, and predictable validation.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q4a · 8 marks</b></div>A cryptographic system uses non-zero residue classes modulo 7 for secure key generation. Consider the set: G = {1,2,3,4,5,6} under multiplication modulo 7. Based on this system: 1. Construct the multiplication table of G under multiplication modulo 7. 2. Determine the multiplicative inverses of 2,3,5, and 6. 3. Analyze whether G forms a cyclic group. 4. If it is cyclic, identify at least one generator and justify your answer.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Ring</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">8 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="16"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6a · 8 marks</b></div>The college uses modulo-6 operations to rotate lab batches: Addition: a ⊕ b = (a + b) mod 6; Multiplication: a ⊗ b = (a × b) mod 6. i. Check if (Z<sub>6</sub>, ⊕) is an abelian group. ii. Check closure, associativity of (Z<sub>6</sub>, ⊗). iii. Verify distributive property of ⊗ over ⊕. iv. Conclude whether (Z<sub>6</sub>, ⊕, ⊗) forms a ring, and discuss why this matters in designing timetable rotation logic.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q6a · 8 marks</b></div>A cryptographic system uses arithmetic operations on residue classes modulo 4 for encoding and verification. Consider the set: Z<sub>4</sub> = {0,1,2,3} with addition and multiplication defined modulo 4. Based on this algebraic structure: 1. Construct the addition and multiplication tables for Z<sub>4</sub>. 2. Verify whether Z<sub>4</sub> satisfies the required ring properties. 3. Analyze the role of additive identity, additive inverse, multiplicative associativity, and distributive laws. 4. Conclude whether Z<sub>4</sub> forms a ring under addition and multiplication modulo 4.</div>
+</article></section>
+
+<!-- RANK 3 · UNIT VI -->
+<section class="unit reveal" data-unit="u6"><div class="unit-head"><h2>Unit VI — Graph Theory</h2><span class="rank">Rank 3 · 4 questions</span></div>
+<p>Graphs close the paper: isomorphism in Q5a and Euler/Hamiltonian in Q6b, both asked in both papers.</p>
+
+<article class="topic"><div class="topic-head"><h3>Graph isomorphism</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">8 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="16"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q5a · 8 marks</b></div>Two lab surveillance networks are modeled as undirected graphs: Graph G<sub>1</sub> (Cameras A,B,C,D): A: B, C; B: A, D; C: A, D; D: B, C. Graph G<sub>2</sub> (Cameras P,Q,R,S): P: Q, R; Q: P, S; R: P, S; S: Q, R. i. Determine whether G<sub>1</sub> and G<sub>2</sub> are isomorphic. ii. If yes, provide the mapping. iii. Explain how detecting isomorphic patterns helps in reusing surveillance layouts and minimizing storage of duplicate designs.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q5a · 8 marks</b></div>A computer networking company proposes two communication network layouts represented by graphs G<sub>1</sub> and G<sub>2</sub>. The organization wants to verify whether both network structures provide the same connectivity pattern even though the device labels are different. The graphs are represented as: V(G<sub>1</sub>) = {A,B,C,X,Y,Z}; E(G<sub>1</sub>) = {(A,X), (A,Y), (B,X), (B,Y), (C,Y)}; V(G<sub>2</sub>) = {1,2,3,4,5,6}; E(G<sub>2</sub>) = {(1,4), (1,5), (2,4), (2,5), (3,5)}. Based on the above network structures: 1. Define isomorphism of graphs. 2. Analyze whether graphs G<sub>1</sub> and G<sub>2</sub> are isomorphic. 3. If they are isomorphic, determine a valid one-to-one correspondence between the vertices. 4. Justify your answer by comparing degree sequence and adjacency preservation.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Euler / Hamiltonian paths &amp; circuits</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">7 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="14"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q6b · 7 marks</b></div>A research conference venue is modeled as graph V = {A,B,C,D,E,F} with edges: E = {AB, AC, BC, BD, CE, DE, DF, EF}. i. Determine existence of Euler Path, Euler Circuit, Hamiltonian Path, Hamiltonian Circuit. ii. Construct them if they exist. iii. Explain what this means for planning visitor flow, inspection rounds, and avoiding repeated walking paths.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q6b · 7 marks</b></div>A city transport authority is analyzing a road network connecting six important locations A, B, C, D, E, and F. The network is represented by the following graph: [graph figure not legible in scan]. Based on the given road network: 1. Determine whether the graph has an Euler Path. 2. Determine whether the graph has an Euler Circuit. 3. Determine whether the graph has a Hamiltonian Path. 4. Determine whether the graph has a Hamiltonian Circuit. 5. Justify your answer using degree of vertices and graph traversal conditions.</div>
+</article></section>
+
+<!-- RANK 4 · UNIT III -->
+<section class="unit reveal" data-unit="u3"><div class="unit-head"><h2>Unit III — Functions</h2><span class="rank">Rank 4 · 3 questions</span></div>
+<p>The smallest unit, but function composition is a fixed Q2b in both papers, and mapping types round out Q1.</p>
+
+<article class="topic"><div class="topic-head"><h3>Function composition</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">7 marks both times</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="14"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q2b · 7 marks</b></div>A university assigns raw marks to final grades using: Moderation function M(x) = x + 5; Weight conversion W(x) = 0.4x. Compute the compositions: i. W ∘ M; ii. M ∘ W; iii. M ∘ M; iv. W ∘ W. Interpret each composition in the grading context, and discuss which are academically meaningful and which may distort scores.</div>
+<div class="q"><div class="meta"><b>May 2026 · Q2b · 7 marks</b></div>A retail store offers seasonal discounts on clothing items. A customer wants to purchase a shirt priced at Rs.1000. The store first provides a 15% discount, after which an 8% sales tax is applied to the discounted price. Based on this shopping scenario: 1. Develop suitable mathematical functions representing the discount process and the tax calculation process. 2. Construct the composite function representing the final cost of the shirt. 3. Determine the final amount to be paid by the customer. 4. Analyze how composite functions help automate billing systems in retail applications.</div>
+</article>
+
+<article class="topic"><div class="topic-head"><h3>Mapping: function / one-one / onto / many-one</h3><span><span class="badge papers">Dec 2025 only</span> <span class="badge marks">5 marks</span></span></div>
+<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+<div class="q"><div class="meta"><b>Dec 2025 · Q1e · 5 marks</b></div>Students are assigned to specialization tracks based on the following rule: Score in Coding ≥ 80 → Software Track; Score in Networks ≥ 75 → Network Security; Score in Math ≥ 85 → Data Science. (Priority: Data Science &gt; Software &gt; Network Security). Given sample data (Coding, Networks, Math): S1: (85, 60, 70); S2: (65, 80, 90); S3: (82, 78, 88); S4: (78, 76, 60). i. Map each student to a track. ii. Check if the mapping is function / one-one / onto / many-one. iii. Explain how these properties impact batch size planning, mentor allocation, and fairness.</div>
+</article></section>
+<section id="subjects"><div class="wrap">
+<h2>The whole sem, on this site — one format per subject</h2>
+<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers — plus solutions, which start landing from tomorrow, one per question.</p>
+<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
+<tr><td><b><a href="/maths/" style="color:var(--color-ink)">Maths (N2113111)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/#solutions">From tomorrow</a></td></tr>
+<tr><td><b>DSGT (N2113112)</b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="#units">Done — on this page</a></td><td><a href="#model-paper">Done — above</a></td><td><a href="#how-to-pass">Done — top-right button</a></td><td><a href="/papers/#dsgt">Done — /papers/#dsgt</a></td><td><a href="#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/aoa/" style="color:var(--color-ink)">AOA (N2113113)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/#solutions">From tomorrow</a></td></tr>
+<tr><td><b><a href="/coa/" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/#solutions">Live — own page</a></td></tr>
+<tr><td><b><a href="/genai/" style="color:var(--color-ink)">Gen AI (OE, 2013311)</a></b><br>Computer · AI&amp;DS</td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/#solutions">From tomorrow</a></td></tr></table>
+</div></section><section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for DSGT. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Q1 — short skills</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit I — Crisp Set Theory and Logic</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit II — Mathematical Relations</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit III — Functions</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit IV — Counting</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit V — Algebraic Structures</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit VI — Graph Theory</summary><p>Coming tomorrow — step-by-step, in this order.</p><p>Note: the May 2026 Q6b graph figure is not legible in the scan — its solution needs a clearer scan of the original paper.</p></details></div></section><footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer></main>
+<button class="fab" id="fabPass" type="button">Exam tension? How to pass</button>
+<span id="how-to-pass"></span><div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
+<div class="modal-card"><button class="modal-close" id="passClose" type="button">✕ Close</button>
+<div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · target 30+ / 60</span></div>
+<p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>45 marks on the table from just Q1 plus Q2 plus Q3</strong> — so even with mistakes, you stay above the pass band. Add one more full question and it becomes 60 marks on the table.</p>
+<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
 <table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
 <tr><td><b>Q1's three fixed shorts</b></td><td>Equivalence · Logical equivalence · Pigeonhole</td><td><b>15</b></td></tr>
 <tr><td><b>Q2</b></td><td>Inclusion–exclusion + Function composition</td><td><b>15</b></td></tr>
 <tr><td><b>Q3</b></td><td>Transitive closure + Hasse / lattice</td><td><b>15</b></td></tr>
 <tr><td><b>Total on the table (minimum set)</b></td><td></td><td><b>45</b></td></tr></table>
-<p>Pass is ~27, halfway 30, distinction 45. The minimum set above — Q1 + Q2 + Q3 — already puts 45 marks on the table from fully fixed slots, so even partial credit clears pass comfortably. The safe set adds Q5 (isomorphism + recurrence) for a full 60 attempted. Attempt order for the 3-hour paper: Q1 (30 min) → Q2 (35) → Q3 (35) → strongest of Q4/Q5/Q6 (35) → check with the remaining time. Use the full time on the graph questions' diagrams. Honest note: this pattern comes from only 2 papers — MU can break a slot. It raises your odds; it is not a guarantee.</p>
-</div></section>
-
-<section id="exact"><div class="wrap">
-<h2>Exact papers — DSGT</h2>
-<p>Both papers in original order and numbering, marks on the right, tables as printed. The full verbatim transcript lives in the study notes; the questions below are reproduced as printed, including the scan gaps flagged under the slot map.</p>
-
-<div class="paper">
-<h3>Dec 2025 — QP 99814 · 3 hours · 60 marks · 19/12/2025</h3>
-<p><b>Q1 — Attempt any three out of six sub questions (05M each).</b> a) Student-feedback system, "similar" = same satisfaction band (1–2 Low, 3 Medium, 4–5 High): is similarity an equivalence relation? meaning of each property? effect of violating a property on AI feedback analytics? b) Bus attendance: (P ∨ Q) → R ≡ (P → R) ∧ (Q → R) — prove by logical equivalence laws; why it ensures no boarding method is ignored. c) Programming contest, 240 participants, 12 terminals — Pigeonhole minimum sharing a terminal; use in scheduling and load balancing. d) Cybersecurity lab access A = (P ∧ Q) ∨ (P ∧ R) — truth table, wrongly-granted combinations, security/audit consequences. e) Specialization tracks (Coding ≥ 80 → Software; Networks ≥ 75 → Network Security; Math ≥ 85 → Data Science; priority Data Science &gt; Software &gt; Network Security), students S1 (85,60,70), S2 (65,80,90), S3 (82,78,88), S4 (78,76,60) — map each student; function / one-one / onto / many-one?; impact on batch size, mentors, fairness.</p>
-<p><b>Q2 a) (08M)</b> Campus event app sections E/C/R with survey table E 140, C 110, R 120, E∩C 65, E∩R 70, C∩R 55, Total 200 — inclusion–exclusion: all three sections? only one section? use for notifications and UI. <b>b) (07M)</b> M(x) = x + 5, W(x) = 0.4x — compute W∘M, M∘W, M∘M, W∘W; which are academically meaningful, which distort scores?</p>
-<p><b>Q3 a) (08M)</b> Prerequisite network M1–M5, R = {(1,2),(2,3),(3,4),(4,5),(1,1),(3,3),(5,5)} — Warshall's transitive closure, modules each Mi unlocks, root and terminal modules. <b>b) (07M)</b> Storage plans S = {1, 2, 4, 8, 16 TB} under divisibility — Hasse diagram, all (a,b) with a | b, is S a lattice?; upgrade/downgrade recommendations.</p>
-<p><b>Q4 a) (08M)</b> QR token T(a) = (a × k) mod 7, a ∈ {1…6} — multiplication table (×₇), inverses of 2, 3, 5 mod 7, is ({1…6}, ×₇) a group? reversibility, forgery prevention, validation. <b>b) (07M)</b> Daily saving Sₙ = 4n − 1 — prove Sₙ is always odd by mathematical induction; meaning for weekly budgets and long-term savings.</p>
-<p><b>Q5 a) (08M)</b> Surveillance graphs G₁ (A: B,C; B: A,D; C: A,D; D: B,C) vs G₂ (P: Q,R; Q: P,S; R: P,S; S: Q,R) — isomorphic? mapping? reuse of layouts. <b>b) (07M)</b> Club followers Fₙ = 4Fₙ₋₁ − 4Fₙ₋₂, F₀ = 10, F₁ = 30 — solve, growth pattern, realistic long term?</p>
-<p><b>Q6 a) (08M)</b> Lab-batch rotation: a ⊕ b = (a+b) mod 6, a ⊗ b = (a×b) mod 6 — is (Z₆, ⊕) abelian? closure/associativity of ⊗? distributivity? is (Z₆, ⊕, ⊗) a ring? <b>b) (07M)</b> Conference venue graph V = {A,B,C,D,E,F}, E = {AB, AC, BC, BD, CE, DE, DF, EF} — Euler path, Euler circuit, Hamiltonian path, Hamiltonian circuit: exist? construct? visitor flow and inspection rounds.</p>
+<h3>Step 2 — the safe set (add this and you cover 60 marks)</h3>
+<p>One more full question — Q5 (isomorphism + recurrence) (15) = 15 more marks. 45 + 15 = <strong>60 out of 60</strong> attempted; distinction (45) needs 45/60.</p>
+<h3>Step 3 — how to attempt in the hall (3 hours)</h3>
+<p><strong>Q1 (30 min)</strong> → <strong>Q2 (35)</strong> → <strong>Q3 (35)</strong> → <strong>strongest of Q4/Q5/Q6 (35)</strong> → <strong>check with the remaining time</strong>. Use the full time on the graph questions' diagrams.</p>
+<div class="callout"><p><strong>Honest note, not a guarantee.</strong> This pattern comes from only 2 papers — MU can break a slot. It raises your odds; it is not a guarantee.</p></div>
 </div>
-
-<div class="paper">
-<h3>May 2026 — QP 14827 · 3 hours · 60 marks · 06/06/2026</h3>
-<p><b>Q1 (05M each, as printed a–c).</b> a) Polygons grouped by number of sides, R = {(P₁,P₂): same number of sides} — equivalence relation? properties? classes for triangles, quadrilaterals, pentagons? b) Prove ((p → q) → r) ≡ (p ∧ ¬q) ∨ r by logical equivalences; how equivalence simplifies decision rules. c) 10 pairs of socks in a drawer — Pigeonhole minimum to guarantee a matching pair, with reasoning.</p>
-<p><b>Q2 a) (08M)</b> Drug trial, 1000 people: symptoms A 122, B 88, C 112; pairs A∩B 27, A∩C 29, B∩C 32; all three 10 — inclusion–exclusion: at least one symptom? exactly one symptom? Venn diagram. <b>b) (07M)</b> Shirt Rs. 1000, 15% discount then 8% tax — functions for discount and tax, composite function for final cost, final amount, how composites automate billing.</p>
-<p><b>Q3 a) (08M)</b> Airline network V = {a,b,c,d}, R = {(a,b),(b,d),(d,c),(d,a)} — reachability / transitive closure, direct routes, layover routes, circular routes, final connectivity relation. <b>b) (07M)</b> Permission levels A = {1,2,3,6,12,24,36,72}, (x,y) ∈ R if x | y — all ordered pairs, Hasse diagram, lattice? meet and join examples.</p>
-<p><b>Q4 a) (08M)</b> G = {1,2,3,4,5,6} under multiplication mod 7 — multiplication table, inverses of 2, 3, 5, 6, is G cyclic? find a generator. <b>b) (07M)</b> Prove Σ<sub>r=1</sub><sup>n</sup> r(r + 3) = (1/3)n(n + 1)(n + 5) by induction — base case, inductive step, conclusion.</p>
-<p><b>Q5 a) (08M)</b> Network layouts V(G₁) = {A,B,C,X,Y,Z}, E(G₁) = {(A,X),(A,Y),(B,X),(B,Y),(C,Y)}; V(G₂) = {1,2,3,4,5,6}, E(G₂) = {(1,4),(1,5),(2,4),(2,5),(3,5)} — define isomorphism, isomorphic? one-to-one correspondence? degree sequence and adjacency. <b>b) (07M)</b> Portfolio Fₙ = 3Fₙ₋₁ + 10Fₙ₋₂ + 7·5ⁿ, F₀ = 4, F₁ = −3 — solve, general expression, effect of 7·5ⁿ, use in forecasting.</p>
-<p><b>Q6 a) (08M)</b> Z₄ = {0,1,2,3} with addition and multiplication mod 4 — both tables, ring properties, additive identity/inverse, associativity, distributive laws, is Z₄ a ring? <b>b) (07M)</b> Road network on six locations A–F [graph figure not legible in scan] — Euler path? Euler circuit? Hamiltonian path? Hamiltonian circuit? justify by vertex degrees and traversal conditions.</p>
 </div>
-<p class="small">For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing this subject. Questions extracted from the Dec 2025 and May 2026 NEP papers (N2113112) for study use. No names, no personal details on this page. <a href="/maths/">← Back to Maths page</a> · <a href="/papers/">Exact papers hub</a></p>
-</div></section>
-<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for DSGT. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Inclusion–exclusion</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Transitive closure / Warshall</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Group under × mod 7</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Graph isomorphism</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Ring</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Function composition</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Hasse diagram / lattice</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Mathematical induction</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Recurrence relation</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Euler / Hamiltonian paths &amp; circuits</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Equivalence relation</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Logical equivalence</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Pigeonhole principle</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Truth table / access expression</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Mapping: function / one-one / onto / many-one</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer></main>
+<div class="toast" id="toast"></div>
 <script>
-(function(){
-var boxes=document.querySelectorAll('input[type=checkbox][data-w]');
-var hero=document.getElementById('heroMarks');var toast=document.getElementById('toast');
-var key='dsgt-study-done';var done={};try{done=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
-var miles=[27,30,45,60];var lit={};
-function render(celebrate){
-var s=0;boxes.forEach(function(b,i){if(b.checked)s+=+b.dataset.w;});
-var est=Math.round(s*60/190);hero.textContent=est+' / 60';
-document.querySelectorAll('.miles span').forEach(function(el){
-var m=+el.dataset.mile;var on=est>=m;el.classList.toggle('on',on);
-if(on&&!lit[m]&&celebrate){lit[m]=true;toast.textContent='Yay! You crossed '+m+' — '+(m==27?'you can pass!':m==30?'halfway there!':m==45?'distinction range!':'full paper!');toast.className='show';setTimeout(function(){toast.className=''},3500);}
-if(!on)lit[m]=false;});
-}
-boxes.forEach(function(b,i){b.checked=!!done[i];b.addEventListener('change',function(){done[i]=b.checked;try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}render(true);});});
-render(false);
-})();
+
+const passModal=document.getElementById('passModal');
+function openPass(){passModal.hidden=false;document.body.style.overflow='hidden';}
+function closePass(){passModal.hidden=true;document.body.style.overflow='';}
+document.getElementById('fabPass').addEventListener('click',openPass);
+document.getElementById('passClose').addEventListener('click',closePass);
+passModal.addEventListener('click',e=>{if(e.target===passModal)closePass();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePass();});
+document.querySelectorAll('a[href="#how-to-pass"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openPass();}));
+if(location.hash==='#how-to-pass')openPass();
+document.getElementById('copyLink').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('https://kptimes.in/dsgt/');document.getElementById('copyLink').textContent='Link copied ✓';}catch(e){document.getElementById('copyLink').textContent='https://kptimes.in/dsgt/';}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const boxes=[...document.querySelectorAll('[data-topic]')];
+const KEY='dsgt-study-done';
+let done=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+boxes.forEach((b,i)=>{b.checked=done.has(i);b.addEventListener('change',()=>{b.checked?done.add(i):done.delete(i);localStorage.setItem(KEY,JSON.stringify([...done]));update();})});
+const MILESTONES=[{m:27,t:'Pass zone crossed — you are above 45%!'},{m:30,t:'Halfway there — 50% of the paper!'},{m:45,t:'Distinction zone — 75%!'},{m:60,t:'Full paper — you can attempt everything!'}];
+const TOTAL_W=190;
+let prevLevel=0, toastTimer=null;
+function securedMarks(){let s=0;boxes.forEach((b,i)=>{if(done.has(i))s+=parseInt(b.dataset.w||0,10);});return Math.round(s/TOTAL_W*60);}
+function levelOf(m){let l=0;MILESTONES.forEach((x,i)=>{if(m>=x.m)l=i+1;});return l;}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
+function renderMilestones(m){document.getElementById('milestones').innerHTML=MILESTONES.map(x=>`<span class="ms ${m>=x.m?'done':''}">${m>=x.m?'✓ ':''}${x.m} — ${x.m===27?'Pass':x.m===30?'Halfway':x.m===45?'Distinction':'Full paper'}</span>`).join('');}
+function update(silent){const m=securedMarks();document.getElementById('overallPct').textContent=m+' / 60';document.getElementById('overallBar').style.width=(m/60*100)+'%';renderMilestones(m);const lv=levelOf(m);if(!silent&&lv>prevLevel){showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');}else if(!silent){showToast('Yay! You can secure '+m+' marks in the exam!');}prevLevel=lv;}
+boxes.forEach((b,i)=>{b.checked=done.has(i);});
+update(true);
+const chips=[...document.querySelectorAll('.chip')];let cur='all';
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');cur=c.dataset.unit;filter();}));
+const search=document.getElementById('search');search.addEventListener('input',filter);
+function filter(){const q=search.value.trim().toLowerCase();
+document.querySelectorAll('.unit').forEach(u=>{const okUnit=cur==='all'||u.dataset.unit===cur;let any=false;
+u.querySelectorAll('.topic').forEach(t=>{const hit=!q||t.textContent.toLowerCase().includes(q);t.style.display=hit?'':'none';if(hit)any=true;});
+u.style.display=(okUnit&&any)?'':'none';});}
 </script>
-</body></html>
+</body>
+</html>
