@@ -711,6 +711,10 @@ section {
   font-size: 0.98rem;
   width: 100%;
 }
+/* Scrollable table wrapper: on phones a wide table keeps its natural width
+   and scrolls inside its card instead of crushing columns (GenAI pass table
+   crushed "Six repeaters" to 3-char lines at 390px). Desktop unaffected. */
+.tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .qtable td {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 10px 14px;
@@ -1399,6 +1403,7 @@ footer, .foot {
   .paper { padding: 18px 16px; }
   .paper .sub, .ptable { margin-left: 10px; }
   .qtable, .ptable { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tscroll .qtable, .tscroll .ptable { display: table; width: max-content; min-width: 100%; }
   .wrap { padding: 0 16px; }
   .pill { white-space: normal; }
 }
