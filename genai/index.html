@@ -1,380 +1,644 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gen AI PYQs, Ranked — Sem III Exam Study</title>
-<meta name="description" content="Sem III Gen AI open elective (2013311) PYQs ranked topic-wise, from Dec 2025 (60 marks) + May 2026 (30 marks).">
-<meta property="og:title" content="Gen AI PYQs, Ranked — Sem III Exam Study"><meta property="og:description" content="Gen AI ranked topic-wise, with both papers Dec 2025 (60 marks) + May 2026 (30 marks)."><meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
-  --color-ink:#f4f4f8; --color-muted:#d3d3e6; --color-accent:#c8f542; --color-accent-2:#a78bfa;
-  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
-}
-*{box-sizing:border-box}
-html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
-body{line-height:1.7;font-size:18px}
-a{color:var(--color-accent)}
-.wrap{max-width:1280px;margin:0 auto;padding:0 20px;min-width:0}
-h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
-h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
-h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
-h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin:0 0 .3rem;letter-spacing:-.02em;font-weight:700}
-h3{font-size:1.3rem;margin:.2rem 0 .5rem;letter-spacing:-.01em;font-weight:700}
-p{color:#e8e8f2} p strong{color:var(--color-ink)}
-.hero{position:relative;padding:64px 0 40px;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
-.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
-.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
-@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
-.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
-.lede{font-size:1.15rem;max-width:680px}
-.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
-.pill b{color:var(--color-accent)}
-.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
-.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
-.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
-.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap}
-.fab:hover{transform:translateY(-1px)}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow:auto}
-.modal-backdrop[hidden]{display:none}
-.modal-card{background:var(--color-paper-2);border:1px solid #2e2e46;border-radius:22px;padding:30px 32px;max-width:880px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-.modal-close{float:right;background:transparent;border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:8px 16px;font-size:1rem;cursor:pointer}
-@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}.modal-card{padding:22px 18px}}
-.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
-.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
-.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
-.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
-.stat .l{color:var(--color-muted);font-size:.9rem}
-section{padding:34px 0}
-.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
-.callout p{margin:.3rem 0}
-.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
-.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
-.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
-.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
-.unit{border:1px solid #2e2e46;border-radius:24px;padding:36px 38px;margin:30px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
-.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
-.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
-.topic{background:var(--color-card);border:1px solid #34344e;border-radius:18px;padding:28px 30px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
-.badge{border-radius:999px;padding:3px 10px;font-size:.95rem;font-weight:700;white-space:nowrap}
-.badge.repeat{background:#12351f;color:#7bf1a8}
-.badge.marks{background:#3a2f00;color:var(--color-mark)}
-.badge.papers{background:#241a4d;color:#c4b5fd}
-.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
-.q .meta{font-size:.95rem;color:var(--color-muted);margin-bottom:2px}
-.q .meta b{color:var(--color-accent)}
-.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
-.done input{accent-color:var(--color-accent);width:18px;height:18px}
-.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
-.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
-.milestones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.ms{border:1px solid var(--color-line);border-radius:999px;padding:6px 13px;font-size:.9rem;color:var(--color-muted)}
-.ms.done{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
-.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) scale(.7);background:var(--color-accent);color:#0b0b12;font-weight:700;font-size:1.05rem;padding:16px 24px;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;text-align:center;max-width:92vw}
-.toast.show{opacity:1;transform:translateX(-50%) scale(1);animation:pop .45s ease}
-@keyframes pop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.08)}100%{transform:translateX(-50%) scale(1)}}
-.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
-.soon b{color:var(--color-ink)}
-footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
-@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
-
-.matrix-wrap{display:inline-flex;align-items:stretch;vertical-align:middle;margin:2px 4px}
-.matrix-wrap::before{content:"";width:9px;border:3px solid var(--color-ink);border-right:0}
-.matrix-wrap::after{content:"";width:9px;border:3px solid var(--color-ink);border-left:0}
-.matrix{display:inline-table;vertical-align:middle;border-collapse:collapse}
-.matrix td{padding:3px 10px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:1.12em;line-height:1.3}
-.qtable{border-collapse:collapse;margin:16px auto;font-size:1.05rem;width:100%}
-.qtable td{border:1px solid #4a4a66;padding:9px 12px;text-align:left;color:#e8e8f2;overflow-wrap:anywhere}
-.pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
-.eqblock{margin:12px 0 4px 4px;font-family:Georgia,'Times New Roman',serif;font-size:1.1em;line-height:1.65}
-.eqblock .obj{font-weight:700}
-.eqblock .cons{padding-left:32px}
-.pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
-.pw td{padding:2px 8px}
-.q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
-.q .meta{font-size:.95rem;letter-spacing:.02em}
-
-.paper{background:#fdfdf8;color:#111;border:1px solid #444;border-radius:6px;padding:28px 30px;margin:22px 0;font-family:Georgia,'Times New Roman',serif}
-.paper h3{font-family:Georgia,serif;color:#111;font-size:1.3rem;text-align:center}
-.paper .phead{text-align:center;font-weight:700;line-height:1.4}
-.paper .phead small{display:block;font-weight:400}
-.paper .prow{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-.paper .pmarks{font-weight:700;white-space:nowrap}
-.paper .pq{margin:14px 0}
-.paper .sub{margin:8px 0 8px 28px}
-.paper .matrix td{color:#111}
-.paper .matrix-wrap::before,.paper .matrix-wrap::after{border-color:#111}
-.paper .pw .brace{color:#111}
-.ptable{border-collapse:collapse;margin:8px 0 8px 28px}
-.ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
-@media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
-
-html{scroll-behavior:smooth}
-::selection{background:var(--color-accent);color:#0b0b12}
-.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
-.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
-.nav a:hover{background:var(--color-accent);color:#0b0b12}
-h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
-.topic{transition:transform .2s,box-shadow .2s}
-.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
-.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
-.solslot summary{cursor:pointer;font-weight:700}
-.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
-.sitemap a{color:var(--color-muted);font-weight:600}
-.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
-.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
-.jumpcard b{font-size:1.1rem}
-.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
-.nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}section[id]{scroll-margin-top:88px}
-/* Readability fix 2026-11-05: every word clear and visible on phone */
-@media(max-width:768px){.qtable{font-size:1rem}.qtable td{padding:8px 10px}.topic{padding:18px 16px}body{font-size:18px}}
-.solslot{border:1px solid var(--color-line);border-radius:16px;padding:18px;margin:16px 0;background:var(--color-card)}
-.solslot h3{margin-top:0}
-.solslot p, .solslot li{color:#e8e8f2}
-</style></head>
+<meta name="description" content="Sem III Gen AI open elective (2013311) PYQs ranked topic-wise, from Dec 2025 (60 marks) + May 2026 (30 marks) for Computer, AI&DS branches.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kptimes.in">
+<meta property="og:title" content="Gen AI PYQs, Ranked — Sem III Exam Study">
+<meta property="og:description" content="Gen AI ranked topic-wise, with both papers Dec 2025 (60 marks) + May 2026 (30 marks).">
+<meta property="og:url" content="https://kptimes.in/genai/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../style.css">
+</head>
 <body>
-<header class="hero"><div class="wrap" style="position:relative">
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
 
-<span class="kick">SE · SEM III — Open Elective · Computer · AI&amp;DS</span>
-<h1>Gen AI, cracked.</h1>
-<p class="lede">Generative AI — open elective, paper code 2013311. Read the format warning first: Dec 2025 is a <strong>60-mark / 2-hour</strong> paper, but May 2026 is a <strong>30-mark / 1-hour</b> paper. The Winter 2026 format is unconfirmed — this page covers both, and never mixes their marks up.</p>
-<div class="pillrow">
-<span class="pill">Sources: <b>Dec 2025 (QP 25503, 60 marks)</b> + <b>May 2026 (QP 3001, 30 marks)</b></span>
-<span class="pill">Open elective — branches vary by choice; these papers show Computer · AI&amp;DS</span>
-<span class="pill">Pattern: <b>topics repeat, slots don't — and formats differ</b></span>
-</div>
-<div class="sharebar">
-<a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Gen%20AI%20PYQs%2C%20ranked%20topic-wise%2C%20with%20both%20papers%20Dec%202025%20%2860%20marks%29%20%2B%20May%202026%20%2830%20marks%29%3A%20https%3A%2F%2Fkptimes.in%2Fgenai%2F" target="_blank" rel="noopener">Share on WhatsApp ↗</a>
-<button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
-<a class="sharebtn ghost" href="/papers/#genai">Exact papers →</a>
-</div>
-<nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
-<div class="stats"><div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div><div class="stat"><div class="n">30</div><div class="l">printed questions, both papers</div></div><div class="stat"><div class="n">3</div><div class="l">sections — 2 modules + off-syllabus, ranked by how often they show up</div></div><div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div></div>
-<div class="prog"><i id="overallBar"></i></div>
-<div class="milestones" id="milestones"></div>
-<p style="font-size:.85rem">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
-</div><div class="blob b1"></div><div class="blob b2"></div>
+<!-- Top Persistent Navigation -->
+<nav class="nav" aria-label="Main Navigation">
+  <a class="brand" href="../index.html">kptimes<span class="dot">.</span></a>
+  <a href="../index.html">Home</a>
+  <a href="../maths/index.html">Maths</a>
+  <a href="../dsgt/index.html">DSGT</a>
+  <a href="../aoa/index.html">AOA</a>
+  <a href="../coa/index.html">COA</a>
+  <a class="active" href="../genai/index.html">Gen AI</a>
+  <a href="../papers/index.html">Exact papers</a>
+  <a class="nav-timer" href="../index.html#countdownSection" title="Time remaining until 17th Nov Exam"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kick">SE · SEM III — Open Elective · Computer · AI&amp;DS</span>
+    <h1>Gen AI, <span class="lime">cracked.</span><br>Not crammed, <span class="violet">ranked.</span></h1>
+    <p class="lede">Generative AI — open elective, <strong>paper code 2013311</strong>. Read the format warning first: Dec 2025 is a <strong>60-mark / 2-hour</strong> paper, but May 2026 is a <strong>30-mark / 1-hour</strong> paper. The Winter 2026 format is unconfirmed — this page covers both, and never mixes their marks up.</p>
+    
+    <div class="pillrow">
+      <span class="pill">Sources: <b>Dec 2025 (QP 25503, 60 marks)</b> + <b>May 2026 (QP 3001, 30 marks)</b></span>
+      <span class="pill">Open elective — branches vary by choice; these papers show Computer · AI&amp;DS</span>
+      <span class="pill">Pattern: <b>topics repeat, slots don't — and formats differ</b></span>
+    </div>
+
+    <div class="sharebar">
+      <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20Gen%20AI%20PYQs%2C%20ranked%20topic-wise%2C%20with%20both%20papers%20Dec%202025%20%2860%20marks%29%20%2B%20May%202026%20%2830%20marks%29%3A%20https%3A%2F%2Fkptimes.in%2Fgenai%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
+      <a class="sharebtn ghost" href="../papers/index.html#genai">Exact papers →</a>
+      <a class="sharebtn violet-btn" href="#how-to-pass">🎯 View Pass Plan</a>
+    </div>
+
+    <!-- Live Readiness Tracker -->
+    <div class="stats">
+      <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
+      <div class="stat"><div class="n">30</div><div class="l">printed questions, both papers</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">sections — 2 modules + off-syllabus, ranked by frequency</div></div>
+      <div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div>
+    </div>
+    
+    <div class="prog"><i id="overallBar"></i></div>
+    <div class="milestones" id="milestones"></div>
+    <p style="font-size:.85rem;color:var(--color-muted);margin-top:6px">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
+  </div>
 </header>
 
-<section><div class="wrap"><div class="callout reveal"><p><strong>Read this first — two formats, one course.</strong></p><p><strong>Dec 2025:</strong> Q1 any three × 5 = 15, + any three of Q2–Q6 (15 each), Q6 itself any three × 5 = 15. Total 60, 2 hours.<br><strong>May 2026:</strong> Q1 any five × 2 = 10, + any two of Q2–Q5 (10 each, 5 + 5). Total 30, 1 hour.<br>If Winter 2026 returns to the 60-mark ESE format, the Dec paper is the template. If it stays 30 marks, the May paper is. <strong>Do not study one format's marks as if they were the other's.</strong> The tracker below scales topic coverage to the 60-mark scale as an estimate only.</p></div></div></section>
-<section class="unit reveal" id="model-paper"><div class="unit-head"><h2>Model paper — practice only, not the real paper</h2><span class="rank">Predicted shape · practice only</span></div>
-<p>Gen AI has no slot map: the same topics reappear in different questions and different sizes. Nine topics appear in both papers — the six in the minimum set, plus LLM, pre-training and tools. Two practice versions below, one per format, built from PYQ questions only. <strong>Neither is the Winter 2026 paper.</strong></p>
-<table class="qtable"><tr><td><b>Version</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
-<tr><td><b>60-mark (Dec template)</b></td><td>Q1: definition + GPT variants + data importance · Q2: CNN + pre-training/fine-tuning · Q4: challenges + GPT architecture · Q5: Chat-GPT + LLM types · Q6: ethics + domains + self-attention</td><td>60</td></tr>
-<tr><td><b>30-mark (May template)</b></td><td>Q1: five 2-mark definitions (GenAI, GPT/Chat-GPT, LLM, pre-training, LSTM or tokenization) · any two of: CNN + GPT architecture · ethics + GPT variants · Transformer + five tools · RNN + GPT architecture</td><td>30</td></tr></table>
-</section>
-<nav class="controls"><div class="wrap">
-<input id="search" type="search" placeholder="Search a topic or question… e.g. GPT, RNN, ethics" aria-label="Search questions">
-<button class="chip on" data-unit="all">All units</button>
-<button class="chip" data-unit="u1">Module 1</button>
-<button class="chip" data-unit="u2">Module 2</button>
-<button class="chip" data-unit="u3">Off-syllabus</button>
-</div></nav>
-<main class="wrap" id="units">
-<section><div class="wrap"><h2>Find anything in 2 taps</h2><p>Every subject, every part — pick the subject, then the part you need.</p><div class="jumpgrid"><div class="jumpcard"><b>Maths</b><a href="/maths/#units">Ranked PYQs</a><a href="/maths/#model-paper">Model paper</a><a href="/maths/#how-to-pass">Pass plan</a><a href="/papers/#maths">Exact papers</a><a href="/maths/#solutions">Solutions</a></div><div class="jumpcard"><b>DSGT</b><a href="/dsgt/#units">Ranked PYQs</a><a href="/dsgt/#model-paper">Model paper</a><a href="/dsgt/#how-to-pass">Pass plan</a><a href="/papers/#dsgt">Exact papers</a><a href="/dsgt/#solutions">Solutions</a></div><div class="jumpcard"><b>AOA</b><a href="/aoa/#units">Ranked PYQs</a><a href="/aoa/#model-paper">Model paper</a><a href="/aoa/#how-to-pass">Pass plan</a><a href="/papers/#aoa">Exact papers</a><a href="/aoa/#solutions">Solutions</a></div><div class="jumpcard"><b>COA</b><a href="/coa/#units">Ranked PYQs</a><a href="/coa/#model-paper">Model paper</a><a href="/coa/#how-to-pass">Pass plan</a><a href="/papers/#coa">Exact papers</a><a href="/coa/#solutions">Solutions</a></div><div class="jumpcard"><b>Gen AI</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="/papers/#genai">Exact papers</a><a href="#solutions">Solutions</a></div></div></div></section>
+<!-- Quick In-Page Attachments Bar -->
+<div class="wrap">
+  <div class="attachments-bar">
+    <span class="label">Attachments:</span>
+    <a class="attachment-pill" href="#how-to-pass">🎯 1. Pass Plan (27-45 Marks)</a>
+    <a class="attachment-pill" href="#cheat-code">⚡ 2. Format Warning</a>
+    <a class="attachment-pill" href="#model-paper">📋 3. Model Paper</a>
+    <a class="attachment-pill" href="#units">📊 4. Ranked PYQs (3 Sections)</a>
+    <a class="attachment-pill" href="#solutions">💡 5. Solutions</a>
+    <a class="attachment-pill" href="#subjects">🌐 6. All Subjects</a>
+  </div>
+</div>
 
+<main>
+  <!-- ATTACHMENT 1: HOW TO PASS PLAN -->
+  <section id="how-to-pass" style="padding-top:10px">
+    <div class="wrap">
+      <div class="unit reveal" style="border-color:rgba(167,139,250,0.3);background:linear-gradient(180deg,rgba(167,139,250,0.06),var(--color-paper-2))">
+        <div class="unit-head">
+          <h2>🎯 Attachment 1: How to Pass — For Exam Tension</h2>
+          <span class="rank" style="background:var(--color-accent);color:#07070d">Minimum study · 60-mark &amp; 30-mark formats</span>
+        </div>
+        <p style="font-size:1.02rem;color:#e2e2f5">Breathe. You do not need every topic, and you do not need full marks. Passing lives around <strong>27 marks out of 60</strong> — or about <strong>12–14 out of 30</strong>. The plan below starts with the six topics that appear in both papers, then covers each format's attempt order — so even with mistakes, you stay safely above the pass band.</p>
+        
+        <h3 style="margin-top:20px;color:var(--color-accent)">Step 1 — the minimum set (learn these first, in this order)</h3>
+        <table class="qtable">
+          <tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+          <tr><td><b>Six repeaters</b></td><td>GenAI definition · GPT architecture · GPT variants · CNN · RNN · Ethics</td><td><b>Questions in both papers</b></td></tr>
+          <tr><td><b>60-mark format</b></td><td>Q1 (15, pick three) + any three of Q2–Q6 (45)</td><td><b>60 attempted; pass ~27, distinction 45</b></td></tr>
+          <tr><td><b>30-mark format</b></td><td>Q1 (10, pick five definitions) + any two of Q2–Q5 (20)</td><td><b>30 attempted; pass ~12–14 (confirm from college)</b></td></tr>
+        </table>
 
-<!-- RANK 1 · MODULE 2 -->
-<section class="unit reveal" data-unit="u2"><div class="unit-head"><h2>Module 2 — GPT, ChatGPT, Ethics &amp; Generative AI Tools</h2><span class="rank">Rank 1 · 15 questions</span></div>
-<p>GPT is the centre of this paper: its architecture is asked three times, and variants, pre-training, ChatGPT, self-attention and the multi-head mechanism all hang off it. Ethics and the tools sit in this module too.</p>
-<article class="topic">
-<div class="topic-head"><h3>GPT architecture &amp; working</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 7 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="17"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q4b · 7 marks</b></div>Write a short note on the architecture and working of GPT models.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q2b · 5 marks</b></div>Explain architecture and working of GPT models.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div>Explain GPT architecture and working. (Same question as May Q2b — attempt only one.)</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>GPT variants</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 5 marks</b></div>List any three GPT variants and mention one use case for each.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q3b · 5 marks</b></div>Explain different GPT variants and their applications.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Ethics in Generative AI</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6a · 5 marks</b></div>Ethical concerns related to Generative AI.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q3a · 5 marks</b></div>Explain ethical issues in Generative AI.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Generative AI tools / applications</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1d · 5 marks</b></div>Explain "text-to-image" tools with an example.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q4b · 5 marks</b></div>Explain any five Generative AI tools with examples.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Pre-training</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 7 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="9"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q2b · 7 marks</b></div>Explain pre-training and fine tuning and instruct tuning in gen-AI?</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1d · 2 marks</b></div>What is pre-training?</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Chat-GPT</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">7 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q5a · 7 marks</b></div>What is chat-GPT and how does it work?</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Multi-head mechanism in GPT</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">7 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q3a · 7 marks</b></div>What is the multiread mechanism in GPT? (Printed as “multiread” — read as the multi-head attention mechanism.)</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Self-attention in GPT</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6d · 5 marks</b></div>Explain the importance and role of self-attention in GPT models.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>GPT and Chat-GPT — definition</h3><span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q1b · 2 marks</b></div>What is GPT and Chat-GPT?</div>
-</article>
-</section>
-<!-- RANK 2 · MODULE 1 -->
-<section class="unit reveal" data-unit="u1"><div class="unit-head"><h2>Module 1 — Introduction to Generative AI, Language Models &amp; LLM Architectures</h2><span class="rank">Rank 2 · 12 questions</span></div>
-<p>The foundations: what Generative AI is, how language models work, and the architectures — RNN, LSTM and Transformer — that everything else is built on.</p>
-<article class="topic">
-<div class="topic-head"><h3>RNN — architecture &amp; working</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 8 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q3b · 8 marks</b></div>Explain the architecture of RNN &amp; how it works?</div>
-<div class="q"><div class="meta"><b>May 2026 · Q5a · 5 marks</b></div>Explain RNN and its limitations.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>LLM — Large Language Models</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 8 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q5b · 8 marks</b></div>What is LLM and Types of LLM explain?</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1c · 2 marks</b></div>Define LLM.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Generative AI — definition &amp; scope</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1a · 5 marks</b></div>Define Generative AI. Explain its scope with suitable examples?</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1a · 2 marks</b></div>Define Generative AI.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Challenges in Generative AI</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">8 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q4a · 8 marks</b></div>What are the challenges in Generative AI?</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Importance in five real-world domains</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Explain the importance of Generative AI in any five real-world domains.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Traditional vs modern language models</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6c · 5 marks</b></div>Differentiate between traditional language models and modern language models.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Transformer architecture</h3><span><span class="badge papers">May only</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q4a · 5 marks</b></div>Explain the architecture and working of Transformer models.</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>LSTM</h3><span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q1e · 2 marks</b></div>What is LSTM?</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Tokenization in transformers</h3><span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q1f · 2 marks</b></div>What is tokenization in transformer model?</div>
-</article>
-</section>
-<!-- UNPLACED · NOT IN SYLLABUS -->
-<section class="unit reveal" data-unit="u3"><div class="unit-head"><h2>Asked anyway — not in the syllabus</h2><span class="rank">Rank 3 · 3 questions</span></div>
-<p>These two topics are not named anywhere in the official syllabus — but both papers ask them anyway. Learn them regardless; do not skip them because they are unplaced.</p>
-<article class="topic">
-<div class="topic-head"><h3>CNN — architecture &amp; working</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 8 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q2a · 8 marks</b></div>Explain How CNN Works?</div>
-<div class="q"><div class="meta"><b>May 2026 · Q2a · 5 marks</b></div>Explain the architecture of CNN &amp; how it works?</div>
-</article>
-<article class="topic">
-<div class="topic-head"><h3>Importance of data in training</h3><span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1c · 5 marks</b></div>What is the importance of data in training the AI model?</div>
-</article>
-</section>
-<section id="subjects"><div class="wrap">
-<h2>The whole sem, on this site — one format per subject</h2>
-<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers — plus solutions, which start landing from tomorrow, one per question.</p>
-<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
-<tr><td><b><a href="/maths/" style="color:var(--color-ink)">Maths (N2113111)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/#solutions">From tomorrow</a></td></tr>
-<tr><td><b><a href="/dsgt/" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/#solutions">From tomorrow</a></td></tr>
-<tr><td><b><a href="/aoa/" style="color:var(--color-ink)">AOA (N2113113)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/">Live — own page</a></td><td><a href="/aoa/#solutions">From tomorrow</a></td></tr>
-<tr><td><b><a href="/coa/" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/#solutions">Live — own page</a></td></tr>
-<tr><td><b>Gen AI (OE, 2013311)</b><br>Computer · AI&amp;DS</td><td>Done — on this page</td><td>Done — above</td><td>Done — top-right button</td><td><a href="/papers/#genai">Done — /papers/#genai</a></td><td><a href="#solutions">From tomorrow</a></td></tr>
-</table>
-</div></section>
-<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for Gen AI. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Q1 — short skills</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Module 2 — GPT, ChatGPT, Ethics &amp; Generative AI Tools</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Module 1 — Introduction to Generative AI, Language Models &amp; LLM Architectures</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Asked anyway — not in the syllabus</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section>
-<footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer>
+        <h3 style="margin-top:20px;color:var(--color-accent-2)">Step 2 — how to attempt in the hall</h3>
+        <p><strong>Attempt order, 60-mark paper:</strong> Q1 (25 min) → GPT architecture + CNN (30) → strongest remaining (30) → check (15).<br><strong>For the 30-mark paper:</strong> Q1 definitions first (15 min), then the two strongest 10-mark questions (20 min each), check in the remaining time.</p>
+
+        <div class="callout" style="margin-top:16px">
+          <p><strong>Format warning, not a guarantee.</strong> The Winter 2026 format is unconfirmed — if it returns to 60 marks, study the Dec template; if it stays 30, study May. Never mix the two papers' marks. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: the six repeat topics first, then your strongest remaining questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 2: FORMAT WARNING & INSIDE THE PAPERS -->
+  <section id="cheat-code">
+    <div class="wrap">
+      <div class="callout reveal">
+        <div style="font-size:0.85rem;font-weight:700;color:var(--color-accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px">⚡ Attachment 2: Inside The Papers</div>
+        <h3 style="margin-top:0">Read this first — two formats, one course</h3>
+        <p><strong>Dec 2025:</strong> Q1 any three × 5 = 15, + any three of Q2–Q6 (15 each), Q6 itself any three × 5 = 15. Total 60, 2 hours.<br><strong>May 2026:</strong> Q1 any five × 2 = 10, + any two of Q2–Q5 (10 each, 5 + 5). Total 30, 1 hour.<br>If Winter 2026 returns to the 60-mark ESE format, the Dec paper is the template. If it stays 30 marks, the May paper is. <strong>Do not study one format's marks as if they were the other's.</strong> The tracker below scales topic coverage to the 60-mark scale as an estimate only.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 3: MODEL PAPER -->
+  <section id="model-paper">
+    <div class="wrap">
+      <div class="unit reveal">
+        <div class="unit-head">
+          <h2>📋 Attachment 3: Model paper — practice only, not the real paper</h2>
+          <span class="rank">Predicted shape · practice only</span>
+        </div>
+        <p>Gen AI has no slot map: the same topics reappear in different questions and different sizes. Nine topics appear in both papers — the six in the minimum set, plus LLM, pre-training and tools. Two practice versions below, one per format, built from PYQ questions only. <strong>Neither is the Winter 2026 paper.</strong></p>
+        <table class="qtable">
+          <tr><td><b>Version</b></td><td><b>Practice with</b></td><td><b>Marks</b></td></tr>
+          <tr><td><b>60-mark (Dec template)</b></td><td>Q1: definition + GPT variants + data importance · Q2: CNN + pre-training/fine-tuning · Q4: challenges + GPT architecture · Q5: Chat-GPT + LLM types · Q6: ethics + domains + self-attention</td><td>60</td></tr>
+          <tr><td><b>30-mark (May template)</b></td><td>Q1: five 2-mark definitions (GenAI, GPT/Chat-GPT, LLM, pre-training, LSTM or tokenization) · any two of: CNN + GPT architecture · ethics + GPT variants · Transformer + five tools · RNN + GPT architecture</td><td>30</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 4: RANKED PYQS & QUESTION BANK -->
+  <section id="units">
+    <!-- Filter Chips & Search Bar -->
+    <div class="controls">
+      <div class="wrap">
+        <input id="search" type="search" placeholder="Search a topic or question… e.g. GPT, RNN, ethics" aria-label="Search questions">
+        <button class="chip on" data-unit="all">All sections</button>
+        <button class="chip" data-unit="u2">Module 2 (Rank 1)</button>
+        <button class="chip" data-unit="u1">Module 1 (Rank 2)</button>
+        <button class="chip" data-unit="u3">Off-syllabus (Rank 3)</button>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <!-- RANK 1 · MODULE 2 -->
+      <section class="unit reveal" data-unit="u2">
+        <div class="unit-head">
+          <h2>Module 2 — GPT, ChatGPT, Ethics &amp; Generative AI Tools</h2>
+          <span class="rank">Rank 1 · 15 questions</span>
+        </div>
+        <p>GPT is the centre of this paper: its architecture is asked three times, and variants, pre-training, ChatGPT, self-attention and the multi-head mechanism all hang off it. Ethics and the tools sit in this module too.</p>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>GPT architecture &amp; working</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 7 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="17"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q4b · 7 marks</b></div>Write a short note on the architecture and working of GPT models.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q2b · 5 marks</b></div>Explain architecture and working of GPT models.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q5b · 5 marks</b></div>Explain GPT architecture and working. (Same question as May Q2b — attempt only one.)</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>GPT variants</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1b · 5 marks</b></div>List any three GPT variants and mention one use case for each.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q3b · 5 marks</b></div>Explain different GPT variants and their applications.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Ethics in Generative AI</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6a · 5 marks</b></div>Ethical concerns related to Generative AI.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q3a · 5 marks</b></div>Explain ethical issues in Generative AI.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Generative AI tools / applications</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">5 marks both times</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1d · 5 marks</b></div>Explain "text-to-image" tools with an example.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q4b · 5 marks</b></div>Explain any five Generative AI tools with examples.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Pre-training</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 7 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="9"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q2b · 7 marks</b></div>Explain pre-training and fine tuning and instruct tuning in gen-AI?</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1d · 2 marks</b></div>What is pre-training?</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Chat-GPT</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">7 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q5a · 7 marks</b></div>What is chat-GPT and how does it work?</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Multi-head mechanism in GPT</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">7 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q3a · 7 marks</b></div>What is the multiread mechanism in GPT? (Printed as “multiread” — read as the multi-head attention mechanism.)</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Self-attention in GPT</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6d · 5 marks</b></div>Explain the importance and role of self-attention in GPT models.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>GPT and Chat-GPT — definition</h3>
+            <span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q1b · 2 marks</b></div>What is GPT and Chat-GPT?</div>
+        </article>
+      </section>
+
+      <!-- RANK 2 · MODULE 1 -->
+      <section class="unit reveal" data-unit="u1">
+        <div class="unit-head">
+          <h2>Module 1 — Introduction to Generative AI, Language Models &amp; LLM Architectures</h2>
+          <span class="rank">Rank 2 · 12 questions</span>
+        </div>
+        <p>The foundations: what Generative AI is, how language models work, and the architectures — RNN, LSTM and Transformer — that everything else is built on.</p>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>RNN — architecture &amp; working</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 8 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q3b · 8 marks</b></div>Explain the architecture of RNN &amp; how it works?</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q5a · 5 marks</b></div>Explain RNN and its limitations.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>LLM — Large Language Models</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 8 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q5b · 8 marks</b></div>What is LLM and Types of LLM explain?</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1c · 2 marks</b></div>Define LLM.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Generative AI — definition &amp; scope</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 2 · max 5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="7"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1a · 5 marks</b></div>Define Generative AI. Explain its scope with suitable examples?</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1a · 2 marks</b></div>Define Generative AI.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Challenges in Generative AI</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">8 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q4a · 8 marks</b></div>What are the challenges in Generative AI?</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Importance in five real-world domains</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Explain the importance of Generative AI in any five real-world domains.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Traditional vs modern language models</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6c · 5 marks</b></div>Differentiate between traditional language models and modern language models.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Transformer architecture</h3>
+            <span><span class="badge papers">May only</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q4a · 5 marks</b></div>Explain the architecture and working of Transformer models.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>LSTM</h3>
+            <span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q1e · 2 marks</b></div>What is LSTM?</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Tokenization in transformers</h3>
+            <span><span class="badge papers">May only</span> <span class="badge marks">2 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="2"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q1f · 2 marks</b></div>What is tokenization in transformer model?</div>
+        </article>
+      </section>
+
+      <!-- RANK 3 · UNPLACED / OFF-SYLLABUS -->
+      <section class="unit reveal" data-unit="u3">
+        <div class="unit-head">
+          <h2>Asked anyway — not in the syllabus</h2>
+          <span class="rank">Rank 3 · 3 questions</span>
+        </div>
+        <p>These two topics are not named anywhere in the official syllabus — but both papers ask them anyway. Learn them regardless; do not skip them because they are unplaced.</p>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>CNN — architecture &amp; working</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 8 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q2a · 8 marks</b></div>Explain How CNN Works?</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q2a · 5 marks</b></div>Explain the architecture of CNN &amp; how it works?</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Importance of data in training</h3>
+            <span><span class="badge papers">Dec only</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1c · 5 marks</b></div>What is the importance of data in training the AI model?</div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 5: SOLUTIONS -->
+  <section id="solutions">
+    <div class="wrap">
+      <h2>💡 Attachment 5: Step-by-Step Solutions</h2>
+      <p>Solutions for Gen AI. Step-by-step solutions land here, one per question, in the same order as the ranked topics above. Clean, verified steps for every question.</p>
+      <details class="solslot"><summary>Solution: Q1 — short skills</summary><p>Step-by-step verified explanations in this order.</p></details>
+      <details class="solslot"><summary>Solution: Module 2 — GPT, ChatGPT, Ethics &amp; Generative AI Tools</summary><p>Step-by-step verified explanations in this order.</p></details>
+      <details class="solslot"><summary>Solution: Module 1 — Introduction to Generative AI, Language Models &amp; LLM Architectures</summary><p>Step-by-step verified explanations in this order.</p></details>
+      <details class="solslot"><summary>Solution: Asked anyway — not in the syllabus</summary><p>Step-by-step verified explanations in this order.</p></details>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 6: ALL SUBJECTS & JUMPGRID -->
+  <section id="subjects">
+    <div class="wrap">
+      <h2>🌐 Attachment 6: All Subjects &amp; 2-Tap Jumpgrid</h2>
+      <p>Every subject follows the exact same 6 attachments: pass plan, cheat code, model paper, ranked PYQs, exact papers, and solutions.</p>
+      
+      <table class="qtable">
+        <tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
+        <tr><td><b><a href="../maths/index.html" style="color:var(--color-ink)">Maths (N2113111)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../maths/index.html#units">Done — 42 questions</a></td><td><a href="../maths/index.html#model-paper">Done — MU pattern</a></td><td><a href="../maths/index.html#how-to-pass">Done — 30+ marks</a></td><td><a href="../papers/index.html#maths">Done — 2 papers</a></td><td><a href="../maths/index.html#solutions">Live on page</a></td></tr>
+        <tr><td><b><a href="../dsgt/index.html" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../dsgt/index.html#units">Done — 28 questions</a></td><td><a href="../dsgt/index.html#model-paper">Done — MU pattern</a></td><td><a href="../dsgt/index.html#how-to-pass">Done — 30+ marks</a></td><td><a href="../papers/index.html#dsgt">Done — 2 papers</a></td><td><a href="../dsgt/index.html#solutions">Live on page</a></td></tr>
+        <tr><td><b><a href="../aoa/index.html" style="color:var(--color-ink)">AOA (N2113113)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../aoa/index.html#units">Done — 34 questions</a></td><td><a href="../aoa/index.html#model-paper">Done — MU pattern</a></td><td><a href="../aoa/index.html#how-to-pass">Done — 30+ marks</a></td><td><a href="../papers/index.html#aoa">Done — 2 papers</a></td><td><a href="../aoa/index.html#solutions">Live on page</a></td></tr>
+        <tr><td><b><a href="../coa/index.html" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../coa/index.html#units">Done — 29 questions</a></td><td><a href="../coa/index.html#model-paper">Done — MU pattern</a></td><td><a href="../coa/index.html#how-to-pass">Done — 30+ marks</a></td><td><a href="../papers/index.html#coa">Done — 2 papers</a></td><td><a href="../coa/index.html#solutions">Live on page</a></td></tr>
+        <tr><td><b>Gen AI (OE, 2013311)</b><br>Computer · AI&amp;DS</td><td><a href="#units">Done — 30 questions</a></td><td><a href="#model-paper">Done — 2 templates</a></td><td><a href="#how-to-pass">Done — 27-45 marks</a></td><td><a href="../papers/index.html#genai">Done — 2 papers</a></td><td><a href="#solutions">Live on page</a></td></tr>
+      </table>
+
+      <h3 style="margin-top:28px">Find anything in 2 taps</h3>
+      <div class="jumpgrid">
+        <div class="jumpcard"><b>Maths</b><a href="../maths/index.html#units">Ranked PYQs</a><a href="../maths/index.html#model-paper">Model paper</a><a href="../maths/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#maths">Exact papers</a><a href="../maths/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>DSGT</b><a href="../dsgt/index.html#units">Ranked PYQs</a><a href="../dsgt/index.html#model-paper">Model paper</a><a href="../dsgt/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#dsgt">Exact papers</a><a href="../dsgt/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>AOA</b><a href="../aoa/index.html#units">Ranked PYQs</a><a href="../aoa/index.html#model-paper">Model paper</a><a href="../aoa/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#aoa">Exact papers</a><a href="../aoa/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>COA</b><a href="../coa/index.html#units">Ranked PYQs</a><a href="../coa/index.html#model-paper">Model paper</a><a href="../coa/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#coa">Exact papers</a><a href="../coa/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>Gen AI</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="../papers/index.html#genai">Exact papers</a><a href="#solutions">Solutions</a></div>
+      </div>
+    </div>
+  </section>
 </main>
 
+<footer class="foot">
+  <div class="wrap">
+    <a href="../index.html">← Back to All Subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers and solutions.
+  </div>
+</footer>
 
-<button class="fab" id="fabPass" type="button">Exam tension? How to pass</button>
-<span id="how-to-pass"></span><div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
-<div class="modal-card"><button class="modal-close" id="passClose" type="button">✕ Close</button>
-<div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · 60-mark &amp; 30-mark formats</span></div>
-<p>Breathe. You do not need every topic, and you do not need full marks. Passing lives around 27 marks out of 60 — or about 12–14 out of 30. The plan below starts with the six topics that appear in both papers, then covers each format's attempt order — so even with mistakes, you stay above the pass band.</p>
-<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
-<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
-<tr><td><b>Six repeaters</b></td><td>GenAI definition · GPT architecture · GPT variants · CNN · RNN · Ethics</td><td><b>Questions in both papers</b></td></tr>
-<tr><td><b>60-mark format</b></td><td>Q1 (15, pick three) + any three of Q2–Q6 (45)</td><td><b>60 attempted; pass ~27, distinction 45</b></td></tr>
-<tr><td><b>30-mark format</b></td><td>Q1 (10, pick five definitions) + any two of Q2–Q5 (20)</td><td><b>30 attempted; pass ~12–14 (confirm from college)</b></td></tr></table>
-<h3>Step 2 — how to attempt in the hall</h3>
-<p>Attempt order, 60-mark paper: Q1 (25 min) → GPT architecture + CNN (30) → strongest remaining (30) → check (15). For the 30-mark paper: Q1 definitions first (15 min), then the two strongest 10-mark questions (20 min each), check in the remaining time. Honest note: only 2 papers, in two different formats — the pattern here is topic repetition, not a slot map, and the Winter format itself is unconfirmed. This raises your odds; it is not a guarantee.</p>
-<div class="callout"><p><strong>Format warning, not a guarantee.</strong> The Winter 2026 format is unconfirmed — if it returns to 60 marks, study the Dec template; if it stays 30, study May. Never mix the two papers' marks. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: the six repeat topics first, then your strongest remaining questions.</p></div>
+<!-- How to Pass Modal (For quick access or direct link compatibility) -->
+<div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
+  <div class="modal-card">
+    <button class="modal-close" id="passClose" type="button">✕ Close</button>
+    <div class="unit-head">
+      <h2>How to pass — for exam tension</h2>
+      <span class="rank">Minimum study · 60-mark &amp; 30-mark formats</span>
+    </div>
+    <p>Breathe. You do not need every topic, and you do not need full marks. Passing lives around 27 marks out of 60 — or about 12–14 out of 30. The plan below starts with the six topics that appear in both papers, then covers each format's attempt order — so even with mistakes, you stay above the pass band.</p>
+    <h3>Step 1 — the minimum set (learn these first, in this order)</h3>
+    <table class="qtable">
+      <tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+      <tr><td><b>Six repeaters</b></td><td>GenAI definition · GPT architecture · GPT variants · CNN · RNN · Ethics</td><td><b>Questions in both papers</b></td></tr>
+      <tr><td><b>60-mark format</b></td><td>Q1 (15, pick three) + any three of Q2–Q6 (45)</td><td><b>60 attempted; pass ~27, distinction 45</b></td></tr>
+      <tr><td><b>30-mark format</b></td><td>Q1 (10, pick five definitions) + any two of Q2–Q5 (20)</td><td><b>30 attempted; pass ~12–14 (confirm from college)</b></td></tr>
+    </table>
+    <h3>Step 2 — how to attempt in the hall</h3>
+    <p>Attempt order, 60-mark paper: Q1 (25 min) → GPT architecture + CNN (30) → strongest remaining (30) → check (15). For the 30-mark paper: Q1 definitions first (15 min), then the two strongest 10-mark questions (20 min each), check in the remaining time. Honest note: only 2 papers, in two different formats — the pattern here is topic repetition, not a slot map, and the Winter format itself is unconfirmed. This raises your odds; it is not a guarantee.</p>
+    <div class="callout">
+      <p><strong>Format warning, not a guarantee.</strong> The Winter 2026 format is unconfirmed — if it returns to 60 marks, study the Dec template; if it stays 30, study May. Never mix the two papers' marks. Nothing here guarantees a pass — but it is the highest-coverage, lowest-effort path the evidence supports: the six repeat topics first, then your strongest remaining questions.</p>
+    </div>
+  </div>
+</div>
 
-</div>
-</div>
 <div class="toast" id="toast"></div>
-<script>
 
+<script>
 const passModal=document.getElementById('passModal');
 function openPass(){passModal.hidden=false;document.body.style.overflow='hidden';}
 function closePass(){passModal.hidden=true;document.body.style.overflow='';}
-document.getElementById('fabPass').addEventListener('click',openPass);
+var _fab=document.getElementById('fabPass');if(_fab)_fab.addEventListener('click',openPass);
 document.getElementById('passClose').addEventListener('click',closePass);
 passModal.addEventListener('click',e=>{if(e.target===passModal)closePass();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePass();});
-document.querySelectorAll('a[href="#how-to-pass"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openPass();}));
-if(location.hash==='#how-to-pass')openPass();
-document.getElementById('copyLink').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('https://kptimes.in/genai/');document.getElementById('copyLink').textContent='Link copied ✓';}catch(e){document.getElementById('copyLink').textContent='https://kptimes.in/';}});
+document.getElementById('copyLink').addEventListener('click',async()=>{
+  try{
+    await navigator.clipboard.writeText('https://kptimes.in/genai/');
+    document.getElementById('copyLink').textContent='Link copied ✓';
+  }catch(e){
+    document.getElementById('copyLink').textContent='https://kptimes.in/genai/';
+  }
+});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const boxes=[...document.querySelectorAll('[data-topic]')];
 const KEY='genai-study-done';
-let done=new Set();try{const raw=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(raw))done=new Set(raw);}catch(e){}
-boxes.forEach((b,i)=>{b.checked=done.has(i);b.addEventListener('change',()=>{b.checked?done.add(i):done.delete(i);localStorage.setItem(KEY,JSON.stringify([...done]));update();})});
-const MILESTONES=[{m:27,t:'Pass zone crossed — you are above 45%!'},{m:30,t:'Halfway there — 50% of the paper!'},{m:45,t:'Distinction zone — 75%!'},{m:60,t:'Full paper — you can attempt everything!'}];
+let done=new Set();
+try{
+  const raw=JSON.parse(localStorage.getItem(KEY)||'[]');
+  if(Array.isArray(raw))done=new Set(raw);
+}catch(e){}
+boxes.forEach((b,i)=>{
+  b.checked=done.has(i);
+  b.addEventListener('change',()=>{
+    b.checked?done.add(i):done.delete(i);
+    localStorage.setItem(KEY,JSON.stringify([...done]));
+    update();
+  });
+});
+const MILESTONES=[
+  {m:27,t:'Pass zone crossed — you are above 45%!'},
+  {m:30,t:'Halfway there — 50% of the paper!'},
+  {m:45,t:'Distinction zone — 75%!'},
+  {m:60,t:'Full paper — you can attempt everything!'}
+];
 const TOTAL_W=152;
 let prevLevel=0, toastTimer=null;
-function securedMarks(){let s=0;boxes.forEach((b,i)=>{if(done.has(i))s+=parseInt(b.dataset.w||0,10);});return Math.round(s/TOTAL_W*60);}
-function levelOf(m){let l=0;MILESTONES.forEach((x,i)=>{if(m>=x.m)l=i+1;});return l;}
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
-function renderMilestones(m){document.getElementById('milestones').innerHTML=MILESTONES.map(x=>`<span class="ms ${m>=x.m?'done':''}">${m>=x.m?'✓ ':''}${x.m} — ${x.m===27?'Pass':x.m===30?'Halfway':x.m===45?'Distinction':'Full paper'}</span>`).join('');}
-function update(silent){const m=securedMarks();document.getElementById('overallPct').textContent=m+' / 60';document.getElementById('overallBar').style.width=(m/60*100)+'%';renderMilestones(m);const lv=levelOf(m);if(!silent&&lv>prevLevel){showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');}else if(!silent){showToast('Yay! You can secure '+m+' marks in the exam!');}prevLevel=lv;}
+function securedMarks(){
+  let s=0;
+  boxes.forEach((b,i)=>{if(done.has(i))s+=parseInt(b.dataset.w||0,10);});
+  return Math.round(s/TOTAL_W*60);
+}
+function levelOf(m){
+  let l=0;
+  MILESTONES.forEach((x,i)=>{if(m>=x.m)l=i+1;});
+  return l;
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove('show'),2600);
+}
+function renderMilestones(m){
+  document.getElementById('milestones').innerHTML=MILESTONES.map(x=>`<span class="ms ${m>=x.m?'done':''}">${m>=x.m?'✓ ':''}${x.m} — ${x.m===27?'Pass':x.m===30?'Halfway':x.m===45?'Distinction':'Full paper'}</span>`).join('');
+}
+function update(silent){
+  const m=securedMarks();
+  document.getElementById('overallPct').textContent=m+' / 60';
+  document.getElementById('overallBar').style.width=(m/60*100)+'%';
+  renderMilestones(m);
+  const lv=levelOf(m);
+  if(!silent&&lv>prevLevel){
+    showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');
+    launchConfetti();
+  }else if(!silent){
+    showToast('Yay! You can secure '+m+' marks in the exam!');
+  }
+  prevLevel=lv;
+}
 boxes.forEach((b,i)=>{b.checked=done.has(i);});
 update(true);
-const chips=[...document.querySelectorAll('.chip')];let cur='all';
-chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');cur=c.dataset.unit;filter();}));
-const search=document.getElementById('search');search.addEventListener('input',filter);
-function filter(){const q=search.value.trim().toLowerCase();
-document.querySelectorAll('.unit').forEach(u=>{const okUnit=cur==='all'||u.dataset.unit===cur;let any=false;
-u.querySelectorAll('.topic').forEach(t=>{const hit=!q||t.textContent.toLowerCase().includes(q);t.style.display=hit?'':'none';if(hit)any=true;});
-u.style.display=(okUnit&&any)?'':'none';});}
+
+// Confetti burst animation on milestone completion
+function launchConfetti(){
+  var canvas=document.getElementById('confettiCanvas');
+  if(!canvas){
+    canvas=document.createElement('canvas');
+    canvas.id='confettiCanvas';
+    document.body.appendChild(canvas);
+  }
+  var ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  var particles=[];
+  var colors=['#c8f542','#a78bfa','#ffcf3f','#38bdf8','#34d399','#f472b6'];
+  for(var i=0;i<55;i++){
+    particles.push({
+      x:canvas.width/2,
+      y:canvas.height*0.4,
+      r:Math.random()*6+3,
+      d:Math.random()*50,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      tilt:Math.floor(Math.random()*10)-10,
+      tiltAngleInc:(Math.random()*0.07)+0.05,
+      tiltAngle:0,
+      vx:(Math.random()-0.5)*16,
+      vy:Math.random()*-12-4
+    });
+  }
+  var start=Date.now();
+  function draw(){
+    if(Date.now()-start>2200){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      return;
+    }
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p){
+      p.tiltAngle+=p.tiltAngleInc;
+      p.y+=(Math.cos(p.d)+3+p.r/2)/2+p.vy;
+      p.x+=Math.sin(0)*2+p.vx;
+      p.vy+=0.35;
+      p.tilt=Math.sin(p.tiltAngle)*12;
+      ctx.beginPath();
+      ctx.lineWidth=p.r;
+      ctx.strokeStyle=p.color;
+      ctx.moveTo(p.x+p.tilt+p.r,p.y);
+      ctx.lineTo(p.x+p.tilt,p.y+p.tilt+p.r);
+      ctx.stroke();
+    });
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+// Interactive Copy Question button
+document.querySelectorAll('.q').forEach(function(qEl){
+  var btn=document.createElement('button');
+  btn.className='copy-q-btn';
+  btn.type='button';
+  btn.textContent='📋 Copy';
+  btn.title='Copy question to clipboard';
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var clone=qEl.cloneNode(true);
+    var b=clone.querySelector('.copy-q-btn');
+    if(b) b.remove();
+    var text=clone.innerText.trim();
+    navigator.clipboard.writeText(text).then(function(){
+      btn.textContent='Copied ✓';
+      btn.classList.add('copied');
+      setTimeout(function(){
+        btn.textContent='📋 Copy';
+        btn.classList.remove('copied');
+      },1800);
+    });
+  });
+  qEl.appendChild(btn);
+});
+
+// Live Navbar Countdown Timer to 17th Nov
+(function(){
+  var navTimer=document.getElementById('navTimerVal');
+  if(!navTimer) return;
+  var target=new Date('2026-11-17T14:30:00+05:30');
+  function updateNavTimer(){
+    var diff=target.getTime()-Date.now();
+    if(diff<=0){ navTimer.textContent='Live now!'; return; }
+    var d=Math.floor(diff/(1000*60*60*24));
+    var h=Math.floor((diff/(1000*60*60))%24);
+    var m=Math.floor((diff/(1000*60))%60);
+    var s=Math.floor((diff/1000)%60);
+    navTimer.textContent=d+'d '+h+'h '+m+'m '+s+'s';
+  }
+  updateNavTimer();
+  setInterval(updateNavTimer,1000);
+})();
+
+const chips=[...document.querySelectorAll('.chip')];
+let cur='all';
+chips.forEach(c=>c.addEventListener('click',()=>{
+  chips.forEach(x=>x.classList.remove('on'));
+  c.classList.add('on');
+  cur=c.dataset.unit;
+  filter();
+}));
+const search=document.getElementById('search');
+search.addEventListener('input',filter);
+function filter(){
+  const q=search.value.trim().toLowerCase();
+  document.querySelectorAll('.unit').forEach(u=>{
+    if(!u.dataset.unit)return;
+    const okUnit=cur==='all'||u.dataset.unit===cur;
+    let any=false;
+    u.querySelectorAll('.topic').forEach(t=>{
+      const hit=!q||t.textContent.toLowerCase().includes(q);
+      t.style.display=hit?'':'none';
+      if(hit)any=true;
+    });
+    u.style.display=(okUnit&&any)?'':'none';
+  });
+}
 </script>
+<script src="../lamp.js"></script>
 </body>
 </html>

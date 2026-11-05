@@ -1,6 +1,59 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lost? — Sem III Exam Study</title>
-<meta name="description" content="This page doesn't exist. Head back to the Sem III exam study home and pick a subject."><meta name="robots" content="noindex">
-<style>body{margin:0;background:#0b0b12;color:#f2f2f0;font-family:Inter,system-ui,sans-serif}.wrap{max-width:680px;margin:0 auto;padding:80px 24px;text-align:center}a{color:#c8f542}.btn{display:inline-block;margin-top:24px;background:#c8f542;color:#0b0b12;font-weight:800;padding:12px 22px;border-radius:999px;text-decoration:none}.links{margin-top:28px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.links a{color:#a3a3ad;font-weight:700}</style>
-</head><body><div class="wrap"><h1>That page doesn't exist.</h1><p>But the study material does. Pick a subject and keep going.</p><a class="btn" href="/">Back to all subjects →</a><div class="links"><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a></div></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found — Sem III Exam Study | kptimes.in</title>
+<meta name="description" content="This page doesn't exist. Head back to the Sem III exam study home and pick a subject.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 20px">
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+
+<div class="wrap" style="max-width:640px;position:relative;z-index:2">
+  <div style="margin-bottom:18px">
+    <a class="nav-timer" href="index.html#countdownSection" style="margin:0 auto;display:inline-flex"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+  </div>
+  <span class="kick" style="margin-bottom:14px">404 — Page Not Found</span>
+  <h1 style="font-size:clamp(2.4rem,6vw,4rem);margin:12px 0 16px"><span class="lime">Lost in</span> the syllabus?</h1>
+  <p class="lede" style="margin:0 auto 24px;color:var(--color-muted)">That URL doesn't exist, but all 5 subjects' ranked PYQs, model papers, pass plans, and exact papers are live and ready.</p>
+  
+  <div style="margin:24px 0">
+    <a class="sharebtn" href="index.html">← Back to All Subjects Portal</a>
+  </div>
+
+  <div style="margin-top:32px;padding:24px;background:var(--color-paper-2);border:1px solid var(--color-line);border-radius:20px">
+    <div style="font-size:0.9rem;font-weight:700;color:var(--color-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px">Jump to Subject</div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+      <a class="attachment-pill" href="maths/index.html">Maths</a>
+      <a class="attachment-pill" href="dsgt/index.html">DSGT</a>
+      <a class="attachment-pill" href="aoa/index.html">AOA</a>
+      <a class="attachment-pill" href="coa/index.html">COA</a>
+      <a class="attachment-pill" href="genai/index.html">Gen AI</a>
+      <a class="attachment-pill" href="papers/index.html">Exact Papers</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var navTimer=document.getElementById('navTimerVal');
+  if(!navTimer) return;
+  var target=new Date('2026-11-17T14:30:00+05:30');
+  function updateNavTimer(){
+    var diff=target.getTime()-Date.now();
+    if(diff<=0){ navTimer.textContent='Live now!'; return; }
+    var d=Math.floor(diff/(1000*60*60*24));
+    var h=Math.floor((diff/(1000*60*60))%24);
+    var m=Math.floor((diff/(1000*60))%60);
+    var s=Math.floor((diff/1000)%60);
+    navTimer.textContent=d+'d '+h+'h '+m+'m '+s+'s';
+  }
+  updateNavTimer();
+  setInterval(updateNavTimer,1000);
+})();
+</script>
+<script src="lamp.js"></script>
+</body>
+</html>

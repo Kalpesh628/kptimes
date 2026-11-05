@@ -4,635 +4,799 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exact Papers — Sem III | kptimes.in/papers/</title>
-<meta name="description" content="Sem III previous-year question papers in their exact printed format, arranged subject by subject. Maths Dec 2025 and May 2026 live now; DSGT, AOA, COA and Gen AI follow in the same format.">
+<meta name="description" content="Sem III previous-year question papers in their exact printed format, arranged subject by subject. All 10 papers across Maths, DSGT, AOA, COA and Gen AI in full.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Exact Papers — Sem III">
-<meta property="og:description" content="Previous-year papers exactly as printed, arranged by subject. Maths Dec 2025 + May 2026 live now.">
+<meta property="og:site_name" content="kptimes.in">
+<meta property="og:title" content="Exact Papers — Sem III | kptimes.in">
+<meta property="og:description" content="Previous-year papers exactly as printed, arranged by subject. Dec 2025 + May 2026 live for all 5 subjects.">
 <meta property="og:url" content="https://kptimes.in/papers/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../style.css">
 <style>
-:root{
-  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
-  --color-ink:#f4f4f8; --color-muted:#a7a7bd; --color-accent:#c8f542; --color-accent-2:#a78bfa;
-  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+/* Exact Papers specific formatting */
+.subjnav-sticky {
+  position: sticky;
+  top: 60px;
+  z-index: 30;
+  background: rgba(11, 11, 18, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-line);
+  padding: 10px 0;
+  margin-bottom: 24px;
 }
-*{box-sizing:border-box}
-html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
-body{line-height:1.7;font-size:18px}
-a{color:var(--color-accent)}
-.wrap{max-width:1280px;margin:0 auto;padding:0 20px;min-width:0}
-h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
-h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
-h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
-h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin:0 0 .3rem;letter-spacing:-.02em;font-weight:700}
-h3{font-size:1.3rem;margin:.2rem 0 .5rem;letter-spacing:-.01em;font-weight:700}
-p{color:var(--color-muted)} p strong{color:var(--color-ink)}
-.hero{position:relative;padding:64px 0 40px;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
-.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
-.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
-@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
-.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
-.lede{font-size:1.15rem;max-width:680px}
-.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
-.pill b{color:var(--color-accent)}
-.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
-.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
-.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
-.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
-.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
-.stat .l{color:var(--color-muted);font-size:.9rem}
-section{padding:34px 0}
-.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
-.callout p{margin:.3rem 0}
-.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
-.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
-.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
-.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
-.unit{border:1px solid #2e2e46;border-radius:24px;padding:36px 38px;margin:30px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
-.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
-.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
-.topic{background:var(--color-card);border:1px solid #34344e;border-radius:18px;padding:28px 30px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
-.badge{border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700;white-space:nowrap}
-.badge.repeat{background:#12351f;color:#7bf1a8}
-.badge.marks{background:#3a2f00;color:var(--color-mark)}
-.badge.papers{background:#241a4d;color:#c4b5fd}
-.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
-.q .meta{font-size:.82rem;color:var(--color-muted);margin-bottom:2px}
-.q .meta b{color:var(--color-accent)}
-.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
-.done input{accent-color:var(--color-accent);width:18px;height:18px}
-.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
-.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
-.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
-.soon b{color:var(--color-ink)}
-footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
-@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
-
-.matrix-wrap{display:inline-flex;align-items:stretch;vertical-align:middle;margin:2px 4px}
-.matrix-wrap::before{content:"";width:9px;border:3px solid var(--color-ink);border-right:0}
-.matrix-wrap::after{content:"";width:9px;border:3px solid var(--color-ink);border-left:0}
-.matrix{display:inline-table;vertical-align:middle;border-collapse:collapse}
-.matrix td{padding:3px 10px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:1.12em;line-height:1.3}
-.qtable{border-collapse:collapse;margin:16px auto;font-size:1.08rem}
-.qtable td{border:1px solid #4a4a66;padding:9px 20px;text-align:center;color:#e8e8f2}
-.pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
-.pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
-.pw td{padding:2px 8px}
-.q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
-.q .meta{font-size:.86rem;letter-spacing:.02em}
-
-.paper{background:#fdfdf8;color:#111;border:1px solid #444;border-radius:6px;padding:28px 30px;margin:22px 0;font-family:Georgia,'Times New Roman',serif}
-.paper h3{font-family:Georgia,serif;color:#111;font-size:1.3rem;text-align:center}
-.paper .phead{text-align:center;font-weight:700;line-height:1.4}
-.paper .phead small{display:block;font-weight:400}
-.paper .prow{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-.paper .pmarks{font-weight:700;white-space:nowrap}
-.paper .pq{margin:14px 0}
-.paper .sub{margin:8px 0 8px 28px}
-.paper .matrix td{color:#111}
-.paper .matrix-wrap::before,.paper .matrix-wrap::after{border-color:#111}
-.paper .pw .brace{color:#111}
-.ptable{border-collapse:collapse;margin:8px 0 8px 28px}
-.ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
-@media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
-
-.wrap{max-width:1280px}
-.paper{padding:48px 56px;margin:30px 0;font-size:1.18rem;line-height:1.75}
-.paper .pq{margin:22px 0}
-.paper .sub{margin:12px 0 12px 40px}
-.paper .phead{font-size:1.25rem}
-.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap;text-decoration:none}
-@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}}
-.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
-.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
-.subjnav{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
-.subjnav a{border:1px solid var(--color-line);border-radius:999px;padding:9px 18px;text-decoration:none;color:var(--color-ink)}
-.subjnav a.live{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
-.subjcard{background:var(--color-card);border:1px dashed var(--color-line);border-radius:18px;padding:26px 30px;margin:22px 0}
-.subjcard b{color:var(--color-ink);font-size:1.2rem}
-@media(max-width:768px){.paper{padding:24px 18px}.paper .sub{margin-left:16px}}
-
-html{scroll-behavior:smooth}
-::selection{background:var(--color-accent);color:#0b0b12}
-.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
-.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
-.nav a:hover{background:var(--color-accent);color:#0b0b12}
-h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
-.topic{transition:transform .2s,box-shadow .2s}
-.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
-.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
-.solslot summary{cursor:pointer;font-weight:700}
-.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
-.sitemap a{color:var(--color-muted);font-weight:600}
-.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
-.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
-.jumpcard b{font-size:1.1rem}
-.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
-
-.foot{border-top:1px solid var(--color-line);padding:22px 0;color:var(--color-muted);font-weight:600}
-.foot a{color:var(--color-ink)}
-.subjbtn{display:block;border:1px solid var(--color-line);border-radius:20px;padding:22px 24px;margin:16px 0;text-decoration:none;color:var(--color-ink);transition:transform .2s,box-shadow .2s,border-color .2s}
-.subjbtn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.4);border-color:var(--color-accent)}
-.subjbtn b{font-size:1.5rem;display:block}
-.subjbtn span{color:var(--color-muted);font-weight:600}
-.subjbtn i{display:block;font-style:normal;margin-top:8px;color:var(--color-muted)}
-.nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}section[id]{scroll-margin-top:88px}</style>
+.subjnav-sticky .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.subjnav-sticky .label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+.subjnav-sticky a {
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-2);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.subjnav-sticky a:hover, .subjnav-sticky a.active {
+  background: var(--color-accent);
+  color: #0b0b12;
+  border-color: var(--color-accent);
+  font-weight: 700;
+}
+.subject-anchor-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 36px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-line);
+}
+.subject-anchor-header h2 {
+  margin: 0;
+}
+.back-study-link {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.back-study-link:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
-<body><nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
-<a class="fab" href="/maths/#how-to-pass">Exam tension? How to pass</a>
-<header class="hero"><div class="wrap" style="position:relative">
-<span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
-<h1>Exact papers, <span class="lime">as printed.</span></h1>
-<p class="lede">All 10 papers, all subjects, in full — Dec 2025 + May 2026, original order, original question numbers, marks on the right. Scan gaps are flagged exactly where the scan itself is incomplete; nothing is invented to fill them.</p>
-<div class="sharebar"><a class="sharebtn" href="https://wa.me/?text=Sem%20III%20exact%20papers%2C%20as%20printed%20—%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Fpapers%2F" target="_blank" rel="noopener">Share on WhatsApp</a><button class="sharebtn ghost" onclick="navigator.clipboard.writeText('https://kptimes.in/papers/');this.textContent='Link copied ✓';setTimeout(()=>this.textContent='Copy link',2000)">Copy link</button></div>
-<div class="subjnav">
-<a class="live" href="#maths">Maths — live</a>
-<a href="#dsgt">DSGT — full papers</a>
-<a href="#aoa">AOA — full papers</a>
-<a href="#coa">COA — full papers</a>
-<a href="#genai">Gen AI — full papers</a>
-<a href="/maths/">← Ranked Maths study</a>
+<body>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+
+<!-- Top Persistent Navigation -->
+<nav class="nav" aria-label="Main Navigation">
+  <a class="brand" href="../index.html">kptimes<span class="dot">.</span></a>
+  <a href="../index.html">Home</a>
+  <a href="../maths/index.html">Maths</a>
+  <a href="../dsgt/index.html">DSGT</a>
+  <a href="../aoa/index.html">AOA</a>
+  <a href="../coa/index.html">COA</a>
+  <a href="../genai/index.html">Gen AI</a>
+  <a class="active" href="../papers/index.html">Exact papers</a>
+  <a class="nav-timer" href="../index.html#countdownSection" title="Time remaining until 17th Nov Exam"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="wrap" style="position:relative">
+    <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
+    <h1>Exact papers, <span class="lime">as printed.</span><br>All 10 papers, <span class="violet">unaltered.</span></h1>
+    <p class="lede">All 10 previous-year question papers across all 5 semester subjects, reproduced in full — <strong>Dec 2025 + May 2026</strong>. Original order, original question numbers, marks aligned on the right. Scan gaps are flagged transparently where the source scan was incomplete; nothing is invented to fill them.</p>
+    
+    <div class="pillrow">
+      <span class="pill">Maths (N2113111) — <b>2 papers · 60M each</b></span>
+      <span class="pill">DSGT (N2113112) — <b>2 papers · 60M each</b></span>
+      <span class="pill">AOA (N2113113) — <b>2 papers · 60M each</b></span>
+      <span class="pill">COA (N2113114) — <b>2 papers · 60M each</b></span>
+      <span class="pill">Gen AI (2013311) — <b>Dec 60M + May 30M</b></span>
+    </div>
+
+    <div class="sharebar">
+      <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20exact%20papers%2C%20as%20printed%20—%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Fpapers%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
+      <a class="sharebtn ghost" href="../index.html">← All Subjects Overview</a>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Subject Jumper & Night Eye-Care Switcher -->
+<div class="subjnav-sticky">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <span class="label">Jump to paper:</span>
+      <a href="#maths">Maths</a>
+      <a href="#dsgt">DSGT</a>
+      <a href="#aoa">AOA</a>
+      <a href="#coa">COA</a>
+      <a href="#genai">Gen AI</a>
+      <a href="#solutions">Solutions</a>
+    </div>
+    <!-- Eye-Care Night Reading Mode -->
+    <div class="paper-eye-care">
+      <span class="eye-care-label">👁️ Eye Care:</span>
+      <div class="eye-care-pills" role="radiogroup" aria-label="Paper Reading Theme">
+        <button class="eye-pill active" id="pillDark" data-theme="dark" type="button" title="Dark Slate Paper (Zero Eye Glare for Night Study)">🌙 Night</button>
+        <button class="eye-pill" id="pillSepia" data-theme="sepia" type="button" title="Warm Candlelight Sepia (Kindle Style Blue-Light Filter)">📖 Sepia</button>
+        <button class="eye-pill" id="pillWhite" data-theme="white" type="button" title="Classic White Printed Exam Sheet">📄 White</button>
+      </div>
+    </div>
+  </div>
 </div>
-</div><div class="blob b1"></div><div class="blob b2"></div></header>
+
 <main class="wrap">
-<section id="maths">
-<h2>Maths — Mathematics for Computer Engineering (N2113111)</h2>
-<p>Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong>.</p>
-<p>Dec 2025 (QP 00720) and May 2026 (QP 14664) — the only two NEP papers before your batch. 60 marks, 2 hours each. The Maths pass plan and model paper live on the home page; every subject will get the same four parts as the semester goes on.</p>
 
-<h2>Exact paper view — as printed</h2>
-<p>Below are both papers in their original order, with the original question numbers, sub-parts and marks on the right — exactly as they appear on the paper. Use this to practise under paper conditions; use the ranked view above to study by topic.</p>
+  <!-- ================= MATHS PAPERS ================= -->
+  <section id="maths">
+    <div class="subject-anchor-header">
+      <div>
+        <h2>Maths — Mathematics for Computer Engineering (N2113111)</h2>
+        <p style="margin:4px 0 0;font-size:0.95rem;color:var(--color-muted)">Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong> · 60 marks · 2 hours each</p>
+      </div>
+      <a class="back-study-link" href="../maths/index.html">← View Ranked Maths PYQs &amp; Pass Plan</a>
+    </div>
 
-<article class="paper">
-<div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>S.E. / Sem-III / NEP / Computer / AI&amp;DS / IoT — 17/12/2025 — Q.P. Code: 00720</small></div>
-<div class="prow"><span><b>Time: 2 hours</b></span><span><b>Marks: 60</b></span></div>
-<p style="color:#111"><b>Note:</b> 1. Question No. 1 is Compulsory. 2. Attempt any 3 (Three) Questions from the remaining questions. 3. Statistical Table is allowed.</p>
+    <!-- Maths Dec 2025 -->
+    <article class="paper">
+      <div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>S.E. / Sem-III / NEP / Computer / AI&amp;DS / IoT — 17/12/2025 — Q.P. Code: 00720</small></div>
+      <div class="prow"><span><b>Time: 2 hours</b></span><span><b>Marks: 60</b></span></div>
+      <p style="color:#111"><b>Note:</b> 1. Question No. 1 is Compulsory. 2. Attempt any 3 (Three) Questions from the remaining questions. 3. Statistical Table is allowed.</p>
 
-<div class="pq"><div class="prow"><span><b>Que. 1</b> — Attempt any Five questions of the following</span><span></span></div>
-<div class="sub"><div class="prow"><span>a. If A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>0</td><td>−1</td><td>4</td></tr><tr><td>0</td><td>0</td><td>−2</td></tr></table></span>, find Eigen values of A⁻¹ + 6I</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b. Transform the LPP to standard form<br>Maximise Z = 2x₁ + x₂ + 4x₃<br>x₁ − x₂ + 2x₃ ≤ 5<br>3x₁ + x₂ + 5x₃ ≥ 14&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c. Find the value of a<sub>n</sub> in the expansion of Fourier Series for f(x) = 4 − x² in (0, 2π)</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d. A random variable x defines the possible outcomes of tossing a fair die, find moment generating function of x about origin</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e. What is the remainder when 13⁷⁰ is divided by 21</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f. Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
-<table class="ptable"><tr><td>X</td><td>24</td><td>24</td><td>24</td><td>55</td><td>25</td></tr><tr><td>Y</td><td>24</td><td>31</td><td>51</td><td>40</td><td>38</td></tr></table></div></div>
+      <div class="pq">
+        <div class="prow"><span><b>Que. 1</b> — Attempt any Five questions of the following</span><span></span></div>
+        <div class="sub"><div class="prow"><span>a. If A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>0</td><td>−1</td><td>4</td></tr><tr><td>0</td><td>0</td><td>−2</td></tr></table></span>, find Eigen values of A⁻¹ + 6I</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>b. Transform the LPP to standard form<br>Maximise Z = 2x₁ + x₂ + 4x₃<br>x₁ − x₂ + 2x₃ ≤ 5<br>3x₁ + x₂ + 5x₃ ≥ 14&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>c. Find the value of a<sub>n</sub> in the expansion of Fourier Series for f(x) = 4 − x² in (0, 2π)</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>d. A random variable x defines the possible outcomes of tossing a fair die, find moment generating function of x about origin</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>e. What is the remainder when 13⁷⁰ is divided by 21</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>f. Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
+        <table class="ptable"><tr><td>X</td><td>24</td><td>24</td><td>24</td><td>55</td><td>25</td></tr><tr><td>Y</td><td>24</td><td>31</td><td>51</td><td>40</td><td>38</td></tr></table></div>
+      </div>
 
-<div class="pq"><b>Que. 2</b>
-<div class="sub"><div class="prow"><span>a. It is known that the probability of an item produced by a certain machine will be defective is 0.001. If the produced items are sent to the market in packets of 100, find the number of packets containing at least 2 are defective in the consignment of 2000 Packets.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. Five students got the following percentage of marks in mathematics and statistics<br>Calculate the coefficient of correlation.</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>Maths</td><td>28</td><td>34</td><td>18</td><td>25</td><td>75</td><td>23</td><td>24</td><td>33</td><td>37</td><td>43</td></tr><tr><td>Stats</td><td>24</td><td>31</td><td>11</td><td>34</td><td>65</td><td>24</td><td>23</td><td>53</td><td>53</td><td>42</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c. Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Que. 2</b>
+        <div class="sub"><div class="prow"><span>a. It is known that the probability of an item produced by a certain machine will be defective is 0.001. If the produced items are sent to the market in packets of 100, find the number of packets containing at least 2 are defective in the consignment of 2000 Packets.</span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b. Five students got the following percentage of marks in mathematics and statistics<br>Calculate the coefficient of correlation.</span><span class="pmarks">5</span></div>
+        <table class="ptable"><tr><td>Maths</td><td>28</td><td>34</td><td>18</td><td>25</td><td>75</td><td>23</td><td>24</td><td>33</td><td>37</td><td>43</td></tr><tr><td>Stats</td><td>24</td><td>31</td><td>11</td><td>34</td><td>65</td><td>24</td><td>23</td><td>53</td><td>53</td><td>42</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>c. Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Que. 3</b>
-<div class="sub"><div class="prow"><span>a. Obtain equations of line of regression of x on y for following data.</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>31</td><td>44</td><td>65</td><td>49</td><td>41</td></tr><tr><td>Y</td><td>48</td><td>32</td><td>21</td><td>66</td><td>43</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b. By using Chinese Remainder theorem, Solve<br>x ≡ 1 (mod 3),&nbsp; x ≡ 2 (mod 4),&nbsp; x ≡ 3 (mod 5)</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Find Eigen values and Eigen vectors of the matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>5</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>3</td></tr></table></span> </span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Que. 3</b>
+        <div class="sub"><div class="prow"><span>a. Obtain equations of line of regression of x on y for following data.</span><span class="pmarks">4</span></div>
+        <table class="ptable"><tr><td>X</td><td>31</td><td>44</td><td>65</td><td>49</td><td>41</td></tr><tr><td>Y</td><td>48</td><td>32</td><td>21</td><td>66</td><td>43</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>b. By using Chinese Remainder theorem, Solve<br>x ≡ 1 (mod 3),&nbsp; x ≡ 2 (mod 4),&nbsp; x ≡ 3 (mod 5)</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c. Find Eigen values and Eigen vectors of the matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>5</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>3</td></tr></table></span> </span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Que. 4</b>
-<div class="sub"><div class="prow"><span>a. A random variable X has probability density function<br>f(x) = x²e<sup>−x</sup>&nbsp;&nbsp;&nbsp;&nbsp;x ≥ 0<br>Find 2 moments about origin and mean.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. Show that the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>1</td><td>3</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr></table></span> is diagonalisable, hence find it's diagonalisable matrix.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. In RSA System the public key (E, N) of user A is defined as (7, 187). Calculate φ(N) and private key 'D'. What is the cipher text for M = 10 using the public key.</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Que. 4</b>
+        <div class="sub"><div class="prow"><span>a. A random variable X has probability density function<br>f(x) = x²e<sup>−x</sup>&nbsp;&nbsp;&nbsp;&nbsp;x ≥ 0<br>Find 2 moments about origin and mean.</span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b. Show that the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>1</td><td>3</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr></table></span> is diagonalisable, hence find it's diagonalisable matrix.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c. In RSA System the public key (E, N) of user A is defined as (7, 187). Calculate φ(N) and private key 'D'. What is the cipher text for M = 10 using the public key.</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Que. 5</b>
-<div class="sub"><div class="prow"><span>a. Verify Cayley-Hamilton theorem for matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>2</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>2</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. The height of school children of one school is normally distributed with mean of 54 inches and standard deviation 12 inches. What proportion of students have height between i. 46 and 56 inches&nbsp;&nbsp; ii. More than 56</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Applying Simplex method, Solve the following LPP<br>Maximise&nbsp;&nbsp; Z = 3x₁ + 2x₂<br>Subject to constraint&nbsp;&nbsp; x₁ + x₂ ≤ 4<br>x₁ − x₃ ≤ 2&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Que. 5</b>
+        <div class="sub"><div class="prow"><span>a. Verify Cayley-Hamilton theorem for matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>2</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>2</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b. The height of school children of one school is normally distributed with mean of 54 inches and standard deviation 12 inches. What proportion of students have height between i. 46 and 56 inches&nbsp;&nbsp; ii. More than 56</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c. Applying Simplex method, Solve the following LPP<br>Maximise&nbsp;&nbsp; Z = 3x₁ + 2x₂<br>Subject to constraint&nbsp;&nbsp; x₁ + x₂ ≤ 4<br>x₁ − x₃ ≤ 2&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Que. 6</b>
-<div class="sub"><div class="prow"><span>a. Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>4</td><td>7</td><td>9</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>18</td><td>14</td><td>19</td><td>27</td><td>18</td><td>28</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b. Find Fourier series for the function f(x) = x, 0 &lt; x &lt; 2π</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Using the method of Lagrange's multipliers solve the following NLPP<br>Optimize&nbsp; z = −x₁² − x₂² + 4x₁ + 8x₂<br>Subject to:&nbsp;&nbsp; x₁ + x₂ = 4&nbsp;&nbsp; x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div></div>
-<p style="text-align:center;color:#111">********************</p>
-</article>
+      <div class="pq">
+        <b>Que. 6</b>
+        <div class="sub"><div class="prow"><span>a. Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
+        <table class="ptable"><tr><td>X</td><td>1</td><td>4</td><td>7</td><td>9</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>18</td><td>14</td><td>19</td><td>27</td><td>18</td><td>28</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>b. Find Fourier series for the function f(x) = x, 0 &lt; x &lt; 2π</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c. Using the method of Lagrange's multipliers solve the following NLPP<br>Optimize&nbsp; z = −x₁² − x₂² + 4x₁ + 8x₂<br>Subject to:&nbsp;&nbsp; x₁ + x₂ = 4&nbsp;&nbsp; x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">********************</p>
+    </article>
 
-<article class="paper">
-<div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>SE / Sem-III / NEP / MAY 2026 / Computer / AI&amp;DS / CS-IoT — Date 04/06/2026 — Q.P. 14664</small></div>
-<div class="prow"><span><b>Time: 2 hours</b></span><span><b>Max Marks: 60</b></span></div>
-<p style="color:#111"><b>Note:</b> (1) Question No. 1 is Compulsory. (2) Answer any three questions from Q.2 to Q.6. (3) Figures to the right indicate full marks. (4) Statistical Table to be provided.</p>
+    <!-- Maths May 2026 -->
+    <article class="paper">
+      <div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>SE / Sem-III / NEP / MAY 2026 / Computer / AI&amp;DS / CS-IoT — Date 04/06/2026 — Q.P. 14664</small></div>
+      <div class="prow"><span><b>Time: 2 hours</b></span><span><b>Max Marks: 60</b></span></div>
+      <p style="color:#111"><b>Note:</b> (1) Question No. 1 is Compulsory. (2) Answer any three questions from Q.2 to Q.6. (3) Figures to the right indicate full marks. (4) Statistical Table to be provided.</p>
 
-<div class="pq"><b>Q.1.</b> — Attempt any <b>Five Questions</b> from the following.
-<div class="sub"><div class="prow"><span>a) Find the sum and product of the eigenvalues of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−2</td><td>−9</td><td>5</td></tr><tr><td>−5</td><td>−10</td><td>7</td></tr><tr><td>−9</td><td>−21</td><td>14</td></tr></table></span> </span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b) Construct the dual of the following LPP<br>Maximise&nbsp;&nbsp; Z = 5x₁ + 4x₂<br>Subject to constraint&nbsp;&nbsp; 2x₁ + 6x₂ ≤ 5<br>7x₁ + 3x₂ ≤ 2<br>x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c) Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π)</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d) Calculate first 2 raw moments for probability density function<br>f(x) = <span class="pw"><span class="brace">{</span><table><tr><td>xe<sup>−x</sup></td><td>x ≥ 0</td></tr><tr><td>0</td><td>Otherwise</td></tr></table></span></span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e) What is the remainder when 5¹¹ is divided by 7</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f) Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
-<table class="ptable"><tr><td>X</td><td>18</td><td>17</td><td>13</td><td>17</td><td>19</td><td>21</td></tr><tr><td>Y</td><td>21</td><td>22</td><td>14</td><td>17</td><td>18</td><td>13</td></tr></table></div></div>
+      <div class="pq">
+        <b>Q.1.</b> — Attempt any <b>Five Questions</b> from the following.
+        <div class="sub"><div class="prow"><span>a) Find the sum and product of the eigenvalues of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−2</td><td>−9</td><td>5</td></tr><tr><td>−5</td><td>−10</td><td>7</td></tr><tr><td>−9</td><td>−21</td><td>14</td></tr></table></span> </span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Construct the dual of the following LPP<br>Maximise&nbsp;&nbsp; Z = 5x₁ + 4x₂<br>Subject to constraint&nbsp;&nbsp; 2x₁ + 6x₂ ≤ 5<br>7x₁ + 3x₂ ≤ 2<br>x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π)</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>d) Calculate first 2 raw moments for probability density function<br>f(x) = <span class="pw"><span class="brace">{</span><table><tr><td>xe<sup>−x</sup></td><td>x ≥ 0</td></tr><tr><td>0</td><td>Otherwise</td></tr></table></span></span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>e) What is the remainder when 5¹¹ is divided by 7</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>f) Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
+        <table class="ptable"><tr><td>X</td><td>18</td><td>17</td><td>13</td><td>17</td><td>19</td><td>21</td></tr><tr><td>Y</td><td>21</td><td>22</td><td>14</td><td>17</td><td>18</td><td>13</td></tr></table></div>
+      </div>
 
-<div class="pq"><b>Q.2.</b>
-<div class="sub"><div class="prow"><span>a) The number of traffic accidents that occur on a particular stretch of road during a month follows a Poisson distribution with a mean of 7. Find the probability of observing exactly three accidents on this stretch of road next month.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Calculate the correlation coefficient for the following heights of fathers (X) and their sons (Y)</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>X</td><td>65</td><td>66</td><td>67</td><td>67</td><td>68</td><td>69</td><td>70</td><td>72</td></tr><tr><td>Y</td><td>67</td><td>68</td><td>65</td><td>68</td><td>72</td><td>72</td><td>69</td><td>71</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c) Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Q.2.</b>
+        <div class="sub"><div class="prow"><span>a) The number of traffic accidents that occur on a particular stretch of road during a month follows a Poisson distribution with a mean of 7. Find the probability of observing exactly three accidents on this stretch of road next month.</span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Calculate the correlation coefficient for the following heights of fathers (X) and their sons (Y)</span><span class="pmarks">5</span></div>
+        <table class="ptable"><tr><td>X</td><td>65</td><td>66</td><td>67</td><td>67</td><td>68</td><td>69</td><td>70</td><td>72</td></tr><tr><td>Y</td><td>67</td><td>68</td><td>65</td><td>68</td><td>72</td><td>72</td><td>69</td><td>71</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>c) Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Q.3.</b>
-<div class="sub"><div class="prow"><span>a) Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>3</td><td>5</td><td>7</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>8</td><td>4</td><td>5</td><td>7</td><td>8</td><td>4</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b) By using Chinese Remainder theorem, solve x ≡ 3 (mod 4),&nbsp; x ≡ 5 (mod 7)</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Find eigen values and eigen vectors of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−9</td><td>4</td><td>4</td></tr><tr><td>−8</td><td>3</td><td>4</td></tr><tr><td>−16</td><td>8</td><td>7</td></tr></table></span> </span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Q.3.</b>
+        <div class="sub"><div class="prow"><span>a) Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
+        <table class="ptable"><tr><td>X</td><td>1</td><td>3</td><td>5</td><td>7</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>8</td><td>4</td><td>5</td><td>7</td><td>8</td><td>4</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>b) By using Chinese Remainder theorem, solve x ≡ 3 (mod 4),&nbsp; x ≡ 5 (mod 7)</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Find eigen values and eigen vectors of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−9</td><td>4</td><td>4</td></tr><tr><td>−8</td><td>3</td><td>4</td></tr><tr><td>−16</td><td>8</td><td>7</td></tr></table></span> </span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Q.4.</b>
-<div class="sub"><div class="prow"><span>a) A random variable X has the following probability distribution</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>P(X=x)</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.2</td></tr></table>
-<span>Find moment generating function about origin of x, hence find first two raw moments.</span></div>
-<div class="sub"><div class="prow"><span>b) The distribution of wait times at a drive-through restaurant is approximately normal with mean 185 seconds and standard deviation 15 seconds. Find the percentage of wait times that are<br>i. between 155 and 215 seconds.<br>ii. more than 170 seconds.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Check whether the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>8</td><td>−8</td><td>−2</td></tr><tr><td>4</td><td>−3</td><td>−2</td></tr><tr><td>3</td><td>−4</td><td>1</td></tr></table></span> is diagonalizable, if yes, find the diagonalizing matrix P and the diagonal matrix D.</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Q.4.</b>
+        <div class="sub"><div class="prow"><span>a) A random variable X has the following probability distribution</span><span class="pmarks">4</span></div>
+        <table class="ptable"><tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>P(X=x)</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.2</td></tr></table>
+        <span>Find moment generating function about origin of x, hence find first two raw moments.</span></div>
+        <div class="sub"><div class="prow"><span>b) The distribution of wait times at a drive-through restaurant is approximately normal with mean 185 seconds and standard deviation 15 seconds. Find the percentage of wait times that are<br>i. between 155 and 215 seconds.<br>ii. more than 170 seconds.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Check whether the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>8</td><td>−8</td><td>−2</td></tr><tr><td>4</td><td>−3</td><td>−2</td></tr><tr><td>3</td><td>−4</td><td>1</td></tr></table></span> is diagonalizable, if yes, find the diagonalizing matrix P and the diagonal matrix D.</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Q.5.</b>
-<div class="sub"><div class="prow"><span>a) Verify Cayley-Hamilton theorem for matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>3</td><td>2</td><td>1</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Maximise&nbsp;&nbsp; Z = 7x₁ + 5x₂<br>Subject to constraint&nbsp;&nbsp; −x₁ − 2x₂ ≥ −6<br>4x₁ + 3x₂ ≤ 12<br>x₁, x₂ ≥ 0</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Perform key generation, encryption and decryption for RSA Algorithm with the following parameters primes p = 3,&nbsp; q = 11 message, M = 5</span><span class="pmarks">6</span></div></div></div>
+      <div class="pq">
+        <b>Q.5.</b>
+        <div class="sub"><div class="prow"><span>a) Verify Cayley-Hamilton theorem for matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>3</td><td>2</td><td>1</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Maximise&nbsp;&nbsp; Z = 7x₁ + 5x₂<br>Subject to constraint&nbsp;&nbsp; −x₁ − 2x₂ ≥ −6<br>4x₁ + 3x₂ ≤ 12<br>x₁, x₂ ≥ 0</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Perform key generation, encryption and decryption for RSA Algorithm with the following parameters primes p = 3,&nbsp; q = 11 message, M = 5</span><span class="pmarks">6</span></div></div>
+      </div>
 
-<div class="pq"><b>Q.6.</b>
-<div class="sub"><div class="prow"><span>a) Expand Fourier series for f(x) = x in (−π, π)</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Obtain the equation of line of regression of X on Y</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>X</td><td>21</td><td>23</td><td>25</td><td>27</td><td>28</td><td>20</td></tr><tr><td>Y</td><td>8</td><td>12</td><td>15</td><td>17</td><td>18</td><td>20</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c) Using the method of Lagrange's multipliers, solve the following NLPP<br>Maximise&nbsp; Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃<br>Subject to constraint&nbsp; x₁ + x₂ + x₃ = 7&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂, x₃ ≥ 0</span><span class="pmarks">6</span></div></div></div>
-<p style="text-align:center;color:#111">*************</p>
-</article>
+      <div class="pq">
+        <b>Q.6.</b>
+        <div class="sub"><div class="prow"><span>a) Expand Fourier series for f(x) = x in (−π, π)</span><span class="pmarks">4</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Obtain the equation of line of regression of X on Y</span><span class="pmarks">5</span></div>
+        <table class="ptable"><tr><td>X</td><td>21</td><td>23</td><td>25</td><td>27</td><td>28</td><td>20</td></tr><tr><td>Y</td><td>8</td><td>12</td><td>15</td><td>17</td><td>18</td><td>20</td></tr></table></div>
+        <div class="sub"><div class="prow"><span>c) Using the method of Lagrange's multipliers, solve the following NLPP<br>Maximise&nbsp; Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃<br>Subject to constraint&nbsp; x₁ + x₂ + x₃ = 7&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂, x₃ ≥ 0</span><span class="pmarks">6</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">*************</p>
+    </article>
+  </section>
 
-</section>
-<section id="dsgt"><div class="subjcard"><b>DSGT — Discrete Structures &amp; Graph Theory (N2113112)</b><br>Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong>.<br>Dec 2025 + May 2026 papers are now on their <a href="/dsgt/">own DSGT page</a> in this same exact format — original order, marks on the right, tables and figures as printed.</div></section>
-<section id="aoa"><div class="subjcard"><b>AOA — Analysis of Algorithms (N2113113)</b><br>Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong>.<br>Dec 2025 + May 2026 papers are now on their <a href="/aoa/">own AOA page</a> in this same exact format.</div></section>
-<section id="coa"><div class="subjcard"><b>COA — Computer Organization &amp; Architecture (N2113114)</b><br>Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong>.<br>Dec 2025 + May 2026 papers are now on their <a href="/coa/">own COA page</a> in this same exact format.</div></section>
-<section id="genai"><div class="subjcard"><b>Gen AI — Open Elective (Generative AI, 2013311)</b><br>Branches on this paper: <strong>Computer · AI&amp;DS</strong> (open elective — branches vary by choice).<br>Dec 2025 (60-mark) + May 2026 (30-mark) papers are now on their <a href="/genai/">own Gen AI page</a> in this same exact format.</div></section>
+  <!-- ================= DSGT PAPERS ================= -->
+  <section id="dsgt">
+    <div class="subject-anchor-header">
+      <div>
+        <h2>DSGT — Discrete Structures &amp; Graph Theory (N2113112)</h2>
+        <p style="margin:4px 0 0;font-size:0.95rem;color:var(--color-muted)">Branches on these papers: <strong>Computer · CS-IoT · AI&amp;DS</strong> · Pattern: Q1 compulsory (5M each) + any THREE of Q2–Q6 (15M each) = 60M · 3 hours</p>
+      </div>
+      <a class="back-study-link" href="../dsgt/index.html">← View Ranked DSGT PYQs &amp; Pass Plan</a>
+    </div>
+
+    <!-- DSGT Dec 2025 -->
+    <article class="paper">
+      <div class="phead">Subject: Discrete Structures &amp; Graph Theory (N2113112)<br><small>Dec 2025 — QP 99814 · 3 hours · 60 marks · 19/12/2025</small></div>
+      <p style="color:#111"><i>Scan gap flagged: Q1 heading says "any three out of six sub questions" but the scan shows only a–e (5). A sixth subquestion is not in the scan and is not invented here.</i></p>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q1 — Attempt any three out of six sub questions (5M each)</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A student-feedback system groups teacher responses using the rule: two responses x and y are "similar" if they fall in the same satisfaction band (e.g. 1–2 = Low, 3 = Medium, 4–5 = High). i. Using definitions of reflexive, symmetric, transitive, determine whether "similarity" is an equivalence relation. ii. Explain the classroom-level meaning of each property. iii. Discuss how violating any property affects AI-based feedback analytics and dashboard reports.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A college bus attendance system gives "Boarded = True" when: P: the student taps RFID card; Q: bus mentor manually verifies student; R: the system logs boarding record. The transport officer rewrites: (P ∨ Q) → R ≡ (P → R) ∧ (Q → R). i. Prove the above using logical equivalence laws step-by-step. ii. Explain how this version ensures no boarding method is ignored, improves data consistency, and reduces false "absent" cases.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) A programming contest has 240 participants and 12 judging terminals. i. Using Pigeonhole Principle, find the minimum number of contestants who must end up using the same terminal. ii. Explain how this insight helps in contest scheduling, load balancing, and avoiding terminal bottlenecks.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>d) A Cybersecurity lab access is granted if: P: student has lab clearance; Q: student has signed NDA; R: student completed safety briefing. Access expression: A = (P ∧ Q) ∨ (P ∧ R). i. Construct truth table for A. ii. Identify combinations where access is wrongly granted. iii. Explain consequences for security, safety compliance, and audit records.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>e) Students are assigned to specialization tracks by the rule: Score in Coding ≥ 80 → Software Track; Score in Networks ≥ 75 → Network Security; Score in Math ≥ 85 → Data Science. Priority: Data Science &gt; Software &gt; Network Security. Given sample data (Coding, Networks, Math): S1: (85, 60, 70); S2: (65, 80, 90); S3: (82, 78, 88); S4: (78, 76, 60). i. Map each student to a track. ii. Check if the mapping is function / one-one / onto / many-one. iii. Explain how these properties impact batch size planning, mentor allocation, and fairness.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A campus event app records students who use three app sections: E: Event Announcements; C: Clubs &amp; Communities; R: Reels / Short videos. Survey data: E 140; C 110; R 120; E∩C 65; E∩R 70; C∩R 55; Total Students 200. i. Using inclusion–exclusion, compute how many students use all three sections. ii. Find students who use only one section. iii. Explain how this analysis helps app developers and event committees design targeted notifications and UI improvements.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A university assigns raw marks to final grades using: Moderation function M(x) = x + 5; Weight conversion W(x) = 0.4x. Compute the compositions: i. W ∘ M; ii. M ∘ W; iii. M ∘ M; iv. W ∘ W. Interpret each composition in the grading context, and discuss which are academically meaningful and which may distort scores.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A Data Science program has a prerequisite network among modules: M1: Python Basics; M2: DS Foundation; M3: Machine Learning; M4: Deep Learning; M5: Deployment. Given relation R = {(1,2), (2,3), (3,4), (4,5), (1,1), (3,3), (5,5)}. i. Apply Warshall's Algorithm to compute transitive closure. ii. For each Mi, list all modules it can unlock. iii. Identify root modules and terminal modules. iv. Explain how this helps curriculum planners maintain valid learning paths.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Data storage providers offer plans of sizes: S = {1 TB, 2 TB, 4 TB, 8 TB, 16 TB}. Relation a | b (a divides b). i. Draw the Hasse diagram. ii. List all (a,b) where a divides b. iii. Check whether S forms a lattice (meet &amp; join for every pair). iv. Explain impact on designing upgrade/downgrade recommendations and plan combinations in the storage app.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A QR-based token system transforms token number a into: T(a) = (a × k) mod 7, with a ∈ {1…6}. i. Construct multiplication table (×₇). ii. Find modular inverses of 2, 3, 5 under mod 7. iii. Determine if ({1…6}, ×₇) forms a group. iv. Comment on whether this token transformation ensures reversibility, forgery prevention, and predictable validation.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A student deposits savings in a fund according to: Daily saving: Sₙ = 4n − 1. They want to verify if Sₙ is always odd for all natural numbers n. i. Prove the statement using mathematical induction. ii. Explain the meaning for planning weekly budgets and long-term savings.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Two lab surveillance networks are modeled as undirected graphs: Graph G₁ (Cameras A,B,C,D): A: B, C; B: A, D; C: A, D; D: B, C. Graph G₂ (Cameras P,Q,R,S): P: Q, R; Q: P, S; R: P, S; S: Q, R. i. Determine whether G₁ and G₂ are isomorphic. ii. If yes, provide the mapping. iii. Explain how detecting isomorphic patterns helps in reusing surveillance layouts and minimizing storage of duplicate designs.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A student club records followers using recurrence: Fₙ = 4Fₙ₋₁ − 4Fₙ₋₂. With F₀ = 10 (core team); F₁ = 30 (after first promotion). i. Solve the recurrence relation. ii. Describe growth pattern (linear/exponential). iii. Comment whether such growth is realistic for a campus club in long term.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) The college uses modulo-6 operations to rotate lab batches: Addition: a ⊕ b = (a + b) mod 6; Multiplication: a ⊗ b = (a × b) mod 6. i. Check if (Z₆, ⊕) is an abelian group. ii. Check closure, associativity of (Z₆, ⊗). iii. Verify distributive property of ⊗ over ⊕. iv. Conclude whether (Z₆, ⊕, ⊗) forms a ring, and discuss why this matters in designing timetable rotation logic.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A research conference venue is modeled as graph V = {A,B,C,D,E,F} with edges: E = {AB, AC, BC, BD, CE, DE, DF, EF}. i. Determine existence of Euler Path, Euler Circuit, Hamiltonian Path, Hamiltonian Circuit. ii. Construct them if they exist. iii. Explain what this means for planning visitor flow, inspection rounds, and avoiding repeated walking paths.</span><span class="pmarks">7</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">********************</p>
+    </article>
+
+    <!-- DSGT May 2026 -->
+    <article class="paper">
+      <div class="phead">Subject: Discrete Structures &amp; Graph Theory (N2113112)<br><small>May 2026 — QP 14827 · 3 hours · 60 marks · 06/06/2026</small></div>
+      <p style="color:#111"><i>Scan gaps flagged: May Q1 shows only a–c in the scan (no d/e/f visible); May Q2a and Q4a marks are not printed on their pages and are taken as 8M (question total 15 minus b-part 7M); May Q6b's graph figure is not legible in the scan.</i></p>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q1 (5M each, as printed a–c)</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A digital geometry learning platform groups polygons based on the number of sides for automatic classification and retrieval. Let A be the set of all polygons. A relation R is defined on A as: R = {(P₁, P₂): P₁ and P₂ have the same number of sides}. Based on this classification system: 1. Analyze whether the relation R is an equivalence relation on A. 2. Verify the properties of reflexivity, symmetry, and transitivity. 3. Construct suitable equivalence classes for triangles, quadrilaterals, and pentagons. 4. Interpret how equivalence relations help organize geometric data in digital systems.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A software security system uses logical rules to decide whether access should be granted, denied, or forwarded for further verification. Consider the logical expressions: ((p → q) → r) and (p ∧ ¬q) ∨ r. Using a series of logical equivalences, prove that the two expressions are logically equivalent. Also interpret how logical equivalence helps simplify decision rules in software systems.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) A quality control department stores 10 pairs of socks of different colors in a drawer for packaging verification. Using the Pigeonhole Principle, analyze the minimum number of socks that must be selected randomly to guarantee that at least one matching pair of the same color is obtained. Justify your answer with suitable reasoning.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A pharmaceutical company conducts a drug trial on 1000 people to analyze the side effects of a newly developed medicine. Observations: 122 people develop symptom A; 88 develop symptom B; 112 develop symptom C; 27 develop both A and B; 29 develop both A and C; 32 develop both B and C; 10 develop all three symptoms A, B, and C. Using the Principle of Inclusion and Exclusion: 1. Analyze how many people develop at least one symptom. 2. Determine the number of people who show exactly one symptom. 3. Construct a Venn diagram and fill all regions appropriately.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A retail store offers seasonal discounts on clothing items. A customer wants to purchase a shirt priced at Rs. 1000. The store first provides a 15% discount, after which an 8% sales tax is applied to the discounted price. Based on this shopping scenario: 1. Develop suitable mathematical functions representing the discount process and the tax calculation process. 2. Construct the composite function representing the final cost of the shirt. 3. Determine the final amount to be paid by the customer. 4. Analyze how composite functions help automate billing systems in retail applications.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A domestic airline company maintains a directed flight network among four cities: V = {a, b, c, d}. Direct flight connections are represented by the relation: R = {(a,b), (b,d), (d,c), (d,a)}. The company wants to analyze all possible direct and indirect travel routes, including circular journeys. Based on the given flight network: 1. Identify and explain the concept of reachability / transitive closure used in the graph. 2. Determine all possible ordered pairs of cities connected through: direct routes, routes with layovers, and circular routes. 3. Analyze how graph connectivity helps optimize airline route planning. 4. Represent the final connectivity relation for the graph.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A cloud access-control system organizes permission levels using divisibility-based hierarchy. Permission levels: A = {1,2,3,6,12,24,36,72}. A relation R is defined on A as: (x,y) ∈ R if x | y. Based on this hierarchy: 1. Write all ordered pairs of relation R. 2. Construct the Hasse Diagram of the poset. 3. Analyze whether the given poset forms a lattice. 4. Justify your answer using suitable meet and join examples.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A cryptographic system uses non-zero residue classes modulo 7 for secure key generation. Consider the set: G = {1,2,3,4,5,6} under multiplication modulo 7. Based on this system: 1. Construct the multiplication table of G under multiplication modulo 7. 2. Determine the multiplicative inverses of 2, 3, 5, and 6. 3. Analyze whether G forms a cyclic group. 4. If it is cyclic, identify at least one generator and justify your answer.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A data analyst observes that the cumulative computational cost of a repeated process is modeled by the series: Σ (r=1 to n) r(r + 3). The analyst claims that for every positive integer n, Σ (r=1 to n) r(r + 3) = (1/3)n(n + 1)(n + 5), n ≥ 1, n ∈ N. Using the principle of mathematical induction: 1. Verify the result for the base case. 2. Prove the inductive step. 3. Conclude that the formula is valid for all n ≥ 1. 4. Interpret how induction helps validate formulas in algorithm analysis.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A computer networking company proposes two communication network layouts represented by graphs G₁ and G₂. The organization wants to verify whether both network structures provide the same connectivity pattern even though the device labels are different. Graphs: V(G₁) = {A,B,C,X,Y,Z}; E(G₁) = {(A,X), (A,Y), (B,X), (B,Y), (C,Y)}; V(G₂) = {1,2,3,4,5,6}; E(G₂) = {(1,4), (1,5), (2,4), (2,5), (3,5)}. Based on the above network structures: 1. Define isomorphism of graphs. 2. Analyze whether graphs G₁ and G₂ are isomorphic. 3. If they are isomorphic, determine a valid one-to-one correspondence between the vertices. 4. Justify your answer by comparing degree sequence and adjacency preservation.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A financial analytics company models the quarterly growth of a digital investment portfolio using a recurrence relation. Let Fₙ represent the portfolio value during the nᵗʰ quarter. Growth pattern: Fₙ = 3Fₙ₋₁ + 10Fₙ₋₂ + 7·5ⁿ, with initial conditions: F₀ = 4, F₁ = −3. Based on this predictive model: 1. Solve the given recurrence relation using an appropriate method. 2. Determine the general expression for Fₙ. 3. Analyze the effect of the exponential forcing term 7·5ⁿ on the sequence growth. 4. Interpret how recurrence relations are useful in financial forecasting and computational modeling.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) A cryptographic system uses arithmetic operations on residue classes modulo 4 for encoding and verification. Consider the set: Z₄ = {0,1,2,3} with addition and multiplication defined modulo 4. Based on this algebraic structure: 1. Construct the addition and multiplication tables for Z₄. 2. Verify whether Z₄ satisfies the required ring properties. 3. Analyze the role of additive identity, additive inverse, multiplicative associativity, and distributive laws. 4. Conclude whether Z₄ forms a ring under addition and multiplication modulo 4.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b) A city transport authority is analyzing a road network connecting six important locations A, B, C, D, E, and F. The network is represented by the following graph: [graph figure not legible in scan]. Based on the given road network: 1. Determine whether the graph has an Euler Path. 2. Determine whether the graph has an Euler Circuit. 3. Determine whether the graph has a Hamiltonian Path. 4. Determine whether the graph has a Hamiltonian Circuit. 5. Justify your answer using degree of vertices and graph traversal conditions.</span><span class="pmarks">7</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">*************</p>
+    </article>
+  </section>
+
+  <!-- ================= AOA PAPERS ================= -->
+  <section id="aoa">
+    <div class="subject-anchor-header">
+      <div>
+        <h2>AOA — Analysis of Algorithms (N2113113)</h2>
+        <p style="margin:4px 0 0;font-size:0.95rem;color:var(--color-muted)">Branches on these papers: <strong>Computer · CS-IoT · AI&amp;DS</strong> · Pattern: Q1 compulsory (any 5 of 6 × 3M = 15) + any THREE of Q2–Q6 (15M each) = 60M · 2 hours · Merge Sort fixed in Q2b</p>
+      </div>
+      <a class="back-study-link" href="../aoa/index.html">← View Ranked AOA PYQs &amp; Pass Plan</a>
+    </div>
+
+    <!-- AOA Dec 2025 -->
+    <article class="paper">
+      <div class="phead">Subject: Analysis of Algorithms (N2113113)<br><small>Dec 2025 — QP 99073 · 2 hours · 60 marks · 08/12/2025</small></div>
+      
+      <div class="pq">
+        <div class="prow"><span><b>Q1 — Answer the following (Any five) — 03 each</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Find the complexity of given recurrence relation using Master Method: T(n) = 8T(n/2) + n².</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Write an algorithm for Binary Search.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Explain the general method of the Greedy Approach.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>d) Explain the Principle of Optimality as applied to Dynamic Programming.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>e) Differentiate between Backtracking and Branch &amp; Bound techniques.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>f) Explain the Naive String-Matching Algorithm.</span><span class="pmarks">3</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Sort the following numbers using the Selection Sort, and show the array after each pass: 28, 17, 20, 75, 13, 15.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Write an algorithm for Merge Sort. Derive its time complexity. Sort the following elements using Merge Sort: 32, 55, 17, 48, 64, 26.</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Explain Big Theta (Θ) notation with a suitable example.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) What is Minimum Cost Spanning Tree? Write Kruskal's algorithm and state its time complexity. Find Minimum Cost Spanning Tree for following graph using Kruskal's Algorithm: [graph: A–B 7, B–C 7, C–D 3, D–E 6, E–F 9, F–A 5, A–G 8, B–G 3, D–G 2, F–G 4].</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Consider a Knapsack with capacity W = 16. There are six items with following weights and profits. (P1…P6) = (10, 5, 15, 7, 6, 18); (W1…W6) = (2, 3, 5, 7, 1, 4). Find the maximum profit using Fractional Knapsack algorithm.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Write an algorithm to find Longest Common Subsequences between two given strings. Derive its time complexity. Find the LCS between following strings: X = AVANTIKA; Y = KARNAVATI.</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) What is Multistage Graph? Explain Forward Approach method to find optimal path in Multistage Graph.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) What is the N-Queen Problem? Design a backtracking algorithm to solve it. Provide step-by-step working of it using suitable example.</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Find the All-Pair Source Shortest path for all the vertices using Floyd-Warshall Algorithm: [directed graph: A→B 7, B→A 8, B→C −3, A→C 5, C→A 6].</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Explain Graph Coloring method with suitable example.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Write Rabin Karp String Matching Algorithm. State its time complexity.</span><span class="pmarks">5</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">********************</p>
+    </article>
+
+    <!-- AOA May 2026 -->
+    <article class="paper">
+      <div class="phead">Subject: Analysis of Algorithms (N2113113)<br><small>May 2026 — QP 14659 · 2 hours · 60 marks · 09/06/2026 (header date; p1 handwriting says 03/06/2026)</small></div>
+      
+      <div class="pq">
+        <div class="prow"><span><b>Q1 — Answer the following (Any Five) — 03 each</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Solve the following recurrence relation using recursion tree method: T(n) = 3T(n/3) + n².</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Explain Divide and Conquer strategy with diagram.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Differentiate between fractional and 0/1 knapsack problem (give minimum 5 relevant points).</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>d) Find the LCS for the following sequences: X = ABCDE; Y = ACE.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>e) Explain the concept of Branch and Bound.</span><span class="pmarks">3</span></div></div>
+        <div class="sub"><div class="prow"><span>f) Explain the advantage of KMP algorithm over Naïve string matching algorithm.</span><span class="pmarks">3</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Find the Minimum spanning tree for the following graph using Prim's algorithm: [nodes 1–6; edges: 5–4: 9, 4–1: 1, 4–3: 5, 4–2: 3, 1–5: 4, 1–2: 2, 3–2: 3, 3–6: 8, 2–6: 7].</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Sort the following elements using Merge Sort and hence derive the complexity of Merge Sort: 34, 9, 56, 10, 78, 61, 98, 23, 38.</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Sort the following elements using insertion sort: 90, 1, 4, 2, 78, 45, 39, 58, 79. Show output after each pass. Also, derive complexity of insertion sort.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Find the shortest path for the following graph using Dijkstra's algorithm: (Source vertex is A). [graph: A–B 3, A–D 8, B–E 6, B–D 5, D–E 3, D–F 2, E–C 9, E–F 1, F–C 3].</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Explain backtracking and how it is used to solve the graph coloring problem.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Solve the following knapsack problem using dynamic programming: (Capacity = 7). Table: I1: Weight 1, Profit 50; I2: Weight 2, Profit 40; I3: Weight 4, Profit 70; I4: Weight 5, Profit 80; I5: Weight 1, Profit 10.</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Draw the partial state space tree for 15-puzzle problem. Specify the complexity of 15 puzzle problem.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Find the shortest distance from vertex 1 to vertex 12 for the following graph: [multistage graph: 1→2: 9, 1→3: 7, 1→4: 3, 1→5: 2; 2→6: 4, 2→7: 2; 3→6: 2, 3→7: 7; 4→8: 11; 5→8: 11, 5→7: 8; 6→9: 6, 6→10: 5; 7→9: 4, 7→10: 3; 8→10: 5, 8→11: 6; 9→12: 4; 10→12: 2; 11→12: 6].</span><span class="pmarks">10</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a) Explain the different asymptotic notations with graphs.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b) Explain KMP String matching algorithm with example.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c) Solve the following sum of subset Problem: S = {3, 4, 5, 6} and sum = 9.</span><span class="pmarks">5</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">*************</p>
+    </article>
+  </section>
+
+  <!-- ================= COA PAPERS ================= -->
+  <section id="coa">
+    <div class="subject-anchor-header">
+      <div>
+        <h2>COA — Computer Organization &amp; Architecture (N2113114)</h2>
+        <p style="margin:4px 0 0;font-size:0.95rem;color:var(--color-muted)">Branches on these papers: <strong>CS-IoT · AI&amp;DS · Computer</strong> · Note: "Calculator having number conversion function is not allowed." · Pattern: Q1 compulsory (3 of A–D × 5M = 15) + any THREE of Q2–Q6 (15M each) = 60M · 2 hours · Q5 fixed: 8086 arch (8M) + Booth's (7M)</p>
+      </div>
+      <a class="back-study-link" href="../coa/index.html">← View Ranked COA PYQs &amp; Pass Plan</a>
+    </div>
+
+    <!-- COA Dec 2025 -->
+    <article class="paper">
+      <div class="phead">Subject: Computer Organization &amp; Architecture (N2113114)<br><small>Dec 2025 — QP 98169 · 2 hours · 60 marks · 10/12/2025</small></div>
+      
+      <div class="pq">
+        <div class="prow"><span><b>Q1 — Attempt any THREE (5M each)</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Convert the following decimal number to Binary, Octal and Hexadecimal number. a) (345.35)₁₀ b) (818.55)₁₀.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain addressing modes of 8086 with suitable example.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>C: Explain Associative memory with its usages.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>D: Explain ISA, PCI and USB buses.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Draw flowchart for non restoring division algorithm and implement for (13/3).</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain memory hierarchy with diagrams and characteristics of memory.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: A computer has 64MB main memory and 32KB cache memory. Each line in cache stores 8 bytes. Show the format for memory address for Direct and Associative mapping.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain and compare programmed I/O, interrupt-driven I/O, and DMA.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Explain micro-programmed control unit with suitable diagram.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Draw and explain the various pipeline hazards and method to resolve it.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Explain with suitable diagram Architecture of 8086 microprocessor.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Multiply (12)₁₀ and (−5)₁₀ using Booth's algorithm.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Explain bus arbitration with examples.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain Flynn's classification.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>C: Differentiate horizontal and vertical microinstruction.</span><span class="pmarks">5</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">********************</p>
+    </article>
+
+    <!-- COA May 2026 -->
+    <article class="paper">
+      <div class="phead">Subject: Computer Organization &amp; Architecture (N2113114)<br><small>May 2026 — QP 09161 · 2 hours · 60 marks · 11/06/2026</small></div>
+      
+      <div class="pq">
+        <div class="prow"><span><b>Q1 — Attempt any THREE (5M each)</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Convert (74.25)₁₀ and (47.50)₁₀ into hexadecimal numbers and perform addition on converted numbers.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain instruction pipeline.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>C: Explain characteristics of memory.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>D: Explain Associative memory.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Convert (56.45)₁₀ into IEEE 754 floating point Single Precision format.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain different pipeline hazards.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Draw flow chart for nonrestoring division algorithm and solve (15)₁₀ / (2)₁₀.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Explain programmed IO and interrupt-driven data transfer methods.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Compare Direct, Associative, Set Associative Cache Mapping techniques.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Compare Hardwired and Softwired control unit design techniques.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Explain architecture of 8086 microprocessor.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Multiply (−8)₁₀ and (−3)₁₀ using Booth's algorithm.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>Q6</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>A: Explain Flynn's classification.</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>B: Differentiate between different operation modes of 80386DX processor.</span><span class="pmarks">7</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">*************</p>
+    </article>
+  </section>
+
+  <!-- ================= GEN AI PAPERS ================= -->
+  <section id="genai">
+    <div class="subject-anchor-header">
+      <div>
+        <h2>Gen AI — Open Elective: Generative AI (2013311)</h2>
+        <p style="margin:4px 0 0;font-size:0.95rem;color:var(--color-muted)">Branches on these papers: <strong>Computer · AI&amp;DS</strong> · <strong>Formats differ:</strong> Dec 2025 is 60 marks / 2 hours; May 2026 is 30 marks / 1 hour</p>
+      </div>
+      <a class="back-study-link" href="../genai/index.html">← View Ranked Gen AI PYQs &amp; Pass Plan</a>
+    </div>
+
+    <!-- Gen AI Dec 2025 -->
+    <article class="paper">
+      <div class="phead">Subject: Generative AI (Open Elective — 2013311)<br><small>Dec 2025 — QP 25503 (handwritten; printed code 1042312 also on header) · 2 hours · 60 marks · 12/12/2025</small></div>
+      <p style="color:#111">Pattern: Q1 compulsory, attempt any three × 5M = 15, + attempt any three of Q2–Q6 (each 15M), + Q6 attempt any three × 5M = 15. Total 15 + 3×15 = 60.</p>
+
+      <div class="pq">
+        <div class="prow"><span><b>1 — Attempt any Three [15]</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: Define Generative AI. Explain its scope with suitable examples?</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b: List any three GPT variants and mention one use case for each.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c: What is the importance of data in training the AI model?</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>d: Explain "text-to-image" tools with an example.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: Explain How CNN Works?</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b: Explain pre-training and fine tuning and instruct tuning in gen-AI?</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: What is the multiread mechanism in GPT? (printed "multiread"; read as multi-head attention mechanism)</span><span class="pmarks">7</span></div></div>
+        <div class="sub"><div class="prow"><span>b: Explain the architecture of RNN &amp; how it works?</span><span class="pmarks">8</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: What are the challenges in Generative AI?</span><span class="pmarks">8</span></div></div>
+        <div class="sub"><div class="prow"><span>b: Write a short note on the architecture and working of GPT models.</span><span class="pmarks">7</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: What is chat-GPT and how does it work?</span><span class="pmarks">7</span></div></div>
+        <div class="sub"><div class="prow"><span>b: What is LLM and Types of LLM explain?</span><span class="pmarks">8</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>6 — Attempt any 3 [15]</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>a: Ethical concerns related to Generative AI.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>b: Explain the importance of Generative AI in any five real-world domains.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>c: Differentiate between traditional language models and modern language models.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>d: Explain the importance and role of self-attention in GPT models.</span><span class="pmarks">5</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">********************</p>
+    </article>
+
+    <!-- Gen AI May 2026 -->
+    <article class="paper">
+      <div class="phead">Subject: Generative AI (Open Elective — 2013311)<br><small>May 2026 — QP 3001 (handwritten) · 1 hour · 30 marks · 15/06/2026</small></div>
+      <p style="color:#111"><b>WARNING:</b> This is a 30-mark / 1-hour paper, NOT the 60-mark ESE format. Pattern: Q1 compulsory, attempt any five × 2M = 10, + attempt any two of Q2–Q5, each 10M (5+5). Total 10 + 2×10 = 30. Note: Q2b and Q5b are the same question (GPT architecture and working) — attempt only one.</p>
+
+      <div class="pq">
+        <div class="prow"><span><b>1 — Attempt any five [10]</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>(a) Define Generative AI</span><span class="pmarks">2</span></div></div>
+        <div class="sub"><div class="prow"><span>(b) What is GPT and Chat-GPT?</span><span class="pmarks">2</span></div></div>
+        <div class="sub"><div class="prow"><span>(c) Define LLM.</span><span class="pmarks">2</span></div></div>
+        <div class="sub"><div class="prow"><span>(d) What is pre-training?</span><span class="pmarks">2</span></div></div>
+        <div class="sub"><div class="prow"><span>(e) What is LSTM?</span><span class="pmarks">2</span></div></div>
+        <div class="sub"><div class="prow"><span>(f) What is tokenization in transformer model?</span><span class="pmarks">2</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>2</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>(a) Explain the architecture of CNN &amp; how it works?</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>(b) Explain architecture and working of GPT models.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>3</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>(a) Explain ethical issues in Generative AI.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>(b) Explain different GPT variants and their applications.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>4</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>(a) Explain the architecture and working of Transformer models.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>(b) Explain any five Generative AI tools with examples.</span><span class="pmarks">5</span></div></div>
+      </div>
+
+      <div class="pq">
+        <div class="prow"><span><b>5</b></span><span></span></div>
+        <div class="sub"><div class="prow"><span>(a) Explain RNN and its limitations.</span><span class="pmarks">5</span></div></div>
+        <div class="sub"><div class="prow"><span>(b) Explain GPT architecture and working.</span><span class="pmarks">5</span></div></div>
+      </div>
+      <p style="text-align:center;color:#111">*************</p>
+    </article>
+  </section>
+
+  <!-- ================= SOLUTIONS ================= -->
+  <section id="solutions" style="padding-top:40px">
+    <div class="wrap">
+      <h2>💡 Solutions Hub</h2>
+      <p>Solutions land on each subject's own page in topic-ranked order, complete with step-by-step working and full diagrams. Select a subject to jump directly to its solution section:</p>
+      
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin:20px 0">
+        <a class="sharebtn" href="../maths/index.html#solutions">Maths Solutions →</a>
+        <a class="sharebtn" href="../dsgt/index.html#solutions">DSGT Solutions →</a>
+        <a class="sharebtn" href="../aoa/index.html#solutions">AOA Solutions →</a>
+        <a class="sharebtn" href="../coa/index.html#solutions">COA Solutions →</a>
+        <a class="sharebtn" href="../genai/index.html#solutions">Gen AI Solutions →</a>
+      </div>
+    </div>
+  </section>
+
 </main>
-<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions land on each subject's own page from tomorrow, one per question, in ranked-topic order. Jump straight to the right one: <a href="/maths/#solutions">Maths solutions</a> · <a href="/dsgt/#solutions">DSGT solutions</a> · <a href="/aoa/#solutions">AOA solutions</a> · <a href="/coa/#solutions">COA solutions</a> · <a href="/genai/#solutions">Gen AI solutions</a>.</p></div></section><footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer><footer><div class="wrap">
-<p><strong style="color:var(--color-ink)">Exact Papers — kptimes.in/papers/</strong> · For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing these subjects. Papers reproduced for study use. No names, no personal details on this page.</p>
-</div></footer>
-</body>
-</html><main><section id="maths">
-<h2>Maths — Mathematics for Computer Engineering (N2113111)</h2>
-<p>Branches on this paper: <strong>Computer · AI&amp;DS · CS-IoT</strong>.</p>
-<p>Dec 2025 (QP 00720) and May 2026 (QP 14664) — the only two NEP papers before your batch. 60 marks, 2 hours each. The Maths pass plan and model paper live on the home page; All five subjects' papers are in this hub, in full.</p>
 
-<h2>Exact paper view — as printed</h2>
-<p>Below are both papers in their original order, with the original question numbers, sub-parts and marks on the right — exactly as they appear on the paper. Use this to practise under paper conditions; use the ranked view above to study by topic.</p>
+<footer class="foot">
+  <div class="wrap">
+    <a href="../index.html">← Back to All Subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers and solutions.
+  </div>
+</footer>
 
-<article class="paper">
-<div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>S.E. / Sem-III / NEP / Computer / AI&amp;DS / IoT — 17/12/2025 — Q.P. Code: 00720</small></div>
-<div class="prow"><span><b>Time: 2 hours</b></span><span><b>Marks: 60</b></span></div>
-<p style="color:#111"><b>Note:</b> 1. Question No. 1 is Compulsory. 2. Attempt any 3 (Three) Questions from the remaining questions. 3. Statistical Table is allowed.</p>
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--color-ink)">Exact Papers — kptimes.in/papers/</strong> · For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing these subjects. Papers reproduced for university study use. No personal details collected or stored.</p>
+  </div>
+</footer>
 
-<div class="pq"><div class="prow"><span><b>Que. 1</b> — Attempt any Five questions of the following</span><span></span></div>
-<div class="sub"><div class="prow"><span>a. If A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>0</td><td>−1</td><td>4</td></tr><tr><td>0</td><td>0</td><td>−2</td></tr></table></span>, find Eigen values of A⁻¹ + 6I</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b. Transform the LPP to standard form<br>Maximise Z = 2x₁ + x₂ + 4x₃<br>x₁ − x₂ + 2x₃ ≤ 5<br>3x₁ + x₂ + 5x₃ ≥ 14&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c. Find the value of a<sub>n</sub> in the expansion of Fourier Series for f(x) = 4 − x² in (0, 2π)</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d. A random variable x defines the possible outcomes of tossing a fair die, find moment generating function of x about origin</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e. What is the remainder when 13⁷⁰ is divided by 21</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f. Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
-<table class="ptable"><tr><td>X</td><td>24</td><td>24</td><td>24</td><td>55</td><td>25</td></tr><tr><td>Y</td><td>24</td><td>31</td><td>51</td><td>40</td><td>38</td></tr></table></div></div>
+<script>
+document.getElementById('copyLink').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText('https://kptimes.in/papers/');
+    document.getElementById('copyLink').textContent = 'Link copied ✓';
+    setTimeout(() => document.getElementById('copyLink').textContent = 'Copy link', 2500);
+  } catch (e) {
+    document.getElementById('copyLink').textContent = 'https://kptimes.in/papers/';
+  }
+});
 
-<div class="pq"><b>Que. 2</b>
-<div class="sub"><div class="prow"><span>a. It is known that the probability of an item produced by a certain machine will be defective is 0.001. If the produced items are sent to the market in packets of 100, find the number of packets containing at least 2 are defective in the consignment of 2000 Packets.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. Five students got the following percentage of marks in mathematics and statistics<br>Calculate the coefficient of correlation.</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>Maths</td><td>28</td><td>34</td><td>18</td><td>25</td><td>75</td><td>23</td><td>24</td><td>33</td><td>37</td><td>43</td></tr><tr><td>Stats</td><td>24</td><td>31</td><td>11</td><td>34</td><td>65</td><td>24</td><td>23</td><td>53</td><td>53</td><td>42</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c. Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div></div>
+// Highlight active pill on scroll
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.subjnav-sticky a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+// Live Navbar Countdown Timer to 17th Nov
+(function(){
+  var navTimer=document.getElementById('navTimerVal');
+  if(!navTimer) return;
+  var target=new Date('2026-11-17T14:30:00+05:30');
+  function updateNavTimer(){
+    var diff=target.getTime()-Date.now();
+    if(diff<=0){ navTimer.textContent='Live now!'; return; }
+    var d=Math.floor(diff/(1000*60*60*24));
+    var h=Math.floor((diff/(1000*60*60))%24);
+    var m=Math.floor((diff/(1000*60))%60);
+    var s=Math.floor((diff/1000)%60);
+    navTimer.textContent=d+'d '+h+'h '+m+'m '+s+'s';
+  }
+  updateNavTimer();
+  setInterval(updateNavTimer,1000);
+})();
 
-<div class="pq"><b>Que. 3</b>
-<div class="sub"><div class="prow"><span>a. Obtain equations of line of regression of x on y for following data.</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>31</td><td>44</td><td>65</td><td>49</td><td>41</td></tr><tr><td>Y</td><td>48</td><td>32</td><td>21</td><td>66</td><td>43</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b. By using Chinese Remainder theorem, Solve<br>x ≡ 1 (mod 3),&nbsp; x ≡ 2 (mod 4),&nbsp; x ≡ 3 (mod 5)</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Find Eigen values and Eigen vectors of the matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>5</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>3</td></tr></table></span> </span><span class="pmarks">6</span></div></div></div>
+// Eye-Care Night Reading Theme Switcher for Exact Papers
+(function() {
+  var pills = document.querySelectorAll('.eye-pill');
+  if (!pills.length) return;
 
-<div class="pq"><b>Que. 4</b>
-<div class="sub"><div class="prow"><span>a. A random variable X has probability density function<br>f(x) = x²e<sup>−x</sup>&nbsp;&nbsp;&nbsp;&nbsp;x ≥ 0<br>Find 2 moments about origin and mean.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. Show that the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>1</td><td>3</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr></table></span> is diagonalisable, hence find it's diagonalisable matrix.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. In RSA System the public key (E, N) of user A is defined as (7, 187). Calculate φ(N) and private key 'D'. What is the cipher text for M = 10 using the public key.</span><span class="pmarks">6</span></div></div></div>
+  function applyPaperTheme(theme) {
+    document.body.classList.remove('paper-theme-dark', 'paper-theme-sepia', 'paper-theme-white');
+    document.body.classList.add('paper-theme-' + theme);
+    pills.forEach(function(p) {
+      if (p.getAttribute('data-theme') === theme) {
+        p.classList.add('active');
+        p.setAttribute('aria-checked', 'true');
+      } else {
+        p.classList.remove('active');
+        p.setAttribute('aria-checked', 'false');
+      }
+    });
+    try {
+      localStorage.setItem('kptimes-paper-theme', theme);
+    } catch(e) {}
+  }
 
-<div class="pq"><b>Que. 5</b>
-<div class="sub"><div class="prow"><span>a. Verify Cayley-Hamilton theorem for matrix<br>A = <span class="matrix-wrap"><table class="matrix"><tr><td>2</td><td>−1</td><td>1</td></tr><tr><td>−1</td><td>2</td><td>−1</td></tr><tr><td>1</td><td>−1</td><td>2</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b. The height of school children of one school is normally distributed with mean of 54 inches and standard deviation 12 inches. What proportion of students have height between i. 46 and 56 inches&nbsp;&nbsp; ii. More than 56</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Applying Simplex method, Solve the following LPP<br>Maximise&nbsp;&nbsp; Z = 3x₁ + 2x₂<br>Subject to constraint&nbsp;&nbsp; x₁ + x₂ ≤ 4<br>x₁ − x₃ ≤ 2&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div></div>
+  pills.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var t = this.getAttribute('data-theme');
+      applyPaperTheme(t);
+    });
+  });
 
-<div class="pq"><b>Que. 6</b>
-<div class="sub"><div class="prow"><span>a. Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>4</td><td>7</td><td>9</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>18</td><td>14</td><td>19</td><td>27</td><td>18</td><td>28</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b. Find Fourier series for the function f(x) = x, 0 &lt; x &lt; 2π</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c. Using the method of Lagrange's multipliers solve the following NLPP<br>Optimize&nbsp; z = −x₁² − x₂² + 4x₁ + 8x₂<br>Subject to:&nbsp;&nbsp; x₁ + x₂ = 4&nbsp;&nbsp; x₁, x₂ ≥ 0</span><span class="pmarks">6</span></div></div></div>
-<p style="text-align:center;color:#111">********************</p>
-</article>
-
-<article class="paper">
-<div class="phead">Paper / Subject Code: N2113111 / Mathematics for Computer Engineering<br><small>SE / Sem-III / NEP / MAY 2026 / Computer / AI&amp;DS / CS-IoT — Date 04/06/2026 — Q.P. 14664</small></div>
-<div class="prow"><span><b>Time: 2 hours</b></span><span><b>Max Marks: 60</b></span></div>
-<p style="color:#111"><b>Note:</b> (1) Question No. 1 is Compulsory. (2) Answer any three questions from Q.2 to Q.6. (3) Figures to the right indicate full marks. (4) Statistical Table to be provided.</p>
-
-<div class="pq"><b>Q.1.</b> — Attempt any <b>Five Questions</b> from the following.
-<div class="sub"><div class="prow"><span>a) Find the sum and product of the eigenvalues of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−2</td><td>−9</td><td>5</td></tr><tr><td>−5</td><td>−10</td><td>7</td></tr><tr><td>−9</td><td>−21</td><td>14</td></tr></table></span> </span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b) Construct the dual of the following LPP<br>Maximise&nbsp;&nbsp; Z = 5x₁ + 4x₂<br>Subject to constraint&nbsp;&nbsp; 2x₁ + 6x₂ ≤ 5<br>7x₁ + 3x₂ ≤ 2<br>x₁, x₂ ≥ 0</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c) Find value of a<sub>n</sub> in the expansion of Fourier series for f(x) = x² in (−π, π)</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d) Calculate first 2 raw moments for probability density function<br>f(x) = <span class="pw"><span class="brace">{</span><table><tr><td>xe<sup>−x</sup></td><td>x ≥ 0</td></tr><tr><td>0</td><td>Otherwise</td></tr></table></span></span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e) What is the remainder when 5¹¹ is divided by 7</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f) Obtain Spearman's rank correlation coefficient for following data</span><span class="pmarks">3</span></div>
-<table class="ptable"><tr><td>X</td><td>18</td><td>17</td><td>13</td><td>17</td><td>19</td><td>21</td></tr><tr><td>Y</td><td>21</td><td>22</td><td>14</td><td>17</td><td>18</td><td>13</td></tr></table></div></div>
-
-<div class="pq"><b>Q.2.</b>
-<div class="sub"><div class="prow"><span>a) The number of traffic accidents that occur on a particular stretch of road during a month follows a Poisson distribution with a mean of 7. Find the probability of observing exactly three accidents on this stretch of road next month.</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Calculate the correlation coefficient for the following heights of fathers (X) and their sons (Y)</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>X</td><td>65</td><td>66</td><td>67</td><td>67</td><td>68</td><td>69</td><td>70</td><td>72</td></tr><tr><td>Y</td><td>67</td><td>68</td><td>65</td><td>68</td><td>72</td><td>72</td><td>69</td><td>71</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c) Expand Fourier series for f(x) = x² in (0, 2)</span><span class="pmarks">6</span></div></div></div>
-
-<div class="pq"><b>Q.3.</b>
-<div class="sub"><div class="prow"><span>a) Fit a straight line of the form y = a + bx to the following data</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>3</td><td>5</td><td>7</td><td>8</td><td>10</td></tr><tr><td>Y</td><td>8</td><td>4</td><td>5</td><td>7</td><td>8</td><td>4</td></tr></table></div>
-<div class="sub"><div class="prow"><span>b) By using Chinese Remainder theorem, solve x ≡ 3 (mod 4),&nbsp; x ≡ 5 (mod 7)</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Find eigen values and eigen vectors of A = <span class="matrix-wrap"><table class="matrix"><tr><td>−9</td><td>4</td><td>4</td></tr><tr><td>−8</td><td>3</td><td>4</td></tr><tr><td>−16</td><td>8</td><td>7</td></tr></table></span> </span><span class="pmarks">6</span></div></div></div>
-
-<div class="pq"><b>Q.4.</b>
-<div class="sub"><div class="prow"><span>a) A random variable X has the following probability distribution</span><span class="pmarks">4</span></div>
-<table class="ptable"><tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>P(X=x)</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.2</td></tr></table>
-<span>Find moment generating function about origin of x, hence find first two raw moments.</span></div>
-<div class="sub"><div class="prow"><span>b) The distribution of wait times at a drive-through restaurant is approximately normal with mean 185 seconds and standard deviation 15 seconds. Find the percentage of wait times that are<br>i. between 155 and 215 seconds.<br>ii. more than 170 seconds.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Check whether the matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>8</td><td>−8</td><td>−2</td></tr><tr><td>4</td><td>−3</td><td>−2</td></tr><tr><td>3</td><td>−4</td><td>1</td></tr></table></span> is diagonalizable, if yes, find the diagonalizing matrix P and the diagonal matrix D.</span><span class="pmarks">6</span></div></div></div>
-
-<div class="pq"><b>Q.5.</b>
-<div class="sub"><div class="prow"><span>a) Verify Cayley-Hamilton theorem for matrix A = <span class="matrix-wrap"><table class="matrix"><tr><td>3</td><td>2</td><td>1</td></tr><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>3</td><td>2</td><td>1</td></tr></table></span> </span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Maximise&nbsp;&nbsp; Z = 7x₁ + 5x₂<br>Subject to constraint&nbsp;&nbsp; −x₁ − 2x₂ ≥ −6<br>4x₁ + 3x₂ ≤ 12<br>x₁, x₂ ≥ 0</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Perform key generation, encryption and decryption for RSA Algorithm with the following parameters primes p = 3,&nbsp; q = 11 message, M = 5</span><span class="pmarks">6</span></div></div></div>
-
-<div class="pq"><b>Q.6.</b>
-<div class="sub"><div class="prow"><span>a) Expand Fourier series for f(x) = x in (−π, π)</span><span class="pmarks">4</span></div></div>
-<div class="sub"><div class="prow"><span>b) Obtain the equation of line of regression of X on Y</span><span class="pmarks">5</span></div>
-<table class="ptable"><tr><td>X</td><td>21</td><td>23</td><td>25</td><td>27</td><td>28</td><td>20</td></tr><tr><td>Y</td><td>8</td><td>12</td><td>15</td><td>17</td><td>18</td><td>20</td></tr></table></div>
-<div class="sub"><div class="prow"><span>c) Using the method of Lagrange's multipliers, solve the following NLPP<br>Maximise&nbsp; Z = x₁² + x₂² + x₃² − 10x₁ − 6x₂ − 4x₃<br>Subject to constraint&nbsp; x₁ + x₂ + x₃ = 7&nbsp;&nbsp;&nbsp;&nbsp;x₁, x₂, x₃ ≥ 0</span><span class="pmarks">6</span></div></div></div>
-<p style="text-align:center;color:#111">*************</p>
-</article>
-
-</section>
-<section id="dsgt"><div class="wrap">
-<h2>DSGT — Discrete Structures &amp; Graph Theory (N2113112)</h2>
-<p>Branches on these papers: <strong>Computer · CS-IoT · AI&amp;DS</strong>. Pattern both papers: Q1 compulsory (short subquestions, 5M each) + attempt any THREE of Q2–Q6, each a (8M) + b (7M) = 15. Total 15 + 3×15 = 60.</p>
-<div class="paper">
-<h3>Dec 2025 — QP 99814 · 3 hours · 60 marks · 19/12/2025</h3>
-<p>Scan gap flagged: Q1 heading says "any three out of six sub questions" but the scan shows only a–e (5). A sixth subquestion is not in the scan and is not invented here.</p>
-<div class="pq"><div class="prow"><span><b>Q1 — Attempt any three out of six sub questions (5M each)</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A student-feedback system groups teacher responses using the rule: two responses x and y are "similar" if they fall in the same satisfaction band (e.g. 1–2 = Low, 3 = Medium, 4–5 = High). i. Using definitions of reflexive, symmetric, transitive, determine whether "similarity" is an equivalence relation. ii. Explain the classroom-level meaning of each property. iii. Discuss how violating any property affects AI-based feedback analytics and dashboard reports.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) A college bus attendance system gives "Boarded = True" when: P: the student taps RFID card; Q: bus mentor manually verifies student; R: the system logs boarding record. The transport officer rewrites: (P ∨ Q) → R ≡ (P → R) ∧ (Q → R). i. Prove the above using logical equivalence laws step-by-step. ii. Explain how this version ensures no boarding method is ignored, improves data consistency, and reduces false "absent" cases.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) A programming contest has 240 participants and 12 judging terminals. i. Using Pigeonhole Principle, find the minimum number of contestants who must end up using the same terminal. ii. Explain how this insight helps in contest scheduling, load balancing, and avoiding terminal bottlenecks.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>d) A Cybersecurity lab access is granted if: P: student has lab clearance; Q: student has signed NDA; R: student completed safety briefing. Access expression: A = (P ∧ Q) ∨ (P ∧ R). i. Construct truth table for A. ii. Identify combinations where access is wrongly granted. iii. Explain consequences for security, safety compliance, and audit records.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>e) Students are assigned to specialization tracks by the rule: Score in Coding ≥ 80 → Software Track; Score in Networks ≥ 75 → Network Security; Score in Math ≥ 85 → Data Science. Priority: Data Science &gt; Software &gt; Network Security. Given sample data (Coding, Networks, Math): S1: (85, 60, 70); S2: (65, 80, 90); S3: (82, 78, 88); S4: (78, 76, 60). i. Map each student to a track. ii. Check if the mapping is function / one-one / onto / many-one. iii. Explain how these properties impact batch size planning, mentor allocation, and fairness.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A campus event app records students who use three app sections: E: Event Announcements; C: Clubs &amp; Communities; R: Reels / Short videos. Survey data: E 140; C 110; R 120; E∩C 65; E∩R 70; C∩R 55; Total Students 200. i. Using inclusion–exclusion, compute how many students use all three sections. ii. Find students who use only one section. iii. Explain how this analysis helps app developers and event committees design targeted notifications and UI improvements.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A university assigns raw marks to final grades using: Moderation function M(x) = x + 5; Weight conversion W(x) = 0.4x. Compute the compositions: i. W ∘ M; ii. M ∘ W; iii. M ∘ M; iv. W ∘ W. Interpret each composition in the grading context, and discuss which are academically meaningful and which may distort scores.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A Data Science program has a prerequisite network among modules: M1: Python Basics; M2: DS Foundation; M3: Machine Learning; M4: Deep Learning; M5: Deployment. Given relation R = {(1,2), (2,3), (3,4), (4,5), (1,1), (3,3), (5,5)}. i. Apply Warshall's Algorithm to compute transitive closure. ii. For each Mi, list all modules it can unlock. iii. Identify root modules and terminal modules. iv. Explain how this helps curriculum planners maintain valid learning paths.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) Data storage providers offer plans of sizes: S = {1 TB, 2 TB, 4 TB, 8 TB, 16 TB}. Relation a | b (a divides b). i. Draw the Hasse diagram. ii. List all (a,b) where a divides b. iii. Check whether S forms a lattice (meet &amp; join for every pair). iv. Explain impact on designing upgrade/downgrade recommendations and plan combinations in the storage app.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A QR-based token system transforms token number a into: T(a) = (a × k) mod 7, with a ∈ {1…6}. i. Construct multiplication table (×₇). ii. Find modular inverses of 2, 3, 5 under mod 7. iii. Determine if ({1…6}, ×₇) forms a group. iv. Comment on whether this token transformation ensures reversibility, forgery prevention, and predictable validation.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A student deposits savings in a fund according to: Daily saving: Sₙ = 4n − 1. They want to verify if Sₙ is always odd for all natural numbers n. i. Prove the statement using mathematical induction. ii. Explain the meaning for planning weekly budgets and long-term savings.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Two lab surveillance networks are modeled as undirected graphs: Graph G₁ (Cameras A,B,C,D): A: B, C; B: A, D; C: A, D; D: B, C. Graph G₂ (Cameras P,Q,R,S): P: Q, R; Q: P, S; R: P, S; S: Q, R. i. Determine whether G₁ and G₂ are isomorphic. ii. If yes, provide the mapping. iii. Explain how detecting isomorphic patterns helps in reusing surveillance layouts and minimizing storage of duplicate designs.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A student club records followers using recurrence: Fₙ = 4Fₙ₋₁ − 4Fₙ₋₂. With F₀ = 10 (core team); F₁ = 30 (after first promotion). i. Solve the recurrence relation. ii. Describe growth pattern (linear/exponential). iii. Comment whether such growth is realistic for a campus club in long term.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) The college uses modulo-6 operations to rotate lab batches: Addition: a ⊕ b = (a + b) mod 6; Multiplication: a ⊗ b = (a × b) mod 6. i. Check if (Z₆, ⊕) is an abelian group. ii. Check closure, associativity of (Z₆, ⊗). iii. Verify distributive property of ⊗ over ⊕. iv. Conclude whether (Z₆, ⊕, ⊗) forms a ring, and discuss why this matters in designing timetable rotation logic.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A research conference venue is modeled as graph V = {A,B,C,D,E,F} with edges: E = {AB, AC, BC, BD, CE, DE, DF, EF}. i. Determine existence of Euler Path, Euler Circuit, Hamiltonian Path, Hamiltonian Circuit. ii. Construct them if they exist. iii. Explain what this means for planning visitor flow, inspection rounds, and avoiding repeated walking paths.</span><span class="pmarks">7</span></div></div>
-</div>
-</div><div class="paper">
-<h3>May 2026 — QP 14827 · 3 hours · 60 marks · 06/06/2026</h3>
-<p>Scan gaps flagged: May Q1 shows only a–c in the scan (no d/e/f visible); May Q2a and Q4a marks are not printed on their pages and are taken as 8M (question total 15 minus b-part 7M); May Q6b's graph figure is not legible in the scan.</p>
-<div class="pq"><div class="prow"><span><b>Q1 (5M each, as printed a–c)</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A digital geometry learning platform groups polygons based on the number of sides for automatic classification and retrieval. Let A be the set of all polygons. A relation R is defined on A as: R = {(P₁, P₂): P₁ and P₂ have the same number of sides}. Based on this classification system: 1. Analyze whether the relation R is an equivalence relation on A. 2. Verify the properties of reflexivity, symmetry, and transitivity. 3. Construct suitable equivalence classes for triangles, quadrilaterals, and pentagons. 4. Interpret how equivalence relations help organize geometric data in digital systems.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) A software security system uses logical rules to decide whether access should be granted, denied, or forwarded for further verification. Consider the logical expressions: ((p → q) → r) and (p ∧ ¬q) ∨ r. Using a series of logical equivalences, prove that the two expressions are logically equivalent. Also interpret how logical equivalence helps simplify decision rules in software systems.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) A quality control department stores 10 pairs of socks of different colors in a drawer for packaging verification. Using the Pigeonhole Principle, analyze the minimum number of socks that must be selected randomly to guarantee that at least one matching pair of the same color is obtained. Justify your answer with suitable reasoning.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A pharmaceutical company conducts a drug trial on 1000 people to analyze the side effects of a newly developed medicine. Observations: 122 people develop symptom A; 88 develop symptom B; 112 develop symptom C; 27 develop both A and B; 29 develop both A and C; 32 develop both B and C; 10 develop all three symptoms A, B, and C. Using the Principle of Inclusion and Exclusion: 1. Analyze how many people develop at least one symptom. 2. Determine the number of people who show exactly one symptom. 3. Construct a Venn diagram and fill all regions appropriately.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A retail store offers seasonal discounts on clothing items. A customer wants to purchase a shirt priced at Rs. 1000. The store first provides a 15% discount, after which an 8% sales tax is applied to the discounted price. Based on this shopping scenario: 1. Develop suitable mathematical functions representing the discount process and the tax calculation process. 2. Construct the composite function representing the final cost of the shirt. 3. Determine the final amount to be paid by the customer. 4. Analyze how composite functions help automate billing systems in retail applications.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A domestic airline company maintains a directed flight network among four cities: V = {a, b, c, d}. Direct flight connections are represented by the relation: R = {(a,b), (b,d), (d,c), (d,a)}. The company wants to analyze all possible direct and indirect travel routes, including circular journeys. Based on the given flight network: 1. Identify and explain the concept of reachability / transitive closure used in the graph. 2. Determine all possible ordered pairs of cities connected through: direct routes, routes with layovers, and circular routes. 3. Analyze how graph connectivity helps optimize airline route planning. 4. Represent the final connectivity relation for the graph.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A cloud access-control system organizes permission levels using divisibility-based hierarchy. Permission levels: A = {1,2,3,6,12,24,36,72}. A relation R is defined on A as: (x,y) ∈ R if x | y. Based on this hierarchy: 1. Write all ordered pairs of relation R. 2. Construct the Hasse Diagram of the poset. 3. Analyze whether the given poset forms a lattice. 4. Justify your answer using suitable meet and join examples.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A cryptographic system uses non-zero residue classes modulo 7 for secure key generation. Consider the set: G = {1,2,3,4,5,6} under multiplication modulo 7. Based on this system: 1. Construct the multiplication table of G under multiplication modulo 7. 2. Determine the multiplicative inverses of 2, 3, 5, and 6. 3. Analyze whether G forms a cyclic group. 4. If it is cyclic, identify at least one generator and justify your answer.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A data analyst observes that the cumulative computational cost of a repeated process is modeled by the series: Σ (r=1 to n) r(r + 3). The analyst claims that for every positive integer n, Σ (r=1 to n) r(r + 3) = (1/3)n(n + 1)(n + 5), n ≥ 1, n ∈ N. Using the principle of mathematical induction: 1. Verify the result for the base case. 2. Prove the inductive step. 3. Conclude that the formula is valid for all n ≥ 1. 4. Interpret how induction helps validate formulas in algorithm analysis.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A computer networking company proposes two communication network layouts represented by graphs G₁ and G₂. The organization wants to verify whether both network structures provide the same connectivity pattern even though the device labels are different. Graphs: V(G₁) = {A,B,C,X,Y,Z}; E(G₁) = {(A,X), (A,Y), (B,X), (B,Y), (C,Y)}; V(G₂) = {1,2,3,4,5,6}; E(G₂) = {(1,4), (1,5), (2,4), (2,5), (3,5)}. Based on the above network structures: 1. Define isomorphism of graphs. 2. Analyze whether graphs G₁ and G₂ are isomorphic. 3. If they are isomorphic, determine a valid one-to-one correspondence between the vertices. 4. Justify your answer by comparing degree sequence and adjacency preservation.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A financial analytics company models the quarterly growth of a digital investment portfolio using a recurrence relation. Let Fₙ represent the portfolio value during the nᵗʰ quarter. Growth pattern: Fₙ = 3Fₙ₋₁ + 10Fₙ₋₂ + 7·5ⁿ, with initial conditions: F₀ = 4, F₁ = −3. Based on this predictive model: 1. Solve the given recurrence relation using an appropriate method. 2. Determine the general expression for Fₙ. 3. Analyze the effect of the exponential forcing term 7·5ⁿ on the sequence growth. 4. Interpret how recurrence relations are useful in financial forecasting and computational modeling.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) A cryptographic system uses arithmetic operations on residue classes modulo 4 for encoding and verification. Consider the set: Z₄ = {0,1,2,3} with addition and multiplication defined modulo 4. Based on this algebraic structure: 1. Construct the addition and multiplication tables for Z₄. 2. Verify whether Z₄ satisfies the required ring properties. 3. Analyze the role of additive identity, additive inverse, multiplicative associativity, and distributive laws. 4. Conclude whether Z₄ forms a ring under addition and multiplication modulo 4.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b) A city transport authority is analyzing a road network connecting six important locations A, B, C, D, E, and F. The network is represented by the following graph: [graph figure not legible in scan]. Based on the given road network: 1. Determine whether the graph has an Euler Path. 2. Determine whether the graph has an Euler Circuit. 3. Determine whether the graph has a Hamiltonian Path. 4. Determine whether the graph has a Hamiltonian Circuit. 5. Justify your answer using degree of vertices and graph traversal conditions.</span><span class="pmarks">7</span></div></div>
-</div>
-</div></div></section>
-<section id="aoa"><div class="wrap">
-<h2>AOA — Analysis of Algorithms (N2113113)</h2>
-<p>Branches on these papers: <strong>Computer · CS-IoT · AI&amp;DS</strong>. Pattern both papers: Q1 compulsory, answer any five of six shorts × 3M = 15, + attempt any THREE of Q2–Q6, each 15M (Q2–Q5 = a 5M + b 10M; Q6 = three × 5M). Total 15 + 3×15 = 60. Merge Sort is fixed in Q2b in both papers.</p>
-<div class="paper">
-<h3>Dec 2025 — QP 99073 · 2 hours · 60 marks · 08/12/2025</h3>
-<p></p>
-<div class="pq"><div class="prow"><span><b>Q1 — Answer the following (Any five) — 03 each</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Find the complexity of given recurrence relation using Master Method: T(n) = 8T(n/2) + n².</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b) Write an algorithm for Binary Search.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c) Explain the general method of the Greedy Approach.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d) Explain the Principle of Optimality as applied to Dynamic Programming.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e) Differentiate between Backtracking and Branch &amp; Bound techniques.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f) Explain the Naive String-Matching Algorithm.</span><span class="pmarks">3</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Sort the following numbers using the Selection Sort, and show the array after each pass: 28, 17, 20, 75, 13, 15.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Write an algorithm for Merge Sort. Derive its time complexity. Sort the following elements using Merge Sort: 32, 55, 17, 48, 64, 26.</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Explain Big Theta (Θ) notation with a suitable example.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) What is Minimum Cost Spanning Tree? Write Kruskal's algorithm and state its time complexity. Find Minimum Cost Spanning Tree for following graph using Kruskal's Algorithm: [graph: A–B 7, B–C 7, C–D 3, D–E 6, E–F 9, F–A 5, A–G 8, B–G 3, D–G 2, F–G 4].</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Consider a Knapsack with capacity W = 16. There are six items with following weights and profits. (P1…P6) = (10, 5, 15, 7, 6, 18); (W1…W6) = (2, 3, 5, 7, 1, 4). Find the maximum profit using Fractional Knapsack algorithm.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Write an algorithm to find Longest Common Subsequences between two given strings. Derive its time complexity. Find the LCS between following strings: X = AVANTIKA; Y = KARNAVATI.</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) What is Multistage Graph? Explain Forward Approach method to find optimal path in Multistage Graph.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) What is the N-Queen Problem? Design a backtracking algorithm to solve it. Provide step-by-step working of it using suitable example.</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Find the All-Pair Source Shortest path for all the vertices using Floyd-Warshall Algorithm: [directed graph: A→B 7, B→A 8, B→C −3, A→C 5, C→A 6].</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Explain Graph Coloring method with suitable example.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Write Rabin Karp String Matching Algorithm. State its time complexity.</span><span class="pmarks">5</span></div></div>
-</div>
-</div><div class="paper">
-<h3>May 2026 — QP 14659 · 2 hours · 60 marks · 09/06/2026 (header date; p1 handwriting says 03/06/2026)</h3>
-<p></p>
-<div class="pq"><div class="prow"><span><b>Q1 — Answer the following (Any Five) — 03 each</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Solve the following recurrence relation using recursion tree method: T(n) = 3T(n/3) + n².</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>b) Explain Divide and Conquer strategy with diagram.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>c) Differentiate between fractional and 0/1 knapsack problem (give minimum 5 relevant points).</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>d) Find the LCS for the following sequences: X = ABCDE; Y = ACE.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>e) Explain the concept of Branch and Bound.</span><span class="pmarks">3</span></div></div>
-<div class="sub"><div class="prow"><span>f) Explain the advantage of KMP algorithm over Naïve string matching algorithm.</span><span class="pmarks">3</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Find the Minimum spanning tree for the following graph using Prim's algorithm: [nodes 1–6; edges: 5–4: 9, 4–1: 1, 4–3: 5, 4–2: 3, 1–5: 4, 1–2: 2, 3–2: 3, 3–6: 8, 2–6: 7].</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Sort the following elements using Merge Sort and hence derive the complexity of Merge Sort: 34, 9, 56, 10, 78, 61, 98, 23, 38.</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Sort the following elements using insertion sort: 90, 1, 4, 2, 78, 45, 39, 58, 79. Show output after each pass. Also, derive complexity of insertion sort.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Find the shortest path for the following graph using Dijkstra's algorithm: (Source vertex is A). [graph: A–B 3, A–D 8, B–E 6, B–D 5, D–E 3, D–F 2, E–C 9, E–F 1, F–C 3].</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Explain backtracking and how it is used to solve the graph coloring problem.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Solve the following knapsack problem using dynamic programming: (Capacity = 7). Table: I1: Weight 1, Profit 50; I2: Weight 2, Profit 40; I3: Weight 4, Profit 70; I4: Weight 5, Profit 80; I5: Weight 1, Profit 10.</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Draw the partial state space tree for 15-puzzle problem. Specify the complexity of 15 puzzle problem.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Find the shortest distance from vertex 1 to vertex 12 for the following graph: [multistage graph: 1→2: 9, 1→3: 7, 1→4: 3, 1→5: 2; 2→6: 4, 2→7: 2; 3→6: 2, 3→7: 7; 4→8: 11; 5→8: 11, 5→7: 8; 6→9: 6, 6→10: 5; 7→9: 4, 7→10: 3; 8→10: 5, 8→11: 6; 9→12: 4; 10→12: 2; 11→12: 6].</span><span class="pmarks">10</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a) Explain the different asymptotic notations with graphs.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b) Explain KMP String matching algorithm with example.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c) Solve the following sum of subset Problem: S = {3, 4, 5, 6} and sum = 9.</span><span class="pmarks">5</span></div></div>
-</div>
-</div></div></section>
-<section id="coa"><div class="wrap">
-<h2>COA — Computer Organization &amp; Architecture (N2113114)</h2>
-<p>Branches on these papers: <strong>CS-IoT · AI&amp;DS · Computer</strong>. Note on both papers: "Calculator having number conversion function is not allowed." Pattern both papers: Q1 compulsory, attempt any THREE of A–D × 5M = 15, + attempt any THREE of Q2–Q6, each A (8M) + B (7M) = 15, except Dec Q6 which is three parts × 5M = 15. Total 15 + 3×15 = 60. Q5 is fixed both papers: 8086 architecture (8) + Booth's algorithm (7).</p>
-<div class="paper">
-<h3>Dec 2025 — QP 98169 · 2 hours · 60 marks · 10/12/2025</h3>
-<p></p>
-<div class="pq"><div class="prow"><span><b>Q1 — Attempt any THREE (5M each)</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Convert the following decimal number to Binary, Octal and Hexadecimal number. a) (345.35)₁₀ b) (818.55)₁₀.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain addressing modes of 8086 with suitable example.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>C: Explain Associative memory with its usages.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>D: Explain ISA, PCI and USB buses.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Draw flowchart for non restoring division algorithm and implement for (13/3).</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain memory hierarchy with diagrams and characteristics of memory.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: A computer has 64MB main memory and 32KB cache memory. Each line in cache stores 8 bytes. Show the format for memory address for Direct and Associative mapping.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain and compare programmed I/O, interrupt-driven I/O, and DMA.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Explain micro-programmed control unit with suitable diagram.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Draw and explain the various pipeline hazards and method to resolve it.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Explain with suitable diagram Architecture of 8086 microprocessor.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Multiply (12)₁₀ and (−5)₁₀ using Booth's algorithm.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Explain bus arbitration with examples.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain Flynn's classification.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>C: Differentiate horizontal and vertical microinstruction.</span><span class="pmarks">5</span></div></div>
-</div>
-</div><div class="paper">
-<h3>May 2026 — QP 09161 · 2 hours · 60 marks · 11/06/2026</h3>
-<p></p>
-<div class="pq"><div class="prow"><span><b>Q1 — Attempt any THREE (5M each)</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Convert (74.25)₁₀ and (47.50)₁₀ into hexadecimal numbers and perform addition on converted numbers.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain instruction pipeline.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>C: Explain characteristics of memory.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>D: Explain Associative memory.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Convert (56.45)₁₀ into IEEE 754 floating point Single Precision format.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain different pipeline hazards.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Draw flow chart for nonrestoring division algorithm and solve (15)₁₀ / (2)₁₀.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Explain programmed IO and interrupt-driven data transfer methods.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Compare Direct, Associative, Set Associative Cache Mapping techniques.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Compare Hardwired and Softwired control unit design techniques.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Explain architecture of 8086 microprocessor.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Multiply (−8)₁₀ and (−3)₁₀ using Booth's algorithm.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>Q6</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>A: Explain Flynn's classification.</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>B: Differentiate between different operation modes of 80386DX processor.</span><span class="pmarks">7</span></div></div>
-</div>
-</div></div></section>
-<section id="genai"><div class="wrap">
-<h2>Gen AI — Open Elective: Generative AI (2013311)</h2>
-<p>Branches on these papers: <strong>Computer · AI&amp;DS</strong> (open elective — branches vary by choice). <strong>Formats differ — never mix them:</strong> Dec 2025 is 60 marks / 2 hours; May 2026 is 30 marks / 1 hour. Winter 2026 format is UNCONFIRMED.</p>
-<div class="paper">
-<h3>Dec 2025 — QP 25503 (handwritten; printed code 1042312 also on header) · 2 hours · 60 marks · 12/12/2025</h3>
-<p>Pattern: Q1 compulsory, attempt any three × 5M = 15, + attempt any three of Q2–Q6 (each 15M), + Q6 attempt any three × 5M = 15. Total 15 + 3×15 = 60.</p>
-<div class="pq"><div class="prow"><span><b>1 — Attempt any Three [15]</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: Define Generative AI. Explain its scope with suitable examples?</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b: List any three GPT variants and mention one use case for each.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c: What is the importance of data in training the AI model?</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>d: Explain "text-to-image" tools with an example.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: Explain How CNN Works?</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b: Explain pre-training and fine tuning and instruct tuning in gen-AI?</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: What is the multiread mechanism in GPT? (printed "multiread"; read as multi-head attention mechanism)</span><span class="pmarks">7</span></div></div>
-<div class="sub"><div class="prow"><span>b: Explain the architecture of RNN &amp; how it works?</span><span class="pmarks">8</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: What are the challenges in Generative AI?</span><span class="pmarks">8</span></div></div>
-<div class="sub"><div class="prow"><span>b: Write a short note on the architecture and working of GPT models.</span><span class="pmarks">7</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: What is chat-GPT and how does it work?</span><span class="pmarks">7</span></div></div>
-<div class="sub"><div class="prow"><span>b: What is LLM and Types of LLM explain?</span><span class="pmarks">8</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>6 — Attempt any 3 [15]</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>a: Ethical concerns related to Generative AI.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>b: Explain the importance of Generative AI in any five real-world domains.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>c: Differentiate between traditional language models and modern language models.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>d: Explain the importance and role of self-attention in GPT models.</span><span class="pmarks">5</span></div></div>
-</div>
-</div><div class="paper">
-<h3>May 2026 — QP 3001 (handwritten) · 1 hour · 30 marks · 15/06/2026</h3>
-<p>WARNING: this is a 30-mark / 1-hour paper, NOT the 60-mark ESE format. Pattern: Q1 compulsory, attempt any five × 2M = 10, + attempt any two of Q2–Q5, each 10M (5+5). Total 10 + 2×10 = 30. Note: Q2b and Q5b are the same question (GPT architecture and working) — attempt only one.</p>
-<div class="pq"><div class="prow"><span><b>1 — Attempt any five [10]</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>(a) Define Generative AI</span><span class="pmarks">2</span></div></div>
-<div class="sub"><div class="prow"><span>(b) What is GPT and Chat-GPT?</span><span class="pmarks">2</span></div></div>
-<div class="sub"><div class="prow"><span>(c) Define LLM.</span><span class="pmarks">2</span></div></div>
-<div class="sub"><div class="prow"><span>(d) What is pre-training?</span><span class="pmarks">2</span></div></div>
-<div class="sub"><div class="prow"><span>(e) What is LSTM?</span><span class="pmarks">2</span></div></div>
-<div class="sub"><div class="prow"><span>(f) What is tokenization in transformer model?</span><span class="pmarks">2</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>2</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>(a) Explain the architecture of CNN &amp; how it works?</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>(b) Explain architecture and working of GPT models.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>3</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>(a) Explain ethical issues in Generative AI.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>(b) Explain different GPT variants and their applications.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>4</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>(a) Explain the architecture and working of Transformer models.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>(b) Explain any five Generative AI tools with examples.</span><span class="pmarks">5</span></div></div>
-</div>
-<div class="pq"><div class="prow"><span><b>5</b></span><span></span></div>
-<div class="sub"><div class="prow"><span>(a) Explain RNN and its limitations.</span><span class="pmarks">5</span></div></div>
-<div class="sub"><div class="prow"><span>(b) Explain GPT architecture and working.</span><span class="pmarks">5</span></div></div>
-</div>
-</div></div></section>
-</main>
-<section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions land on each subject's own page from tomorrow, one per question, in ranked-topic order. Jump straight to the right one: <a href="/maths/#solutions">Maths solutions</a> · <a href="/dsgt/#solutions">DSGT solutions</a> · <a href="/aoa/#solutions">AOA solutions</a> · <a href="/coa/#solutions">COA solutions</a> · <a href="/genai/#solutions">Gen AI solutions</a>.</p></div></section><footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer><footer><div class="wrap">
-<p><strong style="color:var(--color-ink)">Exact Papers — kptimes.in/papers/</strong> · For SE Sem III — Computer, AI&amp;DS and CS-IoT branches sharing these subjects. Papers reproduced for study use. No names, no personal details on this page.</p>
-</div></footer>
+  // Default to 'dark' so late-night study has zero glaring light emission
+  try {
+    var savedTheme = localStorage.getItem('kptimes-paper-theme') || 'dark';
+    applyPaperTheme(savedTheme);
+  } catch(e) {
+    applyPaperTheme('dark');
+  }
+})();
+</script>
+<script src="../lamp.js"></script>
 </body>
 </html>

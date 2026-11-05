@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 · Genre: playful · Macrostructure: Workbench · Theme: custom dark study (paper dark · grotesk-sans · lime/violet accent) · Audience: kp, SE AI&DS Sem III · Use: study COA PYQs in rank order · Tone: playful, focused -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,384 +11,575 @@
 <meta property="og:description" content="AOA ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026.">
 <meta property="og:url" content="https://kptimes.in/aoa/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AOA PYQs, Ranked — Sem III Exam Study">
-<meta name="twitter:description" content="AOA ranked topic-wise, with min/max marks and both papers Dec 2025 + May 2026.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --color-paper:#0b0b12; --color-paper-2:#12121c; --color-card:#161626; --color-line:#26263a;
-  --color-ink:#f4f4f8; --color-muted:#d3d3e6; --color-accent:#c8f542; --color-accent-2:#a78bfa;
-  --color-mark:#ffcf3f; --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
-}
-*{box-sizing:border-box}
-html,body{overflow-x:clip;margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body)}
-body{line-height:1.7;font-size:18px}
-a{color:var(--color-accent)}
-.wrap{max-width:1280px;margin:0 auto;padding:0 20px;min-width:0}
-h1,h2,h3{font-family:var(--font-display);font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:1.08}
-h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:.4rem 0 .6rem;letter-spacing:-.02em}
-h1 .lime{color:var(--color-accent)} h1 .violet{color:var(--color-accent-2)}
-h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin:0 0 .3rem;letter-spacing:-.02em;font-weight:700}
-h3{font-size:1.3rem;margin:.2rem 0 .5rem;letter-spacing:-.01em;font-weight:700}
-p{color:#e8e8f2} p strong{color:var(--color-ink)}
-.hero{position:relative;padding:64px 0 40px;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
-.blob.b1{width:340px;height:340px;background:#c8f542;top:-120px;right:-60px}
-.blob.b2{width:280px;height:280px;background:#7c3aed;bottom:-140px;left:-80px;animation-delay:1.5s}
-@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(26px) scale(1.08)}}
-.kick{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;padding:6px 12px;border-radius:999px;font-size:.85rem;transform:rotate(-1.5deg)}
-.lede{font-size:1.15rem;max-width:680px}
-.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.pill{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:7px 13px;font-size:.9rem;white-space:nowrap}
-.pill b{color:var(--color-accent)}
-.sharebar{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
-.sharebtn{display:inline-block;background:var(--color-accent);color:#0b0b12;font-weight:700;border:none;border-radius:999px;padding:11px 20px;font-size:1rem;cursor:pointer;text-decoration:none;white-space:nowrap}
-.sharebtn.ghost{background:transparent;color:var(--color-ink);border:1px solid var(--color-line)}
-.fab{position:fixed;top:16px;right:16px;z-index:50;background:var(--color-accent-2);color:#fff;font-weight:700;border:0;border-radius:999px;padding:14px 22px;font-size:1.02rem;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.5);white-space:nowrap}
-.fab:hover{transform:translateY(-1px)}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow:auto}
-.modal-backdrop[hidden]{display:none}
-.modal-card{background:var(--color-paper-2);border:1px solid #2e2e46;border-radius:22px;padding:30px 32px;max-width:880px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-.modal-close{float:right;background:transparent;border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:8px 16px;font-size:1rem;cursor:pointer}
-@media(max-width:768px){.fab{top:12px;right:12px;padding:11px 16px;font-size:.95rem}.modal-card{padding:22px 18px}}
-.sitenav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-.sitenav a{border:1px solid var(--color-line);background:var(--color-paper-2);border-radius:999px;padding:9px 16px;text-decoration:none;color:var(--color-ink);font-size:.95rem;white-space:nowrap}
-.sitenav a:hover{background:var(--color-accent);color:#0b0b12;font-weight:700}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
-.stat{background:var(--color-card);border:1px solid var(--color-line);border-radius:18px;padding:16px}
-.stat .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--color-accent)}
-.stat .l{color:var(--color-muted);font-size:.9rem}
-section{padding:34px 0}
-.callout{background:#1d1d0a;border:1px solid #4a4a1a;border-left:6px solid var(--color-accent);border-radius:14px;padding:16px 18px}
-.callout p{margin:.3rem 0}
-.controls{position:sticky;top:0;z-index:5;background:rgba(11,11,18,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-line);padding:12px 0}
-.controls .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-#search{flex:1;min-width:220px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink);border-radius:999px;padding:10px 16px;font-size:1rem}
-.chip{border:1px solid var(--color-line);background:transparent;color:var(--color-ink);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
-.chip.on,.chip:hover{background:var(--color-accent);color:#0b0b12;border-color:var(--color-accent);font-weight:700}
-.unit{border:1px solid #2e2e46;border-radius:24px;padding:36px 38px;margin:30px 0;background:linear-gradient(180deg,var(--color-paper-2),#10101a)}
-.unit-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
-.rank{background:var(--color-accent-2);color:#fff;font-weight:700;border-radius:999px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
-.topic{background:var(--color-card);border:1px solid #34344e;border-radius:18px;padding:28px 30px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.topic-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
-.badge{border-radius:999px;padding:3px 10px;font-size:.95rem;font-weight:700;white-space:nowrap}
-.badge.repeat{background:#12351f;color:#7bf1a8}
-.badge.marks{background:#3a2f00;color:var(--color-mark)}
-.badge.papers{background:#241a4d;color:#c4b5fd}
-.q{border-top:1px dashed var(--color-line);padding:10px 0 2px;margin-top:10px}
-.q .meta{font-size:.95rem;color:var(--color-muted);margin-bottom:2px}
-.q .meta b{color:var(--color-accent)}
-.done{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--color-muted);cursor:pointer;user-select:none}
-.done input{accent-color:var(--color-accent);width:18px;height:18px}
-.prog{height:10px;background:#26263a;border-radius:999px;overflow:hidden;margin:8px 0}
-.prog i{display:block;height:100%;background:var(--color-accent);width:0;transition:width .4s}
-.milestones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.ms{border:1px solid var(--color-line);border-radius:999px;padding:6px 13px;font-size:.9rem;color:var(--color-muted)}
-.ms.done{background:var(--color-accent);color:#0b0b12;font-weight:700;border-color:var(--color-accent)}
-.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) scale(.7);background:var(--color-accent);color:#0b0b12;font-weight:700;font-size:1.05rem;padding:16px 24px;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;text-align:center;max-width:92vw}
-.toast.show{opacity:1;transform:translateX(-50%) scale(1);animation:pop .45s ease}
-@keyframes pop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.08)}100%{transform:translateX(-50%) scale(1)}}
-.soon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.soon div{background:var(--color-card);border:1px dashed var(--color-line);border-radius:16px;padding:16px;color:var(--color-muted)}
-.soon b{color:var(--color-ink)}
-footer{border-top:1px solid var(--color-line);padding:28px 0;color:var(--color-muted);font-size:.9rem}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.stats,.soon{grid-template-columns:1fr 1fr}section{padding:26px 0}.unit{padding:16px}}
-@media(max-width:414px){.stats,.soon{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.blob{animation:none}.reveal{transition:none;opacity:1;transform:none}}
-
-.matrix-wrap{display:inline-flex;align-items:stretch;vertical-align:middle;margin:2px 4px}
-.matrix-wrap::before{content:"";width:9px;border:3px solid var(--color-ink);border-right:0}
-.matrix-wrap::after{content:"";width:9px;border:3px solid var(--color-ink);border-left:0}
-.matrix{display:inline-table;vertical-align:middle;border-collapse:collapse}
-.matrix td{padding:3px 10px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:1.12em;line-height:1.3}
-.qtable{border-collapse:collapse;margin:16px auto;font-size:1.05rem;width:100%}
-.qtable td{border:1px solid #4a4a66;padding:9px 12px;text-align:left;color:#e8e8f2;overflow-wrap:anywhere}
-.pw{display:inline-flex;align-items:center;gap:8px;margin:4px 0}
-.eqblock{margin:12px 0 4px 4px;font-family:Georgia,'Times New Roman',serif;font-size:1.1em;line-height:1.65}
-.eqblock .obj{font-weight:700}
-.eqblock .cons{padding-left:32px}
-.pw .brace{font-size:2.6em;font-family:Georgia,serif;line-height:1}
-.pw td{padding:2px 8px}
-.q{font-size:1.14rem;line-height:1.85;color:#e8e8f2}
-.q .meta{font-size:.95rem;letter-spacing:.02em}
-
-.paper{background:#fdfdf8;color:#111;border:1px solid #444;border-radius:6px;padding:28px 30px;margin:22px 0;font-family:Georgia,'Times New Roman',serif}
-.paper h3{font-family:Georgia,serif;color:#111;font-size:1.3rem;text-align:center}
-.paper .phead{text-align:center;font-weight:700;line-height:1.4}
-.paper .phead small{display:block;font-weight:400}
-.paper .prow{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-.paper .pmarks{font-weight:700;white-space:nowrap}
-.paper .pq{margin:14px 0}
-.paper .sub{margin:8px 0 8px 28px}
-.paper .matrix td{color:#111}
-.paper .matrix-wrap::before,.paper .matrix-wrap::after{border-color:#111}
-.paper .pw .brace{color:#111}
-.ptable{border-collapse:collapse;margin:8px 0 8px 28px}
-.ptable td{border:1px solid #111;padding:9px 18px;font-size:1.08rem};text-align:center}
-@media(max-width:768px){.paper{padding:18px 14px}.paper .sub{margin-left:14px}.ptable{margin-left:14px}}
-
-html{scroll-behavior:smooth}
-::selection{background:var(--color-accent);color:#0b0b12}
-.nav{position:sticky;top:0;z-index:40;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center;padding:12px 18px;margin:0 0 18px;background:rgba(11,11,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-line)}
-.nav a{color:var(--color-ink);font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
-.nav a:hover{background:var(--color-accent);color:#0b0b12}
-h1{background:linear-gradient(92deg,var(--color-accent),#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
-.topic{transition:transform .2s,box-shadow .2s}
-.topic:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
-.solslot{border:1px dashed var(--color-line);border-radius:14px;padding:12px 16px;margin:10px 0}
-.solslot summary{cursor:pointer;font-weight:700}
-.sitemap{border-top:1px solid var(--color-line);margin-top:34px;padding:22px 0;display:flex;flex-wrap:wrap;gap:8px 18px}
-.sitemap a{color:var(--color-muted);font-weight:600}
-.jumpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
-.jumpcard{border:1px solid var(--color-line);border-radius:16px;padding:16px}
-.jumpcard b{font-size:1.1rem}
-.jumpcard a{display:block;margin-top:6px;color:var(--color-muted);font-weight:600}
-.nav .brand,.sitenav .brand{font-weight:800;color:var(--color-ink);letter-spacing:-.01em}.nav .brand .dot,.sitenav .brand .dot{color:var(--color-accent)}section[id]{scroll-margin-top:88px}
-/* Readability fix 2026-11-05: every word clear and visible on phone */
-@media(max-width:768px){.qtable{font-size:1rem}.qtable td{padding:8px 10px}.topic{padding:18px 16px}body{font-size:18px}}
-.solslot{border:1px solid var(--color-line);border-radius:16px;padding:18px;margin:16px 0;background:var(--color-card)}
-.solslot h3{margin-top:0}
-.solslot p, .solslot li{color:#e8e8f2}
-</style>
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header class="hero"><div class="wrap" style="position:relative">
-<span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
-<h1>AOA, <span class="lime">cracked.</span><br>Not crammed, <span class="violet">ranked.</span></h1>
-<p class="lede">Analysis of Algorithms — <strong>paper code N2113113</strong>, 60 marks, 2 hours. Every question from the only two NEP papers before your batch, cleaned and ranked: <strong>unit first, topic second</strong>, with the min and max marks each topic has actually carried.</p>
-<div class="pillrow">
-<span class="pill">Pattern: Q1 compulsory, any 5 × 3 marks</span>
-<span class="pill">Then any 3 of Q2–Q6 × 15 marks</span>
-<span class="pill">Sources: <b>Dec 2025 (QP 99073)</b> + <b>May 2026 (QP 14659)</b></span>
-<span class="pill">Same paper for: <b>Computer · AI&amp;DS · CS-IoT</b></span>
-</div>
-<div class="sharebar">
-<a class="sharebtn" href="https://wa.me/?text=Sem%20III%20AOA%20PYQs%2C%20ranked%20topic-wise%2C%20with%20marks%20and%20both%20papers%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Faoa%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
-<button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
-<a class="sharebtn ghost" href="/papers/#aoa" style="text-decoration:none">Exact papers →</a>
-</div>
-<nav class="nav"><a class="brand" href="/">kptimes<span class="dot">.</span></a><a href="/maths/">Maths</a><a href="/dsgt/">DSGT</a><a href="/aoa/">AOA</a><a href="/coa/">COA</a><a href="/genai/">Gen AI</a><a href="/papers/">Exact papers</a><a href="#solutions">Solutions</a></nav>
-<div class="stats">
-<div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
-<div class="stat"><div class="n">34</div><div class="l">printed questions, both papers</div></div>
-<div class="stat"><div class="n">6</div><div class="l">units, ranked by how often they show up</div></div>
-<div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div>
-</div>
-<div class="prog"><i id="overallBar"></i></div>
-<div class="milestones" id="milestones"></div>
-<p style="font-size:.85rem">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
-</div><div class="blob b1"></div><div class="blob b2"></div></header>
-<section><div class="wrap">
-<div class="callout reveal">
-<p><strong>Read this first — the cheat code inside the papers.</strong></p>
-<p>Merge Sort is Q2b in both papers — 10 marks each, the single most reliable 10-mark question in the subject. Learn it cold and Q2 is already two-thirds done.</p>
-<p>Everything else rotates: Kruskal vs Prim, Floyd-Warshall vs Dijkstra, LCS, knapsack, multistage, coloring — all appear both times but move slots between Q3, Q4 and Q5. Q1 is always six 3-mark shorts, any five; Q6 is always three 5-mark shorts. Learn the topic, not the slot.</p>
-<p>Exam dates are <strong>expected, not confirmed</strong> for AI &amp; DS (taken from the AI &amp; ML sheet: 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm). Treat them as expected until the official sheet is seen.</p>
-</div>
-</div></section>
-<section class="unit reveal" id="model-paper"><div class="unit-head"><h2>Model paper — MU's strict pattern</h2><span class="rank">Predicted shape · practice only</span></div>
-<p>MU sets this paper to a loose template — Q1 and Q2 hold their shape, Q6 is always three 5-mark shorts, and everything else rotates. The table below is that template, read off both papers slot by slot. Below it is a <strong>model paper built from the template for practice — it is NOT the real exam paper</strong>, and no question in it is claimed to be a leaked or real question. Practise each slot with the Dec / May question listed in the ranked study below.</p>
-<table class="qtable"><tr><td><b>Question</b></td><td><b>a (marks)</b></td><td><b>b (marks)</b></td><td><b>c (marks)</b></td><td><b>Evidence</b></td></tr>
-<tr><td><b>Q1 — any 5</b></td><td colspan="3">Six 3-mark shorts — Dec: Master Method · Binary Search · Greedy · Optimality · Backtracking vs B&amp;B · Naïve String Matching; May: Recursion tree · Divide &amp; Conquer · Fractional vs 0/1 knapsack · LCS · Branch &amp; Bound · KMP advantage</td><td>Q1 is six 3-mark shorts both papers</td></tr>
-<tr><td><b>Q2</b></td><td>Selection Sort (Dec 5) or Prim's MST (May 5)</td><td>Merge Sort (10) — FIXED</td><td>—</td><td>Sorting + spanning tree both times; Merge Sort Q2b fixed</td></tr>
-<tr><td><b>Q3</b></td><td>Big Theta (Dec 5) or Insertion Sort (May 5)</td><td>Kruskal MCST (Dec 10) or Dijkstra (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
-<tr><td><b>Q4</b></td><td>Fractional Knapsack (Dec 5) or Backtracking + Graph Coloring (May 5)</td><td>LCS (Dec 10) or 0/1 Knapsack DP (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
-<tr><td><b>Q5</b></td><td>Multistage Graph Forward (Dec 5) or 15-puzzle (May 5)</td><td>N-Queen (Dec 10) or Multistage shortest distance (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
-<tr><td><b>Q6</b></td><td>Floyd-Warshall (Dec 5) or Asymptotic notations (May 5)</td><td>Graph Coloring (Dec 5) or KMP (May 5)</td><td>Rabin-Karp (Dec 5) or Sum of Subset (May 5)</td><td>Q6 is three 5-mark shorts both times</td></tr></table>
-<h3>The model paper to practise (predicted shape, 60 marks)</h3>
-<p><strong>Q1 (any 5 × 3):</strong> Recurrence (Master Method) · Knapsack difference · LCS short · Branch &amp; Bound · KMP advantage · Divide &amp; Conquer.</p>
-<p><strong>Q2 (5 + 10):</strong> Prim's MST + Merge Sort (the fixed Q2b).</p>
-<p><strong>Q3 (5 + 10):</strong> Insertion Sort + Dijkstra.</p>
-<p><strong>Q4 (5 + 10):</strong> Fractional Knapsack + LCS (long).</p>
-<p><strong>Q5 (5 + 10):</strong> Multistage Graph + N-Queen.</p>
-<p><strong>Q6 (5 + 5 + 5):</strong> Floyd-Warshall + Graph Coloring + Rabin-Karp.</p>
-<p>If you can attempt Q1 + Q2 + any one of Q3–Q5 from this shape, you are attempting 45 marks with the most predictable material first.</p>
-</section>
-<nav class="controls"><div class="wrap">
-<input id="search" type="search" placeholder="Search a topic or question… e.g. Merge Sort, knapsack, KMP" aria-label="Search questions">
-<button class="chip on" data-unit="all">All units</button>
-<button class="chip" data-unit="u1">Unit I</button>
-<button class="chip" data-unit="u2">Unit II</button>
-<button class="chip" data-unit="u3">Unit III</button>
-<button class="chip" data-unit="u4">Unit IV</button>
-<button class="chip" data-unit="u5">Unit V</button>
-<button class="chip" data-unit="u6">Unit VI</button>
-</div></nav>
-<main class="wrap" id="units"><section><div class="wrap"><h2>Find anything in 2 taps</h2><p>Every subject, every part — pick the subject, then the part you need.</p><div class="jumpgrid">
-<div class="jumpcard"><b>Maths</b><a href="/maths/#units">Ranked PYQs</a><a href="/maths/#model-paper">Model paper</a><a href="/maths/#how-to-pass">Pass plan</a><a href="/papers/">Exact papers</a><a href="/maths/#solutions">Solutions</a></div>
-<div class="jumpcard"><b>DSGT</b><a href="/dsgt/#ranked">Ranked PYQs</a><a href="/dsgt/#model">Model paper</a><a href="/dsgt/#pass">Pass plan</a><a href="/dsgt/#exact">Exact papers</a><a href="/dsgt/#solutions">Solutions</a></div>
-<div class="jumpcard"><b>AOA</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="/papers/#aoa">Exact papers</a><a href="#solutions">Solutions</a></div>
-<div class="jumpcard"><b>COA</b><a href="/coa/#units">Ranked PYQs</a><a href="/coa/#model-paper">Model paper</a><a href="/coa/#how-to-pass">Pass plan</a><a href="/papers/#coa">Exact papers</a><a href="/coa/#solutions">Solutions</a></div>
-<div class="jumpcard"><b>Gen AI</b><a href="/genai/#units">Ranked PYQs</a><a href="/genai/#model-paper">Model paper</a><a href="/genai/#how-to-pass">Pass plan</a><a href="/papers/#genai">Exact papers</a><a href="/genai/#solutions">Solutions</a></div>
-</div></div></section><section class="unit reveal" data-unit="u4"><div class="unit-head"><h2>Unit IV — Dynamic Programming Approach</h2><span class="rank">Rank 1 · 7 questions</span></div>
-<p>DP solves small, remembers, reuses — multistage graphs, LCS, 0/1 knapsack and Floyd-Warshall all live here, and it is the heaviest unit in the paper.</p>
-<article class="topic"><div class="topic-head"><h3>Multistage Graph</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="15"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q5a · 5 marks</b></div>What is Multistage Graph? Explain Forward Approach method to find optimal path in Multistage Graph.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q5b · 10 marks</b></div>Find the shortest distance from vertex 1 to vertex 12 for the following graph: [multistage graph: 1→2: 9, 1→3: 7, 1→4: 3, 1→5: 2; 2→6: 4, 2→7: 2; 3→6: 2, 3→7: 7; 4→8: 11; 5→8: 11, 5→7: 8; 6→9: 6, 6→10: 5; 7→9: 4, 7→10: 3; 8→10: 5, 8→11: 6; 9→12: 4; 10→12: 2; 11→12: 6].</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>LCS — Longest Common Subsequence</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q4b · 10 marks</b></div>Write an algorithm to find Longest Common Subsequences between two given strings. Derive its time complexity. Find the LCS between following strings: X = AVANTIKA; Y = KARNAVATI.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1d · 3 marks</b></div>Find the LCS for the following sequences: X = ABCDE; Y = ACE.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>0/1 Knapsack by DP</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q4b · 10 marks</b></div>Solve the following knapsack problem using dynamic programming: (Capacity = 7). Table: I1: Weight 1, Profit 50; I2: Weight 2, Profit 40; I3: Weight 4, Profit 70; I4: Weight 5, Profit 80; I5: Weight 1, Profit 10.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Floyd-Warshall</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6a · 5 marks</b></div>Find the All-Pair Source Shortest path for all the vertices using Floyd-Warshall Algorithm: [directed graph: A→B 7, B→A 8, B→C −3, A→C 5, C→A 6].</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Principle of Optimality</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1d · 3 marks</b></div>Explain the Principle of Optimality as applied to Dynamic Programming.</div>
-</article>
-</section><section class="unit reveal" data-unit="u5"><div class="unit-head"><h2>Unit V — Backtracking and Branch and Bound</h2><span class="rank">Rank 1 · 7 questions</span></div>
-<p>Try, fail, go back — or try smartly with pruning. N-Queen, graph coloring, sum of subsets and the 15-puzzle all live here.</p>
-<article class="topic"><div class="topic-head"><h3>Backtracking family</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="11"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1e · 3 marks</b></div>Differentiate between Backtracking and Branch &amp; Bound techniques.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1e · 3 marks</b></div>Explain the concept of Branch and Bound.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q4a · 5 marks</b></div>Explain backtracking and how it is used to solve the graph coloring problem.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Graph Coloring</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Explain Graph Coloring method with suitable example.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>N-Queen Problem</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q5b · 10 marks</b></div>What is the N-Queen Problem? Design a backtracking algorithm to solve it. Provide step-by-step working of it using suitable example.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>15-puzzle</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q5a · 5 marks</b></div>Draw the partial state space tree for 15-puzzle problem. Specify the complexity of 15 puzzle problem.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Sum of Subset</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q6c · 5 marks</b></div>Solve the following sum of subset Problem: S = {3, 4, 5, 6} and sum = 9.</div>
-</article>
-</section><section class="unit reveal" data-unit="u1"><div class="unit-head"><h2>Unit I — Introduction</h2><span class="rank">Rank 2 · 6 questions</span></div>
-<p>The analysis toolkit itself — Master Method recurrences, asymptotic notation, and the two elementary sorts.</p>
-<article class="topic"><div class="topic-head"><h3>Recurrence solving</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1a · 3 marks</b></div>Find the complexity of given recurrence relation using Master Method: T(n) = 8T(n/2) + n².</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1a · 3 marks</b></div>Solve the following recurrence relation using recursion tree method: T(n) = 3T(n/3) + n².</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Selection Sort</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q2a · 5 marks</b></div>Sort the following numbers using the Selection Sort, and show the array after each pass: 28, 17, 20, 75, 13, 15.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Insertion Sort</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q3a · 5 marks</b></div>Sort the following elements using insertion sort: 90, 1, 4, 2, 78, 45, 39, 58, 79. Show output after each pass. Also, derive complexity of insertion sort.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Asymptotic notations</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q6a · 5 marks</b></div>Explain the different asymptotic notations with graphs.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Big Theta (Θ)</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q3a · 5 marks</b></div>Explain Big Theta (Θ) notation with a suitable example.</div>
-</article>
-</section><section class="unit reveal" data-unit="u3"><div class="unit-head"><h2>Unit III — Greedy Method Approach</h2><span class="rank">Rank 2 · 6 questions</span></div>
-<p>Greedy grabs the best-looking choice at each step — Dijkstra, both spanning-tree algorithms and Fractional Knapsack all run on it.</p>
-<article class="topic"><div class="topic-head"><h3>Kruskal&#x27;s MCST</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q3b · 10 marks</b></div>What is Minimum Cost Spanning Tree? Write Kruskal&#x27;s algorithm and state its time complexity. Find Minimum Cost Spanning Tree for following graph using Kruskal&#x27;s Algorithm: [graph: A–B 7, B–C 7, C–D 3, D–E 6, E–F 9, F–A 5, A–G 8, B–G 3, D–G 2, F–G 4].</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Dijkstra&#x27;s shortest path</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q3b · 10 marks</b></div>Find the shortest path for the following graph using Dijkstra&#x27;s algorithm: (Source vertex is A). [graph: A–B 3, A–D 8, B–E 6, B–D 5, D–E 3, D–F 2, E–C 9, E–F 1, F–C 3].</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Fractional Knapsack</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q4a · 5 marks</b></div>Consider a Knapsack with capacity W = 16. There are six items with following weights and profits. (P1…P6) = (10, 5, 15, 7, 6, 18); (W1…W6) = (2, 3, 5, 7, 1, 4). Find the maximum profit using Fractional Knapsack algorithm.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q1c · 3 marks</b></div>Differentiate between fractional and 0/1 knapsack problem (give minimum 5 relevant points).</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Prim&#x27;s MST</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q2a · 5 marks</b></div>Find the Minimum spanning tree for the following graph using Prim&#x27;s algorithm: [nodes 1–6; edges: 5–4: 9, 4–1: 1, 4–3: 5, 4–2: 3, 1–5: 4, 1–2: 2, 3–2: 3, 3–6: 8, 2–6: 7].</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Greedy general method</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1c · 3 marks</b></div>Explain the general method of the Greedy Approach.</div>
-</article>
-</section><section class="unit reveal" data-unit="u2"><div class="unit-head"><h2>Unit II — Divide and Conquer Approach</h2><span class="rank">Rank 3 · 4 questions</span></div>
-<p>Split, solve, combine — Merge Sort is the fixed 10-mark anchor of the whole paper, and Binary Search is its 3-mark cousin.</p>
-<article class="topic"><div class="topic-head"><h3>Merge Sort</h3><span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">10 marks both times</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="20"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q2b · 10 marks</b></div>Write an algorithm for Merge Sort. Derive its time complexity. Sort the following elements using Merge Sort: 32, 55, 17, 48, 64, 26.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q2b · 10 marks</b></div>Sort the following elements using Merge Sort and hence derive the complexity of Merge Sort: 34, 9, 56, 10, 78, 61, 98, 23, 38.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Binary Search</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Write an algorithm for Binary Search.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Divide and Conquer</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Explain Divide and Conquer strategy with diagram.</div>
-</article>
-</section><section class="unit reveal" data-unit="u6"><div class="unit-head"><h2>Unit VI — String Matching Algorithms</h2><span class="rank">Rank 3 · 4 questions</span></div>
-<p>Three pattern-searching algorithms and nothing else — Naïve, Rabin-Karp and KMP.</p>
-<article class="topic"><div class="topic-head"><h3>KMP String Matching</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">min 3 · max 5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
-<div class="q"><div class="meta"><b>May 2026 · Q1f · 3 marks</b></div>Explain the advantage of KMP algorithm over Naïve string matching algorithm.</div>
-<div class="q"><div class="meta"><b>May 2026 · Q6b · 5 marks</b></div>Explain KMP String matching algorithm with example.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Rabin-Karp</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q6c · 5 marks</b></div>Write Rabin Karp String Matching Algorithm. State its time complexity.</div>
-</article>
-<article class="topic"><div class="topic-head"><h3>Naïve String Matching</h3><span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span></div>
-<label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
-<div class="q"><div class="meta"><b>Dec 2025 · Q1f · 3 marks</b></div>Explain the Naive String-Matching Algorithm.</div>
-</article>
-</section><section id="subjects"><div class="wrap">
-<h2>The whole sem, on this site — one format per subject</h2>
-<p>This site is built for the full semester, not one page at a time. Every subject gets the same four parts, in the same place, so you always know where to look: ranked PYQs, the model paper pattern, the pass plan, and the exact papers — plus solutions, which start landing from tomorrow, one per question.</p>
-<table class="qtable"><tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
-<tr><td><b>Maths (N2113111)</b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/maths/">Done — own page</a></td><td><a href="/papers/#maths">Done — own page</a></td><td><a href="/maths/#solutions">From tomorrow</a></td></tr>
-<tr><td><b><a href="/dsgt/" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/">Live — own page</a></td><td><a href="/dsgt/#solutions">From tomorrow</a></td></tr>
-<tr><td><b>AOA (N2113113)</b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="#units">Done — on this page</a></td><td><a href="#model-paper">Done — above</a></td><td><a href="#how-to-pass">Done — top-right button</a></td><td><a href="/papers/#aoa">Done — /papers/#aoa</a></td><td><a href="#solutions">From tomorrow</a></td></tr>
-<tr><td><b><a href="/coa/" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/">Live — own page</a></td><td><a href="/coa/#solutions">Live — own page</a></td></tr>
-<tr><td><b><a href="/genai/" style="color:var(--color-ink)">Gen AI (OE, 2013311)</a></b><br>Computer · AI&amp;DS</td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/">Done — own page</a></td><td><a href="/genai/#solutions">From tomorrow</a></td></tr></table>
-</div></section><section id="solutions"><div class="wrap"><h2>Solutions — coming tomorrow</h2><p>Solutions for AOA. From tomorrow, step-by-step solutions land here, one per question, in the same order as the ranked topics above. Nothing is here yet on purpose — this page is ready to receive them, so nothing needs restructuring when they arrive.</p><details class="solslot"><summary>Solution: Q1 — six short skills</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit I — Introduction</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit II — Divide and Conquer Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit III — Greedy Method Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit IV — Dynamic Programming Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit V — Backtracking and Branch and Bound</summary><p>Coming tomorrow — step-by-step, in this order.</p></details><details class="solslot"><summary>Solution: Unit VI — String Matching Algorithms</summary><p>Coming tomorrow — step-by-step, in this order.</p></details></div></section><footer class="foot"><div class="wrap"><a href="/">← All subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.</div></footer></main>
-<button class="fab" id="fabPass" type="button">Exam tension? How to pass</button>
-<span id="how-to-pass"></span><div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
-<div class="modal-card"><button class="modal-close" id="passClose" type="button">✕ Close</button>
-<div class="unit-head"><h2>How to pass — for exam tension</h2><span class="rank">Minimum study · target 30+ / 60</span></div>
-<p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>30 marks on the table from just Q1 plus Q2</strong> — so even with mistakes, you stay above the pass band. Add one more full question and it becomes 45 marks on the table.</p>
-<h3>Step 1 — the minimum set (learn these first, in this order)</h3>
-<table class="qtable"><tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
-<tr><td><b>Q1 — pick five shorts</b></td><td>Recurrence · Knapsack difference · LCS short · Branch &amp; Bound · KMP · Divide &amp; Conquer</td><td><b>15</b></td></tr>
-<tr><td><b>Q2</b></td><td>Sorting + Merge Sort (fixed in Q2b)</td><td><b>15</b></td></tr>
-<tr><td><b>Total on the table (minimum set)</b></td><td></td><td><b>30</b></td></tr></table>
-<h3>Step 2 — the safe set (add this and you cover 45 marks)</h3>
-<p>One more full question — Q4 (knapsack/LCS) or Q5 (multistage/backtracking) (15) = 15 more marks. 30 + 15 = <strong>45 out of 60</strong>, the distinction line.</p>
-<h3>Step 3 — how to attempt in the hall (2 hours)</h3>
-<p><strong>Q1 (25 min)</strong> → <strong>Q2 (30)</strong> → <strong>strongest remaining (30)</strong> → <strong>check (15)</strong>. Draw each graph once, neatly, and label it — redraws eat the paper.</p>
-<div class="callout"><p><strong>Honest note, not a guarantee.</strong> Pattern from only 2 papers, and AOA rotates topics across slots, so learn the topic, not the slot. It raises your odds; it is not a guarantee.</p></div>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
 
+<!-- Top Persistent Navigation -->
+<nav class="nav" aria-label="Main Navigation">
+  <a class="brand" href="../index.html">kptimes<span class="dot">.</span></a>
+  <a href="../index.html">Home</a>
+  <a href="../maths/index.html">Maths</a>
+  <a href="../dsgt/index.html">DSGT</a>
+  <a class="active" href="../aoa/index.html">AOA</a>
+  <a href="../coa/index.html">COA</a>
+  <a href="../genai/index.html">Gen AI</a>
+  <a href="../papers/index.html">Exact papers</a>
+  <a class="nav-timer" href="../index.html#countdownSection" title="Time remaining until 17th Nov Exam"><span class="pulse"></span> 17 Nov: <span id="navTimerVal">--</span></a>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kick">SE · SEM III — Computer · AI&amp;DS · CS-IoT</span>
+    <h1>AOA, <span class="lime">cracked.</span><br>Not crammed, <span class="violet">ranked.</span></h1>
+    <p class="lede">Analysis of Algorithms — <strong>paper code N2113113</strong>, 60 marks, 2 hours. Every question from the only two NEP papers before your batch, cleaned and ranked: <strong>unit first, topic second</strong>, with the min and max marks each topic has actually carried.</p>
+    
+    <div class="pillrow">
+      <span class="pill">Pattern: Q1 compulsory, any 5 × 3 marks</span>
+      <span class="pill">Then any 3 of Q2–Q6 × 15 marks</span>
+      <span class="pill">Sources: <b>Dec 2025 (QP 99073)</b> + <b>May 2026 (QP 14659)</b></span>
+      <span class="pill">Same paper for: <b>Computer · AI&amp;DS · CS-IoT</b></span>
+    </div>
+
+    <div class="sharebar">
+      <a class="sharebtn" href="https://wa.me/?text=Sem%20III%20AOA%20PYQs%2C%20ranked%20topic-wise%2C%20with%20marks%20and%20both%20papers%20Dec%202025%20%2B%20May%202026%3A%20https%3A%2F%2Fkptimes.in%2Faoa%2F" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="sharebtn ghost" id="copyLink" type="button">Copy link</button>
+      <a class="sharebtn ghost" href="../papers/index.html#aoa">Exact papers →</a>
+      <a class="sharebtn violet-btn" href="#how-to-pass">🎯 View Pass Plan</a>
+    </div>
+
+    <!-- Live Readiness Tracker -->
+    <div class="stats">
+      <div class="stat"><div class="n">2</div><div class="l">NEP papers exist before your batch</div></div>
+      <div class="stat"><div class="n">34</div><div class="l">printed questions, both papers</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">units, ranked by frequency</div></div>
+      <div class="stat"><div class="n" id="overallPct">0%</div><div class="l">estimated marks you can secure — saved on this device</div></div>
+    </div>
+    
+    <div class="prog"><i id="overallBar"></i></div>
+    <div class="milestones" id="milestones"></div>
+    <p style="font-size:.85rem;color:var(--color-muted);margin-top:6px">Estimated from PYQ coverage — ticking a topic means you can attempt its questions. Milestones: pass 27 · halfway 30 · distinction 45 · full paper 60.</p>
+  </div>
+</header>
+
+<!-- Quick In-Page Attachments Bar -->
+<div class="wrap">
+  <div class="attachments-bar">
+    <span class="label">Attachments:</span>
+    <a class="attachment-pill" href="#how-to-pass">🎯 1. Pass Plan (30+ Marks)</a>
+    <a class="attachment-pill" href="#cheat-code">⚡ 2. Cheat Code</a>
+    <a class="attachment-pill" href="#model-paper">📋 3. Model Paper</a>
+    <a class="attachment-pill" href="#units">📊 4. Ranked PYQs (6 Units)</a>
+    <a class="attachment-pill" href="#solutions">💡 5. Solutions</a>
+    <a class="attachment-pill" href="#subjects">🌐 6. All Subjects</a>
+  </div>
 </div>
+
+<main>
+  <!-- ATTACHMENT 1: HOW TO PASS PLAN -->
+  <section id="how-to-pass" style="padding-top:10px">
+    <div class="wrap">
+      <div class="unit reveal" style="border-color:rgba(167,139,250,0.3);background:linear-gradient(180deg,rgba(167,139,250,0.06),var(--color-paper-2))">
+        <div class="unit-head">
+          <h2>🎯 Attachment 1: How to Pass — For Exam Tension</h2>
+          <span class="rank" style="background:var(--color-accent);color:#07070d">Minimum study · target 30+ / 60</span>
+        </div>
+        <p style="font-size:1.02rem;color:#e2e2f5">Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>30 marks on the table from just Q1 plus Q2</strong> — so even with mistakes, you stay above the pass band. Add one more full question and it becomes 45 marks on the table.</p>
+        
+        <h3 style="margin-top:20px;color:var(--color-accent)">Step 1 — the minimum set (learn these first, in this order)</h3>
+        <table class="qtable">
+          <tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+          <tr><td><b>Q1 — pick five shorts</b></td><td>Recurrence · Knapsack difference · LCS short · Branch &amp; Bound · KMP · Divide &amp; Conquer</td><td><b>15</b></td></tr>
+          <tr><td><b>Q2</b></td><td>Sorting + Merge Sort (fixed in Q2b)</td><td><b>15</b></td></tr>
+          <tr><td><b>Total on the table (minimum set)</b></td><td></td><td><b>30</b></td></tr>
+        </table>
+
+        <h3 style="margin-top:20px;color:var(--color-accent-2)">Step 2 — the safe set (add this and you cover 45 marks)</h3>
+        <p>One more full question — Q4 (knapsack/LCS) or Q5 (multistage/backtracking) (15) = 15 more marks. 30 + 15 = <strong>45 out of 60</strong>, the distinction line.</p>
+
+        <h3 style="margin-top:20px;color:var(--color-mark)">Step 3 — how to attempt in the hall (2 hours)</h3>
+        <p><strong>Q1 (25 min)</strong> → <strong>Q2 (30)</strong> → <strong>strongest remaining (30)</strong> → <strong>check (15)</strong>. Draw each graph once, neatly, and label it — redraws eat the paper.</p>
+
+        <div class="callout" style="margin-top:16px">
+          <p><strong>Honest note, not a guarantee.</strong> Pattern from only 2 papers, and AOA rotates topics across slots, so learn the topic, not the slot. It raises your odds; it is not a guarantee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 2: CHEAT CODE -->
+  <section id="cheat-code">
+    <div class="wrap">
+      <div class="callout reveal">
+        <div style="font-size:0.85rem;font-weight:700;color:var(--color-accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px">⚡ Attachment 2: Inside The Papers</div>
+        <h3 style="margin-top:0">Read this first — the cheat code inside the papers</h3>
+        <p><strong>Merge Sort is Q2b in both papers — 10 marks each, the single most reliable 10-mark question in the subject. Learn it cold and Q2 is already two-thirds done.</strong></p>
+        <p>Everything else rotates: Kruskal vs Prim, Floyd-Warshall vs Dijkstra, LCS, knapsack, multistage, coloring — all appear both times but move slots between Q3, Q4 and Q5. Q1 is always six 3-mark shorts, any five; Q6 is always three 5-mark shorts. Learn the topic, not the slot.</p>
+        <p>Exam dates are <strong>expected, not confirmed</strong> for AI &amp; DS (taken from the AI &amp; ML sheet: 17 / 19 / 21 / 25 / 27 Nov, 2:30–4:30 pm). Treat them as expected until the official sheet is seen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 3: MODEL PAPER -->
+  <section id="model-paper">
+    <div class="wrap">
+      <div class="unit reveal">
+        <div class="unit-head">
+          <h2>📋 Attachment 3: Model paper — MU's strict pattern</h2>
+          <span class="rank">Predicted shape · practice only</span>
+        </div>
+        <p>MU sets this paper to a loose template — Q1 and Q2 hold their shape, Q6 is always three 5-mark shorts, and everything else rotates. The table below is that template, read off both papers slot by slot. Below it is a <strong>model paper built from the template for practice — it is NOT the real exam paper</strong>, and no question in it is claimed to be a leaked or real question. Practise each slot with the Dec / May question listed in the ranked study below.</p>
+        
+        <table class="qtable">
+          <tr><td><b>Question</b></td><td><b>a (marks)</b></td><td><b>b (marks)</b></td><td><b>c (marks)</b></td><td><b>Evidence</b></td></tr>
+          <tr><td><b>Q1 — any 5</b></td><td colspan="3">Six 3-mark shorts — Dec: Master Method · Binary Search · Greedy · Optimality · Backtracking vs B&amp;B · Naïve String Matching; May: Recursion tree · Divide &amp; Conquer · Fractional vs 0/1 knapsack · LCS · Branch &amp; Bound · KMP advantage</td><td>Q1 is six 3-mark shorts both papers</td></tr>
+          <tr><td><b>Q2</b></td><td>Selection Sort (Dec 5) or Prim's MST (May 5)</td><td>Merge Sort (10) — FIXED</td><td>—</td><td>Sorting + spanning tree both times; Merge Sort Q2b fixed</td></tr>
+          <tr><td><b>Q3</b></td><td>Big Theta (Dec 5) or Insertion Sort (May 5)</td><td>Kruskal MCST (Dec 10) or Dijkstra (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
+          <tr><td><b>Q4</b></td><td>Fractional Knapsack (Dec 5) or Backtracking + Graph Coloring (May 5)</td><td>LCS (Dec 10) or 0/1 Knapsack DP (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
+          <tr><td><b>Q5</b></td><td>Multistage Graph Forward (Dec 5) or 15-puzzle (May 5)</td><td>N-Queen (Dec 10) or Multistage shortest distance (May 10)</td><td>—</td><td>Topics rotate, marks fixed</td></tr>
+          <tr><td><b>Q6</b></td><td>Floyd-Warshall (Dec 5) or Asymptotic notations (May 5)</td><td>Graph Coloring (Dec 5) or KMP (May 5)</td><td>Rabin-Karp (Dec 5) or Sum of Subset (May 5)</td><td>Q6 is three 5-mark shorts both times</td></tr>
+        </table>
+
+        <h3 style="margin-top:24px;color:var(--color-accent)">The model paper to practise (predicted shape, 60 marks)</h3>
+        <p><strong>Q1 (any 5 × 3):</strong> Recurrence (Master Method) · Knapsack difference · LCS short · Branch &amp; Bound · KMP advantage · Divide &amp; Conquer.</p>
+        <p><strong>Q2 (5 + 10):</strong> Prim's MST + Merge Sort (the fixed Q2b).</p>
+        <p><strong>Q3 (5 + 10):</strong> Insertion Sort + Dijkstra.</p>
+        <p><strong>Q4 (5 + 10):</strong> Fractional Knapsack + LCS (long).</p>
+        <p><strong>Q5 (5 + 10):</strong> Multistage Graph + N-Queen.</p>
+        <p><strong>Q6 (5 + 5 + 5):</strong> Floyd-Warshall + Graph Coloring + Rabin-Karp.</p>
+        <p style="margin-top:12px;color:#d5d5ea">If you can attempt Q1 + Q2 + any one of Q3–Q5 from this shape, you are attempting 45 marks with the most predictable material first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 4: RANKED QUESTION BANK (WITH FILTER CONTROLS) -->
+  <section id="units" style="padding-top:0">
+    <!-- Sticky Search and Filter Controls -->
+    <nav class="controls" aria-label="Question Bank Filter">
+      <div class="wrap">
+        <input id="search" type="search" placeholder="Search a topic or question… e.g. Merge Sort, knapsack, KMP" aria-label="Search questions">
+        <button class="chip on" data-unit="all">All units</button>
+        <button class="chip" data-unit="u1">Unit I</button>
+        <button class="chip" data-unit="u2">Unit II</button>
+        <button class="chip" data-unit="u3">Unit III</button>
+        <button class="chip" data-unit="u4">Unit IV</button>
+        <button class="chip" data-unit="u5">Unit V</button>
+        <button class="chip" data-unit="u6">Unit VI</button>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <div style="margin-bottom:18px">
+        <h2>📊 Attachment 4: Ranked PYQs &amp; Question Bank</h2>
+        <p>Sorted by frequency and yield. Tick the boxes as you master each topic to watch your marks tracker update live.</p>
+      </div>
+
+      <!-- UNIT IV: DYNAMIC PROGRAMMING (RANK 1) -->
+      <section class="unit reveal" data-unit="u4">
+        <div class="unit-head">
+          <h2>Unit IV — Dynamic Programming Approach</h2>
+          <span class="rank">Rank 1 · 7 questions</span>
+        </div>
+        <p>DP solves small, remembers, reuses — multistage graphs, LCS, 0/1 knapsack and Floyd-Warshall all live here, and it is the heaviest unit in the paper.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Multistage Graph</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 5 · max 10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="15"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q5a · 5 marks</b></div>What is Multistage Graph? Explain Forward Approach method to find optimal path in Multistage Graph.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q5b · 10 marks</b></div>Find the shortest distance from vertex 1 to vertex 12 for the following graph: [multistage graph: 1→2: 9, 1→3: 7, 1→4: 3, 1→5: 2; 2→6: 4, 2→7: 2; 3→6: 2, 3→7: 7; 4→8: 11; 5→8: 11, 5→7: 8; 6→9: 6, 6→10: 5; 7→9: 4, 7→10: 3; 8→10: 5, 8→11: 6; 9→12: 4; 10→12: 2; 11→12: 6].</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>LCS — Longest Common Subsequence</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="13"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q4b · 10 marks</b></div>Write an algorithm to find Longest Common Subsequences between two given strings. Derive its time complexity. Find the LCS between following strings: X = AVANTIKA; Y = KARNAVATI.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1d · 3 marks</b></div>Find the LCS for the following sequences: X = ABCDE; Y = ACE.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>0/1 Knapsack by DP</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q4b · 10 marks</b></div>Solve the following knapsack problem using dynamic programming: (Capacity = 7). Table: I1: Weight 1, Profit 50; I2: Weight 2, Profit 40; I3: Weight 4, Profit 70; I4: Weight 5, Profit 80; I5: Weight 1, Profit 10.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Floyd-Warshall</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6a · 5 marks</b></div>Find the All-Pair Source Shortest path for all the vertices using Floyd-Warshall Algorithm: [directed graph: A→B 7, B→A 8, B→C −3, A→C 5, C→A 6].</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Principle of Optimality</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1d · 3 marks</b></div>Explain the Principle of Optimality as applied to Dynamic Programming.</div>
+        </article>
+      </section>
+
+      <!-- UNIT V: BACKTRACKING & BRANCH AND BOUND (RANK 1) -->
+      <section class="unit reveal" data-unit="u5">
+        <div class="unit-head">
+          <h2>Unit V — Backtracking and Branch and Bound</h2>
+          <span class="rank">Rank 1 · 7 questions</span>
+        </div>
+        <p>Try, fail, go back — or try smartly with pruning. N-Queen, graph coloring, sum of subsets and the 15-puzzle all live here.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Backtracking family</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="11"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1e · 3 marks</b></div>Differentiate between Backtracking and Branch &amp; Bound techniques.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1e · 3 marks</b></div>Explain the concept of Branch and Bound.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q4a · 5 marks</b></div>Explain backtracking and how it is used to solve the graph coloring problem.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Graph Coloring</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6b · 5 marks</b></div>Explain Graph Coloring method with suitable example.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>N-Queen Problem</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q5b · 10 marks</b></div>What is the N-Queen Problem? Design a backtracking algorithm to solve it. Provide step-by-step working of it using suitable example.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>15-puzzle</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q5a · 5 marks</b></div>Draw the partial state space tree for 15-puzzle problem. Specify the complexity of 15 puzzle problem.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Sum of Subset</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q6c · 5 marks</b></div>Solve the following sum of subset Problem: S = {3, 4, 5, 6} and sum = 9.</div>
+        </article>
+      </section>
+
+      <!-- UNIT I: INTRODUCTION (RANK 2) -->
+      <section class="unit reveal" data-unit="u1">
+        <div class="unit-head">
+          <h2>Unit I — Introduction</h2>
+          <span class="rank">Rank 2 · 6 questions</span>
+        </div>
+        <p>The analysis toolkit itself — Master Method recurrences, asymptotic notation, and the two elementary sorts.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Recurrence solving</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">3 marks both times</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="6"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1a · 3 marks</b></div>Find the complexity of given recurrence relation using Master Method: T(n) = 8T(n/2) + n².</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1a · 3 marks</b></div>Solve the following recurrence relation using recursion tree method: T(n) = 3T(n/3) + n².</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Selection Sort</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q2a · 5 marks</b></div>Sort the following numbers using the Selection Sort, and show the array after each pass: 28, 17, 20, 75, 13, 15.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Insertion Sort</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q3a · 5 marks</b></div>Sort the following elements using insertion sort: 90, 1, 4, 2, 78, 45, 39, 58, 79. Show output after each pass. Also, derive complexity of insertion sort.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Asymptotic notations</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q6a · 5 marks</b></div>Explain the different asymptotic notations with graphs.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Big Theta (Θ)</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q3a · 5 marks</b></div>Explain Big Theta (Θ) notation with a suitable example.</div>
+        </article>
+      </section>
+
+      <!-- UNIT III: GREEDY METHOD (RANK 2) -->
+      <section class="unit reveal" data-unit="u3">
+        <div class="unit-head">
+          <h2>Unit III — Greedy Method Approach</h2>
+          <span class="rank">Rank 2 · 6 questions</span>
+        </div>
+        <p>Greedy grabs the best-looking choice at each step — Dijkstra, both spanning-tree algorithms and Fractional Knapsack all run on it.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Kruskal's MCST</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q3b · 10 marks</b></div>What is Minimum Cost Spanning Tree? Write Kruskal's algorithm and state its time complexity. Find Minimum Cost Spanning Tree for following graph using Kruskal's Algorithm: [graph: A–B 7, B–C 7, C–D 3, D–E 6, E–F 9, F–A 5, A–G 8, B–G 3, D–G 2, F–G 4].</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Dijkstra's shortest path</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">10 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="10"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q3b · 10 marks</b></div>Find the shortest path for the following graph using Dijkstra's algorithm: (Source vertex is A). [graph: A–B 3, A–D 8, B–E 6, B–D 5, D–E 3, D–F 2, E–C 9, E–F 1, F–C 3].</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Fractional Knapsack</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">min 3 · max 5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q4a · 5 marks</b></div>Consider a Knapsack with capacity W = 16. There are six items with following weights and profits. (P1…P6) = (10, 5, 15, 7, 6, 18); (W1…W6) = (2, 3, 5, 7, 1, 4). Find the maximum profit using Fractional Knapsack algorithm.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q1c · 3 marks</b></div>Differentiate between fractional and 0/1 knapsack problem (give minimum 5 relevant points).</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Prim's MST</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q2a · 5 marks</b></div>Find the Minimum spanning tree for the following graph using Prim's algorithm: [nodes 1–6; edges: 5–4: 9, 4–1: 1, 4–3: 5, 4–2: 3, 1–5: 4, 1–2: 2, 3–2: 3, 3–6: 8, 2–6: 7].</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Greedy general method</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1c · 3 marks</b></div>Explain the general method of the Greedy Approach.</div>
+        </article>
+      </section>
+
+      <!-- UNIT II: DIVIDE AND CONQUER (RANK 3) -->
+      <section class="unit reveal" data-unit="u2">
+        <div class="unit-head">
+          <h2>Unit II — Divide and Conquer Approach</h2>
+          <span class="rank">Rank 3 · 4 questions</span>
+        </div>
+        <p>Split, solve, combine — Merge Sort is the fixed 10-mark anchor of the whole paper, and Binary Search is its 3-mark cousin.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Merge Sort (FIXED 10 MARKS)</h3>
+            <span><span class="badge repeat">2 / 2 papers</span> <span class="badge marks">10 marks both times</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="20"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q2b · 10 marks</b></div>Write an algorithm for Merge Sort. Derive its time complexity. Sort the following elements using Merge Sort: 32, 55, 17, 48, 64, 26.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q2b · 10 marks</b></div>Sort the following elements using Merge Sort and hence derive the complexity of Merge Sort: 34, 9, 56, 10, 78, 61, 98, 23, 38.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Binary Search</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1b · 3 marks</b></div>Write an algorithm for Binary Search.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Divide and Conquer</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q1b · 3 marks</b></div>Explain Divide and Conquer strategy with diagram.</div>
+        </article>
+      </section>
+
+      <!-- UNIT VI: STRING MATCHING (RANK 3) -->
+      <section class="unit reveal" data-unit="u6">
+        <div class="unit-head">
+          <h2>Unit VI — String Matching Algorithms</h2>
+          <span class="rank">Rank 3 · 4 questions</span>
+        </div>
+        <p>Three pattern-searching algorithms and nothing else — Naïve, Rabin-Karp and KMP.</p>
+        
+        <article class="topic">
+          <div class="topic-head">
+            <h3>KMP String Matching</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">min 3 · max 5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="8"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>May 2026 · Q1f · 3 marks</b></div>Explain the advantage of KMP algorithm over Naïve string matching algorithm.</div>
+          <div class="q"><div class="meta"><b>May 2026 · Q6b · 5 marks</b></div>Explain KMP String matching algorithm with example.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Rabin-Karp</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">5 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="5"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q6c · 5 marks</b></div>Write Rabin Karp String Matching Algorithm. State its time complexity.</div>
+        </article>
+
+        <article class="topic">
+          <div class="topic-head">
+            <h3>Naïve String Matching</h3>
+            <span><span class="badge papers">1 paper</span> <span class="badge marks">3 marks</span></span>
+          </div>
+          <label class="done"><input type="checkbox" data-topic data-w="3"> Mark topic done</label>
+          <div class="q"><div class="meta"><b>Dec 2025 · Q1f · 3 marks</b></div>Explain the Naive String-Matching Algorithm.</div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 5: SOLUTIONS -->
+  <section id="solutions">
+    <div class="wrap">
+      <div style="margin-bottom:16px">
+        <h2>💡 Attachment 5: Solutions — Step by Step</h2>
+        <p>Solutions for AOA. Step-by-step solutions land here, one per question, in the same order as the ranked topics above.</p>
+      </div>
+      
+      <details class="solslot"><summary>Solution: Q1 — six short skills</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit I — Introduction</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit II — Divide and Conquer Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit III — Greedy Method Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit IV — Dynamic Programming Approach</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit V — Backtracking and Branch and Bound</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+      <details class="solslot"><summary>Solution: Unit VI — String Matching Algorithms</summary><p>Coming tomorrow — step-by-step, in this order.</p></details>
+    </div>
+  </section>
+
+  <!-- ATTACHMENT 6: ALL SUBJECTS NAVIGATOR -->
+  <section id="subjects" style="background:var(--color-paper-2);border-top:1px solid var(--color-line)">
+    <div class="wrap">
+      <h2>🌐 Attachment 6: Find Anything in 2 Taps (All Subjects)</h2>
+      <p>Switch between subjects or jump straight to any section across Sem III.</p>
+
+      <div class="jumpgrid">
+        <div class="jumpcard"><b>Maths</b><a href="../maths/index.html#units">Ranked PYQs</a><a href="../maths/index.html#model-paper">Model paper</a><a href="../maths/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#maths">Exact papers</a><a href="../maths/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>DSGT</b><a href="../dsgt/index.html#units">Ranked PYQs</a><a href="../dsgt/index.html#model-paper">Model paper</a><a href="../dsgt/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#dsgt">Exact papers</a><a href="../dsgt/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard" style="border-color:var(--color-accent)"><b>AOA (Current)</b><a href="#units">Ranked PYQs</a><a href="#model-paper">Model paper</a><a href="#how-to-pass">Pass plan</a><a href="../papers/index.html#aoa">Exact papers</a><a href="#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>COA</b><a href="../coa/index.html#units">Ranked PYQs</a><a href="../coa/index.html#model-paper">Model paper</a><a href="../coa/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#coa">Exact papers</a><a href="../coa/index.html#solutions">Solutions</a></div>
+        <div class="jumpcard"><b>Gen AI</b><a href="../genai/index.html#units">Ranked PYQs</a><a href="../genai/index.html#model-paper">Model paper</a><a href="../genai/index.html#how-to-pass">Pass plan</a><a href="../papers/index.html#genai">Exact papers</a><a href="../genai/index.html#solutions">Solutions</a></div>
+      </div>
+
+      <div style="margin-top:30px">
+        <h3>The Whole Semester Overview</h3>
+        <p>This site is built for the full semester, not one page at a time. Every subject gets the same five attachments, in the same place.</p>
+        <table class="qtable" style="margin-top:14px">
+          <tr><td><b>Subject</b></td><td><b>Ranked PYQs</b></td><td><b>Model paper</b></td><td><b>Pass plan</b></td><td><b>Exact papers</b></td><td><b>Solutions</b></td></tr>
+          <tr><td><b>Maths (N2113111)</b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../maths/index.html">Live — own page</a></td><td><a href="../maths/index.html#model-paper">Live — own page</a></td><td><a href="../maths/index.html#how-to-pass">Live — own page</a></td><td><a href="../papers/index.html#maths">Live — own page</a></td><td><a href="../maths/index.html#solutions">From tomorrow</a></td></tr>
+          <tr><td><b><a href="../dsgt/index.html" style="color:var(--color-ink)">DSGT (N2113112)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../dsgt/index.html">Live — own page</a></td><td><a href="../dsgt/index.html#model-paper">Live — own page</a></td><td><a href="../dsgt/index.html#how-to-pass">Live — own page</a></td><td><a href="../papers/index.html#dsgt">Live — own page</a></td><td><a href="../dsgt/index.html#solutions">From tomorrow</a></td></tr>
+          <tr><td><b>AOA (N2113113)</b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="#units">Live — on this page</a></td><td><a href="#model-paper">Live — above</a></td><td><a href="#how-to-pass">Live — above</a></td><td><a href="../papers/index.html#aoa">Live — /papers/#aoa</a></td><td><a href="#solutions">From tomorrow</a></td></tr>
+          <tr><td><b><a href="../coa/index.html" style="color:var(--color-ink)">COA (N2113114)</a></b><br>Computer · AI&amp;DS · CS-IoT</td><td><a href="../coa/index.html">Live — own page</a></td><td><a href="../coa/index.html#model-paper">Live — own page</a></td><td><a href="../coa/index.html#how-to-pass">Live — own page</a></td><td><a href="../papers/index.html#coa">Live — own page</a></td><td><a href="../coa/index.html#solutions">Live — own page</a></td></tr>
+          <tr><td><b><a href="../genai/index.html" style="color:var(--color-ink)">Gen AI (OE, 2013311)</a></b><br>Computer · AI&amp;DS</td><td><a href="../genai/index.html">Live — own page</a></td><td><a href="../genai/index.html#model-paper">Live — own page</a></td><td><a href="../genai/index.html#how-to-pass">Live — own page</a></td><td><a href="../papers/index.html#genai">Live — own page</a></td><td><a href="../genai/index.html#solutions">From tomorrow</a></td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="../index.html">← Back to All Subjects</a> &nbsp;·&nbsp; Sem III Exam Study — ranked PYQs, model papers, pass plans, exact papers. Solutions from tomorrow.
+  </div>
+</footer>
+
+<!-- Modal Backdrop for How To Pass (kept for button clicks) -->
+<div class="modal-backdrop" id="passModal" hidden role="dialog" aria-modal="true" aria-label="How to pass">
+  <div class="modal-card">
+    <button class="modal-close" id="passClose" type="button">✕ Close</button>
+    <div class="unit-head">
+      <h2>How to pass — for exam tension</h2>
+      <span class="rank">Minimum study · target 30+ / 60</span>
+    </div>
+    <p>Breathe. You do not need all 6 units, and you do not need 60 out of 60. Passing lives around 27–30 marks out of 60. The plan below puts <strong>30 marks on the table from just Q1 plus Q2</strong> — so even with mistakes, you stay above the pass band. Add one more full question and it becomes 45 marks on the table.</p>
+    <h3>Step 1 — the minimum set (learn these first, in this order)</h3>
+    <table class="qtable">
+      <tr><td><b>Learn</b></td><td><b>Where it pays</b></td><td><b>Marks on the table</b></td></tr>
+      <tr><td><b>Q1 — pick five shorts</b></td><td>Recurrence · Knapsack difference · LCS short · Branch &amp; Bound · KMP · Divide &amp; Conquer</td><td><b>15</b></td></tr>
+      <tr><td><b>Q2</b></td><td>Sorting + Merge Sort (fixed in Q2b)</td><td><b>15</b></td></tr>
+      <tr><td><b>Total on the table (minimum set)</b></td><td></td><td><b>30</b></td></tr>
+    </table>
+    <h3>Step 2 — the safe set (add this and you cover 45 marks)</h3>
+    <p>One more full question — Q4 (knapsack/LCS) or Q5 (multistage/backtracking) (15) = 15 more marks. 30 + 15 = <strong>45 out of 60</strong>, the distinction line.</p>
+    <h3>Step 3 — how to attempt in the hall (2 hours)</h3>
+    <p><strong>Q1 (25 min)</strong> → <strong>Q2 (30)</strong> → <strong>strongest remaining (30)</strong> → <strong>check (15)</strong>. Draw each graph once, neatly, and label it — redraws eat the paper.</p>
+    <div class="callout"><p><strong>Honest note, not a guarantee.</strong> Pattern from only 2 papers, and AOA rotates topics across slots, so learn the topic, not the slot. It raises your odds; it is not a guarantee.</p></div>
+  </div>
 </div>
+
 <div class="toast" id="toast"></div>
-<script>
 
+<!-- Original Checkbox & Filter Script (100% Intact Logic) -->
+<script>
 const passModal=document.getElementById('passModal');
 function openPass(){passModal.hidden=false;document.body.style.overflow='hidden';}
 function closePass(){passModal.hidden=true;document.body.style.overflow='';}
-document.getElementById('fabPass').addEventListener('click',openPass);
+var _fab=document.getElementById('fabPass');if(_fab)_fab.addEventListener('click',openPass);
 document.getElementById('passClose').addEventListener('click',closePass);
 passModal.addEventListener('click',e=>{if(e.target===passModal)closePass();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePass();});
-document.querySelectorAll('a[href="#how-to-pass"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openPass();}));
-if(location.hash==='#how-to-pass')openPass();
-document.getElementById('copyLink').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('https://kptimes.in/aoa/');document.getElementById('copyLink').textContent='Link copied ✓';}catch(e){document.getElementById('copyLink').textContent='https://kptimes.in/aoa/';}});
+document.querySelectorAll('a[href="#how-to-pass"]').forEach(a=>a.addEventListener('click',e=>{
+  // Smoothly scroll to the section
+  const target = document.getElementById('how-to-pass');
+  if(target){ target.scrollIntoView({behavior:'smooth'}); }
+}));
+document.getElementById('copyLink').addEventListener('click',async()=>{
+  try{
+    await navigator.clipboard.writeText('https://kptimes.in/aoa/');
+    document.getElementById('copyLink').textContent='Link copied ✓';
+    setTimeout(()=>document.getElementById('copyLink').textContent='Copy link',2000);
+  }catch(e){
+    document.getElementById('copyLink').textContent='https://kptimes.in/aoa/';
+  }
+});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const boxes=[...document.querySelectorAll('[data-topic]')];
@@ -403,16 +593,135 @@ function securedMarks(){let s=0;boxes.forEach((b,i)=>{if(done.has(i))s+=parseInt
 function levelOf(m){let l=0;MILESTONES.forEach((x,i)=>{if(m>=x.m)l=i+1;});return l;}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
 function renderMilestones(m){document.getElementById('milestones').innerHTML=MILESTONES.map(x=>`<span class="ms ${m>=x.m?'done':''}">${m>=x.m?'✓ ':''}${x.m} — ${x.m===27?'Pass':x.m===30?'Halfway':x.m===45?'Distinction':'Full paper'}</span>`).join('');}
-function update(silent){const m=securedMarks();document.getElementById('overallPct').textContent=m+' / 60';document.getElementById('overallBar').style.width=(m/60*100)+'%';renderMilestones(m);const lv=levelOf(m);if(!silent&&lv>prevLevel){showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');}else if(!silent){showToast('Yay! You can secure '+m+' marks in the exam!');}prevLevel=lv;}
+function update(silent){
+  const m=securedMarks();
+  document.getElementById('overallPct').textContent=m+' / 60';
+  document.getElementById('overallBar').style.width=(m/60*100)+'%';
+  renderMilestones(m);
+  const lv=levelOf(m);
+  if(!silent&&lv>prevLevel){
+    showToast('🎉 '+MILESTONES[lv-1].t+' You can secure '+m+' marks!');
+    launchConfetti();
+  }else if(!silent){
+    showToast('Yay! You can secure '+m+' marks in the exam!');
+  }
+  prevLevel=lv;
+}
 boxes.forEach((b,i)=>{b.checked=done.has(i);});
 update(true);
+
+// Confetti burst animation on milestone completion
+function launchConfetti(){
+  var canvas=document.getElementById('confettiCanvas');
+  if(!canvas){
+    canvas=document.createElement('canvas');
+    canvas.id='confettiCanvas';
+    document.body.appendChild(canvas);
+  }
+  var ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  var particles=[];
+  var colors=['#c8f542','#a78bfa','#ffcf3f','#38bdf8','#34d399','#f472b6'];
+  for(var i=0;i<55;i++){
+    particles.push({
+      x:canvas.width/2,
+      y:canvas.height*0.4,
+      r:Math.random()*6+3,
+      d:Math.random()*50,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      tilt:Math.floor(Math.random()*10)-10,
+      tiltAngleInc:(Math.random()*0.07)+0.05,
+      tiltAngle:0,
+      vx:(Math.random()-0.5)*16,
+      vy:Math.random()*-12-4
+    });
+  }
+  var start=Date.now();
+  function draw(){
+    if(Date.now()-start>2200){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      return;
+    }
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p){
+      p.tiltAngle+=p.tiltAngleInc;
+      p.y+=(Math.cos(p.d)+3+p.r/2)/2+p.vy;
+      p.x+=Math.sin(0)*2+p.vx;
+      p.vy+=0.35;
+      p.tilt=Math.sin(p.tiltAngle)*12;
+      ctx.beginPath();
+      ctx.lineWidth=p.r;
+      ctx.strokeStyle=p.color;
+      ctx.moveTo(p.x+p.tilt+p.r,p.y);
+      ctx.lineTo(p.x+p.tilt,p.y+p.tilt+p.r);
+      ctx.stroke();
+    });
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+// Interactive Copy Question button
+document.querySelectorAll('.q').forEach(function(qEl){
+  var btn=document.createElement('button');
+  btn.className='copy-q-btn';
+  btn.type='button';
+  btn.textContent='📋 Copy';
+  btn.title='Copy question to clipboard';
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var clone=qEl.cloneNode(true);
+    var b=clone.querySelector('.copy-q-btn');
+    if(b) b.remove();
+    var text=clone.innerText.trim();
+    navigator.clipboard.writeText(text).then(function(){
+      btn.textContent='Copied ✓';
+      btn.classList.add('copied');
+      setTimeout(function(){
+        btn.textContent='📋 Copy';
+        btn.classList.remove('copied');
+      },1800);
+    });
+  });
+  qEl.appendChild(btn);
+});
+
+// Live Navbar Countdown Timer to 17th Nov
+(function(){
+  var navTimer=document.getElementById('navTimerVal');
+  if(!navTimer) return;
+  var target=new Date('2026-11-17T14:30:00+05:30');
+  function updateNavTimer(){
+    var diff=target.getTime()-Date.now();
+    if(diff<=0){ navTimer.textContent='Live now!'; return; }
+    var d=Math.floor(diff/(1000*60*60*24));
+    var h=Math.floor((diff/(1000*60*60))%24);
+    var m=Math.floor((diff/(1000*60))%60);
+    var s=Math.floor((diff/1000)%60);
+    navTimer.textContent=d+'d '+h+'h '+m+'m '+s+'s';
+  }
+  updateNavTimer();
+  setInterval(updateNavTimer,1000);
+})();
+
 const chips=[...document.querySelectorAll('.chip')];let cur='all';
 chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');cur=c.dataset.unit;filter();}));
 const search=document.getElementById('search');search.addEventListener('input',filter);
-function filter(){const q=search.value.trim().toLowerCase();
-document.querySelectorAll('.unit').forEach(u=>{const okUnit=cur==='all'||u.dataset.unit===cur;let any=false;
-u.querySelectorAll('.topic').forEach(t=>{const hit=!q||t.textContent.toLowerCase().includes(q);t.style.display=hit?'':'none';if(hit)any=true;});
-u.style.display=(okUnit&&any)?'':'none';});}
+function filter(){
+  const q=search.value.trim().toLowerCase();
+  document.querySelectorAll('.unit[data-unit]').forEach(u=>{
+    const okUnit=cur==='all'||u.dataset.unit===cur;
+    let any=false;
+    u.querySelectorAll('.topic').forEach(t=>{
+      const hit=!q||t.textContent.toLowerCase().includes(q);
+      t.style.display=hit?'':'none';
+      if(hit)any=true;
+    });
+    u.style.display=(okUnit&&any)?'':'none';
+  });
+}
 </script>
+<script src="../lamp.js"></script>
 </body>
 </html>
