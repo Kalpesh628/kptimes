@@ -721,7 +721,9 @@ section {
   color: #ebebf5;
   text-align: left;
   vertical-align: top;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word; /* was anywhere: anywhere let the auto layout
+    crush short columns to 1–2 chars ("Question" -> "Questi/on", "Bus" ->
+    "Bu/s" on desktop). break-word only breaks a word that cannot fit. */
 }
 .qtable tr:first-child td {
   background: rgba(255, 255, 255, 0.03);
