@@ -11,6 +11,7 @@
 
     var nav = document.querySelector('.nav');
     if (!nav) return;
+    retryPendingEnrollment();
 
     // ── 2. USER PROFILE & VISIT LOGGING ──────────────────────
     function getUser() {
@@ -55,6 +56,44 @@
       } catch (e) {}
     }
 
+    // ── 2b. ENROLLMENT SYNC (Cloudflare Worker + D1) ─────────
+    var ENROLL_URL = 'https://kptimes-enroll.kalpeshvpatil0210.workers.dev/enroll';
+    function sendEnrollment(name, email) {
+      var payload = { name: (name || '').trim(), email: (email || '').trim(), page: window.location.pathname };
+      if (!payload.name || payload.name === 'Student') return; // guests are not enrolled
+      function queuePending() {
+        try { localStorage.setItem('kptimes-pending-enroll', JSON.stringify(payload)); } catch (e) {}
+      }
+      try {
+        fetch(ENROLL_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).then(function (res) {
+          if (res && res.ok) {
+            try {
+              var raw = localStorage.getItem('kptimes-pending-enroll');
+              if (raw) {
+                var p = JSON.parse(raw);
+                if (p && p.name === payload.name && (p.email || '') === payload.email) {
+                  localStorage.removeItem('kptimes-pending-enroll');
+                }
+              }
+            } catch (e) {}
+          } else { queuePending(); }
+        }).catch(queuePending);
+      } catch (e) { queuePending(); }
+    }
+    function retryPendingEnrollment() {
+      try {
+        var raw = localStorage.getItem('kptimes-pending-enroll');
+        if (!raw) return;
+        var p = JSON.parse(raw);
+        if (p && p.name) sendEnrollment(p.name, p.email || '');
+      } catch (e) {}
+    }
+
     // ── 3. ONBOARDING MODAL INJECTION ────────────────────────
     function showOnboardModal() {
       if (document.getElementById('userOnboardModal')) {
@@ -78,9 +117,10 @@
         '      <input type="text" id="inputUserName" placeholder="e.g. KP" required autocomplete="name" maxlength="32">',
         '    </div>',
         '    <div class="form-group">',
-        '      <label for="inputUserEmail">Your Email Address</label>',
-        '      <input type="email" id="inputUserEmail" placeholder="e.g. kp@gmail.com" required autocomplete="email">',
+        '      <label for="inputUserEmail">Your Email Address <span style="opacity:.65">(optional)</span></label>',
+        '      <input type="email" id="inputUserEmail" placeholder="Only if you want updates — otherwise leave blank" autocomplete="email">',
         '    </div>',
+        '    <p class="user-modal-sub" style="margin:2px 0 0;font-size:12px;">Your name (and email, if you add it) goes to a private list only the site owner sees — never posted publicly.</p>',
         '    <div class="user-modal-actions">',
         '      <button type="submit" class="user-submit-btn">🚀 Lock In &amp; Study</button>',
         '      <button type="button" class="user-guest-btn" id="btnContinueGuest">Continue as Guest</button>',
@@ -96,6 +136,7 @@
         var n = document.getElementById('inputUserName').value;
         var em = document.getElementById('inputUserEmail').value;
         saveUser(n, em);
+        sendEnrollment(n, em);
         modal.style.display = 'none';
 
         var toast = document.getElementById('toast');
