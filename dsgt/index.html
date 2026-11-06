@@ -492,30 +492,103 @@ function launchConfetti(){
   requestAnimationFrame(draw);
 }
 
-// Interactive Copy Question button
-document.querySelectorAll('.q').forEach(function(qEl){
-  var btn=document.createElement('button');
-  btn.className='copy-q-btn';
-  btn.type='button';
-  btn.textContent='📋 Copy';
-  btn.title='Copy question to clipboard';
-  btn.addEventListener('click',function(e){
-    e.stopPropagation();
+// Clean Copy Question button — copies AI-agent-friendly text:
+// header (subject · topic — paper · Q · marks), matrices as [[..], [..]],
+// data tables as Markdown tables, sub/superscripts as unicode, no UI clutter.
+(function(){
+  var SUBJ={maths:'Maths',dsgt:'DSGT',aoa:'AOA',coa:'COA',genai:'Gen AI'};
+  var slug=(location.pathname.split('/')[1]||'').toLowerCase();
+  var SUBJNAME=SUBJ[slug]||'Sem III';
+  var SUBMAP={'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉','n':'ₙ','x':'ₓ','i':'ᵢ','j':'ⱼ','k':'ₖ','+':'₊','-':'₋'};
+  var SUPMAP={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','x':'ˣ','i':'ⁱ','+':'⁺','-':'⁻'};
+  function conv(t,map){var o='';for(var i=0;i<t.length;i++){var c=t.charAt(i);o+=map[c]||c;}return o;}
+  function txt(node){
+    var out='';
+    for(var i=0;i<node.childNodes.length;i++){
+      var n=node.childNodes[i];
+      if(n.nodeType===3){out+=n.nodeValue;}
+      else if(n.nodeType===1){out+=fmtEl(n);}
+    }
+    return out;
+  }
+  function fmtEl(el){
+    if(el.classList&&el.classList.contains('copy-q-btn'))return '';
+    if(el.classList&&el.classList.contains('meta'))return '';
+    if(el.tagName==='BR')return '\n';
+    if(el.tagName==='SUB')return conv(el.textContent,SUBMAP);
+    if(el.tagName==='SUP')return conv(el.textContent,SUPMAP);
+    if(el.tagName==='TABLE'&&el.classList.contains('matrix')){
+      var rows=[];
+      for(var r=0;r<el.rows.length;r++){
+        var cells=[];
+        for(var c=0;c<el.rows[r].cells.length;c++){cells.push(el.rows[r].cells[c].textContent.trim());}
+        rows.push('['+cells.join(', ')+']');
+      }
+      return '['+rows.join(', ')+']';
+    }
+    if(el.tagName==='TABLE'&&el.classList.contains('qtable')){
+      var lines=[];
+      for(var r2=0;r2<el.rows.length;r2++){
+        var cs=[];
+        for(var c2=0;c2<el.rows[r2].cells.length;c2++){cs.push(el.rows[r2].cells[c2].textContent.trim().replace(/\|/g,'\\|'));}
+        lines.push('| '+cs.join(' | ')+' |');
+        if(r2===0){var sep=[];for(var s=0;s<cs.length;s++){sep.push('---');}lines.push('| '+sep.join(' | ')+' |');}
+      }
+      return '\n'+lines.join('\n')+'\n';
+    }
+    if(el.classList&&el.classList.contains('eqblock')){
+      var ls=[];
+      for(var e=0;e<el.children.length;e++){ls.push(txt(el.children[e]).trim());}
+      return '\n'+ls.join('\n')+'\n';
+    }
+    var inner=txt(el);
+    if(el.tagName==='DIV'||el.tagName==='P'||el.tagName==='LI')return '\n'+inner+'\n';
+    return inner;
+  }
+  function formatQ(qEl){
+    var metaEl=qEl.querySelector('.meta');
+    var meta=metaEl?metaEl.textContent.trim().replace(/\s+/g,' '):'';
+    var topic='';
+    if(qEl.closest){
+      var art=qEl.closest('article.topic');
+      if(art){var h=art.querySelector('.topic-head h3');if(h)topic=h.textContent.trim();}
+    }
+    var head=SUBJNAME+(topic?' · '+topic:'')+(meta?' — '+meta:'');
     var clone=qEl.cloneNode(true);
-    var b=clone.querySelector('.copy-q-btn');
-    if(b) b.remove();
-    var text=clone.innerText.trim();
-    navigator.clipboard.writeText(text).then(function(){
-      btn.textContent='Copied ✓';
-      btn.classList.add('copied');
-      setTimeout(function(){
-        btn.textContent='📋 Copy';
-        btn.classList.remove('copied');
-      },1800);
+    var b=clone.querySelector('.copy-q-btn');if(b)b.remove();
+    var m=clone.querySelector('.meta');if(m)m.remove();
+    var body=txt(clone).replace(/\u00a0/g,' ');
+    var lines=body.split('\n');
+    var clean=[];
+    for(var i=0;i<lines.length;i++){
+      var L=lines[i].replace(/[ \t]+/g,' ').replace(/\s+$/,'');
+      if(L!==''||(clean.length>0&&clean[clean.length-1]!=='')){clean.push(L);}
+    }
+    while(clean.length>0&&clean[0]==='')clean.shift();
+    while(clean.length>0&&clean[clean.length-1]==='')clean.pop();
+    return head+'\n\n'+clean.join('\n');
+  }
+  document.querySelectorAll('.q').forEach(function(qEl){
+    var btn=document.createElement('button');
+    btn.className='copy-q-btn';
+    btn.type='button';
+    btn.textContent='📋 Copy';
+    btn.title='Copy question to clipboard';
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var text=formatQ(qEl);
+      navigator.clipboard.writeText(text).then(function(){
+        btn.textContent='Copied ✓';
+        btn.classList.add('copied');
+        setTimeout(function(){
+          btn.textContent='📋 Copy';
+          btn.classList.remove('copied');
+        },1800);
+      });
     });
+    qEl.appendChild(btn);
   });
-  qEl.appendChild(btn);
-});
+})();
 
 // Live Navbar Countdown Timer to 17th Nov
 (function(){
