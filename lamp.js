@@ -123,7 +123,6 @@
         '    <p class="user-modal-sub" style="margin:2px 0 0;font-size:12px;">Your name (and email, if you add it) goes to a private list only the site owner sees — never posted publicly.</p>',
         '    <div class="user-modal-actions">',
         '      <button type="submit" class="user-submit-btn">🚀 Lock In &amp; Study</button>',
-        '      <button type="button" class="user-guest-btn" id="btnContinueGuest">Continue as Guest</button>',
         '    </div>',
         '  </form>',
         '</div>'
@@ -147,13 +146,6 @@
         }
       });
 
-      var guestBtn = document.getElementById('btnContinueGuest');
-      if (guestBtn) {
-        guestBtn.addEventListener('click', function () {
-          saveUser('Student', 'guest@kptimes.in');
-          modal.style.display = 'none';
-        });
-      }
     }
 
     // ── 4. CHATGPT-STYLE GREETINGS & NAVBAR PROFILE PILL ─────
